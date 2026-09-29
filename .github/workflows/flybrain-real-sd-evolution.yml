@@ -1,0 +1,110 @@
+name: FlyBrain Real-Image SD Evolution
+
+on:
+  push:
+    branches: [flybrain-ai-evolution-20260929]
+    paths:
+      - flybrain_real_sd_evolution.py
+      - .github/workflows/flybrain-real-sd-evolution.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flybrain-real-sd-evolution
+  cancel-in-progress: false
+
+jobs:
+  evolve-real-sd:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      HF_HUB_DISABLE_XET: '1'
+      FLY_SD_TRAIN: segmind/tiny-sd
+    steps:
+      - name: Checkout continuing branch
+        uses: actions/checkout@v4
+        with:
+          ref: flybrain-ai-evolution-20260929
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install ML stack
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy pillow safetensors accelerate transformers==4.57.1 diffusers==0.35.2 peft==0.17.1
+
+      - name: Download licensed real Drosophila melanogaster images
+        run: |
+          mkdir -p real_drosophila
+          base='https://obbard.bio.ed.ac.uk/photo_gallery/small'
+          for f in \
+            Drosophila_melanogaster.jpg \
+            Drosophila_melanogaster_alt.jpg \
+            Drosophila_melanogaster_Pose.jpg \
+            Drosophila_melanogaster_female_Pose.jpg \
+            Drosophila_melanogaster2_female_Sussex_July2011.jpg \
+            Drosophila_melanogaster_female_Sussex_July2011.jpg; do
+            curl -fL --retry 4 --retry-delay 2 "$base/$f" -o "real_drosophila/$f"
+          done
+          cat > real_drosophila/REAL_IMAGE_SOURCES.txt <<'EOF'
+          Source: Obbard Lab, University of Edinburgh — Drosophilidae photographs
+          Page: https://obbard.bio.ed.ac.uk/photos.html
+          License stated on source page: CC BY-NC 4.0 for academic/non-commercial use with attribution.
+          Files used:
+          Drosophila_melanogaster.jpg
+          Drosophila_melanogaster_alt.jpg
+          Drosophila_melanogaster_Pose.jpg
+          Drosophila_melanogaster_female_Pose.jpg
+          Drosophila_melanogaster2_female_Sussex_July2011.jpg
+          Drosophila_melanogaster_female_Sussex_July2011.jpg
+          EOF
+          file real_drosophila/* || true
+          test "$(find real_drosophila -type f -name '*.jpg' | wc -l)" -ge 6
+
+      - name: Train challenger on real flies and select against incumbent
+        run: |
+          python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72 | tee real_sd_evolution.log
+
+      - name: Verify evolutionary selection artifacts
+        run: |
+          test -s lora_results/real_sd_evolution.json
+          test -s lora_results/real_base.png
+          test -s lora_results/real_incumbent.png
+          test -s lora_results/real_candidate.png
+          test -s lora_results/sd_unet_lora.pt
+          cat lora_results/real_sd_evolution.json
+
+      - name: Persist selected champion and evidence
+        run: |
+          git config user.name 'flybrain-realdata-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          cp real_drosophila/REAL_IMAGE_SOURCES.txt lora_results/REAL_IMAGE_SOURCES.txt
+          git add -f lora_results/real_sd_evolution.json lora_results/real_base.png lora_results/real_incumbent.png lora_results/real_candidate.png lora_results/sd_real_candidate.pt lora_results/sd_unet_lora.pt lora_results/REAL_IMAGE_SOURCES.txt
+          git diff --cached --quiet && exit 0
+          git commit -m 'Evolve SD LoRA using held-out real Drosophila images'
+          git pull --rebase origin flybrain-ai-evolution-20260929
+          git push origin HEAD:flybrain-ai-evolution-20260929
+
+      - name: Upload real-image evolution result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flybrain-real-sd-evolution-results
+          path: |
+            lora_results/real_sd_evolution.json
+            lora_results/real_base.png
+            lora_results/real_incumbent.png
+            lora_results/real_candidate.png
+            lora_results/sd_real_candidate.pt
+            lora_results/sd_unet_lora.pt
+            real_drosophila/REAL_IMAGE_SOURCES.txt
+            real_sd_evolution.log
+          if-no-files-found: warn
+          retention-days: 14
