@@ -1,0 +1,588 @@
+{
+  "previous_best_score": 1.365222678544538,
+  "previous_best_genome": {
+    "guidance": 6.347536552954607,
+    "steps": 8,
+    "seed": 1305536006,
+    "mods": [
+      "microscopic",
+      "neural tissue"
+    ]
+  },
+  "parent_score_remeasured_current_run": 1.365222678544538,
+  "best_score": 1.4011548108584213,
+  "best_genome": {
+    "guidance": 6.530250964124138,
+    "steps": 10,
+    "seed": 1022652024,
+    "mods": [
+      "neural tissue"
+    ]
+  },
+  "improved_over_previous": true,
+  "generation_range": [
+    6,
+    8
+  ],
+  "final_prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue",
+  "final_image": "flybrain_evo/results_v4/flybrain_sd_v4_final.png",
+  "history": [
+    {
+      "generation": 6,
+      "candidate": 0,
+      "score": 1.365222678544538,
+      "metrics": {
+        "edge": 0.1570514738559723,
+        "variance": 0.12324116379022598,
+        "mean": 0.3495793640613556,
+        "entropy": 0.8877154503129046,
+        "target_agreement": 0.7053385376930237
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1305536006,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p0_+1.36522.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 6,
+      "candidate": 1,
+      "score": 1.3389834245863022,
+      "metrics": {
+        "edge": 0.150739386677742,
+        "variance": 0.15755410492420197,
+        "mean": 0.4413977563381195,
+        "entropy": 0.8958121705818286,
+        "target_agreement": 0.625781238079071
+      },
+      "genome": {
+        "guidance": 6.025841894851794,
+        "steps": 7,
+        "seed": 67886654,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p1_+1.33898.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 6,
+      "candidate": 2,
+      "score": 1.0100875314707183,
+      "metrics": {
+        "edge": 0.11400966346263885,
+        "variance": 0.12760846316814423,
+        "mean": 0.6901617050170898,
+        "entropy": 0.8711893601191086,
+        "target_agreement": 0.40342748165130615
+      },
+      "genome": {
+        "guidance": 6.444406670069571,
+        "steps": 8,
+        "seed": 226306614,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "bioluminescent"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p2_+1.01009.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, bioluminescent"
+    },
+    {
+      "generation": 6,
+      "candidate": 3,
+      "score": 1.2710831912475298,
+      "metrics": {
+        "edge": 0.099139504134655,
+        "variance": 0.10643596202135086,
+        "mean": 0.24148809909820557,
+        "entropy": 0.8032969286256613,
+        "target_agreement": 0.8269492387771606
+      },
+      "genome": {
+        "guidance": 6.191274268850456,
+        "steps": 6,
+        "seed": 849804173,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p3_+1.27108.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 6,
+      "candidate": 4,
+      "score": 1.1745778755011953,
+      "metrics": {
+        "edge": 0.17259541153907776,
+        "variance": 0.12220245599746704,
+        "mean": 0.6533848643302917,
+        "entropy": 0.9177894317133497,
+        "target_agreement": 0.44928765296936035
+      },
+      "genome": {
+        "guidance": 6.142182018569146,
+        "steps": 9,
+        "seed": 1029109611,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "confocal microscopy"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p4_+1.17458.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, confocal microscopy"
+    },
+    {
+      "generation": 6,
+      "candidate": 5,
+      "score": 1.2307770749534384,
+      "metrics": {
+        "edge": 0.09054820239543915,
+        "variance": 0.10678395628929138,
+        "mean": 0.33123916387557983,
+        "entropy": 0.8654318928005502,
+        "target_agreement": 0.7168275117874146
+      },
+      "genome": {
+        "guidance": 6.206692813124961,
+        "steps": 6,
+        "seed": 1315084354,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "synaptic arborization"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p5_+1.23078.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, synaptic arborization"
+    },
+    {
+      "generation": 6,
+      "candidate": 6,
+      "score": 1.3420026332615655,
+      "metrics": {
+        "edge": 0.1584305465221405,
+        "variance": 0.1511865258216858,
+        "mean": 0.38951125741004944,
+        "entropy": 0.8630467226069698,
+        "target_agreement": 0.6462239623069763
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 740967776,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p6_+1.34200.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 6,
+      "candidate": 7,
+      "score": 1.3158122701441828,
+      "metrics": {
+        "edge": 0.1728723645210266,
+        "variance": 0.12829440832138062,
+        "mean": 0.3061925768852234,
+        "entropy": 0.762904752564355,
+        "target_agreement": 0.7041972875595093
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1674729240,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g6_p7_+1.31581.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 7,
+      "candidate": 0,
+      "score": 1.365222678544538,
+      "metrics": {
+        "edge": 0.1570514738559723,
+        "variance": 0.12324116379022598,
+        "mean": 0.3495793640613556,
+        "entropy": 0.8877154503129046,
+        "target_agreement": 0.7053385376930237
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1305536006,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p0_+1.36522.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 7,
+      "candidate": 1,
+      "score": 1.3355217805039996,
+      "metrics": {
+        "edge": 0.14826799929141998,
+        "variance": 0.1321439892053604,
+        "mean": 0.40870240330696106,
+        "entropy": 0.9054307898846746,
+        "target_agreement": 0.6434512734413147
+      },
+      "genome": {
+        "guidance": 6.056876258679493,
+        "steps": 6,
+        "seed": 945527978,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p1_+1.33552.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 7,
+      "candidate": 2,
+      "score": 1.2861366773795333,
+      "metrics": {
+        "edge": 0.14187052845954895,
+        "variance": 0.056173816323280334,
+        "mean": 0.20476865768432617,
+        "entropy": 0.768595995894209,
+        "target_agreement": 0.8414636850357056
+      },
+      "genome": {
+        "guidance": 6.3234653097904285,
+        "steps": 7,
+        "seed": 1472393116,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "anatomical"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p2_+1.28614.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, anatomical"
+    },
+    {
+      "generation": 7,
+      "candidate": 3,
+      "score": 1.1829366693374403,
+      "metrics": {
+        "edge": 0.11899775266647339,
+        "variance": 0.057374659925699234,
+        "mean": 0.16336886584758759,
+        "entropy": 0.6941506709071521,
+        "target_agreement": 0.8228209018707275
+      },
+      "genome": {
+        "guidance": 6.3391168769989195,
+        "steps": 6,
+        "seed": 608027431,
+        "mods": [
+          "neural tissue",
+          "confocal microscopy"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p3_+1.18294.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, confocal microscopy"
+    },
+    {
+      "generation": 7,
+      "candidate": 4,
+      "score": 1.277348282819249,
+      "metrics": {
+        "edge": 0.16124853491783142,
+        "variance": 0.13515949249267578,
+        "mean": 0.5642392039299011,
+        "entropy": 0.940967399216525,
+        "target_agreement": 0.5515012145042419
+      },
+      "genome": {
+        "guidance": 6.390092579603462,
+        "steps": 7,
+        "seed": 1340487784,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "high detail"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p4_+1.27735.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, high detail"
+    },
+    {
+      "generation": 7,
+      "candidate": 5,
+      "score": 1.3524106129633244,
+      "metrics": {
+        "edge": 0.14232373237609863,
+        "variance": 0.1271071583032608,
+        "mean": 0.45097002387046814,
+        "entropy": 0.9733433690264107,
+        "target_agreement": 0.6415709257125854
+      },
+      "genome": {
+        "guidance": 6.670352788699574,
+        "steps": 10,
+        "seed": 1526279031,
+        "mods": [
+          "microscopic"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p5_+1.35241.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic"
+    },
+    {
+      "generation": 7,
+      "candidate": 6,
+      "score": 1.2805384162253668,
+      "metrics": {
+        "edge": 0.09632514417171478,
+        "variance": 0.162505641579628,
+        "mean": 0.3649345636367798,
+        "entropy": 0.8765229106286311,
+        "target_agreement": 0.6912798881530762
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1614404137,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p6_+1.28054.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 7,
+      "candidate": 7,
+      "score": 1.3680482609689362,
+      "metrics": {
+        "edge": 0.15724408626556396,
+        "variance": 0.06838760524988174,
+        "mean": 0.37647464871406555,
+        "entropy": 0.9551559229005694,
+        "target_agreement": 0.7087584137916565
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1299973554,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g7_p7_+1.36805.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 8,
+      "candidate": 0,
+      "score": 1.3680482609689362,
+      "metrics": {
+        "edge": 0.15724408626556396,
+        "variance": 0.06838760524988174,
+        "mean": 0.37647464871406555,
+        "entropy": 0.9551559229005694,
+        "target_agreement": 0.7087584137916565
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1299973554,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p0_+1.36805.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 8,
+      "candidate": 1,
+      "score": 0.9803406016267826,
+      "metrics": {
+        "edge": 0.07703202962875366,
+        "variance": 0.028381476178765297,
+        "mean": 0.08586601167917252,
+        "entropy": 0.4495648065277102,
+        "target_agreement": 0.8839384317398071
+      },
+      "genome": {
+        "guidance": 6.409894806508357,
+        "steps": 10,
+        "seed": 842981346,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "dark background"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p1_+0.98034.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, dark background"
+    },
+    {
+      "generation": 8,
+      "candidate": 2,
+      "score": 1.3725467946350525,
+      "metrics": {
+        "edge": 0.15385989844799042,
+        "variance": 0.1069863811135292,
+        "mean": 0.3381008803844452,
+        "entropy": 0.8957654155059203,
+        "target_agreement": 0.7375995516777039
+      },
+      "genome": {
+        "guidance": 6.5376882283686895,
+        "steps": 10,
+        "seed": 780138347,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p2_+1.37255.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 8,
+      "candidate": 3,
+      "score": 1.4011548108584213,
+      "metrics": {
+        "edge": 0.1838991940021515,
+        "variance": 0.12800483405590057,
+        "mean": 0.35164642333984375,
+        "entropy": 0.8769784451843261,
+        "target_agreement": 0.694496750831604
+      },
+      "genome": {
+        "guidance": 6.530250964124138,
+        "steps": 10,
+        "seed": 1022652024,
+        "mods": [
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p3_+1.40115.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue"
+    },
+    {
+      "generation": 8,
+      "candidate": 4,
+      "score": 1.1000562563944465,
+      "metrics": {
+        "edge": 0.1266631782054901,
+        "variance": 0.11322784423828125,
+        "mean": 0.6594815254211426,
+        "entropy": 0.920587940181495,
+        "target_agreement": 0.46359145641326904
+      },
+      "genome": {
+        "guidance": 6.298033065457601,
+        "steps": 10,
+        "seed": 1140271351,
+        "mods": [
+          "microscopic",
+          "anatomical"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p4_+1.10006.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, anatomical"
+    },
+    {
+      "generation": 8,
+      "candidate": 5,
+      "score": 1.368691248908317,
+      "metrics": {
+        "edge": 0.17380128800868988,
+        "variance": 0.13963554799556732,
+        "mean": 0.3988551199436188,
+        "entropy": 0.9028684497144652,
+        "target_agreement": 0.6269722580909729
+      },
+      "genome": {
+        "guidance": 6.421426482591423,
+        "steps": 10,
+        "seed": 2057905127,
+        "mods": [
+          "microscopic",
+          "neural tissue",
+          "ultrastructure"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p5_+1.36869.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue, ultrastructure"
+    },
+    {
+      "generation": 8,
+      "candidate": 6,
+      "score": 1.3490016670712435,
+      "metrics": {
+        "edge": 0.1581995189189911,
+        "variance": 0.12247540801763535,
+        "mean": 0.465645432472229,
+        "entropy": 0.9738401741130069,
+        "target_agreement": 0.6105085611343384
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 1564888271,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p6_+1.34900.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    },
+    {
+      "generation": 8,
+      "candidate": 7,
+      "score": 1.1799787932279424,
+      "metrics": {
+        "edge": 0.12267574667930603,
+        "variance": 0.16126911342144012,
+        "mean": 0.5225439667701721,
+        "entropy": 0.8657071817359627,
+        "target_agreement": 0.522549033164978
+      },
+      "genome": {
+        "guidance": 6.347536552954607,
+        "steps": 8,
+        "seed": 652591001,
+        "mods": [
+          "microscopic",
+          "neural tissue"
+        ]
+      },
+      "image": "flybrain_evo/results_v4/evolution_v4_candidates/g8_p7_+1.17998.png",
+      "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, microscopic, neural tissue"
+    }
+  ]
+}
