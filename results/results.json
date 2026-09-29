@@ -1,0 +1,132 @@
+{
+  "seed": 20260929,
+  "connectome": {
+    "neurons": 139255,
+    "edges": 2698236,
+    "groups": 63,
+    "nonzero_group_edges": 275
+  },
+  "evolution": {
+    "generations": 120,
+    "population": 96,
+    "resumed_checkpoint": false,
+    "initial_random_best_validation_accuracy": 0.43119266055045874,
+    "final_best_validation_accuracy": 0.9908256880733946,
+    "first": {
+      "generation": 0,
+      "train_best": 0.35234215885947046,
+      "validation_best": 0.43119266055045874,
+      "fitness_best": 0.352339022532475
+    },
+    "last": {
+      "generation": 119,
+      "train_best": 1.0,
+      "validation_best": 0.9908256880733946,
+      "fitness_best": 0.9999315354143619
+    }
+  },
+  "demo": {
+    "requested_stimulus": "food",
+    "evolved_prediction": "food",
+    "probabilities": {
+      "food": 0.6741600036621094,
+      "touch": 0.0622030533850193,
+      "air": 0.04739587754011154,
+      "light": 0.0010104826651513577,
+      "warm": 0.1130547970533371,
+      "cool": 0.10217580944299698
+    },
+    "top_groups": [
+      {
+        "id": 60,
+        "name": "GENERIC_CENTRAL",
+        "activation": 0.9964345693588257,
+        "neurons": 21955
+      },
+      {
+        "id": 26,
+        "name": "CX_PFN",
+        "activation": 0.9605975151062012,
+        "neurons": 1244
+      },
+      {
+        "id": 8,
+        "name": "OLF_LN",
+        "activation": 0.7100350260734558,
+        "neurons": 453
+      },
+      {
+        "id": 28,
+        "name": "CX_HDELTA",
+        "activation": 0.7070872783660889,
+        "neurons": 611
+      },
+      {
+        "id": 27,
+        "name": "CX_FC",
+        "activation": 0.6302249431610107,
+        "neurons": 822
+      },
+      {
+        "id": 35,
+        "name": "GNG_DESC",
+        "activation": 0.5312618017196655,
+        "neurons": 3581
+      },
+      {
+        "id": 9,
+        "name": "OLF_PN",
+        "activation": 0.36611267924308777,
+        "neurons": 699
+      },
+      {
+        "id": 2,
+        "name": "VIS_ME",
+        "activation": 0.3642352819442749,
+        "neurons": 82318
+      },
+      {
+        "id": 32,
+        "name": "GUS_GRN_SWEET",
+        "activation": 0.3261602520942688,
+        "neurons": 214
+      },
+      {
+        "id": 37,
+        "name": "DRIVE_HUNGER",
+        "activation": 0.322524756193161,
+        "neurons": 46
+      },
+      {
+        "id": 57,
+        "name": "MN_HEAD",
+        "activation": 0.28346842527389526,
+        "neurons": 40
+      },
+      {
+        "id": 23,
+        "name": "LH_APP",
+        "activation": 0.11642005294561386,
+        "neurons": 559
+      }
+    ]
+  },
+  "llm": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "output": "The likely next behavior in one factual sentence is to touch the food."
+  },
+  "stable_diffusion": {
+    "model": "segmind/tiny-sd",
+    "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
+    "inference_seconds": 6.788698196411133,
+    "image": "stable_diffusion_result.png"
+  },
+  "training_scope": {
+    "trained": "connectome-to-semantic evolutionary readout/controller",
+    "frozen_base_models": [
+      "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "segmind/tiny-sd"
+    ]
+  },
+  "total_seconds": 24.076066493988037
+}
