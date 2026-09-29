@@ -1,4 +1,4 @@
-# FlyBrain AI evolution runner - SD1.5 512px quality pass
+# FlyBrain AI evolution runner - focused fruit-fly SD1.5 quality pass
 name: FlyBrain AI Evolution
 
 on:
@@ -58,9 +58,11 @@ jobs:
           from pathlib import Path
           p=Path('flybrain_ai_evolution.py')
           s=p.read_text()
-          s=s.replace('num_inference_steps=6,guidance_scale=6.0,height=256,width=256', 'num_inference_steps=24,guidance_scale=7.5,height=512,width=512')
-          s=s.replace('scientific macro photograph of Drosophila melanogaster in a neural laboratory, ', 'macro photograph of a fruit fly (Drosophila melanogaster) feeding on fresh red fruit, compound eyes, translucent wings, natural insect anatomy, ')
-          s=s.replace('fruit fly behavior: {behavior}, visible glowing connectome pathways, microscopy, realistic anatomy, high detail', 'behavior: {behavior}, proboscis visible, sharp scientific macro photography, shallow depth of field, realistic biology, high detail')
+          s=s.replace('num_inference_steps=6,guidance_scale=6.0,height=256,width=256', 'num_inference_steps=20,guidance_scale=7.5,height=512,width=512')
+          s=s.replace('scientific macro photograph of Drosophila melanogaster in a neural laboratory, ', 'full body macro photograph of a single fruit fly, Drosophila melanogaster, red compound eyes, two transparent wings, six legs, standing on a red apple, ')
+          s=s.replace('fruit fly behavior: {behavior}, visible glowing connectome pathways, microscopy, realistic anatomy, high detail', 'feeding behavior selected by the neural controller: {behavior}, sharp insect photography, realistic anatomy, natural light, high detail')
+          s=s.replace('text, watermark, malformed insect, duplicate wings, blurry', 'text, watermark, abstract object, flower, mushroom, fruit slice, fabric, cropped insect, malformed insect, extra wings, blurry')
+          s=s.replace("manual_seed(SEED)", "manual_seed(42)")
           p.write_text(s)
           PY
           python flybrain_ai_evolution.py --flybrain external/flybrain --out results --generations 120 --population 96 --stimulus food | tee results/run.log
@@ -82,7 +84,7 @@ jobs:
           git config user.email 'actions@users.noreply.github.com'
           git add -f results/results.json results/evolution_history.json results/llm_output.txt results/stable_diffusion_result.png results/stable_diffusion_result_512.png results/state/best_genome.npz
           git diff --cached --quiet && exit 0
-          git commit -m 'FlyBrain evolution run: persist checkpoint and SD1.5 512px outputs'
+          git commit -m 'FlyBrain evolution run: focused fruit-fly SD1.5 output'
           git push origin HEAD:flybrain-ai-evolution-20260929
 
       - name: Upload full result artifact
