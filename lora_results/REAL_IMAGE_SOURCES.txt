@@ -1,0 +1,10 @@
+Source: Obbard Lab, University of Edinburgh — Drosophilidae photographs
+Page: https://obbard.bio.ed.ac.uk/photos.html
+License stated on source page: CC BY-NC 4.0 for academic/non-commercial use with attribution.
+Files used:
+Drosophila_melanogaster.jpg
+Drosophila_melanogaster_alt.jpg
+Drosophila_melanogaster_Pose.jpg
+Drosophila_melanogaster_female_Pose.jpg
+Drosophila_melanogaster2_female_Sussex_July2011.jpg
+Drosophila_melanogaster_female_Sussex_July2011.jpg

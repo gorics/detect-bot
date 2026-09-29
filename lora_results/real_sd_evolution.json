@@ -1,0 +1,50 @@
+{
+  "seed": 20260929,
+  "model": "segmind/tiny-sd",
+  "selection_metric": "held-out real Drosophila fixed denoising loss (lower is better)",
+  "license_note": "Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.",
+  "train_images": [
+    "Drosophila_melanogaster.jpg",
+    "Drosophila_melanogaster2_female_Sussex_July2011.jpg",
+    "Drosophila_melanogaster_Pose.jpg",
+    "Drosophila_melanogaster_alt.jpg"
+  ],
+  "validation_images": [
+    "Drosophila_melanogaster_female_Pose.jpg",
+    "Drosophila_melanogaster_female_Sussex_July2011.jpg"
+  ],
+  "incumbent": {
+    "loaded": true,
+    "real_validation_loss": 0.2787456139922142,
+    "each": [
+      0.32088702917099,
+      0.23660419881343842
+    ],
+    "inference_seconds": 11.023280620574951
+  },
+  "candidate": {
+    "trainable_parameters": 431616,
+    "total_unet_parameters": 323816580,
+    "steps": 72,
+    "base_real_validation_loss": 0.319831982254982,
+    "candidate_real_validation_loss": 0.25854820013046265,
+    "candidate_improvement_vs_base": 0.191612426288443,
+    "base_each": [
+      0.3646809160709381,
+      0.2749830484390259
+    ],
+    "candidate_each": [
+      0.2964175343513489,
+      0.22067886590957642
+    ],
+    "train_loss_first": 0.33460482954978943,
+    "train_loss_last": 0.10325880348682404,
+    "lora_weight_norm_sum": 91.13920711353421,
+    "candidate_path": "lora_results/sd_real_candidate.pt",
+    "inference_seconds": 10.602088451385498
+  },
+  "selected": "candidate",
+  "selected_loss": 0.25854820013046265,
+  "relative_gain_over_incumbent": 0.0724582301851598,
+  "total_seconds": 117.35856127738953
+}
