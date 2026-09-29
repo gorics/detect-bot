@@ -1,19 +1,19 @@
-V3_LLM_GEN 9 GEN_BEST 0.6761916416916417 BEST_EVER 0.7207042124542125
-V3_LLM_GEN 10 GEN_BEST 0.6592192078754578 BEST_EVER 0.7207042124542125
-V3_LLM_GEN 11 GEN_BEST 0.6080100732600733 BEST_EVER 0.7207042124542125
-V3_LLM_GEN 12 GEN_BEST 0.6699574773053034 BEST_EVER 0.7207042124542125
-V3_SD_GEN 9 GEN_BEST 0.6576464806097109 BEST_EVER 0.6576464806097109
-V3_SD_GEN 10 GEN_BEST 0.6576464806097109 BEST_EVER 0.6576464806097109
-V3_SD_GEN 11 GEN_BEST 0.6576464806097109 BEST_EVER 0.6576464806097109
-V3_SD_GEN 12 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
+V31_LLM_GEN 13 GEN_BEST 0.35205120999219364 BEST_EVER 0.4259428571428572
+V31_LLM_GEN 14 GEN_BEST 0.8743357142857144 BEST_EVER 0.8743357142857144
+V31_LLM_GEN 15 GEN_BEST 0.6957801452784504 BEST_EVER 0.8743357142857144
+V31_LLM_GEN 16 GEN_BEST 0.7380000000000001 BEST_EVER 0.8743357142857144
+V31_SD_GEN 13 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
+V31_SD_GEN 14 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
+V31_SD_GEN 15 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
+V31_SD_GEN 16 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
 {
   "status": "SUCCESS",
-  "generation_start": 8,
-  "generation_end": 12,
+  "generation_start": 12,
+  "generation_end": 16,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
-    "group_slots": 61,
+    "group_slots": 63,
     "populated_group_ids": 32,
     "region_counts": {
       "0": 103847,
@@ -22,8 +22,8 @@ V3_SD_GEN 12 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
       "3": 76
     },
     "brain_signature": [
-      0.16308093921456257,
-      0.34713065175393765,
+      0.1579037665410844,
+      0.3427707652172499,
       0.9988929769914545,
       -0.48885252414596864,
       0.30716781477993377,
@@ -32,16 +32,15 @@ V3_SD_GEN 12 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
       0.4095390273414121
     ]
   },
-  "upgrade": {
-    "llm_from": "Qwen/Qwen2.5-0.5B-Instruct",
-    "llm_to": "Qwen/Qwen2.5-1.5B-Instruct",
-    "sd_from": "segmind/tiny-sd",
-    "sd_to": "stabilityai/sd-turbo",
+  "models": {
+    "llm": "Qwen/Qwen2.5-1.5B-Instruct",
+    "diffusion": "stabilityai/sd-turbo",
     "semantic_evaluator": "openai/clip-vit-base-patch32"
   },
   "llm": {
-    "inherited_v2_score": 0.7207042124542125,
-    "v3_best_score": 0.7207042124542125,
+    "before_score_under_v31": 0.4259428571428572,
+    "after_score_v31": 0.8743357142857144,
+    "improved": true,
     "champion_genes": {
       "temperature": 0.8719059962676539,
       "top_p": 0.8394445349276074,
@@ -50,7 +49,9 @@ V3_SD_GEN 12 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
     }
   },
   "image": {
-    "v3_best_score": 0.6700972347702439,
+    "before_score_v3": 0.6700972347702439,
+    "after_score_v3": 0.6700972347702439,
+    "improved": false,
     "winner": {
       "generation": 12,
       "candidate": 1,
@@ -71,9 +72,8 @@ V3_SD_GEN 12 GEN_BEST 0.6700972347702439 BEST_EVER 0.6700972347702439
       "score": 0.6700972347702439,
       "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, bioluminescent axon pathways",
       "file": "sd_g12_c1.png"
-    },
-    "fitness_note": "v3 score uses CLIP semantic alignment plus visual proxy; do not compare numerically to v2 image score"
+    }
   },
-  "elapsed_seconds": 650.2475402355194,
-  "learning": "pretrained LLM and diffusion weights remain frozen; the full FlyBrain-derived controller conditions evolutionary search; best-ever champion is persisted"
+  "elapsed_seconds": 687.3857226371765,
+  "learning": "pretrained Qwen/SD-Turbo weights frozen; 139255-neuron/2698236-edge FlyBrain is reduced through all 63 declared group slots into a recurrent controller; persistent best-ever champions seed the next run"
 }

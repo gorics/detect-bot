@@ -1,9 +1,9 @@
 {
-  "generation": 12,
+  "generation": 16,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
-    "group_slots": 61,
+    "group_slots": 63,
     "populated_group_ids": 32,
     "region_counts": {
       "0": 103847,
@@ -12,8 +12,8 @@
       "3": 76
     },
     "brain_signature": [
-      0.16308093921456257,
-      0.34713065175393765,
+      0.1579037665410844,
+      0.3427707652172499,
       0.9988929769914545,
       -0.48885252414596864,
       0.30716781477993377,
@@ -24,14 +24,15 @@
   },
   "llm": {
     "model": "Qwen/Qwen2.5-1.5B-Instruct",
-    "score": 0.7207042124542125,
-    "text": "1단계: 초파리 FlyWire Connectome의 기본적인 기능을 이해하고 활용하기 위해 초기 설정에 따라 실행합니다.\n\n2단계: 연결성, 신경망의 구성, 학습된 모델을 이용하여 새로운 데이터를 처리합니다. \n\n3단계: LLM와 stable diffusion을 통해 새로운 보상 및 조건을 만들어야 합니다.\n\n4단계: LLM가 학습한 결과를 stable diffusion에서 생성합니다. 이 생성된 이미지를 보상 기능으로 사용할 수 있게 됩니다.\n\n5단계: 생성된 보상 이미지는 인공지능과의 진화를 통해 지속적으로 변화하고 있습니다.\n\n6단계: 모든 정보를 분석하고, 가장 최적의 선택을 내리는 과정을 거칩니다.",
+    "score": 0.8743357142857144,
+    "text": "[입력]\n[뇌활성] FlyBrain connectome의 뉴런/연결에 대한 데이터를 입력합니다.\n[생성] Open-source LLM과 Stable Diffusion를 사용하여 생성합니다.\n[평가] 생성된 이미지를 평가하고, CLIP를 이용해 보상 계산합니다.\n[선택] Fitness를 기준으로 후보들을 선별합니다.\n[돌연변이] Controller가 생성 파라미터를 변환하며 후보를 선택합니다.\n\n[가중치 고정] LLM과 Stable Diffusion은 사전 학습된 가중치를 고정합니다.\n[sampling] Controller는 다양한 후보를 생성하면서 sampling합니다.\n[seed] Sampling 과정에서 seed를 고유하게 설정합니다.\n[CLIP]",
     "genes": {
       "temperature": 0.8719059962676539,
       "top_p": 0.8394445349276074,
       "rep": 1.072845852217016,
       "max_new": 170
-    }
+    },
+    "fitness_version": "v3.1"
   },
   "sd": {
     "model": "stabilityai/sd-turbo",
@@ -62,6 +63,7 @@
       "score": 0.6700972347702439,
       "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, bioluminescent axon pathways",
       "file": "sd_g12_c1.png"
-    }
+    },
+    "fitness_version": "v3"
   }
 }

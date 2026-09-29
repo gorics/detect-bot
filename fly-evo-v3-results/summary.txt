@@ -1,6 +1,6 @@
-FLY CONNECTOME x QWEN 1.5B x SD-TURBO x CLIP — V3
-generation 8 -> 12
-neurons=139255 edges=2698236
-LLM best=0.720704
-Image best=0.670097 clip=0.321582
-elapsed=650.25s
+FLY CONNECTOME PERSISTENT NEUROEVOLUTION V3.1
+generation 12 -> 16
+neurons=139255 edges=2698236 groups=63 populated=32
+LLM 0.425943 -> 0.874336
+Image 0.670097 -> 0.670097
+elapsed=687.39s
