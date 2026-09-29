@@ -1,5 +1,6 @@
 {
   "seed": 20260929,
+  "generation_mode": "resume adapters if present",
   "connectome": {
     "neurons": 139255,
     "edges": 2698236
@@ -7,32 +8,37 @@
   "evolved_checkpoint_validation_accuracy": 1.0,
   "llm_lora": {
     "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "resumed_adapter": false,
     "trainable_parameters": 921600,
     "total_parameters": 135436608,
     "trainable_fraction": 0.006804659490586179,
     "steps": 90,
-    "loss_first": 6.750889778137207,
-    "loss_last": 0.018968423828482628,
-    "loss_mean_first5": 6.059311771392823,
-    "loss_mean_last5": 0.02275774907320738,
-    "test_kind": "touch",
-    "target": "orient away from touch and initiate grooming",
-    "before": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. Neural state=g60=+1.00, g26=+0.",
-    "after": "orient away from touch and initiate grooming"
+    "learning_rate": 0.0008,
+    "loss_first": 7.160825729370117,
+    "loss_last": 0.034095291048288345,
+    "loss_mean_first5": 5.815166187286377,
+    "loss_mean_last5": 0.021785902976989745,
+    "holdout_accuracy_before": 0.0,
+    "holdout_accuracy_after": 0.8333333333333334
   },
   "stable_diffusion_lora": {
     "model": "segmind/tiny-sd",
+    "resumed_adapter": false,
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "trainable_fraction": 0.0013329027191875105,
     "steps": 18,
-    "loss_first": 0.01068495400249958,
-    "loss_last": 0.017797663807868958,
-    "loss_mean_first4": 0.1653759735636413,
-    "loss_mean_last4": 0.1800822156947106,
-    "inference_seconds": 17.073780059814453,
-    "output": "sd_lora_result.png"
+    "learning_rate": 8e-05,
+    "fixed_validation_loss_before": 0.3561580677827199,
+    "fixed_validation_loss_after": 0.34317247569561005,
+    "validation_improvement_fraction": 0.036460193553812574,
+    "train_loss_first": 0.7086181640625,
+    "train_loss_last": 0.1391034871339798,
+    "lora_weight_norm_sum": 86.48826559074223,
+    "inference_seconds": 19.73911428451538,
+    "base_output": "sd_base_result.png",
+    "lora_output": "sd_lora_result.png"
   },
-  "total_seconds": 167.9867889881134,
-  "scope": "Both base models remain frozen; LoRA parameters are actually optimized and saved. Connectome evolution checkpoint is reused rather than reset."
+  "total_seconds": 193.362069606781,
+  "scope": "Frozen base models + trainable LoRA adapters; existing adapters and the evolved FlyBrain readout are reused across generations."
 }

@@ -1,1 +1,0 @@
-Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. Neural state=g60=+1.00, g26=+0.
