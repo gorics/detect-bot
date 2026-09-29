@@ -2,3 +2,4 @@
 {"generation": 14, "fitness": 0.6944520528592202, "improved": true, "mutations": 55, "active_neo": 3}
 {"generation": 15, "breeder_fitness": 0.6196843321744318, "champion_fitness": 0.6944520528592202, "improved": false, "breeder_hash": "d700d3da65b4bd16cf72d0532ffd346e91b74e9df8df8cf75036c79bbe2de9f0", "native_ops": 2}
 {"generation": 16, "breeder_fitness": 0.7576004495930573, "champion_fitness": 0.7576004495930573, "improved": true, "breeder_hash": "5e77964a3ae19409f5afe0ff06dfc029929ee6863d111b6510ad74082bdced22", "native_ops": 3}
+{"generation": 17, "breeder_fitness": 0.6444820274138995, "champion_fitness": 0.7576004495930573, "improved": false, "breeder_hash": "398e6870ff406d6f158b5d08a0fc5b211f61718d136638170daac660bb37ef49", "native_ops": 5}
