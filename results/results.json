@@ -16,25 +16,25 @@
       "generation": 0,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999340772701544
+      "fitness_best": 0.9999355021864176
     },
     "last": {
       "generation": 119,
       "train_best": 1.0,
-      "validation_best": 0.981651376146789,
-      "fitness_best": 0.9999405018352263
+      "validation_best": 1.0,
+      "fitness_best": 0.9999426839603984
     }
   },
   "demo": {
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.6369975209236145,
-      "touch": 0.058873798698186874,
-      "air": 0.07015775889158249,
-      "light": 0.0025728337932378054,
-      "warm": 0.11529563367366791,
-      "cool": 0.11610240489244461
+      "food": 0.5709591507911682,
+      "touch": 0.06792342662811279,
+      "air": 0.06418658047914505,
+      "light": 0.0028897845186293125,
+      "warm": 0.13838139176368713,
+      "cool": 0.15565961599349976
     },
     "top_groups": [
       {
@@ -117,8 +117,8 @@
   },
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
-    "prompt": "macro photograph of a fruit fly (Drosophila melanogaster) feeding on fresh red fruit, compound eyes, translucent wings, natural insect anatomy, behavior: approach food and extend the proboscis to feed, proboscis visible, sharp scientific macro photography, shallow depth of field, realistic biology, high detail",
-    "inference_seconds": 316.06375789642334,
+    "prompt": "full body macro photograph of a single fruit fly, Drosophila melanogaster, red compound eyes, two transparent wings, six legs, standing on a red apple, feeding behavior selected by the neural controller: approach food and extend the proboscis to feed, sharp insect photography, realistic anatomy, natural light, high detail",
+    "inference_seconds": 136.9886167049408,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -128,5 +128,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 368.31905245780945
+  "total_seconds": 184.1763505935669
 }
