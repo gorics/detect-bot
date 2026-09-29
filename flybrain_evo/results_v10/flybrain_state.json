@@ -340,7 +340,7 @@
   "stats": [
     {
       "type": "stats",
-      "avgTickMs": 0.7362671000000575,
+      "avgTickMs": 0.9618180999999965,
       "firedNeurons": 648,
       "activeNeurons": 35239,
       "totalNeurons": 139255,
