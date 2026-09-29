@@ -4,12 +4,12 @@ const path = require('path');
 const os = require('os');
 
 const repo = process.argv[2];
-const outDir = process.argv[3] || 'outputs';
+const outDir = path.resolve(process.argv[3] || 'outputs');
 if (!repo) throw new Error('usage: node run_flybrain_worker.cjs <flybrain-repo> [out-dir]');
 fs.mkdirSync(outDir, { recursive: true });
 
-const simWorker = path.join(repo, 'js', 'sim-worker.js');
-const dataPath = path.join(repo, 'data', 'connectome.bin.gz');
+const simWorker = path.resolve(repo, 'js', 'sim-worker.js');
+const dataPath = path.resolve(repo, 'data', 'connectome.bin.gz');
 const wrapper = path.join(os.tmpdir(), `flybrain-node-wrapper-${process.pid}.cjs`);
 fs.writeFileSync(wrapper, `
 const { parentPort, workerData } = require('worker_threads');
