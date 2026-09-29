@@ -27,6 +27,13 @@ jobs:
           ref: fly-evo-open-models
           fetch-depth: 30
 
+      - name: Reconstruct verified UTF-8 organism source
+        run: |
+          set -euxo pipefail
+          cat fly_organism_v4.py.b64.0 fly_organism_v4.py.b64.1 fly_organism_v4.py.b64.2 fly_organism_v4.py.b64.3 fly_organism_v4.py.b64.4 | tr -d '\n' | base64 -d > fly_organism_v4.py
+          python -m py_compile fly_organism_v4.py
+          test "$(sha256sum fly_organism_v4.py | awk '{print $1}')" = "5f55676c152af98f960f89ef7f999620d29a09a98aaf7322fbf29da109c83ed3"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
