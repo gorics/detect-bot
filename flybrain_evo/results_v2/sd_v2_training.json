@@ -1,0 +1,21 @@
+{
+  "model": "segmind/tiny-sd",
+  "training": "UNet LoRA attention",
+  "steps": 8,
+  "first_loss": 0.7446349859237671,
+  "last_loss": 0.7224751710891724,
+  "losses": [
+    0.7446349859237671,
+    0.41959673166275024,
+    0.5593447685241699,
+    0.3962121903896332,
+    0.7587395310401917,
+    0.7635002136230469,
+    0.43473660945892334,
+    0.7224751710891724
+  ],
+  "base_prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph",
+  "target_image": "flybrain_evo/results_v2/brain_condition_target.png",
+  "before_image": "flybrain_evo/results_v2/sd_v2_before.png",
+  "trainable_parameters": 431616
+}
