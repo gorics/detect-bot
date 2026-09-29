@@ -1,0 +1,163 @@
+{
+  "seed": 20260929,
+  "connectome": {
+    "neurons": 139255,
+    "edges": 2698236,
+    "groups": 63
+  },
+  "scenario_states": [
+    {
+      "name": "food_seek",
+      "stimulated_neurons": 644,
+      "top_groups": [
+        {
+          "name": "GUS_GRN_SWEET",
+          "score": 1.0
+        },
+        {
+          "name": "DRIVE_HUNGER",
+          "score": 1.0
+        },
+        {
+          "name": "OLF_ORN_FOOD",
+          "score": 0.20745542645454407
+        }
+      ]
+    },
+    {
+      "name": "touch_alert",
+      "stimulated_neurons": 768,
+      "top_groups": [
+        {
+          "name": "MECH_JO",
+          "score": 1.0
+        },
+        {
+          "name": "MECH_BRISTLE",
+          "score": 0.45614945888519287
+        }
+      ]
+    },
+    {
+      "name": "bright_visual",
+      "stimulated_neurons": 768,
+      "top_groups": [
+        {
+          "name": "VIS_R1R6",
+          "score": 1.0
+        },
+        {
+          "name": "VIS_ME",
+          "score": 0.13954420387744904
+        }
+      ]
+    },
+    {
+      "name": "warmth",
+      "stimulated_neurons": 49,
+      "top_groups": [
+        {
+          "name": "THERMO_WARM",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "name": "cooling",
+      "stimulated_neurons": 54,
+      "top_groups": [
+        {
+          "name": "THERMO_COOL",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "name": "novel_mix",
+      "stimulated_neurons": 1152,
+      "top_groups": [
+        {
+          "name": "OLF_ORN_FOOD",
+          "score": 1.0
+        },
+        {
+          "name": "MECH_BRISTLE",
+          "score": 0.9605604410171509
+        },
+        {
+          "name": "VIS_R1R6",
+          "score": 0.16113868355751038
+        }
+      ]
+    }
+  ],
+  "llm": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "adapter": "63D connectome state -> 5 learned soft-prefix embeddings",
+    "train": [
+      {
+        "step": 0,
+        "loss": 7.974002361297607
+      },
+      {
+        "step": 2,
+        "loss": 7.531049728393555
+      },
+      {
+        "step": 5,
+        "loss": 6.783596038818359
+      },
+      {
+        "step": 11,
+        "loss": 5.970602035522461
+      },
+      {
+        "step": 17,
+        "loss": 5.083198547363281
+      }
+    ],
+    "outputs": {
+      "food_seek": "1, 2, 7, 5, 3, 1, 4, 0\n2020-05-09",
+      "touch_alert": "0.103 5.50 5.49 3.97 3.52 3.10 3.1",
+      "bright_visual": "1-2 hours (if needed)\n\nA: 1.2\n\nB: 1.6\n\nC: 1.9",
+      "warmth": "30-100% of the flying body temperature is maintained\nBipolar-like-states: 0-15% of the flying body temperature is",
+      "cooling": "1) to maintain homeostasis, 2) to activate the brain's reward system, 3) to enhance learning, 4) to regulate the autonomic nervous system (",
+      "novel_mix": "600- to 1000-mg/kg body weight (2000 to 2600 IU) of phenylethyl"
+    },
+    "probe_output": "the state when the fly is in a state of focus or concentration. \n\n- Fli-brain state:  the state when the fly is in a state of",
+    "fallback_errors": []
+  },
+  "stable_diffusion": {
+    "model": "segmind/tiny-sd",
+    "adapter": "63D connectome state -> CLIP conditioning delta",
+    "train": [
+      {
+        "step": 0,
+        "loss": 0.10399947315454483
+      },
+      {
+        "step": 9,
+        "loss": 0.020282389596104622
+      },
+      {
+        "step": 39,
+        "loss": 0.0006710122106596828
+      },
+      {
+        "step": 99,
+        "loss": 1.2148182122473372e-06
+      },
+      {
+        "step": 219,
+        "loss": 9.353690044733298e-10
+      }
+    ],
+    "image_size": [
+      256,
+      256
+    ],
+    "same_seed_pixel_l1": 58.847042083740234,
+    "fallback_errors": []
+  },
+  "note": "Hybrid computation: the connectome state conditions frozen open-source generative models; this does not imply fly consciousness or that the biological brain itself became an LLM."
+}
