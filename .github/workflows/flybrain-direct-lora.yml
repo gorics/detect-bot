@@ -1,3 +1,4 @@
+# trigger: 2026-09-29 direct LoRA pass
 name: FlyBrain Direct LoRA Training
 
 on:
