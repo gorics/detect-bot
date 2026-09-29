@@ -30,50 +30,39 @@ jobs:
           python -m pip install --upgrade pip
           pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
           pip install 'transformers>=4.48,<5' 'diffusers>=0.32,<0.40' 'accelerate>=1,<2' 'peft>=0.14,<1' safetensors sentencepiece pillow numpy scipy
-      - name: Clone open-source FlyBrain
+      - name: Clone exact open-source FlyBrain
         run: |
           git clone --depth 1 https://github.com/snedea/flybrain external/flybrain
           git -C external/flybrain rev-parse HEAD > flybrain_source_commit.txt
       - name: Execute exact 139k-neuron connectome worker
         run: |
-          rm -rf flybrain_evo/results_v6
-          mkdir -p flybrain_evo/results_v6
-          node flybrain_evo/run_flybrain_worker.cjs external/flybrain flybrain_evo/results_v6
-          cp flybrain_source_commit.txt flybrain_evo/results_v6/
-      - name: Continue generations from V5 elite
+          rm -rf flybrain_evo/results_v7
+          mkdir -p flybrain_evo/results_v7
+          node flybrain_evo/run_flybrain_worker.cjs external/flybrain flybrain_evo/results_v7
+          cp flybrain_source_commit.txt flybrain_evo/results_v7/
+      - name: Continue generations from V6 elite
         env:
           TOKENIZERS_PARALLELISM: 'false'
         run: |
-          test -f flybrain_evo/results_v5/evolution_v5_state.json
-          python flybrain_evo/hybrid_v6.py \
-            --brain flybrain_evo/results_v6/flybrain_state.json \
+          test -f flybrain_evo/results_v6/evolution_v6_state.json
+          python flybrain_evo/hybrid_v7.py \
+            --brain flybrain_evo/results_v7/flybrain_state.json \
             --meta external/flybrain/data/neuron_meta.json \
-            --previous flybrain_evo/results_v5/evolution_v5_state.json \
-            --out flybrain_evo/results_v6 \
+            --previous flybrain_evo/results_v6/evolution_v6_state.json \
+            --out flybrain_evo/results_v7 \
             --generations 3 \
-            --population 12
-      - name: Upload full v6 result artifact
+            --population 14
+      - name: Upload full v7 result artifact
         uses: actions/upload-artifact@v4
         with:
-          name: flybrain-evo-v6-results
-          path: flybrain_evo/results_v6/
+          name: flybrain-evo-v7-results
+          path: flybrain_evo/results_v7/
           retention-days: 7
-      - name: Persist compact v6 results to experiment branch
+      - name: Persist compact v7 results to experiment branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f \
-            flybrain_evo/results_v6/brain_v6_summary.json \
-            flybrain_evo/results_v6/llm_v3_output.txt \
-            flybrain_evo/results_v6/llm_v3_training.json \
-            flybrain_evo/results_v6/sd_v3_training.json \
-            flybrain_evo/results_v6/evolution_v6_state.json \
-            flybrain_evo/results_v6/run_report_v6.json \
-            flybrain_evo/results_v6/flybrain_state.json \
-            flybrain_evo/results_v6/flybrain_sd_v6_final.png \
-            flybrain_evo/results_v6/sd_v3_before.png \
-            flybrain_evo/results_v6/brain_condition_target_v3.png \
-            flybrain_evo/results_v6/flybrain_source_commit.txt
-          git commit -m 'Persist FlyBrain v6 recursive evolution results [skip ci]' || exit 0
+          git add -f flybrain_evo/results_v7/brain_v7_summary.json flybrain_evo/results_v7/llm_v3_output.txt flybrain_evo/results_v7/llm_v3_training.json flybrain_evo/results_v7/sd_v3_training.json flybrain_evo/results_v7/evolution_v7_state.json flybrain_evo/results_v7/run_report_v7.json flybrain_evo/results_v7/flybrain_state.json flybrain_evo/results_v7/flybrain_sd_v7_final.png flybrain_evo/results_v7/sd_v3_before.png flybrain_evo/results_v7/brain_condition_target_v3.png flybrain_evo/results_v7/flybrain_source_commit.txt
+          git commit -m 'Persist FlyBrain v7 recursive evolution results [skip ci]' || exit 0
           git pull --rebase origin flybrain-evo-experiment
           git push origin HEAD:flybrain-evo-experiment
