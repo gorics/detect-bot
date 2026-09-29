@@ -1,0 +1,196 @@
+{
+  "model": "stabilityai/sd-turbo",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "fitness": "0.78*CLIP_mapped + 0.22*visual_proxy",
+  "history": [
+    {
+      "generation": 9,
+      "candidate": 1,
+      "genes": {
+        "steps": 2,
+        "seed": 258681894,
+        "modifier": "precise anatomical overlay"
+      },
+      "clip_cosine": 0.32675784826278687,
+      "clip_01": 0.6633789241313934,
+      "proxy_metrics": {
+        "entropy": 0.9062716717782621,
+        "contrast": 0.19541752338409424,
+        "edge": 0.03551461547613144,
+        "saturation": 0.09295706450939178,
+        "proxy": 0.6373223626692
+      },
+      "score": 0.6576464806097109,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, precise anatomical overlay",
+      "file": "sd_g9_c1.png"
+    },
+    {
+      "generation": 9,
+      "candidate": 0,
+      "genes": {
+        "steps": 2,
+        "seed": 20714234,
+        "modifier": "ultra-detailed compound eyes"
+      },
+      "clip_cosine": 0.2752690017223358,
+      "clip_01": 0.6376345008611679,
+      "proxy_metrics": {
+        "entropy": 0.9043332468937065,
+        "contrast": 0.17340944707393646,
+        "edge": 0.06177036091685295,
+        "saturation": 0.12203071266412735,
+        "proxy": 0.6997917626739609
+      },
+      "score": 0.6513090984599824,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, ultra-detailed compound eyes",
+      "file": "sd_g9_c0.png"
+    },
+    {
+      "generation": 10,
+      "candidate": 0,
+      "genes": {
+        "steps": 2,
+        "seed": 258681894,
+        "modifier": "precise anatomical overlay"
+      },
+      "clip_cosine": 0.32675784826278687,
+      "clip_01": 0.6633789241313934,
+      "proxy_metrics": {
+        "entropy": 0.9062716717782621,
+        "contrast": 0.19541752338409424,
+        "edge": 0.03551461547613144,
+        "saturation": 0.09295706450939178,
+        "proxy": 0.6373223626692
+      },
+      "score": 0.6576464806097109,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, precise anatomical overlay",
+      "file": "sd_g10_c0.png"
+    },
+    {
+      "generation": 10,
+      "candidate": 1,
+      "genes": {
+        "steps": 2,
+        "seed": 1418596233,
+        "modifier": "bioluminescent axon pathways"
+      },
+      "clip_cosine": 0.28941455483436584,
+      "clip_01": 0.6447072774171829,
+      "proxy_metrics": {
+        "entropy": 0.8663452322469651,
+        "contrast": 0.14514373242855072,
+        "edge": 0.031359799206256866,
+        "saturation": 0.07988714426755905,
+        "proxy": 0.5521718950625212
+      },
+      "score": 0.6243494932991573,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, bioluminescent axon pathways",
+      "file": "sd_g10_c1.png"
+    },
+    {
+      "generation": 11,
+      "candidate": 0,
+      "genes": {
+        "steps": 2,
+        "seed": 258681894,
+        "modifier": "precise anatomical overlay"
+      },
+      "clip_cosine": 0.32675784826278687,
+      "clip_01": 0.6633789241313934,
+      "proxy_metrics": {
+        "entropy": 0.9062716717782621,
+        "contrast": 0.19541752338409424,
+        "edge": 0.03551461547613144,
+        "saturation": 0.09295706450939178,
+        "proxy": 0.6373223626692
+      },
+      "score": 0.6576464806097109,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, precise anatomical overlay",
+      "file": "sd_g11_c0.png"
+    },
+    {
+      "generation": 11,
+      "candidate": 1,
+      "genes": {
+        "steps": 1,
+        "seed": 1213860648,
+        "modifier": "clean dark laboratory background"
+      },
+      "clip_cosine": 0.3139778673648834,
+      "clip_01": 0.6569889336824417,
+      "proxy_metrics": {
+        "entropy": 0.9141601107171861,
+        "contrast": 0.17530395090579987,
+        "edge": 0.024938587099313736,
+        "saturation": 0.05390617623925209,
+        "proxy": 0.560866601777127
+      },
+      "score": 0.6358420206632724,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, clean dark laboratory background",
+      "file": "sd_g11_c1.png"
+    },
+    {
+      "generation": 12,
+      "candidate": 1,
+      "genes": {
+        "steps": 2,
+        "seed": 450671887,
+        "modifier": "bioluminescent axon pathways"
+      },
+      "clip_cosine": 0.32158204913139343,
+      "clip_01": 0.6607910245656967,
+      "proxy_metrics": {
+        "entropy": 0.9379308365147735,
+        "contrast": 0.1998620629310608,
+        "edge": 0.0395205058157444,
+        "saturation": 0.1427159607410431,
+        "proxy": 0.7030919800409107
+      },
+      "score": 0.6700972347702439,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, bioluminescent axon pathways",
+      "file": "sd_g12_c1.png"
+    },
+    {
+      "generation": 12,
+      "candidate": 0,
+      "genes": {
+        "steps": 2,
+        "seed": 258681894,
+        "modifier": "precise anatomical overlay"
+      },
+      "clip_cosine": 0.32675784826278687,
+      "clip_01": 0.6633789241313934,
+      "proxy_metrics": {
+        "entropy": 0.9062716717782621,
+        "contrast": 0.19541752338409424,
+        "edge": 0.03551461547613144,
+        "saturation": 0.09295706450939178,
+        "proxy": 0.6373223626692
+      },
+      "score": 0.6576464806097109,
+      "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, precise anatomical overlay",
+      "file": "sd_g12_c0.png"
+    }
+  ],
+  "winner": {
+    "generation": 12,
+    "candidate": 1,
+    "genes": {
+      "steps": 2,
+      "seed": 450671887,
+      "modifier": "bioluminescent axon pathways"
+    },
+    "clip_cosine": 0.32158204913139343,
+    "clip_01": 0.6607910245656967,
+    "proxy_metrics": {
+      "entropy": 0.9379308365147735,
+      "contrast": 0.1998620629310608,
+      "edge": 0.0395205058157444,
+      "saturation": 0.1427159607410431,
+      "proxy": 0.7030919800409107
+    },
+    "score": 0.6700972347702439,
+    "prompt": "macro scientific portrait of a Drosophila fruit fly, visible transparent brain with intricate neural connectome, glowing synapses, biologically inspired circuitry, high detail, photorealistic, laboratory visualization, bioluminescent axon pathways",
+    "file": "sd_g12_c1.png"
+  }
+}
