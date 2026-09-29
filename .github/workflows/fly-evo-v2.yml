@@ -84,3 +84,5 @@ jobs:
             sleep $((i*2))
           done
           exit 1
+
+# continuation-run: 2
