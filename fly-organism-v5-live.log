@@ -1,3 +1,11 @@
+V5_EVALUATE 0 generation 15 native_ops 3 neo 3
+V5_FITNESS 0 0.6062355122113077 topology 83bb25e5edc8594b
+V5_EVALUATE 1 generation 15 native_ops 2 neo 3
+V5_FITNESS 1 0.6196843321744318 topology d700d3da65b4bd16
+V5_EVALUATE 2 generation 15 native_ops 2 neo 3
+V5_FITNESS 2 0.5714425777914921 topology d8c7afb60f3a1ef1
+V5_EVALUATE 3 generation 15 native_ops 2 neo 3
+V5_FITNESS 3 0.6000857324549405 topology 683354f896591235
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
