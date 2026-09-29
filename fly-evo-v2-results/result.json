@@ -15,36 +15,36 @@
       0.16179773016193008,
       0.34714506768696207,
       0.9990876940297313,
-      -0.4896112075661082,
-      0.3170155716327962,
+      -0.48961120756610804,
+      0.31701557163279626,
       0.4908417999152094,
-      0.011700732872693345,
+      0.011700732872693343,
       0.41352197830446363
     ]
   },
   "before": {
-    "generation": 0,
-    "llm_score": -1.0,
-    "sd_score": -1.0
-  },
-  "after": {
     "generation": 4,
     "llm_score": 0.653720238095238,
     "sd_score": 0.7538277150921746
   },
+  "after": {
+    "generation": 8,
+    "llm_score": 0.7667142857142857,
+    "sd_score": 0.7663551736046986
+  },
   "llm_model": "Qwen/Qwen2.5-0.5B-Instruct",
   "stable_diffusion_model": "segmind/tiny-sd",
   "llm_champion_genes": {
-    "temperature": 0.6874475333660485,
-    "top_p": 0.8271788171467277,
-    "rep": 1.0686693410574564,
-    "max_new": 140
+    "temperature": 0.8719059962676539,
+    "top_p": 0.8394445349276074,
+    "rep": 1.072845852217016,
+    "max_new": 170
   },
   "sd_champion_genes": {
-    "guidance": 7.089127029969833,
-    "steps": 7,
-    "seed": 683216346
+    "guidance": 7.174410423321882,
+    "steps": 6,
+    "seed": 1144157554
   },
-  "elapsed_seconds": 337.97445940971375,
+  "elapsed_seconds": 348.1472280025482,
   "learning": "base LLM/SD weights frozen; connectome-conditioned controller evolves with strict best-ever elitism; state persists across runs"
 }
