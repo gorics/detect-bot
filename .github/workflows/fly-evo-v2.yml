@@ -1,0 +1,86 @@
+name: Fly Persistent Neuroevolution v2
+
+on:
+  push:
+    branches: [fly-evo-open-models]
+    paths:
+      - 'fly_evo_v2.py'
+      - '.github/workflows/fly-evo-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fly-evo-v2-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fly-evo-open-models
+          fetch-depth: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch and test open-source FlyBrain
+        run: |
+          set -euxo pipefail
+          rm -rf /tmp/flybrain
+          git clone --depth 1 https://github.com/snedea/flybrain.git /tmp/flybrain
+          node /tmp/flybrain/tests/run-node.js
+      - name: Install runtimes
+        run: |
+          set -euxo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install 'transformers>=4.45,<5' 'diffusers>=0.30,<1' 'accelerate>=1,<2' safetensors pillow numpy sentencepiece ftfy
+      - name: Continue real connectome-conditioned evolution
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: |
+          set -euxo pipefail
+          python fly_evo_v2.py | tee fly-evo-v2-live.log
+      - name: Validate no-regression outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('fly-evo-v2-results/result.json').read_text(encoding='utf-8'))
+          print(json.dumps(r,ensure_ascii=False,indent=2))
+          assert r['status']=='SUCCESS'
+          assert r['connectome']['neurons']==139255 and r['connectome']['edges']==2698236
+          assert r['after']['llm_score'] >= r['before']['llm_score']
+          assert r['after']['sd_score'] >= r['before']['sd_score']
+          assert Path('fly-evo-v2-results/llm_evolved.txt').stat().st_size > 50
+          assert Path('fly-evo-v2-results/sd_selected.png').stat().st_size > 1000
+          PY
+      - name: Upload complete v2 results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fly-evo-v2-results
+          path: |
+            fly-evo-v2-results/
+            fly-evo-v2-live.log
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Persist champion state for next run
+        if: success()
+        run: |
+          set -euxo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fly-evo-v2-results fly-evo-v2-live.log
+          git commit -m 'Persist Fly neuroevolution v2 champion [skip ci]' || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin fly-evo-open-models || true
+            if git push origin HEAD:fly-evo-open-models; then exit 0; fi
+            sleep $((i*2))
+          done
+          exit 1
