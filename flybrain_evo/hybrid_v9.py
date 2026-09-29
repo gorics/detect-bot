@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+# V9 continues V8 under the same fitness domain; strict elitism remains in the V6 core.
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent))
+import hybrid_v6 as v6
+
+v6.SEED = 20261004
+v6.MODS = list(dict.fromkeys(v6.MODS + [
+    'projection neuron','olfactory glomerulus','connectome tracing','dense neurites','synaptic boutons',
+    'glomerular neuropil','axon tract','dendritic arbor','synaptic microcircuit','fluorescent neural tracing',
+    'olfactory projection tract','glomerular microcircuit','sparse neural arbor','dense neuropil','synaptic puncta'
+]))
+
+_orig_save_json = v6.core.save_json
+def save_json_v9(path, obj):
+    p = Path(path)
+    _orig_save_json(p.with_name(p.name.replace('v6','v9')), obj)
+v6.core.save_json = save_json_v9
+
+_orig_evolve = v6.evolve
+def evolve_v9(pipe, prompt0, target, outdir, previous, generations=3, population=18):
+    state = _orig_evolve(pipe, prompt0, target, outdir, previous, generations, population)
+    out = Path(outdir)
+    old = out/'flybrain_sd_v6_final.png'
+    new = out/'flybrain_sd_v9_final.png'
+    if old.exists(): old.replace(new)
+    state['final_image'] = str(new)
+    _orig_save_json(out/'evolution_v9_state.json', state)
+    return state
+v6.evolve = evolve_v9
+
+if __name__ == '__main__':
+    v6.main()
