@@ -1,4 +1,4 @@
-name: Fly Organism v4 Continuous Structural Evolution
+name: Fly Organism v5 Native-Core Continuous Evolution
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: fly-organism-v4-continuous
+  group: fly-organism-native-core-continuous
   cancel-in-progress: false
 
 jobs:
@@ -27,19 +27,21 @@ jobs:
           ref: fly-evo-open-models
           fetch-depth: 30
 
-      - name: Reconstruct verified UTF-8 organism source
+      - name: Reconstruct verified organism sources
         run: |
           set -euxo pipefail
           cat fly_organism_v4.py.b64.0 fly_organism_v4.py.b64.1 fly_organism_v4.py.b64.2 fly_organism_v4.py.b64.3 fly_organism_v4.py.b64.4 | tr -d '\n' | base64 -d > fly_organism_v4.py
-          python -m py_compile fly_organism_v4.py
+          cat fly_organism_v5.py.b64.0 fly_organism_v5.py.b64.1 fly_organism_v5.py.b64.2 | tr -d '\n' | base64 -d > fly_organism_v5.py
+          python -m py_compile fly_organism_v4.py fly_organism_v5.py
           test "$(sha256sum fly_organism_v4.py | awk '{print $1}')" = "5f55676c152af98f960f89ef7f999620d29a09a98aaf7322fbf29da109c83ed3"
+          test "$(sha256sum fly_organism_v5.py | awk '{print $1}')" = "353bfde37e3bb889ac8090a8dc0939f80292d899fa1e927015c63577b7e1da21"
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Cache open models
+      - name: Cache open neural organs
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
@@ -60,7 +62,7 @@ jobs:
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
           python -m pip install 'transformers>=4.45,<5' 'diffusers>=0.30,<1' 'accelerate>=1,<2' safetensors pillow numpy sentencepiece ftfy
 
-      - name: Evolve one structural generation
+      - name: Evolve one native FlyBrain generation
         env:
           FLY_CONNECTOME: /tmp/flybrain/data/connectome.bin.gz
           FLY_V4_ROOT: .
@@ -68,9 +70,9 @@ jobs:
           TOKENIZERS_PARALLELISM: 'false'
         run: |
           set -euxo pipefail
-          python fly_organism_v4.py | tee fly-organism-v4-live.log
+          python fly_organism_v5.py | tee fly-organism-v5-live.log
 
-      - name: Validate unified organism result
+      - name: Validate native topology evolution
         run: |
           python - <<'PY'
           import json
@@ -79,35 +81,40 @@ jobs:
           r=json.loads(p.read_text(encoding='utf-8'))
           print(json.dumps(r,ensure_ascii=False,indent=2))
           assert r['status']=='SUCCESS'
-          assert r['connectome']['neurons']==139255
-          assert r['connectome']['edges']==2698236
-          assert r['architecture']['shared_recurrent_state'] is True
-          assert r['architecture']['structure_evolves'] is True
-          assert r['architecture']['total_organism_nodes']==87
+          assert r['version']=='v5-native-core-evolution'
+          assert r['connectome']['neurons']==139255 and r['connectome']['edges']==2698236
+          a=r['architecture']
+          assert a['shared_recurrent_state'] is True
+          assert a['native_flybrain_core_evolves'] is True
+          assert a['breeder_always_mutates'] is True
+          assert a['best_ever_elitism'] is True
+          assert a['total_organism_nodes']==87
+          assert r['native_core']['breeder_native_ops'] >= 1
+          assert len(r['native_core']['breeder_topology_hash']) == 64
           assert Path('fly-organism-v4-results/organism_state.json').stat().st_size > 1000
+          assert Path('fly-organism-v4-results/breeder.png').stat().st_size > 1000
           assert Path('fly-organism-v4-results/champion.png').stat().st_size > 1000
-          assert Path('fly-organism-v4-results/champion.txt').stat().st_size > 50
           PY
 
       - name: Upload generation artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: fly-organism-v4-generation
+          name: fly-organism-v5-native-core-generation
           path: |
             fly-organism-v4-results/
-            fly-organism-v4-live.log
+            fly-organism-v5-live.log
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Persist evolved anatomy and champion
+      - name: Persist evolved native anatomy and champion
         if: success()
         run: |
           set -euxo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add fly-organism-v4-results fly-organism-v4-live.log
-          git commit -m 'Evolve Fly organism structural generation [skip ci]' || exit 0
+          git add fly-organism-v4-results fly-organism-v5-live.log
+          git commit -m 'Evolve native FlyBrain topology generation [skip ci]' || exit 0
           for i in 1 2 3; do
             git pull --rebase origin fly-evo-open-models || true
             if git push origin HEAD:fly-evo-open-models; then exit 0; fi
