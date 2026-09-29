@@ -1,4 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
+# scheduled continuation generation 2
 
 on:
   push:
@@ -44,13 +45,7 @@ jobs:
         run: |
           mkdir -p real_drosophila
           base='https://obbard.bio.ed.ac.uk/photo_gallery/small'
-          for f in \
-            Drosophila_melanogaster.jpg \
-            Drosophila_melanogaster_alt.jpg \
-            Drosophila_melanogaster_Pose.jpg \
-            Drosophila_melanogaster_female_Pose.jpg \
-            Drosophila_melanogaster2_female_Sussex_July2011.jpg \
-            Drosophila_melanogaster_female_Sussex_July2011.jpg; do
+          for f in Drosophila_melanogaster.jpg Drosophila_melanogaster_alt.jpg Drosophila_melanogaster_Pose.jpg Drosophila_melanogaster_female_Pose.jpg Drosophila_melanogaster2_female_Sussex_July2011.jpg Drosophila_melanogaster_female_Sussex_July2011.jpg; do
             curl -fL --retry 4 --retry-delay 2 "$base/$f" -o "real_drosophila/$f"
           done
           cat > real_drosophila/REAL_IMAGE_SOURCES.txt <<'EOF'
@@ -65,7 +60,6 @@ jobs:
           Drosophila_melanogaster2_female_Sussex_July2011.jpg
           Drosophila_melanogaster_female_Sussex_July2011.jpg
           EOF
-          file real_drosophila/* || true
           test "$(find real_drosophila -type f -name '*.jpg' | wc -l)" -ge 6
 
       - name: Train challenger on real flies and select against incumbent
