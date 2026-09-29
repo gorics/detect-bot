@@ -1,0 +1,83 @@
+name: FlyBrain AI Evolution
+
+on:
+  push:
+    branches: [flybrain-ai-evolution-20260929]
+    paths:
+      - flybrain_ai_evolution.py
+      - .github/workflows/flybrain-ai-evolution.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  evolve-and-generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      FLY_LLM: HuggingFaceTB/SmolLM2-135M-Instruct
+      FLY_SD: segmind/tiny-sd
+    steps:
+      - name: Checkout evolution branch
+        uses: actions/checkout@v4
+        with:
+          ref: flybrain-ai-evolution-20260929
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CPU ML stack
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy pillow safetensors accelerate transformers==4.57.1 diffusers==0.35.2
+
+      - name: Fetch open-source FlyBrain connectome
+        run: |
+          rm -rf external/flybrain
+          git clone --depth 1 https://github.com/snedea/flybrain.git external/flybrain
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path('external/flybrain/data/neuron_meta.json').read_text())
+          print('FlyBrain neurons:',m['neuron_count'],'edges:',m['edge_count'],'groups:',m['group_count'])
+          PY
+
+      - name: Evolve connectome controller and run open models
+        run: |
+          mkdir -p results
+          python flybrain_ai_evolution.py --flybrain external/flybrain --out results --generations 120 --population 96 --stimulus food | tee results/run.log
+
+      - name: Verify real outputs
+        run: |
+          test -s results/results.json
+          test -s results/evolution_history.json
+          test -s results/llm_output.txt
+          test -s results/stable_diffusion_result.png
+          test -s results/state/best_genome.npz
+          ls -lh results
+          cat results/results.json
+
+      - name: Commit evolved checkpoint and generated results
+        run: |
+          git config user.name 'flybrain-evolution-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -f results/results.json results/evolution_history.json results/llm_output.txt results/stable_diffusion_result.png results/stable_diffusion_result_512.png results/state/best_genome.npz
+          git diff --cached --quiet && exit 0
+          git commit -m 'FlyBrain evolution run: persist checkpoint and generated outputs'
+          git push origin HEAD:flybrain-ai-evolution-20260929
+
+      - name: Upload full result artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flybrain-ai-evolution-results
+          path: results/
+          if-no-files-found: warn
+          retention-days: 14
