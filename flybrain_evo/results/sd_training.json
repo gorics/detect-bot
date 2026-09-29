@@ -1,0 +1,19 @@
+{
+  "model": "diffusers/tiny-stable-diffusion-torch",
+  "training": "full_unet_self_distillation",
+  "steps": 8,
+  "losses": [
+    1.1337248086929321,
+    1.0982725620269775,
+    1.025132656097412,
+    1.0350319147109985,
+    1.0822030305862427,
+    1.011405348777771,
+    1.0124191045761108,
+    0.9505173563957214
+  ],
+  "first_loss": 1.1337248086929321,
+  "last_loss": 0.9505173563957214,
+  "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses",
+  "before_image": "flybrain_evo/results/sd_before_training.png"
+}

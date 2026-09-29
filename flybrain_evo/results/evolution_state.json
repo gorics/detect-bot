@@ -1,0 +1,296 @@
+{
+  "best_genome": {
+    "guidance": 5.338277352618484,
+    "steps": 1,
+    "seed": 319330618,
+    "mods": [
+      "microscopic",
+      "neural",
+      "electric",
+      "anatomical"
+    ]
+  },
+  "final_prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric, anatomical",
+  "final_image": "flybrain_evo/results/flybrain_sd_final.png",
+  "history": [
+    {
+      "generation": 1,
+      "candidate": 0,
+      "score": 0.842795278886402,
+      "metrics": {
+        "edge": 0.13650956749916077,
+        "variance": 0.02657138742506504,
+        "mean": 0.5083263516426086,
+        "entropy": 0.6781840576976277
+      },
+      "genome": {
+        "guidance": 5.0,
+        "steps": 2,
+        "seed": 20260929,
+        "mods": [
+          "microscopic",
+          "neural"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g1_p0_+0.84280.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural"
+    },
+    {
+      "generation": 1,
+      "candidate": 1,
+      "score": 0.8414878618584739,
+      "metrics": {
+        "edge": 0.13703638315200806,
+        "variance": 0.026767587289214134,
+        "mean": 0.5080857276916504,
+        "entropy": 0.6745661196202054
+      },
+      "genome": {
+        "guidance": 5.445390096645934,
+        "steps": 2,
+        "seed": 1685177090,
+        "mods": [
+          "microscopic",
+          "neural",
+          "surreal"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g1_p1_+0.84149.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, surreal"
+    },
+    {
+      "generation": 1,
+      "candidate": 2,
+      "score": 0.8789948335524306,
+      "metrics": {
+        "edge": 0.15044188499450684,
+        "variance": 0.027234911918640137,
+        "mean": 0.5085184574127197,
+        "entropy": 0.68431644694771
+      },
+      "genome": {
+        "guidance": 4.995450896101696,
+        "steps": 1,
+        "seed": 605579951,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g1_p2_+0.87899.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric"
+    },
+    {
+      "generation": 1,
+      "candidate": 3,
+      "score": 0.8615378596579109,
+      "metrics": {
+        "edge": 0.14479361474514008,
+        "variance": 0.027007577940821648,
+        "mean": 0.5083324313163757,
+        "entropy": 0.6781829476357027
+      },
+      "genome": {
+        "guidance": 5.38571892304537,
+        "steps": 1,
+        "seed": 1472641993,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g1_p3_+0.86154.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric"
+    },
+    {
+      "generation": 2,
+      "candidate": 0,
+      "score": 0.8789948335524306,
+      "metrics": {
+        "edge": 0.15044188499450684,
+        "variance": 0.027234911918640137,
+        "mean": 0.5085184574127197,
+        "entropy": 0.68431644694771
+      },
+      "genome": {
+        "guidance": 4.995450896101696,
+        "steps": 1,
+        "seed": 605579951,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g2_p0_+0.87899.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric"
+    },
+    {
+      "generation": 2,
+      "candidate": 1,
+      "score": 0.874344228885464,
+      "metrics": {
+        "edge": 0.14789527654647827,
+        "variance": 0.0275131706148386,
+        "mean": 0.5082995295524597,
+        "entropy": 0.6848700484415227
+      },
+      "genome": {
+        "guidance": 4.85481716949311,
+        "steps": 1,
+        "seed": 1395090027,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric",
+          "macro photography"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g2_p1_+0.87434.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric, macro photography"
+    },
+    {
+      "generation": 2,
+      "candidate": 2,
+      "score": 0.8502165634949845,
+      "metrics": {
+        "edge": 0.13949547708034515,
+        "variance": 0.026478761807084084,
+        "mean": 0.5083215236663818,
+        "entropy": 0.6793835225608433
+      },
+      "genome": {
+        "guidance": 5.198529000128768,
+        "steps": 2,
+        "seed": 635219365,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric",
+          "high detail"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g2_p2_+0.85022.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric, high detail"
+    },
+    {
+      "generation": 2,
+      "candidate": 3,
+      "score": 0.8542727559976059,
+      "metrics": {
+        "edge": 0.1401117891073227,
+        "variance": 0.026281530037522316,
+        "mean": 0.5083658695220947,
+        "entropy": 0.6830990986249873
+      },
+      "genome": {
+        "guidance": 5.272148665010918,
+        "steps": 2,
+        "seed": 1192691707,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric",
+          "anatomical"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g2_p3_+0.85427.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric, anatomical"
+    },
+    {
+      "generation": 3,
+      "candidate": 0,
+      "score": 0.8789948335524306,
+      "metrics": {
+        "edge": 0.15044188499450684,
+        "variance": 0.027234911918640137,
+        "mean": 0.5085184574127197,
+        "entropy": 0.68431644694771
+      },
+      "genome": {
+        "guidance": 4.995450896101696,
+        "steps": 1,
+        "seed": 605579951,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g3_p0_+0.87899.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric"
+    },
+    {
+      "generation": 3,
+      "candidate": 1,
+      "score": 0.8795464636937832,
+      "metrics": {
+        "edge": 0.15102286636829376,
+        "variance": 0.02766972780227661,
+        "mean": 0.5084348320960999,
+        "entropy": 0.6826724367044121
+      },
+      "genome": {
+        "guidance": 5.338277352618484,
+        "steps": 1,
+        "seed": 319330618,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric",
+          "anatomical"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g3_p1_+0.87955.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric, anatomical"
+    },
+    {
+      "generation": 3,
+      "candidate": 2,
+      "score": 0.8581521881143473,
+      "metrics": {
+        "edge": 0.14183202385902405,
+        "variance": 0.02704492025077343,
+        "mean": 0.5078974366188049,
+        "entropy": 0.6816042249805689
+      },
+      "genome": {
+        "guidance": 4.4299061953006085,
+        "steps": 2,
+        "seed": 1227962502,
+        "mods": [
+          "microscopic",
+          "neural"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g3_p2_+0.85815.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural"
+    },
+    {
+      "generation": 3,
+      "candidate": 3,
+      "score": 0.8756836367726244,
+      "metrics": {
+        "edge": 0.15033134818077087,
+        "variance": 0.0270477756857872,
+        "mean": 0.5086081027984619,
+        "entropy": 0.6808517769457476
+      },
+      "genome": {
+        "guidance": 5.622227134216451,
+        "steps": 1,
+        "seed": 1980227963,
+        "mods": [
+          "microscopic",
+          "neural",
+          "electric",
+          "dark background"
+        ]
+      },
+      "image": "flybrain_evo/results/evolution_candidates/g3_p3_+0.87568.png",
+      "prompt": "scientific neural visualization of a drosophila connectome, food odor sensory response, brain activity groups OLF_ORN_FOOD, OLF_LN, OLF_PN, microscopic branching neurons, glowing synapses, microscopic, neural, electric, dark background"
+    }
+  ]
+}
