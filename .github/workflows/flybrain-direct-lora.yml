@@ -1,4 +1,4 @@
-# FlyBrain recursive LoRA evolution runner
+# FlyBrain recursive LoRA evolution runner - resumed generation trigger
 name: FlyBrain Direct LoRA Training
 
 on:
