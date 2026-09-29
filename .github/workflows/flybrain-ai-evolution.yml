@@ -1,4 +1,4 @@
-# FlyBrain AI evolution runner - trigger 2026-09-29
+# FlyBrain AI evolution runner - SD1.5 quality pass
 name: FlyBrain AI Evolution
 
 on:
@@ -18,9 +18,10 @@ jobs:
     timeout-minutes: 60
     env:
       HF_HUB_DISABLE_TELEMETRY: '1'
+      HF_HUB_DISABLE_XET: '1'
       TOKENIZERS_PARALLELISM: 'false'
       FLY_LLM: HuggingFaceTB/SmolLM2-135M-Instruct
-      FLY_SD: segmind/tiny-sd
+      FLY_SD: stable-diffusion-v1-5/stable-diffusion-v1-5
     steps:
       - name: Checkout evolution branch
         uses: actions/checkout@v4
@@ -53,6 +54,7 @@ jobs:
       - name: Evolve connectome controller and run open models
         run: |
           mkdir -p results
+          sed -i 's/num_inference_steps=6/num_inference_steps=12/' flybrain_ai_evolution.py
           python flybrain_ai_evolution.py --flybrain external/flybrain --out results --generations 120 --population 96 --stimulus food | tee results/run.log
 
       - name: Verify real outputs
@@ -67,11 +69,12 @@ jobs:
 
       - name: Commit evolved checkpoint and generated results
         run: |
+          git checkout -- flybrain_ai_evolution.py
           git config user.name 'flybrain-evolution-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add -f results/results.json results/evolution_history.json results/llm_output.txt results/stable_diffusion_result.png results/stable_diffusion_result_512.png results/state/best_genome.npz
           git diff --cached --quiet && exit 0
-          git commit -m 'FlyBrain evolution run: persist checkpoint and generated outputs'
+          git commit -m 'FlyBrain evolution run: persist checkpoint and SD1.5 outputs'
           git push origin HEAD:flybrain-ai-evolution-20260929
 
       - name: Upload full result artifact
