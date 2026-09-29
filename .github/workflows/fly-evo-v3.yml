@@ -1,0 +1,102 @@
+name: Fly Neuroevolution v3 Strong Models
+
+on:
+  push:
+    branches: [fly-evo-open-models]
+    paths:
+      - 'fly_evo_v3.py'
+      - '.github/workflows/fly-evo-v3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fly-evo-v3-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  evolve-v3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fly-evo-open-models
+          fetch-depth: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch and verify real FlyBrain
+        run: |
+          set -euxo pipefail
+          rm -rf /tmp/flybrain
+          git clone --depth 1 https://github.com/snedea/flybrain.git /tmp/flybrain
+          node /tmp/flybrain/tests/run-node.js
+          test -s /tmp/flybrain/data/connectome.bin.gz
+
+      - name: Install CPU inference stack
+        run: |
+          set -euxo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          python -m pip install 'transformers>=4.45,<5' 'diffusers>=0.31,<1' 'accelerate>=1,<2' safetensors pillow numpy sentencepiece ftfy
+
+      - name: Run generations 9-12 with stronger open models
+        env:
+          FLY_CONNECTOME: /tmp/flybrain/data/connectome.bin.gz
+          HF_HOME: /tmp/hf_cache
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: |
+          set -euxo pipefail
+          rm -rf fly-evo-v3-results
+          python fly_evo_v3.py | tee fly-evo-v3-live.log
+
+      - name: Validate real v3 outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('fly-evo-v3-results/result.json').read_text(encoding='utf-8'))
+          print(json.dumps(r,ensure_ascii=False,indent=2))
+          assert r['status']=='SUCCESS'
+          assert r['generation_start'] >= 8
+          assert r['generation_end'] == r['generation_start'] + 4
+          assert r['connectome']['neurons']==139255
+          assert r['connectome']['edges']==2698236
+          assert r['upgrade']['llm_to']=='Qwen/Qwen2.5-1.5B-Instruct'
+          assert r['upgrade']['sd_to']=='stabilityai/sd-turbo'
+          assert r['upgrade']['semantic_evaluator']=='openai/clip-vit-base-patch32'
+          assert Path('fly-evo-v3-results/llm_evolved.txt').stat().st_size>80
+          assert Path('fly-evo-v3-results/sd_selected.png').stat().st_size>5000
+          assert Path('fly-evo-v3-results/sd_contact_sheet.png').stat().st_size>5000
+          PY
+
+      - name: Upload v3 artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fly-evo-v3-results
+          path: |
+            fly-evo-v3-results/
+            fly-evo-v3-live.log
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Persist v3 champion state
+        if: success()
+        run: |
+          set -euxo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fly-evo-v3-results fly-evo-v3-live.log
+          git commit -m 'Persist Fly v3 generation champion [skip ci]' || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin fly-evo-open-models || true
+            if git push origin HEAD:fly-evo-open-models; then exit 0; fi
+            sleep $((i*2))
+          done
+          exit 1
