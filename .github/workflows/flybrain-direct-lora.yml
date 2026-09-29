@@ -1,4 +1,4 @@
-# trigger: 2026-09-29 direct LoRA pass
+# FlyBrain recursive LoRA evolution runner
 name: FlyBrain Direct LoRA Training
 
 on:
@@ -11,6 +11,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: flybrain-direct-lora-evolution
+  cancel-in-progress: false
 
 jobs:
   train-lora:
@@ -47,27 +51,32 @@ jobs:
           test -s external/flybrain/data/connectome.bin.gz
           test -s results/state/best_genome.npz
 
-      - name: Train actual LLM LoRA and Stable Diffusion LoRA
+      - name: Continue actual LLM and Stable Diffusion LoRA training
         run: |
-          rm -rf lora_results
-          python flybrain_direct_lora.py --flybrain external/flybrain --out lora_results --sd-steps 18 | tee lora_results_run.log
+          mkdir -p lora_results
+          python flybrain_direct_lora.py --flybrain external/flybrain --out lora_results --sd-steps 36 | tee lora_results_run.log
 
-      - name: Verify optimized adapter artifacts
+      - name: Verify optimized adapter artifacts and validation
         run: |
           test -s lora_results/lora_results.json
           test -s lora_results/llm_lora/adapter_model.safetensors
           test -s lora_results/sd_unet_lora.pt
+          test -s lora_results/sd_base_result.png
           test -s lora_results/sd_lora_result.png
+          test -s lora_results/sd_validation.json
+          test -s lora_results/llm_holdout_before.json
+          test -s lora_results/llm_holdout_after.json
           cat lora_results/lora_results.json
           find lora_results -maxdepth 3 -type f -printf '%p %k KB\n'
 
-      - name: Persist new adapters and metrics
+      - name: Persist next-generation adapters and metrics
         run: |
           git config user.name 'flybrain-lora-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add -f lora_results/lora_results.json lora_results/llm_before.txt lora_results/llm_after.txt lora_results/training_examples.json lora_results/llm_lora/adapter_config.json lora_results/llm_lora/adapter_model.safetensors lora_results/sd_unet_lora.pt lora_results/sd_lora_result.png
+          git add -f lora_results/
           git diff --cached --quiet && exit 0
-          git commit -m 'Persist FlyBrain-trained LLM and Stable Diffusion LoRA adapters'
+          git commit -m 'FlyBrain recursive LoRA generation: persist improved adapters'
+          git pull --rebase origin flybrain-ai-evolution-20260929
           git push origin HEAD:flybrain-ai-evolution-20260929
 
       - name: Upload complete LoRA results
