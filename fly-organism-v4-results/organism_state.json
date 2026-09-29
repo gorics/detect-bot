@@ -1,11 +1,11 @@
 {
   "status": "SUCCESS",
-  "generation": 13,
-  "champion_generation": 13,
-  "fitness": 0.6747849925410445,
+  "generation": 14,
+  "champion_generation": 14,
+  "fitness": 0.6944520528592202,
   "improved": true,
   "genome": {
-    "generation": 13,
+    "generation": 14,
     "active_neo": 3,
     "mutations": [
       {
@@ -320,20 +320,20 @@
     "structure_evolves": true
   },
   "last_best": {
-    "fitness": 0.6747849925410445,
-    "text_score": 0.6810857142857143,
+    "fitness": 0.6944520528592202,
+    "text_score": 0.7563753246753246,
     "vision": {
-      "clip_cosine": 0.24794739484786987,
-      "score": 0.7066994839906693,
-      "guidance": 6.098780632019043
+      "clip_cosine": 0.2131131887435913,
+      "score": 0.6931141436100007,
+      "guidance": 6.082849979400635
     },
-    "integration": 0.6908314824104309,
+    "integration": 0.6751754879951477,
     "structure": {
       "mutations": 55,
       "active_neo": 3,
       "nonzero_edges": 329
     },
-    "text": "초파리, LLM, Stable Diffusion는 신생뉴런과 구조변이의 이해와 연계를 위해 사용되는 계산 유기체로, 신생뉴런은 이들의 특성을 알고 있어야 합니다. \n\n새로운 신생뉴런은 신생뉴런의 종류, 성형, 수용력 등에 대한 정보를 얻고 있습니다. 이러한 정보는 LLM에서 제공하고, 이를 통해 신생뉴런의 신생ness를 결정합니다.\n\n稳定差分"
+    "text": "초파리,connectome, LLM은 신생 신호 기반 언어 학습 및 생성 모델로, 이 모델은 뉴런과 연결된 신호를 사용하여 새로운 정보를 생성하고 이해하는 기법을 제시한다. LLM은 이 신호 기반 기술을 활용하여 다양한 분야에서의 대화와 정보 제공에 도움이 될 수 있다.\n\n稳定 diffusion는 신생 빛학습 모델인 Stable Diffusion, 뒤로"
   },
-  "elapsed_seconds": 149.12444734573364
+  "elapsed_seconds": 135.990816116333
 }
