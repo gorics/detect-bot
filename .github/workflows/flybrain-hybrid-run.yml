@@ -1,0 +1,87 @@
+name: FlyBrain Hybrid Real Run
+
+on:
+  push:
+    branches:
+      - flybrain-hybrid-run
+    paths:
+      - flybrain_ai/full_run.py
+      - .github/workflows/flybrain-hybrid-run.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  train-and-infer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      HF_HUB_DISABLE_XET: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+    steps:
+      - name: Checkout experiment branch
+        uses: actions/checkout@v4
+        with:
+          ref: flybrain-hybrid-run
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CPU ML stack
+        run: |
+          python -m pip install --upgrade pip
+          pip install --index-url https://download.pytorch.org/whl/cpu torch
+          pip install 'transformers>=4.48,<5' 'diffusers>=0.33,<1' accelerate safetensors sentencepiece pillow numpy huggingface_hub
+
+      - name: Fetch open-source FlyBrain
+        run: |
+          git clone --depth 1 https://github.com/snedea/flybrain.git flybrain-src
+          git -C flybrain-src rev-parse HEAD | tee flybrain_upstream_commit.txt
+          python - <<'PY'
+          import gzip,struct,json
+          from pathlib import Path
+          raw=gzip.decompress(Path('flybrain-src/data/connectome.bin.gz').read_bytes())
+          n,e=struct.unpack_from('<II',raw,0)
+          meta=json.loads(Path('flybrain-src/data/neuron_meta.json').read_text())
+          print('upstream connectome:',n,e,'metadata:',meta['neuron_count'],meta['edge_count'])
+          assert n==meta['neuron_count'] and e==meta['edge_count']
+          PY
+
+      - name: Train adapters and run LLM plus Stable Diffusion
+        run: |
+          python flybrain_ai/full_run.py 2>&1 | tee flybrain_run.log
+
+      - name: Upload binary results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flybrain-hybrid-real-${{ github.run_id }}
+          path: |
+            flybrain_ai/results/**
+            flybrain_run.log
+            flybrain_upstream_commit.txt
+          if-no-files-found: warn
+          retention-days: 3
+
+      - name: Persist downloadable text/base64 results
+        if: always()
+        run: |
+          target='run-output/flybrain-hybrid/latest'
+          rm -rf "$target"
+          mkdir -p "$target"
+          for f in results.json sd_flybrain.png.b64 sd_baseline.png.b64 llm_prefix_adapter.pt.b64 sd_condition_adapter.pt.b64; do
+            if [ -f "flybrain_ai/results/$f" ]; then cp "flybrain_ai/results/$f" "$target/$f"; fi
+          done
+          cp flybrain_run.log "$target/run.log" 2>/dev/null || true
+          cp flybrain_upstream_commit.txt "$target/upstream_commit.txt" 2>/dev/null || true
+          echo -n "$GITHUB_RUN_ID" > "$target/run_id.txt"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$target"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Persist FlyBrain hybrid run outputs [skip ci]'
+          git push origin HEAD:flybrain-hybrid-run
