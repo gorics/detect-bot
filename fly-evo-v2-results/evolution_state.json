@@ -1,0 +1,30 @@
+{
+  "llm": {
+    "score": 0.653720238095238,
+    "text": "초파리 FlyWire Connectome을 사용하여 오픈소스 LLM과 Stable Diffusion을 결합한 진화형 AI 한 사이클은 다음과 같이 구성됩니다:\n\n1. **초파리 FlyWire Connectome** (단계 1): 초파리 FlyWire Connectome를 이용해 인공지능의 뇌 활성화를 수행합니다.\n\n2. **블록 학습** (단계 2): LLM의 훈련 데이터를 바탕으로 뇌 활성화에 대한 신경망을 학습합니다.\n\n3. **생성** (단계 3): 학습된",
+    "genes": {
+      "temperature": 0.6874475333660485,
+      "top_p": 0.8271788171467277,
+      "rep": 1.0686693410574564,
+      "max_new": 140
+    },
+    "model": "Qwen/Qwen2.5-0.5B-Instruct"
+  },
+  "generation": 4,
+  "sd": {
+    "score": 0.7538277150921746,
+    "metrics": {
+      "entropy": 0.9448757410820076,
+      "contrast": 0.2614836096763611,
+      "edge": 0.03494192659854889,
+      "saturation": 0.15218207240104675,
+      "score": 0.7538277150921746
+    },
+    "genes": {
+      "guidance": 7.089127029969833,
+      "steps": 7,
+      "seed": 683216346
+    },
+    "model": "segmind/tiny-sd"
+  }
+}

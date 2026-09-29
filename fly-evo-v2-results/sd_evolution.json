@@ -1,0 +1,131 @@
+{
+  "model": "segmind/tiny-sd",
+  "prompt": "macro photograph of a Drosophila fruit fly, transparent head revealing an intricate scientific neural connectome, glowing synapses, biological anatomy, dark laboratory background, sharp focus, high detail",
+  "records": [
+    {
+      "generation": 1,
+      "candidate": 0,
+      "genes": {
+        "guidance": 6.415193019423065,
+        "steps": 6,
+        "seed": 20268541
+      },
+      "metrics": {
+        "entropy": 0.9343170144303232,
+        "contrast": 0.2014799565076828,
+        "edge": 0.013694994151592255,
+        "saturation": 0.1528211385011673,
+        "score": 0.6600307030422565
+      }
+    },
+    {
+      "generation": 1,
+      "candidate": 1,
+      "genes": {
+        "guidance": 7.066102024258573,
+        "steps": 7,
+        "seed": 753646585
+      },
+      "metrics": {
+        "entropy": 0.7853633605951931,
+        "contrast": 0.13716715574264526,
+        "edge": 0.0069976793602108955,
+        "saturation": 0.16771507263183594,
+        "score": 0.5398388950549771
+      }
+    },
+    {
+      "generation": 1,
+      "candidate": 2,
+      "genes": {
+        "guidance": 7.008174660627744,
+        "steps": 5,
+        "seed": 1382713453
+      },
+      "metrics": {
+        "entropy": 0.9217308007502281,
+        "contrast": 0.217872753739357,
+        "edge": 0.007753157988190651,
+        "saturation": 0.1464802324771881,
+        "score": 0.6562548796370246
+      }
+    },
+    {
+      "generation": 2,
+      "candidate": 0,
+      "genes": {
+        "guidance": 7.089127029969833,
+        "steps": 7,
+        "seed": 683216346
+      },
+      "metrics": {
+        "entropy": 0.9448757410820076,
+        "contrast": 0.2614836096763611,
+        "edge": 0.03494192659854889,
+        "saturation": 0.15218207240104675,
+        "score": 0.7538277150921746
+      }
+    },
+    {
+      "generation": 2,
+      "candidate": 1,
+      "genes": {
+        "guidance": 6.778153688934852,
+        "steps": 5,
+        "seed": 172847138
+      },
+      "metrics": {
+        "entropy": 0.8173913574762667,
+        "contrast": 0.19561901688575745,
+        "edge": 0.016383051872253418,
+        "saturation": 0.17157305777072906,
+        "score": 0.6394091141685105
+      }
+    },
+    {
+      "generation": 3,
+      "candidate": 0,
+      "genes": {
+        "guidance": 6.4409597270098455,
+        "steps": 8,
+        "seed": 2001199982
+      },
+      "metrics": {
+        "entropy": 0.930589861817325,
+        "contrast": 0.2992370128631592,
+        "edge": 0.031724829226732254,
+        "saturation": 0.10933784395456314,
+        "score": 0.7080280994689956
+      }
+    },
+    {
+      "generation": 3,
+      "candidate": 1,
+      "genes": {
+        "guidance": 7.733216790129999,
+        "steps": 6,
+        "seed": 254828278
+      },
+      "metrics": {
+        "entropy": 0.835964697839379,
+        "contrast": 0.17286710441112518,
+        "edge": 0.010987200774252415,
+        "saturation": 0.1019083708524704,
+        "score": 0.5515128002383738
+      }
+    }
+  ],
+  "best_score": 0.7538277150921746,
+  "best_genes": {
+    "guidance": 7.089127029969833,
+    "steps": 7,
+    "seed": 683216346
+  },
+  "best_metrics": {
+    "entropy": 0.9448757410820076,
+    "contrast": 0.2614836096763611,
+    "edge": 0.03494192659854889,
+    "saturation": 0.15218207240104675,
+    "score": 0.7538277150921746
+  }
+}

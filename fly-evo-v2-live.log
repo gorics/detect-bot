@@ -1,0 +1,57 @@
+LLM_GEN 1 BEST_EVER 0.6263884711779448
+LLM_GEN 2 BEST_EVER 0.653720238095238
+LLM_GEN 3 BEST_EVER 0.653720238095238
+LLM_GEN 4 BEST_EVER 0.653720238095238
+SD_GEN 1 BEST_EVER 0.6600307030422565
+SD_GEN 2 BEST_EVER 0.7538277150921746
+SD_GEN 3 BEST_EVER 0.7538277150921746
+{
+  "status": "SUCCESS",
+  "connectome": {
+    "neurons": 139255,
+    "edges": 2698236,
+    "group_slots": 63,
+    "populated_group_ids": 61,
+    "region_counts": {
+      "0": 103847,
+      "1": 35252,
+      "2": 80,
+      "3": 76
+    },
+    "brain_signature": [
+      0.16179773016193008,
+      0.34714506768696207,
+      0.9990876940297313,
+      -0.4896112075661082,
+      0.3170155716327962,
+      0.4908417999152094,
+      0.011700732872693345,
+      0.41352197830446363
+    ]
+  },
+  "before": {
+    "generation": 0,
+    "llm_score": -1.0,
+    "sd_score": -1.0
+  },
+  "after": {
+    "generation": 4,
+    "llm_score": 0.653720238095238,
+    "sd_score": 0.7538277150921746
+  },
+  "llm_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "stable_diffusion_model": "segmind/tiny-sd",
+  "llm_champion_genes": {
+    "temperature": 0.6874475333660485,
+    "top_p": 0.8271788171467277,
+    "rep": 1.0686693410574564,
+    "max_new": 140
+  },
+  "sd_champion_genes": {
+    "guidance": 7.089127029969833,
+    "steps": 7,
+    "seed": 683216346
+  },
+  "elapsed_seconds": 337.97445940971375,
+  "learning": "base LLM/SD weights frozen; connectome-conditioned controller evolves with strict best-ever elitism; state persists across runs"
+}
