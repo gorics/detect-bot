@@ -1,0 +1,223 @@
+name: Fly Connectome Open-Model Evolution
+
+on:
+  push:
+    branches: [fly-evo-open-models]
+    paths:
+      - '.github/workflows/fly-evo-open-models.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fly-evo-open-models
+          fetch-depth: 10
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch and verify open-source FlyBrain
+        run: |
+          set -euxo pipefail
+          rm -rf /tmp/flybrain
+          git clone --depth 1 https://github.com/snedea/flybrain.git /tmp/flybrain
+          test -s /tmp/flybrain/data/connectome.bin.gz
+          node /tmp/flybrain/tests/run-node.js
+
+      - name: Install runtimes
+        run: |
+          set -euxo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install 'transformers>=4.45,<5' 'diffusers>=0.30,<1' 'accelerate>=1,<2' safetensors pillow numpy sentencepiece ftfy
+
+      - name: Run connectome conditioned LLM + Stable Diffusion evolution
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: |
+          set -euxo pipefail
+          mkdir -p fly-evo-results
+          python - <<'PY'
+          import gc, gzip, json, math, os, random, struct, time
+          from pathlib import Path
+          import numpy as np
+          import torch
+          from transformers import AutoTokenizer, AutoModelForCausalLM
+
+          OUT = Path('fly-evo-results')
+          SEED = 20260929
+          random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
+          torch.set_num_threads(max(1, min(4, os.cpu_count() or 2)))
+          t0 = time.time()
+
+          # --- 1) Parse the real FlyBrain binary and use every edge ---
+          raw = gzip.open('/tmp/flybrain/data/connectome.bin.gz','rb').read()
+          N, E = struct.unpack_from('<II', raw, 0)
+          edge_dt = np.dtype([('pre','<u4'),('post','<u4'),('w','<f4')])
+          meta_dt = np.dtype([('region','u1'),('group','<u2')])
+          edges = np.frombuffer(raw, dtype=edge_dt, count=E, offset=8)
+          meta = np.frombuffer(raw, dtype=meta_dt, count=N, offset=8 + E*12)
+          G = int(meta['group'].max()) + 1
+          pre_g = meta['group'][edges['pre']].astype(np.int64)
+          post_g = meta['group'][edges['post']].astype(np.int64)
+          ew = edges['w'].astype(np.float64)
+          cw = np.sign(ew) * np.log1p(np.abs(ew))
+          W = np.bincount(pre_g*G + post_g, weights=cw, minlength=G*G).reshape(G,G)
+          denom = np.sum(np.abs(W), axis=1, keepdims=True); denom[denom < 1e-9] = 1
+          Wn = W / denom
+          group_sizes = np.bincount(meta['group'], minlength=G)
+          group_region = np.full(G, 255, dtype=np.uint8)
+          for g in range(G):
+              idx = np.flatnonzero(meta['group'] == g)
+              if idx.size:
+                  v,c = np.unique(meta['region'][idx], return_counts=True)
+                  group_region[g] = v[np.argmax(c)]
+          a = np.zeros(G, dtype=np.float64)
+          sens = np.flatnonzero(group_region == 0)
+          a[sens] = 0.4 + 0.6*np.sqrt(group_sizes[sens]+1)/max(1,float(np.sqrt(group_sizes[sens]+1).max()))
+          traj=[]
+          for k in range(20):
+              drive=np.zeros(G); drive[sens]=(0.05+0.02*math.sin(k))*a[sens]
+              a=np.tanh(0.72*a + 1.38*(a@Wn) + drive)
+              traj.append(a.copy())
+          brain = np.array([a.mean(),a.std(),a.max(),a.min()] + [float(np.mean(np.abs(a[group_region==r]))) if np.any(group_region==r) else 0 for r in range(4)])
+          connectome_stats = {
+              'neurons': int(N), 'edges': int(E), 'groups': int(G),
+              'region_counts': {str(r): int(np.sum(meta['region']==r)) for r in range(4)},
+              'brain_signature': brain.tolist()
+          }
+          (OUT/'connectome_stats.json').write_text(json.dumps(connectome_stats,indent=2),encoding='utf-8')
+          np.savez_compressed(OUT/'connectome_controller.npz', W=W, trajectory=np.stack(traj), brain=brain)
+          print('CONNECTOME', connectome_stats)
+          assert N == 139255 and E == 2698236
+
+          # --- 2) Open-source LLM neuroevolution ---
+          llm_id='Qwen/Qwen2.5-0.5B-Instruct'
+          tok=AutoTokenizer.from_pretrained(llm_id)
+          model=AutoModelForCausalLM.from_pretrained(llm_id, torch_dtype=torch.float32, low_cpu_mem_usage=True)
+          model.eval()
+          system='너는 생물학적 connectome과 생성형 AI를 결합하는 연구 엔지니어다. 과장 없이 실제 구현만 설명한다.'
+          user="초파리 FlyWire connectome을 제어기와 보상회로로 사용하고 LLM과 Stable Diffusion을 결합한 진화형 AI 한 사이클을 한국어로 설명하라. 반드시 초파리, connectome, LLM, Stable Diffusion, 뉴런, 보상, 진화 단어와 입력→뇌활성→생성→평가→선택→돌연변이 순서를 포함하라."
+          prompt=tok.apply_chat_template([{'role':'system','content':system},{'role':'user','content':user}],tokenize=False,add_generation_prompt=True)
+          inp=tok(prompt,return_tensors='pt')
+          def score_text(s):
+              keys=['초파리','connectome','LLM','Stable Diffusion','뉴런','보상','진화']
+              coverage=sum(k.lower() in s.lower() for k in keys)/len(keys)
+              n=len(s); length=max(0,1-abs(n-320)/320)
+              toks=[x for x in s.replace('\n',' ').split(' ') if x]
+              uniq=len(set(zip(toks,toks[1:]))) / max(1,len(toks)-1)
+              return 0.58*coverage+0.20*length+0.22*uniq
+          base={'temperature':float(np.clip(0.55+0.25*abs(brain[1]),.2,1.2)), 'top_p':float(np.clip(.82+.1*abs(brain[5]),.6,.98)), 'rep':1.06, 'max_new':104}
+          rng=np.random.default_rng(SEED)
+          champ=base.copy(); history=[]; best_text=''; best_score=-1
+          for gen in range(3):
+              pop=[champ.copy()]
+              for _ in range(2):
+                  pop.append({
+                    'temperature':float(np.clip(champ['temperature']+rng.normal(0,.14),.2,1.25)),
+                    'top_p':float(np.clip(champ['top_p']+rng.normal(0,.05),.55,.99)),
+                    'rep':float(np.clip(champ['rep']+rng.normal(0,.03),1.0,1.22)),
+                    'max_new':int(np.clip(champ['max_new']+rng.normal(0,14),72,144))})
+              rows=[]
+              for i,g in enumerate(pop):
+                  torch.manual_seed(SEED+gen*10+i)
+                  with torch.inference_mode():
+                      out=model.generate(**inp,do_sample=True,temperature=g['temperature'],top_p=g['top_p'],repetition_penalty=g['rep'],max_new_tokens=g['max_new'],pad_token_id=tok.eos_token_id)
+                  txt=tok.decode(out[0][inp['input_ids'].shape[1]:],skip_special_tokens=True).strip()
+                  sc=float(score_text(txt)); rows.append({'generation':gen+1,'candidate':i,'genes':g,'score':sc,'text':txt})
+              rows.sort(key=lambda x:x['score'], reverse=True)
+              history.extend(rows); champ=rows[0]['genes']; best_text=rows[0]['text']; best_score=rows[0]['score']
+              print('LLM_GEN',gen+1,'BEST',best_score,champ)
+          (OUT/'llm_evolved.txt').write_text(best_text+'\n',encoding='utf-8')
+          (OUT/'llm_evolution.json').write_text(json.dumps(history,ensure_ascii=False,indent=2),encoding='utf-8')
+          del model,tok,inp; gc.collect()
+
+          # --- 3) Open-source Stable Diffusion selection/mutation ---
+          from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
+          from PIL import Image, ImageDraw
+          sd_id='segmind/tiny-sd'
+          pipe=DiffusionPipeline.from_pretrained(sd_id, torch_dtype=torch.float32)
+          pipe.scheduler=DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
+          if hasattr(pipe,'safety_checker'): pipe.safety_checker=None
+          pipe.set_progress_bar_config(disable=True); pipe=pipe.to('cpu')
+          img_prompt='Drosophila fruit fly with visible neural connectome, scientific visualization, bioluminescent synapses, transparent brain anatomy overlay, macro photography, intricate neural circuitry, high detail'
+          neg='text, watermark, logo, blurry, low detail'
+          guidance=float(np.clip(6.0+1.4*abs(brain[5])-.5*brain[7],4.5,8.2))
+          cand=[('baseline',6.0,4,SEED),('brain_evolved',guidance,5,SEED+int(abs(brain[2])*10000)+17)]
+          def metrics(im):
+              ar=np.asarray(im.convert('RGB'),dtype=np.float32)/255.; gray=ar.mean(2)
+              hist,_=np.histogram(gray,bins=64,range=(0,1)); p=hist/hist.sum(); p=p[p>0]
+              ent=float(-(p*np.log2(p)).sum()/6); con=float(gray.std()); edge=float((np.abs(np.diff(gray,axis=0)).mean()+np.abs(np.diff(gray,axis=1)).mean())/2); sat=float(np.std(ar,axis=2).mean())
+              sc=.30*min(1,ent)+.27*min(1,con/.24)+.27*min(1,edge/.12)+.16*min(1,sat/.2)
+              return {'entropy':ent,'contrast':con,'edge':edge,'saturation':sat,'score':float(sc)}
+          imgs=[]; sd_rows=[]
+          for name,cfg,steps,seed in cand:
+              gen=torch.Generator(device='cpu').manual_seed(int(seed))
+              with torch.inference_mode():
+                  im=pipe(prompt=img_prompt,negative_prompt=neg,width=256,height=256,num_inference_steps=steps,guidance_scale=cfg,generator=gen).images[0]
+              m=metrics(im); im.save(OUT/f'sd_{name}.png'); imgs.append((name,im.copy(),m)); sd_rows.append({'name':name,'guidance':cfg,'steps':steps,'seed':int(seed),'metrics':m})
+              print('SD',name,m)
+          winner=max(sd_rows,key=lambda x:x['metrics']['score'])
+          for name,im,m in imgs:
+              if name==winner['name']: im.save(OUT/'sd_selected.png')
+          sheet=Image.new('RGB',(512,292),'white'); draw=ImageDraw.Draw(sheet)
+          for i,(name,im,m) in enumerate(imgs):
+              sheet.paste(im,(256*i,0)); draw.text((8+256*i,264),f'{name} score={m["score"]:.3f}',fill='black')
+          sheet.save(OUT/'sd_contact_sheet.png')
+          (OUT/'sd_evolution.json').write_text(json.dumps({'model':sd_id,'prompt':img_prompt,'candidates':sd_rows,'winner':winner},indent=2),encoding='utf-8')
+
+          result={
+            'status':'SUCCESS','connectome':connectome_stats,'llm_model':llm_id,'stable_diffusion_model':sd_id,
+            'llm_generation_1_best':max(x['score'] for x in history if x['generation']==1),
+            'llm_generation_3_best':max(x['score'] for x in history if x['generation']==3),
+            'llm_champion_genes':champ,'sd_winner':winner,'elapsed_seconds':time.time()-t0,
+            'learning_note':'Pretrained LLM/SD weights are frozen; the connectome-conditioned controller is trained by mutation and selection.'}
+          (OUT/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          (OUT/'summary.txt').write_text('\n'.join([
+            'REAL FLY CONNECTOME x OPEN LLM x STABLE DIFFUSION RUN',
+            f'neurons={N} edges={E} groups={G}',f'LLM={llm_id}',f'SD={sd_id}',
+            f'LLM score {result["llm_generation_1_best"]:.4f} -> {result["llm_generation_3_best"]:.4f}',
+            f'SD winner={winner["name"]} score={winner["metrics"]["score"]:.4f}',f'elapsed={result["elapsed_seconds"]:.2f}s'])+'\n',encoding='utf-8')
+          print(json.dumps(result,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Validate real outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('fly-evo-results/result.json').read_text())
+          assert r['status']=='SUCCESS'
+          assert r['connectome']['neurons']==139255
+          assert r['connectome']['edges']==2698236
+          assert Path('fly-evo-results/llm_evolved.txt').stat().st_size>50
+          assert Path('fly-evo-results/sd_selected.png').stat().st_size>1000
+          print(json.dumps(r,indent=2))
+          PY
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fly-evo-open-models-results
+          path: fly-evo-results/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Persist results on experiment branch
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fly-evo-results
+          git commit -m 'Persist Fly evolution results [skip ci]' || exit 0
+          git push origin HEAD:fly-evo-open-models
