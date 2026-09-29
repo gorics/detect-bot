@@ -9,32 +9,32 @@
   "evolution": {
     "generations": 120,
     "population": 96,
-    "resumed_checkpoint": false,
-    "initial_random_best_validation_accuracy": 0.43119266055045874,
-    "final_best_validation_accuracy": 0.9908256880733946,
+    "resumed_checkpoint": true,
+    "initial_random_best_validation_accuracy": 0.9908256880733946,
+    "final_best_validation_accuracy": 1.0,
     "first": {
       "generation": 0,
-      "train_best": 0.35234215885947046,
-      "validation_best": 0.43119266055045874,
-      "fitness_best": 0.352339022532475
+      "train_best": 1.0,
+      "validation_best": 0.9908256880733946,
+      "fitness_best": 0.9999315354143619
     },
     "last": {
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 0.9908256880733946,
-      "fitness_best": 0.9999315354143619
+      "fitness_best": 0.9999376586638391
     }
   },
   "demo": {
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.6741600036621094,
-      "touch": 0.0622030533850193,
-      "air": 0.04739587754011154,
-      "light": 0.0010104826651513577,
-      "warm": 0.1130547970533371,
-      "cool": 0.10217580944299698
+      "food": 0.663774847984314,
+      "touch": 0.0635518878698349,
+      "air": 0.05584721267223358,
+      "light": 0.001431667828001082,
+      "warm": 0.1190824955701828,
+      "cool": 0.09631183743476868
     },
     "top_groups": [
       {
@@ -116,17 +116,17 @@
     "output": "The likely next behavior in one factual sentence is to touch the food."
   },
   "stable_diffusion": {
-    "model": "segmind/tiny-sd",
+    "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 6.788698196411133,
+    "inference_seconds": 34.325896978378296,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
     "trained": "connectome-to-semantic evolutionary readout/controller",
     "frozen_base_models": [
       "HuggingFaceTB/SmolLM2-135M-Instruct",
-      "segmind/tiny-sd"
+      "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 24.076066493988037
+  "total_seconds": 81.26318645477295
 }
