@@ -36,44 +36,44 @@ jobs:
           git -C external/flybrain rev-parse HEAD > flybrain_source_commit.txt
       - name: Execute exact 139k-neuron connectome worker
         run: |
-          rm -rf flybrain_evo/results_v3
-          mkdir -p flybrain_evo/results_v3
-          node flybrain_evo/run_flybrain_worker.cjs external/flybrain flybrain_evo/results_v3
-          cp flybrain_source_commit.txt flybrain_evo/results_v3/
-      - name: Continue elite lineage with structured LLM and SD evolution
+          rm -rf flybrain_evo/results_v4
+          mkdir -p flybrain_evo/results_v4
+          node flybrain_evo/run_flybrain_worker.cjs external/flybrain flybrain_evo/results_v4
+          cp flybrain_source_commit.txt flybrain_evo/results_v4/
+      - name: Continue generations from V3 elite
         env:
           TOKENIZERS_PARALLELISM: 'false'
         run: |
-          test -f flybrain_evo/results_v2/evolution_v2_state.json
-          python flybrain_evo/hybrid_v3.py \
-            --brain flybrain_evo/results_v3/flybrain_state.json \
+          test -f flybrain_evo/results_v3/evolution_v3_state.json
+          python flybrain_evo/hybrid_v4.py \
+            --brain flybrain_evo/results_v4/flybrain_state.json \
             --meta external/flybrain/data/neuron_meta.json \
-            --previous flybrain_evo/results_v2/evolution_v2_state.json \
-            --out flybrain_evo/results_v3 \
+            --previous flybrain_evo/results_v3/evolution_v3_state.json \
+            --out flybrain_evo/results_v4 \
             --generations 3 \
-            --population 6
-      - name: Upload full v3 result artifact
+            --population 8
+      - name: Upload full v4 result artifact
         uses: actions/upload-artifact@v4
         with:
-          name: flybrain-evo-v3-results
-          path: flybrain_evo/results_v3/
+          name: flybrain-evo-v4-results
+          path: flybrain_evo/results_v4/
           retention-days: 7
-      - name: Persist compact v3 results to experiment branch
+      - name: Persist compact v4 results to experiment branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -f \
-            flybrain_evo/results_v3/brain_v3_summary.json \
-            flybrain_evo/results_v3/llm_v3_output.txt \
-            flybrain_evo/results_v3/llm_v3_training.json \
-            flybrain_evo/results_v3/sd_v3_training.json \
-            flybrain_evo/results_v3/evolution_v3_state.json \
-            flybrain_evo/results_v3/run_report_v3.json \
-            flybrain_evo/results_v3/flybrain_state.json \
-            flybrain_evo/results_v3/flybrain_sd_v3_final.png \
-            flybrain_evo/results_v3/sd_v3_before.png \
-            flybrain_evo/results_v3/brain_condition_target_v3.png \
-            flybrain_evo/results_v3/flybrain_source_commit.txt
-          git commit -m 'Persist FlyBrain v3 recursive evolution results [skip ci]' || exit 0
+            flybrain_evo/results_v4/brain_v4_summary.json \
+            flybrain_evo/results_v4/llm_v3_output.txt \
+            flybrain_evo/results_v4/llm_v3_training.json \
+            flybrain_evo/results_v4/sd_v3_training.json \
+            flybrain_evo/results_v4/evolution_v4_state.json \
+            flybrain_evo/results_v4/run_report_v4.json \
+            flybrain_evo/results_v4/flybrain_state.json \
+            flybrain_evo/results_v4/flybrain_sd_v4_final.png \
+            flybrain_evo/results_v4/sd_v3_before.png \
+            flybrain_evo/results_v4/brain_condition_target_v3.png \
+            flybrain_evo/results_v4/flybrain_source_commit.txt
+          git commit -m 'Persist FlyBrain v4 continued evolution results [skip ci]' || exit 0
           git pull --rebase origin flybrain-evo-experiment
           git push origin HEAD:flybrain-evo-experiment
