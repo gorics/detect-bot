@@ -30,7 +30,9 @@ function finish() {
   if (done) return;
   done = true;
   w.postMessage({ type: 'stop' });
-  const groupCount = Math.max(63, groupId ? Math.max(...groupId) + 1 : 63);
+  let maxGroup = 62;
+  if (groupId) for (let i = 0; i < groupId.length; i++) if (groupId[i] > maxGroup) maxGroup = groupId[i];
+  const groupCount = Math.max(63, maxGroup + 1);
   const cumulative = new Array(groupCount).fill(0);
   for (const t of traces) t.groups.forEach((v, i) => { cumulative[i] += v || 0; });
   const result = {
