@@ -1,0 +1,109 @@
+name: Fly Organism v4 Continuous Structural Evolution
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fly-organism-v4-continuous.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fly-organism-v4-continuous
+  cancel-in-progress: false
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout evolving organism branch
+        uses: actions/checkout@v4
+        with:
+          ref: fly-evo-open-models
+          fetch-depth: 30
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache open models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: fly-organism-v4-qwen05-tinysd-clip-v1
+
+      - name: Fetch and verify real FlyBrain
+        run: |
+          set -euxo pipefail
+          rm -rf /tmp/flybrain
+          git clone --depth 1 https://github.com/snedea/flybrain.git /tmp/flybrain
+          node /tmp/flybrain/tests/run-node.js
+          test -s /tmp/flybrain/data/connectome.bin.gz
+
+      - name: Install inference runtime
+        run: |
+          set -euxo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          python -m pip install 'transformers>=4.45,<5' 'diffusers>=0.30,<1' 'accelerate>=1,<2' safetensors pillow numpy sentencepiece ftfy
+
+      - name: Evolve one structural generation
+        env:
+          FLY_CONNECTOME: /tmp/flybrain/data/connectome.bin.gz
+          FLY_V4_ROOT: .
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: |
+          set -euxo pipefail
+          python fly_organism_v4.py | tee fly-organism-v4-live.log
+
+      - name: Validate unified organism result
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('fly-organism-v4-results/latest_result.json')
+          r=json.loads(p.read_text(encoding='utf-8'))
+          print(json.dumps(r,ensure_ascii=False,indent=2))
+          assert r['status']=='SUCCESS'
+          assert r['connectome']['neurons']==139255
+          assert r['connectome']['edges']==2698236
+          assert r['architecture']['shared_recurrent_state'] is True
+          assert r['architecture']['structure_evolves'] is True
+          assert r['architecture']['total_organism_nodes']==87
+          assert Path('fly-organism-v4-results/organism_state.json').stat().st_size > 1000
+          assert Path('fly-organism-v4-results/champion.png').stat().st_size > 1000
+          assert Path('fly-organism-v4-results/champion.txt').stat().st_size > 50
+          PY
+
+      - name: Upload generation artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fly-organism-v4-generation
+          path: |
+            fly-organism-v4-results/
+            fly-organism-v4-live.log
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Persist evolved anatomy and champion
+        if: success()
+        run: |
+          set -euxo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fly-organism-v4-results fly-organism-v4-live.log
+          git commit -m 'Evolve Fly organism structural generation [skip ci]' || exit 0
+          for i in 1 2 3; do
+            git pull --rebase origin fly-evo-open-models || true
+            if git push origin HEAD:fly-evo-open-models; then exit 0; fi
+            sleep $((i*2))
+          done
+          exit 1
