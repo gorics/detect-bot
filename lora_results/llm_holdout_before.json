@@ -1,0 +1,32 @@
+[
+  {
+    "kind": "food",
+    "target": "approach food and extend the proboscis to feed",
+    "output": "approach food and extend the proboscis to feed"
+  },
+  {
+    "kind": "cool",
+    "target": "reorient after cooling and reduce forward exploration",
+    "output": "reorient after cooling and reduce forward exploration"
+  },
+  {
+    "kind": "air",
+    "target": "brace against airflow and prepare an escape response",
+    "output": "brace against airflow and prepare an escape response"
+  },
+  {
+    "kind": "warm",
+    "target": "move away from the warm region while exploring",
+    "output": "brace against the warm environment and prepare an escape response"
+  },
+  {
+    "kind": "light",
+    "target": "orient toward the bright visual field and explore",
+    "output": "orient toward the bright visual field and explore"
+  },
+  {
+    "kind": "touch",
+    "target": "orient away from touch and initiate grooming",
+    "output": "orient away from touch and initiate grooming"
+  }
+]
