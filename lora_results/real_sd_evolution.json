@@ -15,12 +15,12 @@
   ],
   "incumbent": {
     "loaded": true,
-    "real_validation_loss": 0.22992175817489624,
+    "real_validation_loss": 0.22215767204761505,
     "each": [
-      0.2660481631755829,
-      0.1937953531742096
+      0.25780418515205383,
+      0.18651115894317627
     ],
-    "inference_seconds": 19.91183590888977
+    "inference_seconds": 20.005353212356567
   },
   "candidate": {
     "trainable_parameters": 431616,
@@ -41,10 +41,10 @@
     "train_loss_last": 0.10325892269611359,
     "lora_weight_norm_sum": 91.1392050087452,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 19.68053650856018
+    "inference_seconds": 19.91106152534485
   },
   "selected": "incumbent",
-  "selected_loss": 0.22992175817489624,
+  "selected_loss": 0.22215767204761505,
   "relative_gain_over_incumbent": 0.0,
-  "total_seconds": 171.38781642913818
+  "total_seconds": 173.90610480308533
 }
