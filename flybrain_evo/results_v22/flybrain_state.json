@@ -1,0 +1,352 @@
+{
+  "source": "snedea/flybrain js/sim-worker.js",
+  "exact_worker_execution": true,
+  "neuron_count": 139255,
+  "edge_count": 2698236,
+  "ticks": 40,
+  "stimulation": {
+    "group": 6,
+    "name": "OLF_ORN_FOOD",
+    "neurons": 1851,
+    "intensity": 2.5,
+    "duration_ticks": 20
+  },
+  "cumulative_group_spikes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    12957,
+    0,
+    7,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "tick_summary": [
+    {
+      "tick": 0,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 1,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 2,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 3,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 4,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 5,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 6,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 7,
+      "fired": 2,
+      "top_groups": [
+        [
+          8,
+          2
+        ]
+      ]
+    },
+    {
+      "tick": 8,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 9,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 10,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 11,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 12,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 13,
+      "fired": 2,
+      "top_groups": [
+        [
+          9,
+          2
+        ]
+      ]
+    },
+    {
+      "tick": 14,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 15,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 16,
+      "fired": 4,
+      "top_groups": [
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "tick": 17,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 18,
+      "fired": 1851,
+      "top_groups": [
+        [
+          6,
+          1851
+        ]
+      ]
+    },
+    {
+      "tick": 19,
+      "fired": 2,
+      "top_groups": [
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ]
+      ]
+    },
+    {
+      "tick": 20,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 21,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 22,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 23,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 24,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 25,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 26,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 27,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 28,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 29,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 30,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 31,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 32,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 33,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 34,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 35,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 36,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 37,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 38,
+      "fired": 0,
+      "top_groups": []
+    },
+    {
+      "tick": 39,
+      "fired": 0,
+      "top_groups": []
+    }
+  ],
+  "stats": [
+    {
+      "type": "stats",
+      "avgTickMs": 1.3485424500000078,
+      "firedNeurons": 648,
+      "activeNeurons": 35239,
+      "totalNeurons": 139255,
+      "activeGroups": 12,
+      "totalGroups": 61,
+      "tickRate": 10
+    }
+  ]
+}
