@@ -31,17 +31,17 @@
     "steps": 36,
     "learning_rate": 3e-05,
     "fixed_validation_loss_before": 0.27432382603486377,
-    "fixed_validation_loss_after": 0.26783092444141704,
-    "validation_improvement_fraction": 0.023668748308510214,
+    "fixed_validation_loss_after": 0.2678309840460618,
+    "validation_improvement_fraction": 0.023668531030100106,
     "train_loss_first": 0.5937876105308533,
-    "train_loss_last": 0.10148821771144867,
-    "lora_weight_norm_sum": 99.75124101340771,
-    "inference_seconds": 20.77850341796875,
+    "train_loss_last": 0.10148822516202927,
+    "lora_weight_norm_sum": 99.75124105811119,
+    "inference_seconds": 19.93512487411499,
     "base_output": "sd_base_result.png",
     "lora_output": "sd_lora_result.png",
     "champion_promoted": false,
     "champion_gate": "not eligible: self-distillation validation; real-image workflow owns SD champion"
   },
-  "total_seconds": 154.58572459220886,
+  "total_seconds": 130.1589479446411,
   "scope": "Frozen base models + trainable LoRA adapters; existing adapters and the evolved FlyBrain readout are reused across generations."
 }
