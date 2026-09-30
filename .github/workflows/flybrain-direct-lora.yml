@@ -1,5 +1,5 @@
 # FlyBrain recursive LoRA evolution runner - resumed generation trigger
-# scheduled continuation generation 11
+# scheduled continuation generation 12
 name: FlyBrain Direct LoRA Training
 
 on:
