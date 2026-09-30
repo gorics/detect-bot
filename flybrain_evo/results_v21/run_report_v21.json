@@ -124,7 +124,7 @@
     "trainable_parameters": 431616
   },
   "evolution": {
-    "previous_best_score": 1.4713299971382179,
+    "previous_best_score": 1.4713296929849562,
     "parent_score_remeasured_current_run": 1.4713299971382179,
     "best_score": 1.4713299971382179,
     "best_genome": {
@@ -138,7 +138,7 @@
         "axon bundle"
       ]
     },
-    "improved_over_previous": false,
+    "improved_over_previous": true,
     "generation_range": [
       57,
       59
@@ -148,10 +148,10 @@
   },
   "evaluations": 126,
   "timing_sec": {
-    "llm": 54.83687138557434,
-    "sd": 38.686034202575684,
-    "evolution": 608.3802585601807,
-    "total": 701.9031641483307
+    "llm": 54.67902970314026,
+    "sd": 38.04626488685608,
+    "evolution": 607.783819437027,
+    "total": 700.5091140270233
   },
   "verified": {
     "exact_flybrain_input": true,

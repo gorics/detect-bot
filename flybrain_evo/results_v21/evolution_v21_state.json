@@ -1,5 +1,5 @@
 {
-  "previous_best_score": 1.4713299971382179,
+  "previous_best_score": 1.4713296929849562,
   "previous_best_genome": {
     "guidance": 6.082817284227981,
     "steps": 8,
@@ -24,7 +24,7 @@
       "axon bundle"
     ]
   },
-  "improved_over_previous": false,
+  "improved_over_previous": true,
   "generation_range": [
     57,
     59
