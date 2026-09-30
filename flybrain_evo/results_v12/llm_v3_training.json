@@ -1,0 +1,79 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "training": "LoRA(q_proj,v_proj), assistant-only masked SFT",
+  "steps": 40,
+  "first_loss": 2.3768765926361084,
+  "last_loss": 1.2700408697128296,
+  "min_loss": 0.5824043154716492,
+  "losses": [
+    2.3768765926361084,
+    2.1638901233673096,
+    1.5075170993804932,
+    2.3531765937805176,
+    2.3162591457366943,
+    2.1124634742736816,
+    1.7314974069595337,
+    2.2620677947998047,
+    2.4858126640319824,
+    2.611344337463379,
+    1.6280698776245117,
+    1.5823698043823242,
+    1.0523914098739624,
+    1.4901678562164307,
+    1.4577839374542236,
+    1.5440784692764282,
+    1.356519103050232,
+    1.633710503578186,
+    1.8201278448104858,
+    1.855291724205017,
+    1.1709288358688354,
+    1.1579022407531738,
+    0.7245061993598938,
+    0.9861996173858643,
+    0.9891484379768372,
+    1.260552167892456,
+    1.183173418045044,
+    1.2737680673599243,
+    1.573580026626587,
+    1.4944472312927246,
+    0.9521915316581726,
+    0.9034621119499207,
+    0.5824043154716492,
+    0.7117769718170166,
+    0.6849638819694519,
+    1.0963151454925537,
+    1.0256242752075195,
+    1.0534461736679077,
+    1.3531816005706787,
+    1.2700408697128296
+  ],
+  "raw_generation": "{\"dominant\":\"OLF_ORN_FOOD\",\"intent\":\"food seeking\"}",
+  "raw_generation_parsed": {
+    "dominant": "OLF_ORN_FOOD",
+    "intent": "food seeking"
+  },
+  "raw_generation_valid": true,
+  "structured_output": {
+    "dominant": "OLF_ORN_FOOD",
+    "intent": "inspect food odor cue"
+  },
+  "structured_valid_schema_and_group": true,
+  "candidate_scores": [
+    {
+      "score": -0.7822256684303284,
+      "json": "{\"dominant\":\"OLF_ORN_FOOD\",\"intent\":\"inspect food odor cue\"}",
+      "dominant": "OLF_ORN_FOOD"
+    },
+    {
+      "score": -1.4048913717269897,
+      "json": "{\"dominant\":\"OLF_LN\",\"intent\":\"modulate olfactory local circuit\"}",
+      "dominant": "OLF_LN"
+    },
+    {
+      "score": -1.919899821281433,
+      "json": "{\"dominant\":\"OLF_PN\",\"intent\":\"relay olfactory projection signal\"}",
+      "dominant": "OLF_PN"
+    }
+  ],
+  "adapter_dir": "flybrain_evo/results_v12/llm_v3_lora_adapter"
+}
