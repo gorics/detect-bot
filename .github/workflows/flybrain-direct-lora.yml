@@ -1,5 +1,5 @@
 # FlyBrain recursive LoRA evolution runner - resumed generation trigger
-# scheduled continuation generation 4
+# scheduled continuation generation 5
 name: FlyBrain Direct LoRA Training
 
 on:
@@ -70,7 +70,6 @@ jobs:
           if not improved:
               shutil.rmtree('lora_results/llm_lora', ignore_errors=True)
               shutil.copytree('/tmp/llm_incumbent','lora_results/llm_lora')
-          # The real-image SD workflow exclusively owns the SD champion.
           shutil.copy2('/tmp/sd_incumbent/sd_unet_lora.pt','lora_results/sd_unet_lora.pt')
           d['stable_diffusion_lora']['champion_promoted']=False
           d['stable_diffusion_lora']['champion_gate']='not eligible: self-distillation validation; real-image workflow owns SD champion'
