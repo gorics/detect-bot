@@ -14,12 +14,13 @@
     "trainable_fraction": 0.006804659490586179,
     "steps": 30,
     "learning_rate": 0.0002,
-    "loss_first": 3.0067135412537027e-06,
-    "loss_last": 1.7404518075636588e-06,
-    "loss_mean_first5": 2.9577054647234034e-06,
-    "loss_mean_last5": 1.8021756204689155e-06,
+    "loss_first": 1.2450723261281382e-06,
+    "loss_last": 8.821476740195067e-07,
+    "loss_mean_first5": 1.3331546824701945e-06,
+    "loss_mean_last5": 9.306259016739205e-07,
     "holdout_accuracy_before": 1.0,
-    "holdout_accuracy_after": 1.0
+    "holdout_accuracy_after": 1.0,
+    "champion_promoted": false
   },
   "stable_diffusion_lora": {
     "model": "segmind/tiny-sd",
@@ -29,16 +30,18 @@
     "trainable_fraction": 0.0013329027191875105,
     "steps": 36,
     "learning_rate": 3e-05,
-    "fixed_validation_loss_before": 0.28077347452441853,
-    "fixed_validation_loss_after": 0.27432382603486377,
-    "validation_improvement_fraction": 0.022971003583865404,
-    "train_loss_first": 0.6084699630737305,
-    "train_loss_last": 0.10244593024253845,
-    "lora_weight_norm_sum": 98.3485249131918,
-    "inference_seconds": 19.500483989715576,
+    "fixed_validation_loss_before": 0.27432380492488545,
+    "fixed_validation_loss_after": 0.26783091699083644,
+    "validation_improvement_fraction": 0.02366870033691342,
+    "train_loss_first": 0.5937875509262085,
+    "train_loss_last": 0.10148824751377106,
+    "lora_weight_norm_sum": 99.75123962014914,
+    "inference_seconds": 11.95398211479187,
     "base_output": "sd_base_result.png",
-    "lora_output": "sd_lora_result.png"
+    "lora_output": "sd_lora_result.png",
+    "champion_promoted": false,
+    "champion_gate": "not eligible: self-distillation validation; real-image workflow owns SD champion"
   },
-  "total_seconds": 117.08323216438293,
+  "total_seconds": 88.38424921035767,
   "scope": "Frozen base models + trainable LoRA adapters; existing adapters and the evolved FlyBrain readout are reused across generations."
 }
