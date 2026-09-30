@@ -16,25 +16,27 @@
       "generation": 0,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999355021864176
+      "fitness_best": 0.9999421094507852
     },
     "last": {
       "generation": 119,
       "train_best": 1.0,
-      "validation_best": 1.0,
-      "fitness_best": 0.9999426839603984
-    }
+      "validation_best": 0.9908256880733946,
+      "fitness_best": 0.9999494079311262
+    },
+    "incumbent_validation_accuracy": 1.0,
+    "champion_promoted": false
   },
   "demo": {
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5709591507911682,
-      "touch": 0.06792342662811279,
-      "air": 0.06418658047914505,
-      "light": 0.0028897845186293125,
-      "warm": 0.13838139176368713,
-      "cool": 0.15565961599349976
+      "food": 0.5357034802436829,
+      "touch": 0.06337568163871765,
+      "air": 0.08674650639295578,
+      "light": 0.0033539836294949055,
+      "warm": 0.15026722848415375,
+      "cool": 0.16055317223072052
     },
     "top_groups": [
       {
@@ -113,12 +115,12 @@
   },
   "llm": {
     "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
-    "output": "The likely next behavior in one factual sentence is to \"touch\" the food."
+    "output": "The likely next behavior in one factual sentence is to touch the food."
   },
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
-    "prompt": "full body macro photograph of a single fruit fly, Drosophila melanogaster, red compound eyes, two transparent wings, six legs, standing on a red apple, feeding behavior selected by the neural controller: approach food and extend the proboscis to feed, sharp insect photography, realistic anatomy, natural light, high detail",
-    "inference_seconds": 136.9886167049408,
+    "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
+    "inference_seconds": 18.795650005340576,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -128,5 +130,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 184.1763505935669
+  "total_seconds": 63.53246188163757
 }
