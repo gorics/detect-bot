@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 19 native_ops 7 neo 3
-V5_FITNESS 0 0.6106062199421175 topology 51cec08eafef849a
-V5_EVALUATE 1 generation 19 native_ops 4 neo 7
-V5_FITNESS 1 0.5396054292877396 topology 7322ff11e8cd53b8
-V5_EVALUATE 2 generation 19 native_ops 8 neo 5
-V5_FITNESS 2 0.6916065717796107 topology fed5958d66387786
-V5_EVALUATE 3 generation 19 native_ops 6 neo 3
-V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
+V5_EVALUATE 0 generation 20 native_ops 9 neo 6
+V5_FITNESS 0 0.5601834370996049 topology 7da9fafe009cea58
+V5_EVALUATE 1 generation 20 native_ops 5 neo 7
+V5_FITNESS 1 0.5223674477224639 topology b02edf38d9b0e4ab
+V5_EVALUATE 2 generation 20 native_ops 9 neo 4
+V5_FITNESS 2 0.7080630189503772 topology d0f6d20753f335a8
+V5_EVALUATE 3 generation 20 native_ops 6 neo 3
+V5_FITNESS 3 0.5759255734601522 topology 745bf4279c1d55c2
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 19,
+  "generation": 20,
   "fitness": 0.7576004495930573,
   "genome": {
     "generation": 16,
@@ -345,10 +345,10 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
     ]
   },
   "champion_generation": 16,
-  "breeder_fitness": 0.6916065717796107,
+  "breeder_fitness": 0.7080630189503772,
   "breeder_genome": {
-    "generation": 19,
-    "active_neo": 5,
+    "generation": 20,
+    "active_neo": 4,
     "mutations": [
       {
         "s": 13,
@@ -358,7 +358,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       {
         "s": 54,
         "d": 71,
-        "w": 0.3177132151135992
+        "w": 0.22454935031537981
       },
       {
         "s": 62,
@@ -422,7 +422,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       },
       {
         "s": 25,
-        "d": 66,
+        "d": 30,
         "w": 0.1978021474058818
       },
       {
@@ -483,7 +483,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       {
         "s": 71,
         "d": 27,
-        "w": 0.0976975042637768
+        "w": 0.22370636467844354
       },
       {
         "s": 75,
@@ -528,7 +528,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       {
         "s": 78,
         "d": 40,
-        "w": 0.2283592336935995
+        "w": 0.2888404324050544
       },
       {
         "s": 73,
@@ -558,7 +558,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       {
         "s": 76,
         "d": 53,
-        "w": 0.026315375127399065
+        "w": -0.07497509397995991
       },
       {
         "s": 25,
@@ -567,7 +567,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       },
       {
         "s": 65,
-        "d": 80,
+        "d": 84,
         "w": 0.1752654519468846
       },
       {
@@ -613,7 +613,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       {
         "s": 1,
         "d": 38,
-        "w": -0.4446877394001457
+        "w": -0.46739334019630424
       },
       {
         "s": 77,
@@ -628,7 +628,7 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
       {
         "s": 85,
         "d": 6,
-        "w": -0.26066964323091163
+        "w": -0.34284625248997325
       },
       {
         "s": 45,
@@ -654,16 +654,26 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
         "s": 37,
         "d": 11,
         "w": 0.07557864290041133
+      },
+      {
+        "s": 80,
+        "d": 31,
+        "w": 0.052313604748716824
+      },
+      {
+        "s": 27,
+        "d": 62,
+        "w": 0.15010686380634664
       }
     ],
-    "temp": 0.6942833522281201,
-    "top_p": 0.9680216581464063,
-    "rep": 1.032835415360383,
-    "tokens": 124,
-    "guidance": 5.686566207580917,
+    "temp": 0.7335269231218212,
+    "top_p": 0.9566270703094613,
+    "rep": 1.0168739826649962,
+    "tokens": 126,
+    "guidance": 5.980789790274339,
     "steps": 6,
-    "seed_bias": 1001306472,
-    "mutation_rate": 0.12929438407483562,
+    "seed_bias": 200242411,
+    "mutation_rate": 0.1352084345401288,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -711,6 +721,11 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
         "s": 35,
         "d": 28,
         "d2": 34
+      },
+      {
+        "kind": "native_knockout",
+        "s": 21,
+        "d": 23
       }
     ]
   },
@@ -1079,31 +1094,31 @@ V5_FITNESS 3 0.5777554699495473 topology faa758c48dcc1662
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "fed5958d6638778626eb6a7f8ea4c0ba12e7963b154edd9724a378c7ef51edc7",
-    "breeder_native_nonzero_edges": 284,
-    "breeder_native_ops": 8,
+    "breeder_topology_hash": "d0f6d20753f335a81b269f8b529efcbd573d77581191e1b452348892a6bd9311",
+    "breeder_native_nonzero_edges": 285,
+    "breeder_native_ops": 9,
     "champion_topology_hash": "5e77964a3ae19409f5afe0ff06dfc029929ee6863d111b6510ad74082bdced22",
     "champion_native_nonzero_edges": 278,
     "champion_native_ops": 3
   },
   "last_breeder": {
-    "fitness": 0.6916065717796107,
-    "text_score": 0.7633015873015874,
+    "fitness": 0.7080630189503772,
+    "text_score": 0.8406285714285714,
     "vision": {
-      "clip_cosine": 0.26397401094436646,
-      "score": 0.712949864268303,
-      "guidance": 5.699581146240234
+      "clip_cosine": 0.24582627415657043,
+      "score": 0.7058722469210625,
+      "guidance": 5.984763145446777
     },
-    "integration": 0.5711473226547241,
+    "integration": 0.5067025423049927,
     "structure": {
-      "mutations": 61,
-      "active_neo": 5,
+      "mutations": 63,
+      "active_neo": 4,
       "nonzero_edges": 334,
-      "native_ops": 8,
-      "native_core_nonzero_edges": 284,
-      "topology_hash": "fed5958d6638778626eb6a7f8ea4c0ba12e7963b154edd9724a378c7ef51edc7"
+      "native_ops": 9,
+      "native_core_nonzero_edges": 285,
+      "topology_hash": "d0f6d20753f335a81b269f8b529efcbd573d77581191e1b452348892a6bd9311"
     },
-    "text": "세대 19의 사고 사이클은 다음과 같이 설명할 수 있습니다:\n\n1. **세대 19의 기능적 향상을 위한 신생뉴런 (Newborn Neurons):** 여기에는 초파리, LLM(로봇 언어 모델), Stable Diffusion 시각적 언어 모델, 뉴런이 포함됩니다. 이들은 신생뉴런의 기능적 향상을 지원하며, 이는 높은 보상 수준을 유지하며, 새로운 정보를 받아들일 수 있도록 도와줍니다"
+    "text": "세대 20의 사고 사이클은 신생뉴런과 구조변이의 관계를 이해하기 위해 복잡한 계산을 수행하는 과정을 나타내는 계산 유기체의 단계들을 설명합니다. 이 계산 유기체는 초파리, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 포함하고 있습니다.\n\n1. **신생뉴런의 생성**:\n   - 신생뉴런"
   },
-  "elapsed_seconds": 126.09858465194702
+  "elapsed_seconds": 127.19265651702881
 }
