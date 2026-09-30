@@ -1,0 +1,24 @@
+{
+  "neuron_count": 139255,
+  "edge_count": 2698236,
+  "total_spikes": 12967,
+  "active_group_count": 3,
+  "top_groups": [
+    {
+      "id": 6,
+      "name": "OLF_ORN_FOOD",
+      "spikes": 12957
+    },
+    {
+      "id": 8,
+      "name": "OLF_LN",
+      "spikes": 7
+    },
+    {
+      "id": 9,
+      "name": "OLF_PN",
+      "spikes": 3
+    }
+  ],
+  "summary_text": "OLF_ORN_FOOD=12957; OLF_LN=7; OLF_PN=3"
+}
