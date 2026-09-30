@@ -1,0 +1,171 @@
+{
+  "brain": {
+    "neuron_count": 139255,
+    "edge_count": 2698236,
+    "total_spikes": 12967,
+    "active_group_count": 3,
+    "top_groups": [
+      {
+        "id": 6,
+        "name": "OLF_ORN_FOOD",
+        "spikes": 12957
+      },
+      {
+        "id": 8,
+        "name": "OLF_LN",
+        "spikes": 7
+      },
+      {
+        "id": 9,
+        "name": "OLF_PN",
+        "spikes": 3
+      }
+    ],
+    "summary_text": "OLF_ORN_FOOD=12957; OLF_LN=7; OLF_PN=3"
+  },
+  "llm": {
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "training": "LoRA(q_proj,v_proj), assistant-only masked SFT",
+    "steps": 40,
+    "first_loss": 2.3768773078918457,
+    "last_loss": 1.2700413465499878,
+    "min_loss": 0.5824040174484253,
+    "losses": [
+      2.3768773078918457,
+      2.163891315460205,
+      1.5075178146362305,
+      2.353175401687622,
+      2.3162600994110107,
+      2.112464427947998,
+      1.7314966917037964,
+      2.2620677947998047,
+      2.485813856124878,
+      2.6113440990448,
+      1.6280696392059326,
+      1.5823700428009033,
+      1.0523914098739624,
+      1.490168571472168,
+      1.4577853679656982,
+      1.5440784692764282,
+      1.356520175933838,
+      1.6337106227874756,
+      1.8201271295547485,
+      1.855290412902832,
+      1.1709299087524414,
+      1.1579023599624634,
+      0.7245064973831177,
+      0.9861992597579956,
+      0.9891483783721924,
+      1.260552167892456,
+      1.1831731796264648,
+      1.2737693786621094,
+      1.5735796689987183,
+      1.4944467544555664,
+      0.9521915316581726,
+      0.9034625887870789,
+      0.5824040174484253,
+      0.7117774486541748,
+      0.6849655508995056,
+      1.096315622329712,
+      1.02562415599823,
+      1.0534461736679077,
+      1.353182077407837,
+      1.2700413465499878
+    ],
+    "raw_generation": "{\"dominant\":\"OLF_ORN_FOOD\",\"intent\":\"food seeking\"}",
+    "raw_generation_parsed": {
+      "dominant": "OLF_ORN_FOOD",
+      "intent": "food seeking"
+    },
+    "raw_generation_valid": true,
+    "structured_output": {
+      "dominant": "OLF_ORN_FOOD",
+      "intent": "inspect food odor cue"
+    },
+    "structured_valid_schema_and_group": true,
+    "candidate_scores": [
+      {
+        "score": -0.7822257876396179,
+        "json": "{\"dominant\":\"OLF_ORN_FOOD\",\"intent\":\"inspect food odor cue\"}",
+        "dominant": "OLF_ORN_FOOD"
+      },
+      {
+        "score": -1.4048919677734375,
+        "json": "{\"dominant\":\"OLF_LN\",\"intent\":\"modulate olfactory local circuit\"}",
+        "dominant": "OLF_LN"
+      },
+      {
+        "score": -1.9199013710021973,
+        "json": "{\"dominant\":\"OLF_PN\",\"intent\":\"relay olfactory projection signal\"}",
+        "dominant": "OLF_PN"
+      }
+    ],
+    "adapter_dir": "flybrain_evo/results_v21/llm_v3_lora_adapter"
+  },
+  "stable_diffusion": {
+    "model": "segmind/tiny-sd",
+    "training": "UNet LoRA attention",
+    "steps": 8,
+    "first_loss": 0.7446363568305969,
+    "last_loss": 0.7229907512664795,
+    "losses": [
+      0.7446363568305969,
+      0.41994979977607727,
+      0.5575112700462341,
+      0.3953300714492798,
+      0.758171796798706,
+      0.7617348432540894,
+      0.4328572452068329,
+      0.7229907512664795
+    ],
+    "base_prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph",
+    "target_image": "flybrain_evo/results_v21/brain_condition_target_v3.png",
+    "before_image": "flybrain_evo/results_v21/sd_v3_before.png",
+    "trainable_parameters": 431616
+  },
+  "evolution": {
+    "previous_best_score": 1.4713299971382179,
+    "parent_score_remeasured_current_run": 1.4713299971382179,
+    "best_score": 1.4713299971382179,
+    "best_genome": {
+      "guidance": 6.082817284227981,
+      "steps": 8,
+      "seed": 1340753419,
+      "mods": [
+        "neural tissue",
+        "electric",
+        "olfactory glomerulus",
+        "axon bundle"
+      ]
+    },
+    "improved_over_previous": false,
+    "generation_range": [
+      57,
+      59
+    ],
+    "final_prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle",
+    "final_image": "flybrain_evo/results_v21/flybrain_sd_v21_final.png"
+  },
+  "evaluations": 126,
+  "timing_sec": {
+    "llm": 54.83687138557434,
+    "sd": 38.686034202575684,
+    "evolution": 608.3802585601807,
+    "total": 701.9031641483307
+  },
+  "verified": {
+    "exact_flybrain_input": true,
+    "llm_360m_loaded": true,
+    "llm_lora_parameters_updated": true,
+    "raw_llm_schema_valid": true,
+    "structured_llm_valid": true,
+    "segmind_tiny_sd_loaded": true,
+    "sd_lora_parameters_updated": true,
+    "connectome_driven_training_target": true,
+    "previous_elite_inherited": true,
+    "strict_nonregression_gate": true,
+    "generation_number_continued": true,
+    "mutation_selection_executed": true,
+    "consciousness_claim": false
+  }
+}
