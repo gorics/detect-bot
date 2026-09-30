@@ -11,7 +11,7 @@
       "axon bundle"
     ]
   },
-  "parent_score_remeasured_current_run": 1.4686663546353926,
+  "parent_score_remeasured_current_run": 1.468651162485652,
   "best_score": 1.4686663546353926,
   "best_genome": {
     "guidance": 6.365708791416698,
@@ -35,13 +35,13 @@
     {
       "generation": 36,
       "candidate": 0,
-      "score": 1.4686663546353926,
+      "score": 1.468651162485652,
       "metrics": {
-        "edge": 0.20401719212532043,
-        "variance": 0.14251698553562164,
-        "mean": 0.4159448444843292,
-        "entropy": 0.9264853075038936,
-        "target_agreement": 0.6656938791275024
+        "edge": 0.20401807129383087,
+        "variance": 0.1425185203552246,
+        "mean": 0.41594600677490234,
+        "entropy": 0.9264626109245562,
+        "target_agreement": 0.6656862497329712
       },
       "genome": {
         "guidance": 6.365708791416698,
@@ -54,18 +54,18 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p0_+1.46867.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p0_+1.46865.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 36,
       "candidate": 1,
-      "score": 1.3364972664569565,
+      "score": 1.33649565473864,
       "metrics": {
-        "edge": 0.14672881364822388,
-        "variance": 0.1341163069009781,
-        "mean": 0.33809614181518555,
-        "entropy": 0.8837001651805005,
+        "edge": 0.1467292159795761,
+        "variance": 0.13411657512187958,
+        "mean": 0.3380960524082184,
+        "entropy": 0.8836956417139644,
         "target_agreement": 0.6856081485748291
       },
       "genome": {
@@ -85,13 +85,13 @@
     {
       "generation": 36,
       "candidate": 2,
-      "score": 1.2901633927932936,
+      "score": 1.2901580680523432,
       "metrics": {
-        "edge": 0.11946745216846466,
-        "variance": 0.07595040649175644,
-        "mean": 0.37418997287750244,
-        "entropy": 0.9353736987098706,
-        "target_agreement": 0.6977404952049255
+        "edge": 0.11946672201156616,
+        "variance": 0.0759505182504654,
+        "mean": 0.37419021129608154,
+        "entropy": 0.935376488279956,
+        "target_agreement": 0.6977328062057495
       },
       "genome": {
         "guidance": 5.94422921352117,
@@ -110,13 +110,13 @@
     {
       "generation": 36,
       "candidate": 3,
-      "score": 1.4415732573124422,
+      "score": 1.4415721179266,
       "metrics": {
-        "edge": 0.16789457201957703,
-        "variance": 0.10996704548597336,
-        "mean": 0.34073933959007263,
-        "entropy": 0.930225369361793,
-        "target_agreement": 0.7684934139251709
+        "edge": 0.16789618134498596,
+        "variance": 0.10996729135513306,
+        "mean": 0.3407382071018219,
+        "entropy": 0.9302289656110286,
+        "target_agreement": 0.7684857249259949
       },
       "genome": {
         "guidance": 5.943914910939089,
@@ -135,13 +135,13 @@
     {
       "generation": 36,
       "candidate": 4,
-      "score": 1.3751135325557875,
+      "score": 1.3751105803833727,
       "metrics": {
-        "edge": 0.13981235027313232,
-        "variance": 0.09054359048604965,
-        "mean": 0.4211512506008148,
-        "entropy": 0.9835018141932356,
-        "target_agreement": 0.6991459727287292
+        "edge": 0.13981492817401886,
+        "variance": 0.09054571390151978,
+        "mean": 0.42115139961242676,
+        "entropy": 0.9834959426768484,
+        "target_agreement": 0.6991382837295532
       },
       "genome": {
         "guidance": 6.461004034769246,
@@ -160,13 +160,13 @@
     {
       "generation": 36,
       "candidate": 5,
-      "score": 1.1801752563002026,
+      "score": 1.1801776445235366,
       "metrics": {
-        "edge": 0.10937516391277313,
-        "variance": 0.1363910287618637,
-        "mean": 0.6029099225997925,
-        "entropy": 0.9702878743739408,
-        "target_agreement": 0.5295917391777039
+        "edge": 0.1093752384185791,
+        "variance": 0.13639043271541595,
+        "mean": 0.6029103994369507,
+        "entropy": 0.9702877868893568,
+        "target_agreement": 0.5295956134796143
       },
       "genome": {
         "guidance": 6.7958388759150345,
@@ -185,13 +185,13 @@
     {
       "generation": 36,
       "candidate": 6,
-      "score": 1.316688854116165,
+      "score": 1.316673728834068,
       "metrics": {
-        "edge": 0.1548500955104828,
-        "variance": 0.14514397084712982,
-        "mean": 0.48084557056427,
-        "entropy": 0.9906694325858233,
-        "target_agreement": 0.5435622930526733
+        "edge": 0.15484945476055145,
+        "variance": 0.14514411985874176,
+        "mean": 0.48084601759910583,
+        "entropy": 0.9906699083257356,
+        "target_agreement": 0.5435432195663452
       },
       "genome": {
         "guidance": 6.437047213946716,
@@ -204,19 +204,19 @@
           "glomerular map"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p6_+1.31669.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p6_+1.31667.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, glomerular map"
     },
     {
       "generation": 36,
       "candidate": 7,
-      "score": 1.287758494579883,
+      "score": 1.2877570374543215,
       "metrics": {
-        "edge": 0.1010972261428833,
-        "variance": 0.15517574548721313,
-        "mean": 0.43799838423728943,
-        "entropy": 0.9407126106350561,
-        "target_agreement": 0.6384803652763367
+        "edge": 0.10109594464302063,
+        "variance": 0.15517526865005493,
+        "mean": 0.4379989206790924,
+        "entropy": 0.9407200615938403,
+        "target_agreement": 0.638476550579071
       },
       "genome": {
         "guidance": 6.3192766174688755,
@@ -235,13 +235,13 @@
     {
       "generation": 36,
       "candidate": 8,
-      "score": 1.075949173086355,
+      "score": 1.075965910070901,
       "metrics": {
-        "edge": 0.07768265902996063,
-        "variance": 0.030669674277305603,
-        "mean": 0.11281100660562515,
-        "entropy": 0.5985003905557684,
-        "target_agreement": 0.8892999291419983
+        "edge": 0.0776836946606636,
+        "variance": 0.030671894550323486,
+        "mean": 0.11281323432922363,
+        "entropy": 0.5985128933078678,
+        "target_agreement": 0.8893076181411743
       },
       "genome": {
         "guidance": 6.524176706203162,
@@ -254,19 +254,19 @@
           "olfactory projection tract"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p8_+1.07595.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p8_+1.07597.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, olfactory projection tract"
     },
     {
       "generation": 36,
       "candidate": 9,
-      "score": 1.3582900595425267,
+      "score": 1.3582948248462028,
       "metrics": {
-        "edge": 0.12207667529582977,
-        "variance": 0.14264211058616638,
-        "mean": 0.3689287602901459,
-        "entropy": 0.94636698198295,
-        "target_agreement": 0.7052159905433655
+        "edge": 0.1220775619149208,
+        "variance": 0.142642542719841,
+        "mean": 0.3689289093017578,
+        "entropy": 0.9463670075619122,
+        "target_agreement": 0.7052198052406311
       },
       "genome": {
         "guidance": 6.46426386946434,
@@ -286,13 +286,13 @@
     {
       "generation": 36,
       "candidate": 10,
-      "score": 1.285555740390735,
+      "score": 1.2855705130043655,
       "metrics": {
-        "edge": 0.13193054497241974,
-        "variance": 0.15549422800540924,
-        "mean": 0.538155198097229,
-        "entropy": 0.9439485594982756,
-        "target_agreement": 0.5963273644447327
+        "edge": 0.13193117082118988,
+        "variance": 0.15549500286579132,
+        "mean": 0.5381538271903992,
+        "entropy": 0.9439508454263263,
+        "target_agreement": 0.5963426828384399
       },
       "genome": {
         "guidance": 6.232118326777906,
@@ -305,19 +305,19 @@
           "fluorescence microscopy"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p10_+1.28556.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p10_+1.28557.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, fluorescence microscopy"
     },
     {
       "generation": 36,
       "candidate": 11,
-      "score": 1.2341714070200946,
+      "score": 1.2341539411676612,
       "metrics": {
-        "edge": 0.1385386884212494,
-        "variance": 0.09942618757486343,
-        "mean": 0.5705384612083435,
-        "entropy": 0.9659343900030357,
-        "target_agreement": 0.5673138499259949
+        "edge": 0.13853329420089722,
+        "variance": 0.09941986948251724,
+        "mean": 0.5705393552780151,
+        "entropy": 0.9659341051601438,
+        "target_agreement": 0.5673100352287292
       },
       "genome": {
         "guidance": 6.654357086391672,
@@ -330,18 +330,18 @@
           "connectome reconstruction"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p11_+1.23417.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p11_+1.23415.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, axon bundle, connectome reconstruction"
     },
     {
       "generation": 36,
       "candidate": 12,
-      "score": 1.0871911111903212,
+      "score": 1.0871892374358287,
       "metrics": {
-        "edge": 0.11652063578367233,
-        "variance": 0.13789282739162445,
-        "mean": 0.686069667339325,
-        "entropy": 0.9121711999958251,
+        "edge": 0.11652015149593353,
+        "variance": 0.1378919631242752,
+        "mean": 0.6860706210136414,
+        "entropy": 0.9121709806633198,
         "target_agreement": 0.4581533670425415
       },
       "genome": {
@@ -361,13 +361,13 @@
     {
       "generation": 36,
       "candidate": 13,
-      "score": 1.3488774798919287,
+      "score": 1.3488701632637423,
       "metrics": {
-        "edge": 0.17969658970832825,
-        "variance": 0.15718825161457062,
-        "mean": 0.5282551646232605,
-        "entropy": 0.9029234764448667,
-        "target_agreement": 0.5974647402763367
+        "edge": 0.17969746887683868,
+        "variance": 0.15718884766101837,
+        "mean": 0.5282533764839172,
+        "entropy": 0.9029214631461089,
+        "target_agreement": 0.597453236579895
       },
       "genome": {
         "guidance": 6.801151780238673,
@@ -381,19 +381,19 @@
           "antennal lobe circuit"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p13_+1.34888.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p13_+1.34887.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, antennal lobe circuit"
     },
     {
       "generation": 36,
       "candidate": 14,
-      "score": 0.769092462735012,
+      "score": 0.7690971934501465,
       "metrics": {
-        "edge": 0.07898308336734772,
-        "variance": 0.07130688428878784,
-        "mean": 0.8018398284912109,
-        "entropy": 0.8096159334916686,
-        "target_agreement": 0.3039292097091675
+        "edge": 0.07898284494876862,
+        "variance": 0.07130637764930725,
+        "mean": 0.801840603351593,
+        "entropy": 0.8096315627213926,
+        "target_agreement": 0.30392539501190186
       },
       "genome": {
         "guidance": 6.119990625857466,
@@ -407,18 +407,18 @@
           "antennal lobe"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p14_+0.76909.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p14_+0.76910.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, antennal lobe"
     },
     {
       "generation": 36,
       "candidate": 15,
-      "score": 1.273960531294907,
+      "score": 1.2739625215508716,
       "metrics": {
-        "edge": 0.14269733428955078,
-        "variance": 0.14965596795082092,
-        "mean": 0.4869924485683441,
-        "entropy": 0.9102930268384558,
+        "edge": 0.14269796013832092,
+        "variance": 0.14965640008449554,
+        "mean": 0.48699259757995605,
+        "entropy": 0.9102941502184898,
         "target_agreement": 0.5703163146972656
       },
       "genome": {
@@ -437,13 +437,13 @@
     {
       "generation": 36,
       "candidate": 16,
-      "score": 1.1125579883923746,
+      "score": 1.1125643198957658,
       "metrics": {
-        "edge": 0.09390407055616379,
-        "variance": 0.07568918913602829,
-        "mean": 0.16578282415866852,
+        "edge": 0.09390430897474289,
+        "variance": 0.07568954676389694,
+        "mean": 0.16578249633312225,
         "entropy": 0.6474061027206465,
-        "target_agreement": 0.7998008728027344
+        "target_agreement": 0.7998085021972656
       },
       "genome": {
         "guidance": 6.204404015918183,
@@ -463,13 +463,13 @@
     {
       "generation": 36,
       "candidate": 17,
-      "score": 1.3453189265970587,
+      "score": 1.3453298014775497,
       "metrics": {
-        "edge": 0.16682974994182587,
-        "variance": 0.100031279027462,
-        "mean": 0.4622367322444916,
-        "entropy": 0.9685993400928105,
-        "target_agreement": 0.6126838326454163
+        "edge": 0.16683176159858704,
+        "variance": 0.10003188252449036,
+        "mean": 0.4622379243373871,
+        "entropy": 0.9686073569412633,
+        "target_agreement": 0.6126876473426819
       },
       "genome": {
         "guidance": 6.448446559342825,
@@ -483,18 +483,18 @@
           "neuropil compartment"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p17_+1.34532.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p17_+1.34533.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, neuropil compartment"
     },
     {
       "generation": 36,
       "candidate": 18,
-      "score": 1.131461379147509,
+      "score": 1.1314605077287836,
       "metrics": {
-        "edge": 0.09665514528751373,
-        "variance": 0.1411445289850235,
-        "mean": 0.6333432197570801,
-        "entropy": 0.9293731774650545,
+        "edge": 0.09665418416261673,
+        "variance": 0.14114415645599365,
+        "mean": 0.6333423256874084,
+        "entropy": 0.9293746992821553,
         "target_agreement": 0.5285500884056091
       },
       "genome": {
@@ -515,13 +515,13 @@
     {
       "generation": 36,
       "candidate": 19,
-      "score": 1.3590652899951412,
+      "score": 1.359078587633141,
       "metrics": {
-        "edge": 0.1351933628320694,
-        "variance": 0.1253223419189453,
-        "mean": 0.3321785628795624,
-        "entropy": 0.9089091916898294,
-        "target_agreement": 0.7347120046615601
+        "edge": 0.1351948082447052,
+        "variance": 0.125322625041008,
+        "mean": 0.3321799039840698,
+        "entropy": 0.9089017895889431,
+        "target_agreement": 0.734731137752533
       },
       "genome": {
         "guidance": 6.461683708110932,
@@ -534,19 +534,19 @@
           "olfactory sensory neuron"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p19_+1.35907.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p19_+1.35908.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, olfactory sensory neuron"
     },
     {
       "generation": 36,
       "candidate": 20,
-      "score": 1.0970988909756367,
+      "score": 1.097094213200919,
       "metrics": {
-        "edge": 0.13840174674987793,
-        "variance": 0.10410287976264954,
-        "mean": 0.6504129767417908,
-        "entropy": 0.8932696404520716,
-        "target_agreement": 0.45978474617004395
+        "edge": 0.13840384781360626,
+        "variance": 0.104102723300457,
+        "mean": 0.6504123210906982,
+        "entropy": 0.8932596913491452,
+        "target_agreement": 0.4597809910774231
       },
       "genome": {
         "guidance": 6.5936209594781685,
@@ -559,17 +559,17 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p20_+1.09710.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p20_+1.09709.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 36,
       "candidate": 21,
-      "score": 1.3094813741884068,
+      "score": 1.3094819285116033,
       "metrics": {
-        "edge": 0.12654264271259308,
-        "variance": 0.12626290321350098,
-        "mean": 0.37395763397216797,
+        "edge": 0.12654271721839905,
+        "variance": 0.12626326084136963,
+        "mean": 0.37395820021629333,
         "entropy": 0.9298586051827915,
         "target_agreement": 0.6579158902168274
       },
@@ -590,13 +590,13 @@
     {
       "generation": 36,
       "candidate": 22,
-      "score": 1.001419886974111,
+      "score": 1.001412402085815,
       "metrics": {
-        "edge": 0.05857127159833908,
-        "variance": 0.032077252864837646,
-        "mean": 0.09857329726219177,
-        "entropy": 0.5257573526512762,
-        "target_agreement": 0.8898360729217529
+        "edge": 0.05857143551111221,
+        "variance": 0.032077182084321976,
+        "mean": 0.09857305884361267,
+        "entropy": 0.5257538521693589,
+        "target_agreement": 0.8898284435272217
       },
       "genome": {
         "guidance": 6.3829079304963505,
@@ -610,19 +610,19 @@
           "projection neuron tract"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p22_+1.00142.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p22_+1.00141.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, projection neuron tract"
     },
     {
       "generation": 36,
       "candidate": 23,
-      "score": 1.352512203479406,
+      "score": 1.3525120936672583,
       "metrics": {
-        "edge": 0.12042813003063202,
-        "variance": 0.11841049045324326,
-        "mean": 0.39449629187583923,
-        "entropy": 0.9647174976533048,
-        "target_agreement": 0.7051163911819458
+        "edge": 0.12042804807424545,
+        "variance": 0.11841040849685669,
+        "mean": 0.39449718594551086,
+        "entropy": 0.964722465988487,
+        "target_agreement": 0.7051125764846802
       },
       "genome": {
         "guidance": 6.765345003242792,
@@ -641,13 +641,13 @@
     {
       "generation": 36,
       "candidate": 24,
-      "score": 1.2513202758886015,
+      "score": 1.251321808783298,
       "metrics": {
-        "edge": 0.12262509763240814,
-        "variance": 0.0962248370051384,
-        "mean": 0.24428904056549072,
-        "entropy": 0.8119614187980411,
-        "target_agreement": 0.7509689331054688
+        "edge": 0.12262652814388275,
+        "variance": 0.0962243378162384,
+        "mean": 0.24428808689117432,
+        "entropy": 0.8119557420197495,
+        "target_agreement": 0.7509727478027344
       },
       "genome": {
         "guidance": 5.897261103359615,
@@ -667,13 +667,13 @@
     {
       "generation": 36,
       "candidate": 25,
-      "score": 1.168427614678749,
+      "score": 1.1684255012317497,
       "metrics": {
-        "edge": 0.1468806266784668,
-        "variance": 0.15085317194461823,
-        "mean": 0.594589114189148,
-        "entropy": 0.9033184096845865,
-        "target_agreement": 0.45982688665390015
+        "edge": 0.14688053727149963,
+        "variance": 0.15085284411907196,
+        "mean": 0.5945903658866882,
+        "entropy": 0.9033106873331643,
+        "target_agreement": 0.45983070135116577
       },
       "genome": {
         "guidance": 6.0964596341816994,
@@ -692,13 +692,13 @@
     {
       "generation": 36,
       "candidate": 26,
-      "score": 1.307553132323747,
+      "score": 1.3075560851688954,
       "metrics": {
-        "edge": 0.12165908515453339,
-        "variance": 0.1080126166343689,
-        "mean": 0.3547675907611847,
-        "entropy": 0.9243263236470749,
-        "target_agreement": 0.696334958076477
+        "edge": 0.12165860831737518,
+        "variance": 0.10801347345113754,
+        "mean": 0.3547689616680145,
+        "entropy": 0.9243260137593694,
+        "target_agreement": 0.6963388323783875
       },
       "genome": {
         "guidance": 6.215124467388568,
@@ -712,19 +712,19 @@
           "sparse neural arbor"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p26_+1.30755.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g36_p26_+1.30756.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, sparse neural arbor"
     },
     {
       "generation": 36,
       "candidate": 27,
-      "score": 1.235819549272311,
+      "score": 1.2358212293011581,
       "metrics": {
-        "edge": 0.12037023901939392,
-        "variance": 0.04803851246833801,
-        "mean": 0.20175351202487946,
-        "entropy": 0.7911893327305755,
-        "target_agreement": 0.8162224292755127
+        "edge": 0.120363250374794,
+        "variance": 0.0480356328189373,
+        "mean": 0.20175136625766754,
+        "entropy": 0.7912035469435623,
+        "target_agreement": 0.8162338733673096
       },
       "genome": {
         "guidance": 6.5614922742047925,
@@ -743,13 +743,13 @@
     {
       "generation": 37,
       "candidate": 0,
-      "score": 1.4686663546353926,
+      "score": 1.468651162485652,
       "metrics": {
-        "edge": 0.20401719212532043,
-        "variance": 0.14251698553562164,
-        "mean": 0.4159448444843292,
-        "entropy": 0.9264853075038936,
-        "target_agreement": 0.6656938791275024
+        "edge": 0.20401807129383087,
+        "variance": 0.1425185203552246,
+        "mean": 0.41594600677490234,
+        "entropy": 0.9264626109245562,
+        "target_agreement": 0.6656862497329712
       },
       "genome": {
         "guidance": 6.365708791416698,
@@ -762,18 +762,18 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p0_+1.46867.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p0_+1.46865.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 37,
       "candidate": 1,
-      "score": 1.259313154546233,
+      "score": 1.2593120443639756,
       "metrics": {
-        "edge": 0.15644241869449615,
-        "variance": 0.11585909128189087,
-        "mean": 0.5416891574859619,
-        "entropy": 0.969483169692596,
+        "edge": 0.1564406454563141,
+        "variance": 0.11585881561040878,
+        "mean": 0.5416886210441589,
+        "entropy": 0.9694867892369355,
         "target_agreement": 0.5305070877075195
       },
       "genome": {
@@ -794,11 +794,11 @@
     {
       "generation": 37,
       "candidate": 2,
-      "score": 0.7356901402803702,
+      "score": 0.735690326172356,
       "metrics": {
-        "edge": 0.06184302642941475,
-        "variance": 0.06242113187909126,
-        "mean": 0.8164777159690857,
+        "edge": 0.06184294819831848,
+        "variance": 0.06242130696773529,
+        "mean": 0.8164770007133484,
         "entropy": 0.7669625207840388,
         "target_agreement": 0.34388017654418945
       },
@@ -820,13 +820,13 @@
     {
       "generation": 37,
       "candidate": 3,
-      "score": 1.2860923110664408,
+      "score": 1.2860979368539271,
       "metrics": {
-        "edge": 0.16661304235458374,
-        "variance": 0.10707833617925644,
-        "mean": 0.565854012966156,
-        "entropy": 0.9839056425420661,
-        "target_agreement": 0.5500038266181946
+        "edge": 0.16661199927330017,
+        "variance": 0.1070789322257042,
+        "mean": 0.5658552646636963,
+        "entropy": 0.9839083935729693,
+        "target_agreement": 0.5500114560127258
       },
       "genome": {
         "guidance": 6.0183452730849885,
@@ -840,19 +840,19 @@
           "glomerular neuropil boundaries"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p3_+1.28609.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p3_+1.28610.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, glomerular neuropil boundaries"
     },
     {
       "generation": 37,
       "candidate": 4,
-      "score": 1.1086985347657947,
+      "score": 1.108711431748637,
       "metrics": {
-        "edge": 0.08367975056171417,
-        "variance": 0.02558119036257267,
-        "mean": 0.11958789825439453,
-        "entropy": 0.6388315587313874,
-        "target_agreement": 0.8929648995399475
+        "edge": 0.08367565274238586,
+        "variance": 0.025581538677215576,
+        "mean": 0.1195894181728363,
+        "entropy": 0.6388611931276473,
+        "target_agreement": 0.8929687738418579
       },
       "genome": {
         "guidance": 6.335332422990002,
@@ -865,19 +865,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p4_+1.10870.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p4_+1.10871.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 37,
       "candidate": 5,
-      "score": 1.1411176957490474,
+      "score": 1.1411239274640554,
       "metrics": {
-        "edge": 0.1331179141998291,
-        "variance": 0.11591247469186783,
+        "edge": 0.13311758637428284,
+        "variance": 0.11591342836618423,
         "mean": 0.6454069018363953,
-        "entropy": 0.9607041568110259,
-        "target_agreement": 0.4667356014251709
+        "entropy": 0.960709911458361,
+        "target_agreement": 0.4667394161224365
       },
       "genome": {
         "guidance": 6.308818086885811,
@@ -896,13 +896,13 @@
     {
       "generation": 37,
       "candidate": 6,
-      "score": 1.1302736752836862,
+      "score": 1.1302706607787765,
       "metrics": {
-        "edge": 0.11376312375068665,
-        "variance": 0.13434913754463196,
-        "mean": 0.6103715300559998,
+        "edge": 0.11376135051250458,
+        "variance": 0.13434891402721405,
+        "mean": 0.6103706359863281,
         "entropy": 0.9284958090942841,
-        "target_agreement": 0.4884229898452759
+        "target_agreement": 0.4884229302406311
       },
       "genome": {
         "guidance": 6.1542043375538205,
@@ -921,13 +921,13 @@
     {
       "generation": 37,
       "candidate": 7,
-      "score": 0.9729210396656973,
+      "score": 0.9729105216766092,
       "metrics": {
-        "edge": 0.04854348301887512,
-        "variance": 0.015066171996295452,
-        "mean": 0.07443425059318542,
-        "entropy": 0.5031874072460664,
-        "target_agreement": 0.9173100590705872
+        "edge": 0.04854509234428406,
+        "variance": 0.015066077001392841,
+        "mean": 0.07443345338106155,
+        "entropy": 0.5031690930335253,
+        "target_agreement": 0.9173061847686768
       },
       "genome": {
         "guidance": 6.071130772765629,
@@ -939,19 +939,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p7_+0.97292.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p7_+0.97291.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 37,
       "candidate": 8,
-      "score": 1.32245100873528,
+      "score": 1.3224532412304388,
       "metrics": {
-        "edge": 0.10457001626491547,
-        "variance": 0.1291664093732834,
-        "mean": 0.28637266159057617,
-        "entropy": 0.8930947919292536,
-        "target_agreement": 0.778071403503418
+        "edge": 0.1045716255903244,
+        "variance": 0.12916633486747742,
+        "mean": 0.28637391328811646,
+        "entropy": 0.8930986992904465,
+        "target_agreement": 0.7780675292015076
       },
       "genome": {
         "guidance": 6.505219789472639,
@@ -970,13 +970,13 @@
     {
       "generation": 37,
       "candidate": 9,
-      "score": 1.3075835124389896,
+      "score": 1.307587147568023,
       "metrics": {
-        "edge": 0.16229960322380066,
-        "variance": 0.15226387977600098,
-        "mean": 0.4211791455745697,
-        "entropy": 0.8365775694877033,
-        "target_agreement": 0.600053608417511
+        "edge": 0.1622980833053589,
+        "variance": 0.1522635966539383,
+        "mean": 0.421179860830307,
+        "entropy": 0.8365792099532857,
+        "target_agreement": 0.6000612378120422
       },
       "genome": {
         "guidance": 6.738561056856067,
@@ -989,18 +989,18 @@
           "dense neuropil"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p9_+1.30758.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p9_+1.30759.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, olfactory glomerulus, axon bundle, dense neuropil"
     },
     {
       "generation": 37,
       "candidate": 10,
-      "score": 1.2497389165354984,
+      "score": 1.2497374965238313,
       "metrics": {
-        "edge": 0.13608504831790924,
-        "variance": 0.11563584953546524,
-        "mean": 0.5533537268638611,
-        "entropy": 0.9835417911488392,
+        "edge": 0.1360863447189331,
+        "variance": 0.11563640832901001,
+        "mean": 0.5533532500267029,
+        "entropy": 0.9835341727169608,
         "target_agreement": 0.5577014684677124
       },
       "genome": {
@@ -1019,13 +1019,13 @@
     {
       "generation": 37,
       "candidate": 11,
-      "score": 1.4092605475048035,
+      "score": 1.4092742065100947,
       "metrics": {
-        "edge": 0.18489551544189453,
-        "variance": 0.12500227987766266,
-        "mean": 0.4005454480648041,
-        "entropy": 0.9422072021274511,
-        "target_agreement": 0.6421146988868713
+        "edge": 0.18489375710487366,
+        "variance": 0.12500013411045074,
+        "mean": 0.40054336190223694,
+        "entropy": 0.9422049653365899,
+        "target_agreement": 0.6421415209770203
       },
       "genome": {
         "guidance": 6.007555154210153,
@@ -1038,19 +1038,19 @@
           "projection neuron arbor"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p11_+1.40926.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p11_+1.40927.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, projection neuron arbor"
     },
     {
       "generation": 37,
       "candidate": 12,
-      "score": 1.2910637226131572,
+      "score": 1.291058470997271,
       "metrics": {
-        "edge": 0.12353536486625671,
-        "variance": 0.09019160270690918,
-        "mean": 0.37316569685935974,
-        "entropy": 0.9229361359688394,
-        "target_agreement": 0.6839920282363892
+        "edge": 0.12353785336017609,
+        "variance": 0.09019003063440323,
+        "mean": 0.3731653690338135,
+        "entropy": 0.922916129670463,
+        "target_agreement": 0.6839958429336548
       },
       "genome": {
         "guidance": 6.435442713944887,
@@ -1070,13 +1070,13 @@
     {
       "generation": 37,
       "candidate": 13,
-      "score": 1.1651217522297257,
+      "score": 1.1651072696533846,
       "metrics": {
-        "edge": 0.10847172886133194,
-        "variance": 0.030622288584709167,
-        "mean": 0.12181077152490616,
-        "entropy": 0.6410304540619624,
-        "target_agreement": 0.9042700529098511
+        "edge": 0.10847204923629761,
+        "variance": 0.03062300942838192,
+        "mean": 0.12181005626916885,
+        "entropy": 0.6410180140511641,
+        "target_agreement": 0.9042586088180542
       },
       "genome": {
         "guidance": 6.30810006428864,
@@ -1089,19 +1089,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p13_+1.16512.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p13_+1.16511.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 37,
       "candidate": 14,
-      "score": 0.7606311503671896,
+      "score": 0.7606316012485238,
       "metrics": {
-        "edge": 0.10450327396392822,
-        "variance": 0.05745441094040871,
-        "mean": 0.830525815486908,
-        "entropy": 0.7100773752861478,
-        "target_agreement": 0.3321346044540405
+        "edge": 0.10450328141450882,
+        "variance": 0.05745400860905647,
+        "mean": 0.8305248618125916,
+        "entropy": 0.7100730406232697,
+        "target_agreement": 0.3321384787559509
       },
       "genome": {
         "guidance": 6.152210041208169,
@@ -1121,13 +1121,13 @@
     {
       "generation": 37,
       "candidate": 15,
-      "score": 0.9926127110751144,
+      "score": 0.9926098881398429,
       "metrics": {
-        "edge": 0.07977426052093506,
-        "variance": 0.13305599987506866,
-        "mean": 0.711409330368042,
-        "entropy": 0.8689230439936884,
-        "target_agreement": 0.46066176891326904
+        "edge": 0.07977385818958282,
+        "variance": 0.1330556720495224,
+        "mean": 0.711408793926239,
+        "entropy": 0.8689245898136209,
+        "target_agreement": 0.4606579542160034
       },
       "genome": {
         "guidance": 6.211894108623315,
@@ -1146,12 +1146,12 @@
     {
       "generation": 37,
       "candidate": 16,
-      "score": 1.15400233759404,
+      "score": 1.1540026129644363,
       "metrics": {
-        "edge": 0.10845661163330078,
-        "variance": 0.1134200319647789,
-        "mean": 0.6240622401237488,
-        "entropy": 0.9368834877361089,
+        "edge": 0.10845886170864105,
+        "variance": 0.11342097073793411,
+        "mean": 0.6240609288215637,
+        "entropy": 0.936875072096559,
         "target_agreement": 0.5528262853622437
       },
       "genome": {
@@ -1171,13 +1171,13 @@
     {
       "generation": 37,
       "candidate": 17,
-      "score": 1.36575546524129,
+      "score": 1.3657487159018187,
       "metrics": {
-        "edge": 0.18108442425727844,
-        "variance": 0.1434120088815689,
-        "mean": 0.46982285380363464,
-        "entropy": 0.9477980016072898,
-        "target_agreement": 0.5791321992874146
+        "edge": 0.18108385801315308,
+        "variance": 0.143412247300148,
+        "mean": 0.4698232114315033,
+        "entropy": 0.9477924979174622,
+        "target_agreement": 0.5791283845901489
       },
       "genome": {
         "guidance": 6.123509308743448,
@@ -1190,18 +1190,18 @@
           "olfactory receptor axons"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p17_+1.36576.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p17_+1.36575.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, axon bundle, olfactory receptor axons"
     },
     {
       "generation": 37,
       "candidate": 18,
-      "score": 1.1042076979563649,
+      "score": 1.104203579185243,
       "metrics": {
-        "edge": 0.150795117020607,
-        "variance": 0.11797887086868286,
-        "mean": 0.6700892448425293,
-        "entropy": 0.8925357680403853,
+        "edge": 0.15079382061958313,
+        "variance": 0.11798004060983658,
+        "mean": 0.6700887680053711,
+        "entropy": 0.8925303682374872,
         "target_agreement": 0.43346738815307617
       },
       "genome": {
@@ -1216,18 +1216,18 @@
           "neuropil compartment"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p18_+1.10421.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p18_+1.10420.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, neuropil compartment"
     },
     {
       "generation": 37,
       "candidate": 19,
-      "score": 1.3417858907590725,
+      "score": 1.3417821015628246,
       "metrics": {
-        "edge": 0.10595270991325378,
-        "variance": 0.1405089646577835,
-        "mean": 0.485002726316452,
-        "entropy": 0.9953673276053083,
+        "edge": 0.10595191270112991,
+        "variance": 0.1405092477798462,
+        "mean": 0.48500314354896545,
+        "entropy": 0.9953626801050192,
         "target_agreement": 0.6907436847686768
       },
       "genome": {
@@ -1241,19 +1241,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p19_+1.34179.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p19_+1.34178.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 37,
       "candidate": 20,
-      "score": 1.21295947741508,
+      "score": 1.2129639948586064,
       "metrics": {
-        "edge": 0.14935380220413208,
-        "variance": 0.11734988540410995,
-        "mean": 0.6141877770423889,
-        "entropy": 0.9687997018033719,
-        "target_agreement": 0.5078469514846802
+        "edge": 0.14935436844825745,
+        "variance": 0.11734813451766968,
+        "mean": 0.6141858696937561,
+        "entropy": 0.9688026430352961,
+        "target_agreement": 0.5078507661819458
       },
       "genome": {
         "guidance": 6.3866414373877145,
@@ -1273,13 +1273,13 @@
     {
       "generation": 37,
       "candidate": 21,
-      "score": 1.3287750890475878,
+      "score": 1.3287679124765124,
       "metrics": {
-        "edge": 0.17363427579402924,
-        "variance": 0.14490985870361328,
-        "mean": 0.5137589573860168,
-        "entropy": 0.9334547930815671,
-        "target_agreement": 0.5702780485153198
+        "edge": 0.17363257706165314,
+        "variance": 0.1449095606803894,
+        "mean": 0.5137590765953064,
+        "entropy": 0.9334526849321388,
+        "target_agreement": 0.5702742338180542
       },
       "genome": {
         "guidance": 6.5180769444167,
@@ -1292,19 +1292,19 @@
           "olfactory receptor axons"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p21_+1.32878.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p21_+1.32877.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, axon bundle, olfactory receptor axons"
     },
     {
       "generation": 37,
       "candidate": 22,
-      "score": 1.2127572291840436,
+      "score": 1.2127643225551261,
       "metrics": {
-        "edge": 0.11179760098457336,
-        "variance": 0.06938894838094711,
-        "mean": 0.16710491478443146,
-        "entropy": 0.6611010602476597,
-        "target_agreement": 0.8890777826309204
+        "edge": 0.11179840564727783,
+        "variance": 0.06938895583152771,
+        "mean": 0.1671050786972046,
+        "entropy": 0.6611061016647407,
+        "target_agreement": 0.8890816569328308
       },
       "genome": {
         "guidance": 6.791254187213384,
@@ -1322,13 +1322,13 @@
     {
       "generation": 37,
       "candidate": 23,
-      "score": 1.1365322274111573,
+      "score": 1.1365383508875482,
       "metrics": {
-        "edge": 0.07704779505729675,
-        "variance": 0.04990220069885254,
-        "mean": 0.16105222702026367,
-        "entropy": 0.6702053384605436,
-        "target_agreement": 0.8823376297950745
+        "edge": 0.07704956829547882,
+        "variance": 0.04990489408373833,
+        "mean": 0.16105502843856812,
+        "entropy": 0.6701953963934495,
+        "target_agreement": 0.8823452591896057
       },
       "genome": {
         "guidance": 6.72274296166879,
@@ -1342,19 +1342,19 @@
           "fluorescent neural tracing"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p23_+1.13653.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p23_+1.13654.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, fluorescent neural tracing"
     },
     {
       "generation": 37,
       "candidate": 24,
-      "score": 1.0091191405033115,
+      "score": 1.0091224689721692,
       "metrics": {
-        "edge": 0.1263667643070221,
-        "variance": 0.1372954398393631,
-        "mean": 0.6941846013069153,
-        "entropy": 0.7966733423101258,
-        "target_agreement": 0.4197801351547241
+        "edge": 0.12636595964431763,
+        "variance": 0.13729532063007355,
+        "mean": 0.6941849589347839,
+        "entropy": 0.7966770153044984,
+        "target_agreement": 0.41978394985198975
       },
       "genome": {
         "guidance": 6.272791069765892,
@@ -1373,13 +1373,13 @@
     {
       "generation": 37,
       "candidate": 25,
-      "score": 1.336532333795446,
+      "score": 1.3365204292445505,
       "metrics": {
-        "edge": 0.16911163926124573,
-        "variance": 0.11640841513872147,
-        "mean": 0.49081555008888245,
-        "entropy": 0.981327463287689,
-        "target_agreement": 0.5785194635391235
+        "edge": 0.16911283135414124,
+        "variance": 0.11640912294387817,
+        "mean": 0.49081650376319885,
+        "entropy": 0.9813224266711735,
+        "target_agreement": 0.5785041451454163
       },
       "genome": {
         "guidance": 6.559805489139875,
@@ -1393,18 +1393,18 @@
           "neuropil"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p25_+1.33653.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p25_+1.33652.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, neuropil"
     },
     {
       "generation": 37,
       "candidate": 26,
-      "score": 1.1447863004670982,
+      "score": 1.1447768401172547,
       "metrics": {
-        "edge": 0.1125863641500473,
-        "variance": 0.14586715400218964,
-        "mean": 0.5668699145317078,
-        "entropy": 0.9160446342313728,
+        "edge": 0.1125832349061966,
+        "variance": 0.14586827158927917,
+        "mean": 0.5668706297874451,
+        "entropy": 0.916035805338583,
         "target_agreement": 0.49278491735458374
       },
       "genome": {
@@ -1418,19 +1418,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p26_+1.14479.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p26_+1.14478.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 37,
       "candidate": 27,
-      "score": 1.383677753748655,
+      "score": 1.383688496521626,
       "metrics": {
-        "edge": 0.154110386967659,
-        "variance": 0.11069071292877197,
-        "mean": 0.4274004399776459,
-        "entropy": 0.9701876335833287,
-        "target_agreement": 0.6685125827789307
+        "edge": 0.15411174297332764,
+        "variance": 0.11069118976593018,
+        "mean": 0.4274011552333832,
+        "entropy": 0.9701870005627728,
+        "target_agreement": 0.6685240268707275
       },
       "genome": {
         "guidance": 6.18514075456341,
@@ -1443,19 +1443,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p27_+1.38368.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g37_p27_+1.38369.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 38,
       "candidate": 0,
-      "score": 1.4686663546353926,
+      "score": 1.468651162485652,
       "metrics": {
-        "edge": 0.20401719212532043,
-        "variance": 0.14251698553562164,
-        "mean": 0.4159448444843292,
-        "entropy": 0.9264853075038936,
-        "target_agreement": 0.6656938791275024
+        "edge": 0.20401807129383087,
+        "variance": 0.1425185203552246,
+        "mean": 0.41594600677490234,
+        "entropy": 0.9264626109245562,
+        "target_agreement": 0.6656862497329712
       },
       "genome": {
         "guidance": 6.365708791416698,
@@ -1468,19 +1468,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p0_+1.46867.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p0_+1.46865.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 38,
       "candidate": 1,
-      "score": 1.2494012915027652,
+      "score": 1.2494205188433805,
       "metrics": {
-        "edge": 0.12415897846221924,
-        "variance": 0.05235263332724571,
-        "mean": 0.19309736788272858,
-        "entropy": 0.7913773607905191,
-        "target_agreement": 0.8238893747329712
+        "edge": 0.12416009604930878,
+        "variance": 0.05235172435641289,
+        "mean": 0.1930975317955017,
+        "entropy": 0.7913996278662535,
+        "target_agreement": 0.8238970637321472
       },
       "genome": {
         "guidance": 6.26324435033836,
@@ -1493,19 +1493,19 @@
           "fluorescent neural tracing"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p1_+1.24940.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p1_+1.24942.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, olfactory glomerulus, axon bundle, fluorescent neural tracing"
     },
     {
       "generation": 38,
       "candidate": 2,
-      "score": 1.3974722584961732,
+      "score": 1.39748165879951,
       "metrics": {
-        "edge": 0.17344063520431519,
-        "variance": 0.13992570340633392,
-        "mean": 0.37925538420677185,
-        "entropy": 0.9466727798416539,
-        "target_agreement": 0.6402649879455566
+        "edge": 0.17344225943088531,
+        "variance": 0.13992571830749512,
+        "mean": 0.3792557716369629,
+        "entropy": 0.9466741681876701,
+        "target_agreement": 0.6402726769447327
       },
       "genome": {
         "guidance": 6.322340613543471,
@@ -1519,18 +1519,18 @@
           "dendritic arbor"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p2_+1.39747.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p2_+1.39748.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, dendritic arbor"
     },
     {
       "generation": 38,
       "candidate": 3,
-      "score": 1.32378580976894,
+      "score": 1.3238029808337202,
       "metrics": {
-        "edge": 0.12772013247013092,
-        "variance": 0.14896897971630096,
-        "mean": 0.36303117871284485,
-        "entropy": 0.8630454213216538,
+        "edge": 0.12772051990032196,
+        "variance": 0.14896851778030396,
+        "mean": 0.3630301058292389,
+        "entropy": 0.8630766035092077,
         "target_agreement": 0.7027381658554077
       },
       "genome": {
@@ -1545,19 +1545,19 @@
           "glomerular map"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p3_+1.32379.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p3_+1.32380.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, glomerular map"
     },
     {
       "generation": 38,
       "candidate": 4,
-      "score": 1.2291382083146618,
+      "score": 1.2291410604161639,
       "metrics": {
-        "edge": 0.1367834508419037,
-        "variance": 0.15117909014225006,
-        "mean": 0.5376633405685425,
-        "entropy": 0.9468754079935848,
-        "target_agreement": 0.5123965740203857
+        "edge": 0.136784166097641,
+        "variance": 0.15117870271205902,
+        "mean": 0.5376631617546082,
+        "entropy": 0.9468736632380736,
+        "target_agreement": 0.5124003887176514
       },
       "genome": {
         "guidance": 6.47252503735204,
@@ -1576,13 +1576,13 @@
     {
       "generation": 38,
       "candidate": 5,
-      "score": 1.2559272725607862,
+      "score": 1.2559204846159158,
       "metrics": {
-        "edge": 0.12334936112165451,
-        "variance": 0.057714592665433884,
-        "mean": 0.2607865631580353,
-        "entropy": 0.8282473086815729,
-        "target_agreement": 0.7791053652763367
+        "edge": 0.12334968894720078,
+        "variance": 0.05771511793136597,
+        "mean": 0.26078569889068604,
+        "entropy": 0.8282387843701942,
+        "target_agreement": 0.779101550579071
       },
       "genome": {
         "guidance": 6.379290124916734,
@@ -1596,19 +1596,19 @@
           "anatomical"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p5_+1.25593.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p5_+1.25592.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, anatomical"
     },
     {
       "generation": 38,
       "candidate": 6,
-      "score": 1.3920707175077471,
+      "score": 1.3920690660492745,
       "metrics": {
-        "edge": 0.14372393488883972,
-        "variance": 0.14167287945747375,
-        "mean": 0.4359978139400482,
-        "entropy": 0.9605811519950578,
-        "target_agreement": 0.6801087260246277
+        "edge": 0.14372402429580688,
+        "variance": 0.14167244732379913,
+        "mean": 0.4359980523586273,
+        "entropy": 0.9605838117845433,
+        "target_agreement": 0.6801049113273621
       },
       "genome": {
         "guidance": 6.512401379937996,
@@ -1627,12 +1627,12 @@
     {
       "generation": 38,
       "candidate": 7,
-      "score": 0.7702646597823793,
+      "score": 0.7702644412568519,
       "metrics": {
-        "edge": 0.10214501619338989,
-        "variance": 0.08192316442728043,
-        "mean": 0.8176891207695007,
-        "entropy": 0.687246836785348,
+        "edge": 0.1021447703242302,
+        "variance": 0.08192267268896103,
+        "mean": 0.8176894187927246,
+        "entropy": 0.6872480501462672,
         "target_agreement": 0.33668816089630127
       },
       "genome": {
@@ -1653,11 +1653,11 @@
     {
       "generation": 38,
       "candidate": 8,
-      "score": 1.1204372371315998,
+      "score": 1.120438475418095,
       "metrics": {
-        "edge": 0.07705036550760269,
-        "variance": 0.17733515799045563,
-        "mean": 0.5142409205436707,
+        "edge": 0.07705100625753403,
+        "variance": 0.1773356795310974,
+        "mean": 0.5142419934272766,
         "entropy": 0.8890917462977572,
         "target_agreement": 0.5095243453979492
       },
@@ -1679,13 +1679,13 @@
     {
       "generation": 38,
       "candidate": 9,
-      "score": 0.9906468504164536,
+      "score": 0.9906177832706908,
       "metrics": {
-        "edge": 0.07375513017177582,
-        "variance": 0.029853351414203644,
-        "mean": 0.08573675900697708,
-        "entropy": 0.4458780356869406,
-        "target_agreement": 0.9062844514846802
+        "edge": 0.07375496625900269,
+        "variance": 0.029853224754333496,
+        "mean": 0.08573677390813828,
+        "entropy": 0.44583627414958754,
+        "target_agreement": 0.9062768220901489
       },
       "genome": {
         "guidance": 6.269688691660684,
@@ -1697,19 +1697,19 @@
           "olfactory glomerulus"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p9_+0.99065.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p9_+0.99062.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus"
     },
     {
       "generation": 38,
       "candidate": 10,
-      "score": 1.1735858970082047,
+      "score": 1.1735889286634462,
       "metrics": {
-        "edge": 0.1041082888841629,
-        "variance": 0.046788547188043594,
-        "mean": 0.15417712926864624,
-        "entropy": 0.7042122368011045,
-        "target_agreement": 0.8510799407958984
+        "edge": 0.10410667955875397,
+        "variance": 0.04678866267204285,
+        "mean": 0.15417681634426117,
+        "entropy": 0.7042122124428347,
+        "target_agreement": 0.8510876297950745
       },
       "genome": {
         "guidance": 6.412064133177336,
@@ -1726,13 +1726,13 @@
     {
       "generation": 38,
       "candidate": 11,
-      "score": 1.1634876959398657,
+      "score": 1.1634805447180998,
       "metrics": {
-        "edge": 0.142822265625,
-        "variance": 0.14235751330852509,
-        "mean": 0.6069914698600769,
-        "entropy": 0.9138513974845898,
-        "target_agreement": 0.4679112434387207
+        "edge": 0.14282292127609253,
+        "variance": 0.14235819876194,
+        "mean": 0.6069934368133545,
+        "entropy": 0.9138257807529213,
+        "target_agreement": 0.46791893243789673
       },
       "genome": {
         "guidance": 6.446011642989849,
@@ -1743,19 +1743,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p11_+1.16349.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p11_+1.16348.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 38,
       "candidate": 12,
-      "score": 1.3997342386078337,
+      "score": 1.3997347222020373,
       "metrics": {
-        "edge": 0.17866554856300354,
-        "variance": 0.13361167907714844,
-        "mean": 0.4268971383571625,
-        "entropy": 0.9074619584429445,
-        "target_agreement": 0.6556448936462402
+        "edge": 0.17866472899913788,
+        "variance": 0.13361166417598724,
+        "mean": 0.42689672112464905,
+        "entropy": 0.9074600010659019,
+        "target_agreement": 0.6556487083435059
       },
       "genome": {
         "guidance": 6.160510820155459,
@@ -1775,11 +1775,11 @@
     {
       "generation": 38,
       "candidate": 13,
-      "score": 1.3788758387209625,
+      "score": 1.3788796563984604,
       "metrics": {
-        "edge": 0.17727263271808624,
-        "variance": 0.0994710847735405,
-        "mean": 0.3147122859954834,
+        "edge": 0.17727449536323547,
+        "variance": 0.09947222471237183,
+        "mean": 0.31471124291419983,
         "entropy": 0.927350416877351,
         "target_agreement": 0.685619592666626
       },
@@ -1800,12 +1800,12 @@
     {
       "generation": 38,
       "candidate": 14,
-      "score": 1.2622007105148345,
+      "score": 1.2621969025895203,
       "metrics": {
-        "edge": 0.1174943596124649,
-        "variance": 0.10293082147836685,
-        "mean": 0.2735389769077301,
-        "entropy": 0.8671824916558754,
+        "edge": 0.11749410629272461,
+        "variance": 0.1029294952750206,
+        "mean": 0.2735367715358734,
+        "entropy": 0.8671792826083944,
         "target_agreement": 0.7197073698043823
       },
       "genome": {
@@ -1826,13 +1826,13 @@
     {
       "generation": 38,
       "candidate": 15,
-      "score": 1.4450828249510725,
+      "score": 1.445058280639492,
       "metrics": {
-        "edge": 0.21281780302524567,
-        "variance": 0.13254272937774658,
-        "mean": 0.3695802688598633,
-        "entropy": 0.8293147571622601,
-        "target_agreement": 0.7116535902023315
+        "edge": 0.21282148361206055,
+        "variance": 0.13254326581954956,
+        "mean": 0.36958205699920654,
+        "entropy": 0.8292936560107768,
+        "target_agreement": 0.7116268277168274
       },
       "genome": {
         "guidance": 6.227392417034777,
@@ -1845,19 +1845,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p15_+1.44508.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p15_+1.44506.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 38,
       "candidate": 16,
-      "score": 1.3220589833261263,
+      "score": 1.3220448014929858,
       "metrics": {
-        "edge": 0.12777560949325562,
-        "variance": 0.12299927324056625,
-        "mean": 0.3599124252796173,
-        "entropy": 0.9160236155989839,
-        "target_agreement": 0.6901999115943909
+        "edge": 0.12777617573738098,
+        "variance": 0.12299945205450058,
+        "mean": 0.3599136769771576,
+        "entropy": 0.9160109380510661,
+        "target_agreement": 0.6901884078979492
       },
       "genome": {
         "guidance": 6.259304119266508,
@@ -1868,18 +1868,18 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p16_+1.32206.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p16_+1.32204.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, axon bundle"
     },
     {
       "generation": 38,
       "candidate": 17,
-      "score": 1.2531908258910591,
+      "score": 1.2531937137227294,
       "metrics": {
-        "edge": 0.1257452666759491,
-        "variance": 0.15006881952285767,
-        "mean": 0.37434467673301697,
-        "entropy": 0.841015038727922,
+        "edge": 0.1257459968328476,
+        "variance": 0.15006886422634125,
+        "mean": 0.37434640526771545,
+        "entropy": 0.8410171817615243,
         "target_agreement": 0.624299168586731
       },
       "genome": {
@@ -1899,13 +1899,13 @@
     {
       "generation": 38,
       "candidate": 18,
-      "score": 1.3007440578882403,
+      "score": 1.3007421702672568,
       "metrics": {
-        "edge": 0.13632284104824066,
-        "variance": 0.14897280931472778,
-        "mean": 0.42632827162742615,
-        "entropy": 0.9066213087501861,
-        "target_agreement": 0.603676438331604
+        "edge": 0.136322021484375,
+        "variance": 0.14897246658802032,
+        "mean": 0.4263290464878082,
+        "entropy": 0.9066159774913078,
+        "target_agreement": 0.6036803126335144
       },
       "genome": {
         "guidance": 6.212988897513028,
@@ -1925,13 +1925,13 @@
     {
       "generation": 38,
       "candidate": 19,
-      "score": 1.3683979496394394,
+      "score": 1.3684008846387354,
       "metrics": {
-        "edge": 0.14425933361053467,
-        "variance": 0.1535232812166214,
-        "mean": 0.40301549434661865,
-        "entropy": 0.9296048559988626,
-        "target_agreement": 0.6577358841896057
+        "edge": 0.14426079392433167,
+        "variance": 0.15352283418178558,
+        "mean": 0.40301498770713806,
+        "entropy": 0.9296013573272821,
+        "target_agreement": 0.6577396988868713
       },
       "genome": {
         "guidance": 6.376239833470562,
@@ -1950,12 +1950,12 @@
     {
       "generation": 38,
       "candidate": 20,
-      "score": 1.2055189579575338,
+      "score": 1.2055188873593032,
       "metrics": {
-        "edge": 0.09204629063606262,
-        "variance": 0.17054802179336548,
-        "mean": 0.5032097101211548,
-        "entropy": 0.9203450917925039,
+        "edge": 0.09204621613025665,
+        "variance": 0.1705479621887207,
+        "mean": 0.5032109618186951,
+        "entropy": 0.92034584937385,
         "target_agreement": 0.5696192979812622
       },
       "genome": {
@@ -1975,12 +1975,12 @@
     {
       "generation": 38,
       "candidate": 21,
-      "score": 1.4320427023576627,
+      "score": 1.4320426638326915,
       "metrics": {
-        "edge": 0.19219690561294556,
-        "variance": 0.13496440649032593,
-        "mean": 0.38261735439300537,
-        "entropy": 0.9159813977022837,
+        "edge": 0.192195862531662,
+        "variance": 0.13496410846710205,
+        "mean": 0.38261792063713074,
+        "entropy": 0.9159847278309359,
         "target_agreement": 0.6705231070518494
       },
       "genome": {
@@ -2000,13 +2000,13 @@
     {
       "generation": 38,
       "candidate": 22,
-      "score": 1.4038363251831933,
+      "score": 1.4038283826104103,
       "metrics": {
-        "edge": 0.13968980312347412,
-        "variance": 0.09833649545907974,
-        "mean": 0.3605037033557892,
-        "entropy": 0.9550586084067468,
-        "target_agreement": 0.7697150707244873
+        "edge": 0.13968521356582642,
+        "variance": 0.09834038466215134,
+        "mean": 0.3605048358440399,
+        "entropy": 0.9550678683395276,
+        "target_agreement": 0.7697035670280457
       },
       "genome": {
         "guidance": 6.224228473883199,
@@ -2020,19 +2020,19 @@
           "synaptic density map"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p22_+1.40384.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p22_+1.40383.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, synaptic density map"
     },
     {
       "generation": 38,
       "candidate": 23,
-      "score": 1.3257747123359027,
+      "score": 1.3257701974330356,
       "metrics": {
-        "edge": 0.17301148176193237,
-        "variance": 0.14029575884342194,
-        "mean": 0.511502206325531,
-        "entropy": 0.938868905869105,
-        "target_agreement": 0.5678883194923401
+        "edge": 0.17301227152347565,
+        "variance": 0.14029516279697418,
+        "mean": 0.5115013718605042,
+        "entropy": 0.9388796322667258,
+        "target_agreement": 0.5678730010986328
       },
       "genome": {
         "guidance": 6.29676101351799,
@@ -2051,13 +2051,13 @@
     {
       "generation": 38,
       "candidate": 24,
-      "score": 1.1695176083545191,
+      "score": 1.1695387659069192,
       "metrics": {
-        "edge": 0.09900432825088501,
-        "variance": 0.03612028807401657,
-        "mean": 0.14223897457122803,
-        "entropy": 0.6948120768684874,
-        "target_agreement": 0.8794768452644348
+        "edge": 0.09900392591953278,
+        "variance": 0.0361209511756897,
+        "mean": 0.14223818480968475,
+        "entropy": 0.6948406981873316,
+        "target_agreement": 0.8794845342636108
       },
       "genome": {
         "guidance": 6.5251510066523,
@@ -2071,19 +2071,19 @@
           "axon tract"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p24_+1.16952.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p24_+1.16954.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, neural tissue, electric, olfactory glomerulus, axon bundle, axon tract"
     },
     {
       "generation": 38,
       "candidate": 25,
-      "score": 0.9950823093925532,
+      "score": 0.9950939110151713,
       "metrics": {
-        "edge": 0.1193455308675766,
+        "edge": 0.1193452924489975,
         "variance": 0.09388172626495361,
-        "mean": 0.7298890948295593,
-        "entropy": 0.8938818018498956,
-        "target_agreement": 0.40390241146087646
+        "mean": 0.7298893928527832,
+        "entropy": 0.8938932831055799,
+        "target_agreement": 0.4039101004600525
       },
       "genome": {
         "guidance": 6.587256133934884,
@@ -2095,19 +2095,19 @@
           "axon bundle"
         ]
       },
-      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p25_+0.99508.png",
+      "image": "flybrain_evo/results_v14/evolution_v6_candidates/g38_p25_+0.99509.png",
       "prompt": "Drosophila connectome, food odor response, OLF_ORN_FOOD OLF_LN OLF_PN, glowing neural branches, scientific micrograph, electric, olfactory glomerulus, axon bundle"
     },
     {
       "generation": 38,
       "candidate": 26,
-      "score": 1.374989091394199,
+      "score": 1.374985520528567,
       "metrics": {
-        "edge": 0.16086126863956451,
-        "variance": 0.1149500235915184,
-        "mean": 0.39431512355804443,
-        "entropy": 0.9482773693002589,
-        "target_agreement": 0.6592447757720947
+        "edge": 0.16086119413375854,
+        "variance": 0.11494982242584229,
+        "mean": 0.3943168818950653,
+        "entropy": 0.9482758023283916,
+        "target_agreement": 0.6592409610748291
       },
       "genome": {
         "guidance": 6.477288106581977,
@@ -2125,13 +2125,13 @@
     {
       "generation": 38,
       "candidate": 27,
-      "score": 1.0501935413042114,
+      "score": 1.0501910789726576,
       "metrics": {
-        "edge": 0.07868370413780212,
-        "variance": 0.02173858880996704,
-        "mean": 0.10375753790140152,
-        "entropy": 0.5939413534528205,
-        "target_agreement": 0.8685776591300964
+        "edge": 0.07868507504463196,
+        "variance": 0.021739646792411804,
+        "mean": 0.10375761985778809,
+        "entropy": 0.5939153761427329,
+        "target_agreement": 0.8685891628265381
       },
       "genome": {
         "guidance": 6.306892147529487,
