@@ -124,9 +124,9 @@
     "trainable_parameters": 431616
   },
   "evolution": {
-    "previous_best_score": 1.4713299971382179,
+    "previous_best_score": 1.4713296929849562,
     "parent_score_remeasured_current_run": 1.4713270682167485,
-    "best_score": 1.4713299971382179,
+    "best_score": 1.4713296929849562,
     "best_genome": {
       "guidance": 6.082817284227981,
       "steps": 8,
@@ -148,10 +148,10 @@
   },
   "evaluations": 120,
   "timing_sec": {
-    "llm": 56.2977077960968,
-    "sd": 39.87226939201355,
-    "evolution": 659.0215919017792,
-    "total": 755.1915690898895
+    "llm": 58.08462166786194,
+    "sd": 39.858372926712036,
+    "evolution": 647.6824090480804,
+    "total": 745.6254036426544
   },
   "verified": {
     "exact_flybrain_input": true,

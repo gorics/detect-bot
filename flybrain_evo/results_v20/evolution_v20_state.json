@@ -1,5 +1,5 @@
 {
-  "previous_best_score": 1.4713299971382179,
+  "previous_best_score": 1.4713296929849562,
   "previous_best_genome": {
     "guidance": 6.082817284227981,
     "steps": 8,
@@ -12,7 +12,7 @@
     ]
   },
   "parent_score_remeasured_current_run": 1.4713270682167485,
-  "best_score": 1.4713299971382179,
+  "best_score": 1.4713296929849562,
   "best_genome": {
     "guidance": 6.082817284227981,
     "steps": 8,
