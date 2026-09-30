@@ -1,5 +1,5 @@
 # FlyBrain recursive LoRA evolution runner - resumed generation trigger
-# scheduled continuation generation 3
+# scheduled continuation generation 4
 name: FlyBrain Direct LoRA Training
 
 on:
@@ -33,52 +33,68 @@ jobs:
         with:
           ref: flybrain-ai-evolution-20260929
           fetch-depth: 0
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install ML and LoRA stack
         run: |
           python -m pip install --upgrade pip
           python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install numpy pillow safetensors accelerate transformers==4.57.1 diffusers==0.35.2 peft==0.17.1
-
       - name: Fetch real open-source FlyBrain connectome
         run: |
           rm -rf external/flybrain
           git clone --depth 1 https://github.com/snedea/flybrain.git external/flybrain
           test -s external/flybrain/data/connectome.bin.gz
           test -s results/state/best_genome.npz
-
+      - name: Snapshot incumbent champions
+        run: |
+          rm -rf /tmp/llm_incumbent /tmp/sd_incumbent
+          cp -a lora_results/llm_lora /tmp/llm_incumbent
+          mkdir -p /tmp/sd_incumbent
+          cp lora_results/sd_unet_lora.pt /tmp/sd_incumbent/sd_unet_lora.pt
       - name: Continue actual LLM and Stable Diffusion LoRA training
         run: |
           mkdir -p lora_results
           python flybrain_direct_lora.py --flybrain external/flybrain --out lora_results --sd-steps 36 | tee lora_results_run.log
-
+      - name: Champion gate
+        run: |
+          python - <<'PY'
+          import json, shutil
+          from pathlib import Path
+          p=Path('lora_results/lora_results.json')
+          d=json.loads(p.read_text())
+          l=d['llm_lora']
+          improved=float(l['holdout_accuracy_after']) > float(l['holdout_accuracy_before'])
+          l['champion_promoted']=improved
+          if not improved:
+              shutil.rmtree('lora_results/llm_lora', ignore_errors=True)
+              shutil.copytree('/tmp/llm_incumbent','lora_results/llm_lora')
+          # The real-image SD workflow exclusively owns the SD champion.
+          shutil.copy2('/tmp/sd_incumbent/sd_unet_lora.pt','lora_results/sd_unet_lora.pt')
+          d['stable_diffusion_lora']['champion_promoted']=False
+          d['stable_diffusion_lora']['champion_gate']='not eligible: self-distillation validation; real-image workflow owns SD champion'
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2))
+          print('LLM champion promoted:', improved)
+          PY
       - name: Verify optimized adapter artifacts and validation
         run: |
           test -s lora_results/lora_results.json
           test -s lora_results/llm_lora/adapter_model.safetensors
           test -s lora_results/sd_unet_lora.pt
-          test -s lora_results/sd_base_result.png
-          test -s lora_results/sd_lora_result.png
           test -s lora_results/sd_validation.json
           test -s lora_results/llm_holdout_before.json
           test -s lora_results/llm_holdout_after.json
           cat lora_results/lora_results.json
-          find lora_results -maxdepth 3 -type f -printf '%p %k KB\n'
-
-      - name: Persist next-generation adapters and metrics
+      - name: Persist gated next-generation metrics and champions
         run: |
           git config user.name 'flybrain-lora-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add -f lora_results/
           git diff --cached --quiet && exit 0
-          git commit -m 'FlyBrain recursive LoRA generation: persist improved adapters'
+          git commit -m 'FlyBrain recursive LoRA generation: gated champion update'
           git pull --rebase origin flybrain-ai-evolution-20260929
           git push origin HEAD:flybrain-ai-evolution-20260929
-
       - name: Upload complete LoRA results
         if: always()
         uses: actions/upload-artifact@v4
