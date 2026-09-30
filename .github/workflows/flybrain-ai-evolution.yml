@@ -1,5 +1,5 @@
-# FlyBrain AI evolution runner - focused fruit-fly SD1.5 quality pass
-# scheduled continuation generation 2
+# FlyBrain AI evolution runner - champion-gated continuation
+# scheduled continuation generation 3
 name: FlyBrain AI Evolution
 
 on:
@@ -29,45 +29,43 @@ jobs:
         with:
           ref: flybrain-ai-evolution-20260929
           fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install CPU ML stack
         run: |
           python -m pip install --upgrade pip
           python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install numpy pillow safetensors accelerate transformers==4.57.1 diffusers==0.35.2
-
       - name: Fetch open-source FlyBrain connectome
         run: |
           rm -rf external/flybrain
           git clone --depth 1 https://github.com/snedea/flybrain.git external/flybrain
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          m=json.loads(Path('external/flybrain/data/neuron_meta.json').read_text())
-          print('FlyBrain neurons:',m['neuron_count'],'edges:',m['edge_count'],'groups:',m['group_count'])
-          PY
-
+          test -s external/flybrain/data/connectome.bin.gz
+      - name: Snapshot evolved-readout champion
+        run: |
+          cp results/state/best_genome.npz /tmp/best_genome_incumbent.npz
+          cp results/results.json /tmp/results_incumbent.json
       - name: Evolve connectome controller and run open models
         run: |
-          mkdir -p results
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('flybrain_ai_evolution.py')
-          s=p.read_text()
-          s=s.replace('num_inference_steps=6,guidance_scale=6.0,height=256,width=256', 'num_inference_steps=20,guidance_scale=7.5,height=512,width=512')
-          s=s.replace('scientific macro photograph of Drosophila melanogaster in a neural laboratory, ', 'full body macro photograph of a single fruit fly, Drosophila melanogaster, red compound eyes, two transparent wings, six legs, standing on a red apple, ')
-          s=s.replace('fruit fly behavior: {behavior}, visible glowing connectome pathways, microscopy, realistic anatomy, high detail', 'feeding behavior selected by the neural controller: {behavior}, sharp insect photography, realistic anatomy, natural light, high detail')
-          s=s.replace('text, watermark, malformed insect, duplicate wings, blurry', 'text, watermark, abstract object, flower, mushroom, fruit slice, fabric, cropped insect, malformed insect, extra wings, blurry')
-          s=s.replace("manual_seed(SEED)", "manual_seed(42)")
-          p.write_text(s)
-          PY
           python flybrain_ai_evolution.py --flybrain external/flybrain --out results --generations 120 --population 96 --stimulus food | tee results/run.log
-
+      - name: Strict held-out champion gate
+        run: |
+          python - <<'PY'
+          import json, shutil
+          from pathlib import Path
+          old=json.loads(Path('/tmp/results_incumbent.json').read_text())
+          new=json.loads(Path('results/results.json').read_text())
+          ov=float(old['evolution']['final_best_validation_accuracy'])
+          nv=float(new['evolution']['final_best_validation_accuracy'])
+          promoted=nv>ov
+          new['evolution']['incumbent_validation_accuracy']=ov
+          new['evolution']['champion_promoted']=promoted
+          if not promoted:
+              shutil.copy2('/tmp/best_genome_incumbent.npz','results/state/best_genome.npz')
+          Path('results/results.json').write_text(json.dumps(new,ensure_ascii=False,indent=2))
+          print('readout incumbent=',ov,'challenger=',nv,'promoted=',promoted)
+          PY
       - name: Verify real outputs
         run: |
           test -s results/results.json
@@ -75,19 +73,16 @@ jobs:
           test -s results/llm_output.txt
           test -s results/stable_diffusion_result.png
           test -s results/state/best_genome.npz
-          ls -lh results
           cat results/results.json
-
-      - name: Commit evolved checkpoint and generated results
+      - name: Commit gated evolved checkpoint and generated results
         run: |
-          git checkout -- flybrain_ai_evolution.py
           git config user.name 'flybrain-evolution-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add -f results/results.json results/evolution_history.json results/llm_output.txt results/stable_diffusion_result.png results/stable_diffusion_result_512.png results/state/best_genome.npz
           git diff --cached --quiet && exit 0
-          git commit -m 'FlyBrain evolution run: focused fruit-fly SD1.5 output'
+          git commit -m 'FlyBrain evolution run: strict held-out champion gate'
+          git pull --rebase origin flybrain-ai-evolution-20260929
           git push origin HEAD:flybrain-ai-evolution-20260929
-
       - name: Upload full result artifact
         if: always()
         uses: actions/upload-artifact@v4
