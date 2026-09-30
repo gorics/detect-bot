@@ -13,19 +13,18 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: flybrain-ai-evolution
-  cancel-in-progress: false
-
 jobs:
-  evolve:
+  evolve-and-generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     env:
       HF_HUB_DISABLE_TELEMETRY: '1'
       HF_HUB_DISABLE_XET: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      FLY_LLM: HuggingFaceTB/SmolLM2-135M-Instruct
+      FLY_SD: stable-diffusion-v1-5/stable-diffusion-v1-5
     steps:
-      - name: Checkout continuing branch
+      - name: Checkout evolution branch
         uses: actions/checkout@v4
         with:
           ref: flybrain-ai-evolution-20260929
@@ -33,33 +32,62 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install runtime
-        run: pip install --quiet numpy torch transformers diffusers accelerate pillow
-      - name: Download FlyBrain source
+      - name: Install CPU ML stack
         run: |
-          git clone --depth 1 https://github.com/fruitflybrain/ffbo.neuroarch_component.git /tmp/ffbo || true
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy pillow safetensors accelerate transformers==4.57.1 diffusers==0.35.2
+      - name: Fetch open-source FlyBrain connectome
+        run: |
+          rm -rf external/flybrain
+          git clone --depth 1 https://github.com/snedea/flybrain.git external/flybrain
+          test -s external/flybrain/data/connectome.bin.gz
+      - name: Snapshot evolved-readout champion
+        run: |
+          cp results/state/best_genome.npz /tmp/best_genome_incumbent.npz
+          cp results/results.json /tmp/results_incumbent.json
+      - name: Evolve connectome controller and run open models
+        run: |
+          python flybrain_ai_evolution.py --flybrain external/flybrain --out results --generations 120 --population 96 --stimulus food | tee results/run.log
+      - name: Strict held-out champion gate
+        run: |
           python - <<'PY'
-          import urllib.request
+          import json, shutil
           from pathlib import Path
-          # Existing workflow/data preparation logic remains in repository script/runtime.
+          old=json.loads(Path('/tmp/results_incumbent.json').read_text())
+          new=json.loads(Path('results/results.json').read_text())
+          ov=float(old['evolution']['final_best_validation_accuracy'])
+          nv=float(new['evolution']['final_best_validation_accuracy'])
+          promoted=nv>ov
+          new['evolution']['incumbent_validation_accuracy']=ov
+          new['evolution']['champion_promoted']=promoted
+          if not promoted:
+              shutil.copy2('/tmp/best_genome_incumbent.npz','results/state/best_genome.npz')
+          Path('results/results.json').write_text(json.dumps(new,ensure_ascii=False,indent=2))
+          print('readout incumbent=',ov,'challenger=',nv,'promoted=',promoted)
           PY
-      - name: Run continued evolution
+      - name: Verify real outputs
         run: |
-          python flybrain_ai_evolution.py --flybrain flybrain-main --out results --generations 120 --population 96 --stimulus food
-      - name: Strict champion gate
+          test -s results/results.json
+          test -s results/evolution_history.json
+          test -s results/llm_output.txt
+          test -s results/stable_diffusion_result.png
+          test -s results/state/best_genome.npz
+          cat results/results.json
+      - name: Commit gated evolved checkpoint and generated results
         run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          p=Path('results/results.json')
-          d=json.loads(p.read_text())
-          print('validation',d['evolution']['final_best_validation_accuracy'])
-          PY
-      - name: Commit results
-        run: |
-          git config user.name flybrain-evolution-bot
-          git config user.email actions@users.noreply.github.com
-          git add results
-          git diff --cached --quiet || git commit -m 'FlyBrain evolution run: strict held-out champion gate'
+          git config user.name 'flybrain-evolution-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -f results/results.json results/evolution_history.json results/llm_output.txt results/stable_diffusion_result.png results/stable_diffusion_result_512.png results/state/best_genome.npz
+          git diff --cached --quiet && exit 0
+          git commit -m 'FlyBrain evolution run: strict held-out champion gate'
           git pull --rebase origin flybrain-ai-evolution-20260929
           git push origin HEAD:flybrain-ai-evolution-20260929
+      - name: Upload full result artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flybrain-ai-evolution-results
+          path: results/
+          if-no-files-found: warn
+          retention-days: 14
