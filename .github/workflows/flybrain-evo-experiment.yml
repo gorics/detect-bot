@@ -36,33 +36,33 @@ jobs:
           git -C external/flybrain rev-parse HEAD > flybrain_source_commit.txt
       - name: Execute exact 139k-neuron connectome worker
         run: |
-          rm -rf flybrain_evo/results_v14
-          mkdir -p flybrain_evo/results_v14
-          node flybrain_evo/run_flybrain_worker.cjs external/flybrain flybrain_evo/results_v14
-          cp flybrain_source_commit.txt flybrain_evo/results_v14/
-      - name: Continue generations from V13 elite
+          rm -rf flybrain_evo/results_v15
+          mkdir -p flybrain_evo/results_v15
+          node flybrain_evo/run_flybrain_worker.cjs external/flybrain flybrain_evo/results_v15
+          cp flybrain_source_commit.txt flybrain_evo/results_v15/
+      - name: Continue generations from V14 elite
         env:
           TOKENIZERS_PARALLELISM: 'false'
         run: |
-          test -f flybrain_evo/results_v13/evolution_v13_state.json
-          python flybrain_evo/hybrid_v14.py \
-            --brain flybrain_evo/results_v14/flybrain_state.json \
+          test -f flybrain_evo/results_v14/evolution_v14_state.json
+          python flybrain_evo/hybrid_v15.py \
+            --brain flybrain_evo/results_v15/flybrain_state.json \
             --meta external/flybrain/data/neuron_meta.json \
-            --previous flybrain_evo/results_v13/evolution_v13_state.json \
-            --out flybrain_evo/results_v14 \
+            --previous flybrain_evo/results_v14/evolution_v14_state.json \
+            --out flybrain_evo/results_v15 \
             --generations 3 \
-            --population 28
-      - name: Upload full v14 result artifact
+            --population 30
+      - name: Upload full v15 result artifact
         uses: actions/upload-artifact@v4
         with:
-          name: flybrain-evo-v14-results
-          path: flybrain_evo/results_v14/
+          name: flybrain-evo-v15-results
+          path: flybrain_evo/results_v15/
           retention-days: 7
-      - name: Persist compact v14 results to experiment branch
+      - name: Persist compact v15 results to experiment branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f flybrain_evo/results_v14/*.json flybrain_evo/results_v14/*.txt flybrain_evo/results_v14/flybrain_sd_v14_final.png flybrain_evo/results_v14/sd_v3_before.png flybrain_evo/results_v14/brain_condition_target_v3.png
-          git commit -m 'Persist FlyBrain v14 recursive evolution results [skip ci]' || exit 0
+          git add -f flybrain_evo/results_v15/*.json flybrain_evo/results_v15/*.txt flybrain_evo/results_v15/flybrain_sd_v15_final.png flybrain_evo/results_v15/sd_v3_before.png flybrain_evo/results_v15/brain_condition_target_v3.png
+          git commit -m 'Persist FlyBrain v15 recursive evolution results [skip ci]' || exit 0
           git pull --rebase origin flybrain-evo-experiment
           git push origin HEAD:flybrain-evo-experiment
