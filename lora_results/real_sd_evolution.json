@@ -4,47 +4,47 @@
   "selection_metric": "held-out real Drosophila fixed denoising loss (lower is better)",
   "license_note": "Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.",
   "train_images": [
-    "Drosophila_melanogaster.jpg",
-    "Drosophila_melanogaster2_female_Sussex_July2011.jpg",
-    "Drosophila_melanogaster_Pose.jpg",
-    "Drosophila_melanogaster_alt.jpg"
+    "real_00.jpg",
+    "real_01.jpg",
+    "real_02.jpg",
+    "real_03.jpg"
   ],
   "validation_images": [
-    "Drosophila_melanogaster_female_Pose.jpg",
-    "Drosophila_melanogaster_female_Sussex_July2011.jpg"
+    "real_04.jpg",
+    "real_05.jpg"
   ],
   "incumbent": {
     "loaded": true,
-    "real_validation_loss": 0.21352481842041016,
+    "real_validation_loss": 0.31520017981529236,
     "each": [
-      0.2481410801410675,
-      0.1789085566997528
+      0.3879185914993286,
+      0.2424817681312561
     ],
-    "inference_seconds": 20.935409545898438
+    "inference_seconds": 16.33246350288391
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
-    "base_real_validation_loss": 0.31983208656311035,
-    "candidate_real_validation_loss": 0.258548378944397,
-    "candidate_improvement_vs_base": 0.1916121308442287,
+    "base_real_validation_loss": 0.4239717423915863,
+    "candidate_real_validation_loss": 0.3516826778650284,
+    "candidate_improvement_vs_base": 0.17050444003362544,
     "base_each": [
-      0.3646809756755829,
-      0.2749831974506378
+      0.49018311500549316,
+      0.35776036977767944
     ],
     "candidate_each": [
-      0.2964177429676056,
-      0.22067901492118835
+      0.4210449457168579,
+      0.28232041001319885
     ],
-    "train_loss_first": 0.3346039950847626,
-    "train_loss_last": 0.10325892269611359,
-    "lora_weight_norm_sum": 91.13920492306352,
+    "train_loss_first": 0.5710249543190002,
+    "train_loss_last": 0.22534985840320587,
+    "lora_weight_norm_sum": 92.281827904284,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 20.837763786315918
+    "inference_seconds": 16.233572721481323
   },
   "selected": "incumbent",
-  "selected_loss": 0.21352481842041016,
+  "selected_loss": 0.31520017981529236,
   "relative_gain_over_incumbent": 0.0,
-  "total_seconds": 177.5399477481842
+  "total_seconds": 150.7822802066803
 }
