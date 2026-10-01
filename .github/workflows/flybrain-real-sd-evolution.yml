@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# scheduled continuation generation 21 retry with resilient real-image download
+# generation 22: fixed CLI contract; real-photo held-out gate
 on:
   push:
     branches: [flybrain-ai-evolution-20260929]
@@ -37,7 +37,7 @@ jobs:
           python - <<'PY'
           import requests, pathlib, time
           names=['Drosophila melanogaster.jpg','Drosophila melanogaster 01.JPG','Drosophila melanogaster 14Hari.jpg','Drosophila melanogaster 1 007.jpg','Drosphila melanogaster.jpg','Drosophila melanogaster1.jpg']
-          s=requests.Session(); s.headers.update({'User-Agent':'FlyBrainResearch/1.1 (github.com/gorics/detect-bot; research validation)','Accept':'image/*'})
+          s=requests.Session(); s.headers.update({'User-Agent':'FlyBrainResearch/1.2 (github.com/gorics/detect-bot; research validation)','Accept':'image/*'})
           for i,name in enumerate(names):
             u='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+requests.utils.quote(name,safe='')
             last=None
@@ -55,7 +55,7 @@ jobs:
             time.sleep(4)
           PY
       - name: Train challenger and validate against incumbent on held-out real photos
-        run: python flybrain_real_sd_evolution.py --real-dir real_drosophila --out lora_results --steps 72
+        run: python flybrain_real_sd_evolution.py --images 'real_drosophila/*.jpg' --out lora_results --steps 72
       - name: Commit validated champion and evidence
         run: |
           git config user.name 'github-actions[bot]'
