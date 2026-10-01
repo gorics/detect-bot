@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 22,
+  "generation": 23,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7615394576867025,
+  "breeder_fitness": 0.6215476318856988,
   "breeder_genome": {
-    "generation": 22,
+    "generation": 23,
     "active_neo": 7,
     "mutations": [
       {
@@ -632,7 +632,7 @@
         "w": 0.11658934234998806
       },
       {
-        "s": 6,
+        "s": 70,
         "d": 55,
         "w": 0.3409968478276013
       },
@@ -677,13 +677,8 @@
         "w": 0.16480866791870333
       },
       {
-        "s": 41,
-        "d": 66,
-        "w": 0.27209019417162605
-      },
-      {
         "s": 57,
-        "d": 85,
+        "d": 25,
         "w": 0.1812534886086219
       },
       {
@@ -719,7 +714,7 @@
       {
         "s": 71,
         "d": 75,
-        "w": 0.360483073331188
+        "w": 0.18976910800918076
       },
       {
         "s": 8,
@@ -744,7 +739,7 @@
       {
         "s": 12,
         "d": 39,
-        "w": -0.40760081881177573
+        "w": -0.32177635634197543
       },
       {
         "s": 43,
@@ -790,16 +785,36 @@
         "s": 83,
         "d": 79,
         "w": 0.3119341778787293
+      },
+      {
+        "s": 21,
+        "d": 6,
+        "w": 0.1536022217987219
+      },
+      {
+        "s": 8,
+        "d": 21,
+        "w": -0.3458391506641002
+      },
+      {
+        "s": 68,
+        "d": 32,
+        "w": 0.021284428505068426
+      },
+      {
+        "s": 82,
+        "d": 49,
+        "w": -0.1763655042078966
       }
     ],
-    "temp": 0.9135619116996345,
-    "top_p": 0.99,
-    "rep": 1.0258015824770512,
-    "tokens": 162,
-    "guidance": 5.103851338056364,
+    "temp": 0.8875469995390628,
+    "top_p": 0.9873347593894473,
+    "rep": 1.0,
+    "tokens": 164,
+    "guidance": 5.080486414786586,
     "steps": 8,
-    "seed_bias": 960158441,
-    "mutation_rate": 0.10222623866489848,
+    "seed_bias": 462515440,
+    "mutation_rate": 0.1318461559485385,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -876,10 +891,21 @@
         "s": 15,
         "d": 8,
         "factor": 1.0162649135000061
+      },
+      {
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 10,
+        "d2": 4
+      },
+      {
+        "kind": "native_knockout",
+        "s": 28,
+        "d": 21
       }
     ]
   },
-  "improved": true,
+  "improved": false,
   "champion_fitness": 0.7615394576867025,
   "champion_genome": {
     "generation": 22,
@@ -1348,31 +1374,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
-    "breeder_native_nonzero_edges": 293,
-    "breeder_native_ops": 13,
+    "breeder_topology_hash": "1dc0b259586b263a8a97cfbc932d4c7a53cf888d9157cbfce28b4eeedcdf3f99",
+    "breeder_native_nonzero_edges": 294,
+    "breeder_native_ops": 15,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7615394576867025,
-    "text_score": 0.9548000000000001,
+    "fitness": 0.6215476318856988,
+    "text_score": 0.5547428571428572,
     "vision": {
-      "clip_cosine": 0.2501867115497589,
-      "score": 0.707572817504406,
-      "guidance": 5.106729030609131
+      "clip_cosine": 0.29358023405075073,
+      "score": 0.7244962912797928,
+      "guidance": 5.078835964202881
     },
-    "integration": 0.5656031966209412,
+    "integration": 0.5650624632835388,
     "structure": {
-      "mutations": 69,
+      "mutations": 72,
       "active_neo": 7,
-      "nonzero_edges": 343,
-      "native_ops": 13,
-      "native_core_nonzero_edges": 293,
-      "topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e"
+      "nonzero_edges": 345,
+      "native_ops": 15,
+      "native_core_nonzero_edges": 294,
+      "topology_hash": "1dc0b259586b263a8a97cfbc932d4c7a53cf888d9157cbfce28b4eeedcdf3f99"
     },
-    "text": "초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 포함하려면, 다음과 같은 내용들을 포함해야 합니다.\n\n1. 입력\n   - 진화의 과정: 입력이란, 전자체가 정보, 행동 또는 경험을 받아들이고, 그 결과를 통해 스스로 변화하는 방법. 즉, 신호, 신호변환, 신체적인 변화 등을 통해 인식하고 변화시키는 데 사용되고 있습니다.\n\n2. 뉴런\n   - 뉴런은 기능을 수행하고 신경상태를 바꾸는 기본_unit의 일부입니다. 각 �"
+    "text": "세대 23 (세대 23의 단계 3을 의미함)의 사고 사이클은 다음과 같이 구성됩니다:\n\n1. **입력**:\n   - 신생뉴런이 입력을 받습니다. 신생뉴런이 입력의 형태와 갯수를 파악합니다.\n\n2. **검토**:\n   - 신생뉴런은 입력에 대해 검토합니다. 신생뉴런은 구조변이를 검토해야 합니다.\n\n3. **결정**:\n   - 검토 결과에 따라 신생뉴런은 결정합니다. 결정은 진화를 결정합니다. 진화에 대한 결과는 신생뉴런의 신생 뇌에 저장됩니다.\n\n4. **작업**:\n   - 신생"
   },
-  "elapsed_seconds": 158.16345024108887
+  "elapsed_seconds": 159.1469762325287
 }
