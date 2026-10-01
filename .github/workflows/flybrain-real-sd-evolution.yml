@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# scheduled continuation generation 18
+# scheduled continuation generation 19
 
 on:
   push:
@@ -33,62 +33,45 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install ML stack
+      - name: Install CPU dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
-          python -m pip install numpy pillow safetensors accelerate transformers==4.57.1 diffusers==0.35.2 peft==0.17.1
-      - name: Download licensed real Drosophila melanogaster images
+          pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          pip install 'numpy<2' pillow requests 'diffusers>=0.35.0' 'transformers>=4.50.0' 'huggingface_hub>=0.34.0' safetensors accelerate peft
+      - name: Download real Drosophila photographs
         run: |
           mkdir -p real_drosophila
-          base='https://obbard.bio.ed.ac.uk/photo_gallery/small'
-          for f in Drosophila_melanogaster.jpg Drosophila_melanogaster_alt.jpg Drosophila_melanogaster_Pose.jpg Drosophila_melanogaster_female_Pose.jpg Drosophila_melanogaster2_female_Sussex_July2011.jpg Drosophila_melanogaster_female_Sussex_July2011.jpg; do
-            curl -fL --retry 4 --retry-delay 2 "$base/$f" -o "real_drosophila/$f"
-          done
-          cat > real_drosophila/REAL_IMAGE_SOURCES.txt <<'EOF'
-          Source: Obbard Lab, University of Edinburgh — Drosophilidae photographs
-          Page: https://obbard.bio.ed.ac.uk/photos.html
-          License stated on source page: CC BY-NC 4.0 for academic/non-commercial use with attribution.
-          Files used:
-          Drosophila_melanogaster.jpg
-          Drosophila_melanogaster_alt.jpg
-          Drosophila_melanogaster_Pose.jpg
-          Drosophila_melanogaster_female_Pose.jpg
-          Drosophila_melanogaster2_female_Sussex_July2011.jpg
-          Drosophila_melanogaster_female_Sussex_July2011.jpg
-          EOF
-          test "$(find real_drosophila -type f -name '*.jpg' | wc -l)" -ge 6
-      - name: Train challenger on real flies and select against incumbent
-        run: python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72 | tee real_sd_evolution.log
-      - name: Verify evolutionary selection artifacts
+          python - <<'PY'
+          import requests, pathlib
+          urls = {
+            'Drosophila_melanogaster.jpg':'https://obbard.bio.ed.ac.uk/wp-content/uploads/2016/01/Drosophila_melanogaster.jpg',
+            'Drosophila_melanogaster2_female_Sussex_July2011.jpg':'https://obbard.bio.ed.ac.uk/wp-content/uploads/2016/01/Drosophila_melanogaster2_female_Sussex_July2011.jpg',
+            'Drosophila_melanogaster_Pose.jpg':'https://obbard.bio.ed.ac.uk/wp-content/uploads/2016/01/Drosophila_melanogaster_Pose.jpg',
+            'Drosophila_melanogaster_alt.jpg':'https://obbard.bio.ed.ac.uk/wp-content/uploads/2016/01/Drosophila_melanogaster_alt.jpg',
+            'Drosophila_melanogaster_female_Pose.jpg':'https://obbard.bio.ed.ac.uk/wp-content/uploads/2016/01/Drosophila_melanogaster_female_Pose.jpg',
+            'Drosophila_melanogaster_female_Sussex_July2011.jpg':'https://obbard.bio.ed.ac.uk/wp-content/uploads/2016/01/Drosophila_melanogaster_female_Sussex_July2011.jpg',
+          }
+          for name,url in urls.items():
+            r=requests.get(url,timeout=30); r.raise_for_status()
+            pathlib.Path('real_drosophila',name).write_bytes(r.content)
+          PY
+      - name: Train challenger and validate against incumbent on held-out real photos
+        run: python flybrain_real_sd_evolution.py --real-dir real_drosophila --out lora_results --steps 72
+      - name: Commit only validated champion/evidence
         run: |
-          test -s lora_results/real_sd_evolution.json
-          test -s lora_results/real_base.png
-          test -s lora_results/real_incumbent.png
-          test -s lora_results/real_candidate.png
-          test -s lora_results/sd_unet_lora.pt
-          cat lora_results/real_sd_evolution.json
-      - name: Persist selected champion and evidence
-        run: |
-          git config user.name 'flybrain-realdata-bot'
-          git config user.email 'actions@users.noreply.github.com'
-          cp real_drosophila/REAL_IMAGE_SOURCES.txt lora_results/REAL_IMAGE_SOURCES.txt
-          git add -f lora_results/real_sd_evolution.json lora_results/real_base.png lora_results/real_incumbent.png lora_results/real_candidate.png lora_results/sd_real_candidate.pt lora_results/sd_unet_lora.pt lora_results/REAL_IMAGE_SOURCES.txt
-          git diff --cached --quiet && exit 0
-          git commit -m 'Evolve SD LoRA using held-out real Drosophila images'
-          git pull --rebase origin flybrain-ai-evolution-20260929
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add lora_results/real_sd_evolution.json lora_results/sd_unet_lora.pt lora_results/sd_real_candidate.pt lora_results/real_base.png lora_results/real_incumbent.png lora_results/real_candidate.png lora_results/REAL_IMAGE_SOURCES.txt
+          git diff --cached --quiet || git commit -m 'Continue real-image SD LoRA evolution with held-out gate'
           git push origin HEAD:flybrain-ai-evolution-20260929
-      - name: Upload real-image evolution result
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: flybrain-real-sd-evolution-results
+          name: flybrain-real-sd-evolution
           path: |
             lora_results/real_sd_evolution.json
             lora_results/real_base.png
             lora_results/real_incumbent.png
             lora_results/real_candidate.png
-            lora_results/sd_real_candidate.pt
             lora_results/sd_unet_lora.pt
-            real_drosophila/REAL_IMAGE_SOURCES.txt
-            real_sd_evolution.log
-          retention-days: 14
+            lora_results/sd_real_candidate.pt
+            lora_results/REAL_IMAGE_SOURCES.txt
