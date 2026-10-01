@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# scheduled continuation generation 20 retry
+# scheduled continuation generation 21 retry with resilient real-image download
 on:
   push:
     branches: [flybrain-ai-evolution-20260929]
@@ -35,13 +35,24 @@ jobs:
         run: |
           mkdir -p real_drosophila
           python - <<'PY'
-          import requests, pathlib
+          import requests, pathlib, time
           names=['Drosophila melanogaster.jpg','Drosophila melanogaster 01.JPG','Drosophila melanogaster 14Hari.jpg','Drosophila melanogaster 1 007.jpg','Drosphila melanogaster.jpg','Drosophila melanogaster1.jpg']
+          s=requests.Session(); s.headers.update({'User-Agent':'FlyBrainResearch/1.1 (github.com/gorics/detect-bot; research validation)','Accept':'image/*'})
           for i,name in enumerate(names):
             u='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+requests.utils.quote(name,safe='')
-            r=requests.get(u,headers={'User-Agent':'FlyBrainResearch/1.0'},timeout=45); r.raise_for_status()
-            if 'image' not in r.headers.get('content-type','') or len(r.content)<10000: raise RuntimeError(name)
-            pathlib.Path('real_drosophila',f'real_{i:02d}.jpg').write_bytes(r.content)
+            last=None
+            for attempt in range(6):
+              try:
+                r=s.get(u,timeout=60)
+                if r.status_code==429:
+                  time.sleep(min(5*(2**attempt),60)); continue
+                r.raise_for_status()
+                if 'image' not in r.headers.get('content-type','') or len(r.content)<10000: raise RuntimeError(f'invalid image {name}')
+                pathlib.Path('real_drosophila',f'real_{i:02d}.jpg').write_bytes(r.content); last=None; break
+              except Exception as e:
+                last=e; time.sleep(min(3*(2**attempt),45))
+            if last is not None: raise last
+            time.sleep(4)
           PY
       - name: Train challenger and validate against incumbent on held-out real photos
         run: python flybrain_real_sd_evolution.py --real-dir real_drosophila --out lora_results --steps 72
