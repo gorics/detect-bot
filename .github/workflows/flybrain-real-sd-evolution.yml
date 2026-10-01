@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# generation 22: fixed CLI contract; real-photo held-out gate
+# generation 23: directory CLI fixed; real-photo held-out gate
 on:
   push:
     branches: [flybrain-ai-evolution-20260929]
@@ -55,7 +55,7 @@ jobs:
             time.sleep(4)
           PY
       - name: Train challenger and validate against incumbent on held-out real photos
-        run: python flybrain_real_sd_evolution.py --images 'real_drosophila/*.jpg' --out lora_results --steps 72
+        run: python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72
       - name: Commit validated champion and evidence
         run: |
           git config user.name 'github-actions[bot]'
