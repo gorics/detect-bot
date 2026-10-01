@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# scheduled continuation generation 15
+# scheduled continuation generation 16
 
 on:
   push:
@@ -59,8 +59,7 @@ jobs:
           EOF
           test "$(find real_drosophila -type f -name '*.jpg' | wc -l)" -ge 6
       - name: Train challenger on real flies and select against incumbent
-        run: |
-          python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72 | tee real_sd_evolution.log
+        run: python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72 | tee real_sd_evolution.log
       - name: Verify evolutionary selection artifacts
         run: |
           test -s lora_results/real_sd_evolution.json
@@ -80,7 +79,6 @@ jobs:
           git pull --rebase origin flybrain-ai-evolution-20260929
           git push origin HEAD:flybrain-ai-evolution-20260929
       - name: Upload real-image evolution result
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: flybrain-real-sd-evolution-results
@@ -93,5 +91,4 @@ jobs:
             lora_results/sd_unet_lora.pt
             real_drosophila/REAL_IMAGE_SOURCES.txt
             real_sd_evolution.log
-          if-no-files-found: warn
           retention-days: 14
