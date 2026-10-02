@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# generation 24: strict download gate + incumbent LoRA continuation + real-photo held-out gate
+# strict incumbent continuation + real-photo held-out gate
 on:
   push:
     branches: [flybrain-ai-evolution-20260929]
@@ -57,19 +57,15 @@ jobs:
           files=list(pathlib.Path('real_drosophila').glob('*.jpg'))
           if len(files)!=6: raise RuntimeError(f'real-image gate expected 6 files, got {len(files)}')
           PY
-      - name: Enforce continuation from incumbent SD LoRA
+      - name: Verify incumbent SD LoRA continuation guard
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('flybrain_real_sd_evolution.py')
-          s=p.read_text()
-          old='pipe=make_pipe(model_id); params=add_lora(pipe)'
-          new="pipe=make_pipe(model_id); params=add_lora(pipe); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')\n    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')"
-          if old in s:
-              s=s.replace(old,new,1)
-              p.write_text(s)
-          elif "resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')" not in s:
-              raise RuntimeError('could not enforce incumbent continuation')
+          s=Path('flybrain_real_sd_evolution.py').read_text()
+          token="resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')"
+          guard="if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')"
+          if token not in s or guard not in s:
+              raise RuntimeError('incumbent continuation guard missing from training code')
           PY
       - name: Train challenger and validate against incumbent on held-out real photos
         run: python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72
@@ -77,7 +73,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add flybrain_real_sd_evolution.py lora_results/
+          git add lora_results/
           git diff --cached --quiet || git commit -m 'Continue real-image SD LoRA evolution with held-out gate'
           for n in 1 2 3 4; do
             git pull --rebase origin flybrain-ai-evolution-20260929 && git push origin HEAD:flybrain-ai-evolution-20260929 && break
