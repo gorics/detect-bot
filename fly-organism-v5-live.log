@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 27 native_ops 17 neo 8
-V5_FITNESS 0 0.5910054394324733 topology e54d956bf97082a7
-V5_EVALUATE 1 generation 27 native_ops 15 neo 8
-V5_FITNESS 1 0.5783284576651975 topology 2d7053e59d2228c3
-V5_EVALUATE 2 generation 27 native_ops 15 neo 8
-V5_FITNESS 2 0.5706627549472617 topology d657e0471a4bf1b8
-V5_EVALUATE 3 generation 27 native_ops 15 neo 6
-V5_FITNESS 3 0.7518618846860063 topology 733b3a2a7e55cdaa
+V5_EVALUATE 0 generation 28 native_ops 16 neo 6
+V5_FITNESS 0 0.5954589625901701 topology a255fa2283ceb6d1
+V5_EVALUATE 1 generation 28 native_ops 15 neo 8
+V5_FITNESS 1 0.5975208315964964 topology 920dd84e41eec212
+V5_EVALUATE 2 generation 28 native_ops 18 neo 6
+V5_FITNESS 2 0.5687634726674745 topology 97c257bbae1a616e
+V5_EVALUATE 3 generation 28 native_ops 14 neo 6
+V5_FITNESS 3 0.7247165693815227 topology fcf0440f53070a84
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 27,
+  "generation": 28,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -449,9 +449,9 @@ V5_FITNESS 3 0.7518618846860063 topology 733b3a2a7e55cdaa
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7518618846860063,
+  "breeder_fitness": 0.7247165693815227,
   "breeder_genome": {
-    "generation": 27,
+    "generation": 28,
     "active_neo": 6,
     "mutations": [
       {
@@ -896,16 +896,10 @@ V5_FITNESS 3 0.7518618846860063 topology 733b3a2a7e55cdaa
         "factor": 1.0162649135000061
       },
       {
-        "kind": "native_rewire",
-        "s": 8,
-        "d": 9,
-        "d2": 55
-      },
-      {
         "kind": "native_scale",
-        "s": 25,
-        "d": 60,
-        "factor": 0.6647323730998449
+        "s": 11,
+        "d": 0,
+        "factor": 1.2315756584404152
       }
     ]
   },
@@ -1378,31 +1372,31 @@ V5_FITNESS 3 0.7518618846860063 topology 733b3a2a7e55cdaa
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "733b3a2a7e55cdaafbb150938e8ea9190539d09f98b18357578e293b2a098a5f",
+    "breeder_topology_hash": "fcf0440f53070a84868709b1f83a6e70fe8e5f1947b13e64d5fbbdf99bf59576",
     "breeder_native_nonzero_edges": 293,
-    "breeder_native_ops": 15,
+    "breeder_native_ops": 14,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7518618846860063,
-    "text_score": 0.9366000000000001,
+    "fitness": 0.7247165693815227,
+    "text_score": 0.8690285714285715,
     "vision": {
-      "clip_cosine": 0.2389078438282013,
-      "score": 0.7031740590929986,
-      "guidance": 5.450594902038574
+      "clip_cosine": 0.23381736874580383,
+      "score": 0.7011887738108635,
+      "guidance": 5.475815773010254
     },
-    "integration": 0.5548854470252991,
+    "integration": 0.546284019947052,
     "structure": {
       "mutations": 71,
       "active_neo": 6,
       "nonzero_edges": 343,
-      "native_ops": 15,
+      "native_ops": 14,
       "native_core_nonzero_edges": 293,
-      "topology_hash": "733b3a2a7e55cdaafbb150938e8ea9190539d09f98b18357578e293b2a098a5f"
+      "topology_hash": "fcf0440f53070a84868709b1f83a6e70fe8e5f1947b13e64d5fbbdf99bf59576"
     },
-    "text": "네, 초파리,connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 이는 신생뉴런과 뉴런의 관계와 신생뉴런의 생성 및 선택의 과정을 포함하고 있습니다.\n\n1. 신생뉴런: 신생뉴런은 신생 신호 신호요소를 받아서 신경망의 시작 point를 가집니다.\n\n2. 코포레이션: 신생뉴런이 신경망에 반응하면, 새로운 신생뉴런이 생성됩니다. 이는 신경망의 신생 신호에 반응하는 신생뉴런의 생성"
+    "text": "초파리 (Neural Network)는 빅데이터의 전처리와 학습을 돕는 전망 모델로서, LLM은 이 빅데이터를 이해하고 추론할 수 있게 하는 지능형 프로그램으로, Stable Diffusion는 이 시각적 표현을 이용한 새로운 이미지 생성을 가능하게 하는 기술으로, LLM은 이를 통해 새로운 문장을 생성할 수 있도록 하는 역할을 하며, 뉴런은 신생뉴런이란 신생의 빠른 신경적 과정을 나타내는 단지 하나의 신경요소이며, 진화는 빅데이터의 과학적 패턴과 변화를 이해하고, 보상은 입력"
   },
-  "elapsed_seconds": 150.10259556770325
+  "elapsed_seconds": 119.30186772346497
 }
