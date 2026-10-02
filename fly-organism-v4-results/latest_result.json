@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 31,
+  "generation": 32,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.5753080066577094,
+  "breeder_fitness": 0.7021429240837017,
   "breeder_genome": {
-    "generation": 31,
+    "generation": 32,
     "active_neo": 6,
     "mutations": [
       {
@@ -888,22 +888,22 @@
         "factor": 1.0162649135000061
       },
       {
-        "kind": "native_scale",
-        "s": 25,
-        "d": 25,
-        "factor": 1.7269957165464986
+        "kind": "native_rewire",
+        "s": 23,
+        "d": 27,
+        "d2": 52
       },
       {
         "kind": "native_scale",
-        "s": 17,
-        "d": 9,
-        "factor": 0.7664548909372718
+        "s": 15,
+        "d": 35,
+        "factor": 0.5266715060793413
       },
       {
         "kind": "native_scale",
-        "s": 2,
-        "d": 28,
-        "factor": 1.213235169190897
+        "s": 60,
+        "d": 58,
+        "factor": 0.9164770534829384
       }
     ]
   },
@@ -1376,7 +1376,7 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "11d17c71c55894d73da0a3a981bba3728bf2ba89f1d2c6e824117da4bf05a29f",
+    "breeder_topology_hash": "15521021103580c5a0cd5a22c8a1414f6ff4a5ae7a7dac012ae3ea02ce5329ae",
     "breeder_native_nonzero_edges": 293,
     "breeder_native_ops": 16,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
@@ -1384,23 +1384,23 @@
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.5753080066577094,
-    "text_score": 0.46687912087912087,
+    "fitness": 0.7021429240837017,
+    "text_score": 0.7955456445993031,
     "vision": {
-      "clip_cosine": 0.27677297592163086,
-      "score": 0.7027215493222078,
-      "guidance": 5.472605228424072
+      "clip_cosine": 0.27600014209747314,
+      "score": 0.7176400554180146,
+      "guidance": 5.4591193199157715
     },
-    "integration": 0.5378016233444214,
+    "integration": 0.5298905968666077,
     "structure": {
       "mutations": 71,
       "active_neo": 6,
       "nonzero_edges": 343,
       "native_ops": 16,
       "native_core_nonzero_edges": 293,
-      "topology_hash": "11d17c71c55894d73da0a3a981bba3728bf2ba89f1d2c6e824117da4bf05a29f"
+      "topology_hash": "15521021103580c5a0cd5a22c8a1414f6ff4a5ae7a7dac012ae3ea02ce5329ae"
     },
-    "text": "세대 31의 사고 사이클은 신생 뇌의 기본적으로 동작하는 과정을 설명합니다. 이 과정은 신생 뇌는 초기에 입력의 진화, 기억과 기억을 통해 신체 활동, 인식 및 행동 등을 결정하는데 집중하게 합니다.\n\n1. **입력:** 신생 뇌는 초기에는 주로 뇌의 기본적인 활동을 포함할 수 있습니다. 이는 주로 신호(비행, 움직임 등)를 받아 처리합니다.\n\n2. **전달:** 신생 뇌는 입력을 전달합니다. 이는 신생 뇌가 신호와 관련된 다른 정보를 받아서 처리하는 데 사용됩니다. 예"
+    "text": "초파리, LLM, Stable Diffusion, 신생뉴런, GBR, 반응형 신경상태, 생성, 선택, 변화, 진화, 보상, LRB, 인식, 신뢰성, 신경적 활동, 뇌의 동작, 파이썬 코드, 신경적 신경상태, 인공지능의 신경적 활동, 신경의 신뢰성, 신경적 신경적 활동, 인공지능의 생성, 신경적 신경적 활동, 진화, 생성, 신경적 신경적 활동."
   },
-  "elapsed_seconds": 101.8115587234497
+  "elapsed_seconds": 156.30742406845093
 }
