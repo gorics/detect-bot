@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 28,
+  "generation": 29,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,10 +441,10 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7247165693815227,
+  "breeder_fitness": 0.6461878310010338,
   "breeder_genome": {
-    "generation": 28,
-    "active_neo": 6,
+    "generation": 29,
+    "active_neo": 5,
     "mutations": [
       {
         "s": 13,
@@ -455,11 +455,6 @@
         "s": 54,
         "d": 71,
         "w": 0.22454935031537981
-      },
-      {
-        "s": 48,
-        "d": 63,
-        "w": 0.23631686563047385
       },
       {
         "s": 13,
@@ -559,7 +554,7 @@
       {
         "s": 27,
         "d": 78,
-        "w": 0.17259858519218624
+        "w": 0.169821293907292
       },
       {
         "s": 56,
@@ -800,16 +795,36 @@
         "s": 83,
         "d": 6,
         "w": 0.2758059866902395
+      },
+      {
+        "s": 56,
+        "d": 75,
+        "w": -0.03666814856963171
+      },
+      {
+        "s": 2,
+        "d": 3,
+        "w": 0.44778246772630903
+      },
+      {
+        "s": 66,
+        "d": 74,
+        "w": 0.1858026205929518
+      },
+      {
+        "s": 4,
+        "d": 34,
+        "w": 0.12345447192063926
       }
     ],
-    "temp": 0.8609506808108147,
-    "top_p": 0.9691522190072257,
-    "rep": 1.0313452154329787,
-    "tokens": 164,
-    "guidance": 5.463639409090615,
+    "temp": 0.8400710793444963,
+    "top_p": 0.9642717880195896,
+    "rep": 1.0257788502284362,
+    "tokens": 163,
+    "guidance": 6.120156662192236,
     "steps": 8,
-    "seed_bias": 559796831,
-    "mutation_rate": 0.11394994540546191,
+    "seed_bias": 506772027,
+    "mutation_rate": 0.0864416010717277,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -892,6 +907,12 @@
         "s": 11,
         "d": 0,
         "factor": 1.2315756584404152
+      },
+      {
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 5,
+        "d2": 24
       }
     ]
   },
@@ -1364,31 +1385,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "fcf0440f53070a84868709b1f83a6e70fe8e5f1947b13e64d5fbbdf99bf59576",
-    "breeder_native_nonzero_edges": 293,
-    "breeder_native_ops": 14,
+    "breeder_topology_hash": "7b37d4a7bc865baab6ed71a7e7bedcfc31afa9df1ca02f2971f96492c2e9b034",
+    "breeder_native_nonzero_edges": 294,
+    "breeder_native_ops": 15,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7247165693815227,
-    "text_score": 0.8690285714285715,
+    "fitness": 0.6461878310010338,
+    "text_score": 0.6425142857142857,
     "vision": {
-      "clip_cosine": 0.23381736874580383,
-      "score": 0.7011887738108635,
-      "guidance": 5.475815773010254
+      "clip_cosine": 0.2575235068798065,
+      "score": 0.7104341676831245,
+      "guidance": 6.109287738800049
     },
-    "integration": 0.546284019947052,
+    "integration": 0.5494353175163269,
     "structure": {
-      "mutations": 71,
-      "active_neo": 6,
-      "nonzero_edges": 343,
-      "native_ops": 14,
-      "native_core_nonzero_edges": 293,
-      "topology_hash": "fcf0440f53070a84868709b1f83a6e70fe8e5f1947b13e64d5fbbdf99bf59576"
+      "mutations": 74,
+      "active_neo": 5,
+      "nonzero_edges": 344,
+      "native_ops": 15,
+      "native_core_nonzero_edges": 294,
+      "topology_hash": "7b37d4a7bc865baab6ed71a7e7bedcfc31afa9df1ca02f2971f96492c2e9b034"
     },
-    "text": "초파리 (Neural Network)는 빅데이터의 전처리와 학습을 돕는 전망 모델로서, LLM은 이 빅데이터를 이해하고 추론할 수 있게 하는 지능형 프로그램으로, Stable Diffusion는 이 시각적 표현을 이용한 새로운 이미지 생성을 가능하게 하는 기술으로, LLM은 이를 통해 새로운 문장을 생성할 수 있도록 하는 역할을 하며, 뉴런은 신생뉴런이란 신생의 빠른 신경적 과정을 나타내는 단지 하나의 신경요소이며, 진화는 빅데이터의 과학적 패턴과 변화를 이해하고, 보상은 입력"
+    "text": "세대 29의 사고 사이클은 다음과 같이 설명할 수 있습니다:\n\n1. **입력**: 신생뉴런이 새로운 정보를 입력받습니다.\n2. **진화**: 신생뉴런은 이 정보를 통해 새로운 전자적 상태를 생성합니다.\n3. **보상**: 신생뉴런이 생성된 상태에 따른 보상 정보를 제공합니다.\n4. **실태**: 신생뉴런이 보상을 받았을 때 새로운 정보가 입력됩니다.\n5. **뉴런 활성화**: 신생뉴런이 정보를 처리하고 결정하는 데 필요한 활성화를 수행합니다.\n6. **전역 변화**: 신생뉴런이 전역적인 정보를 생성하고 반응합니다.\n7"
   },
-  "elapsed_seconds": 119.30186772346497
+  "elapsed_seconds": 160.19101667404175
 }
