@@ -96,7 +96,8 @@ def generate(pipe,path,seed=SEED+222):
 def train_candidate(model_id,train_paths,val_paths,out,steps):
     from diffusers import DDPMScheduler
     from torchvision.transforms.functional import to_tensor
-    pipe=make_pipe(model_id); params=add_lora(pipe)
+    pipe=make_pipe(model_id); params=add_lora(pipe); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
+    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')
     ntrain=sum(p.numel() for p in params); ntotal=sum(p.numel() for p in pipe.unet.parameters())
     scheduler=DDPMScheduler.from_config(pipe.scheduler.config)
     _,val_cases=encode_cases(pipe,val_paths,SEED+5000)
