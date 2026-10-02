@@ -1,5 +1,5 @@
 name: FlyBrain Real-Image SD Evolution
-# generation 23: directory CLI fixed; real-photo held-out gate
+# generation 24: strict download gate + incumbent LoRA continuation + real-photo held-out gate
 on:
   push:
     branches: [flybrain-ai-evolution-20260929]
@@ -33,26 +33,43 @@ jobs:
           pip install 'numpy<2' pillow requests 'diffusers>=0.35.0' 'transformers>=4.50.0' 'huggingface_hub>=0.34.0' safetensors accelerate peft
       - name: Download real Drosophila photographs
         run: |
-          mkdir -p real_drosophila
+          rm -rf real_drosophila && mkdir -p real_drosophila
           python - <<'PY'
           import requests, pathlib, time
           names=['Drosophila melanogaster.jpg','Drosophila melanogaster 01.JPG','Drosophila melanogaster 14Hari.jpg','Drosophila melanogaster 1 007.jpg','Drosphila melanogaster.jpg','Drosophila melanogaster1.jpg']
-          s=requests.Session(); s.headers.update({'User-Agent':'FlyBrainResearch/1.2 (github.com/gorics/detect-bot; research validation)','Accept':'image/*'})
+          s=requests.Session(); s.headers.update({'User-Agent':'FlyBrainResearch/1.3 (github.com/gorics/detect-bot; research validation)','Accept':'image/*'})
           for i,name in enumerate(names):
             u='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+requests.utils.quote(name,safe='')
-            last=None
-            for attempt in range(6):
+            last=None; success=False
+            for attempt in range(8):
               try:
                 r=s.get(u,timeout=60)
                 if r.status_code==429:
-                  time.sleep(min(5*(2**attempt),60)); continue
+                  last=RuntimeError(f'HTTP 429 for {name}, attempt {attempt+1}')
+                  time.sleep(min(8*(2**attempt),75)); continue
                 r.raise_for_status()
                 if 'image' not in r.headers.get('content-type','') or len(r.content)<10000: raise RuntimeError(f'invalid image {name}')
-                pathlib.Path('real_drosophila',f'real_{i:02d}.jpg').write_bytes(r.content); last=None; break
+                pathlib.Path('real_drosophila',f'real_{i:02d}.jpg').write_bytes(r.content); success=True; break
               except Exception as e:
-                last=e; time.sleep(min(3*(2**attempt),45))
-            if last is not None: raise last
-            time.sleep(4)
+                last=e; time.sleep(min(5*(2**attempt),60))
+            if not success: raise RuntimeError(f'failed real-image download: {name}: {last}')
+            time.sleep(8)
+          files=list(pathlib.Path('real_drosophila').glob('*.jpg'))
+          if len(files)!=6: raise RuntimeError(f'real-image gate expected 6 files, got {len(files)}')
+          PY
+      - name: Enforce continuation from incumbent SD LoRA
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('flybrain_real_sd_evolution.py')
+          s=p.read_text()
+          old='pipe=make_pipe(model_id); params=add_lora(pipe)'
+          new="pipe=make_pipe(model_id); params=add_lora(pipe); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')\n    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')"
+          if old in s:
+              s=s.replace(old,new,1)
+              p.write_text(s)
+          elif "resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')" not in s:
+              raise RuntimeError('could not enforce incumbent continuation')
           PY
       - name: Train challenger and validate against incumbent on held-out real photos
         run: python flybrain_real_sd_evolution.py --images real_drosophila --out lora_results --steps 72
@@ -60,9 +77,13 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add lora_results/
+          git add flybrain_real_sd_evolution.py lora_results/
           git diff --cached --quiet || git commit -m 'Continue real-image SD LoRA evolution with held-out gate'
-          git push origin HEAD:flybrain-ai-evolution-20260929
+          for n in 1 2 3 4; do
+            git pull --rebase origin flybrain-ai-evolution-20260929 && git push origin HEAD:flybrain-ai-evolution-20260929 && break
+            test "$n" = 4 && exit 1
+            sleep $((n*5))
+          done
       - uses: actions/upload-artifact@v4
         with:
           name: flybrain-real-sd-evolution
