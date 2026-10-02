@@ -98,6 +98,7 @@ def train_candidate(model_id,train_paths,val_paths,out,steps):
     from torchvision.transforms.functional import to_tensor
     pipe=make_pipe(model_id); params=add_lora(pipe); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
+    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')
     ntrain=sum(p.numel() for p in params); ntotal=sum(p.numel() for p in pipe.unet.parameters())
     scheduler=DDPMScheduler.from_config(pipe.scheduler.config)
