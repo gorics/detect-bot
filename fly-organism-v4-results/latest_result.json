@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 36,
+  "generation": 37,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.6302925878615682,
+  "breeder_fitness": 0.635510740924384,
   "breeder_genome": {
-    "generation": 36,
+    "generation": 37,
     "active_neo": 6,
     "mutations": [
       {
@@ -888,21 +888,22 @@
         "factor": 1.0162649135000061
       },
       {
-        "kind": "native_knockout",
-        "s": 17,
-        "d": 25
+        "kind": "native_scale",
+        "s": 3,
+        "d": 5,
+        "factor": 1.53730360147879
       },
       {
         "kind": "native_rewire",
-        "s": 60,
-        "d": 60,
-        "d2": 45
+        "s": 27,
+        "d": 57,
+        "d2": 42
       },
       {
-        "kind": "native_birth",
-        "s": 14,
-        "d": 37,
-        "w": 0.1701981931492706
+        "kind": "native_scale",
+        "s": 35,
+        "d": 57,
+        "factor": 0.6657545983176425
       }
     ]
   },
@@ -1375,7 +1376,7 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "c5b89f125cff5e4e0d0990a5e59de3d9ba3b67ec96ccb266f0b620bd49366c70",
+    "breeder_topology_hash": "9efd93ab609a3d69db07ffbf5781a16b791566bee1d48566e3a6d44133a222f2",
     "breeder_native_nonzero_edges": 293,
     "breeder_native_ops": 16,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
@@ -1383,23 +1384,23 @@
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.6302925878615682,
-    "text_score": 0.6155142857142857,
+    "fitness": 0.635510740924384,
+    "text_score": 0.6278681318681318,
     "vision": {
-      "clip_cosine": 0.2691150903701782,
-      "score": 0.7149548852443696,
-      "guidance": 5.480299472808838
+      "clip_cosine": 0.2308724969625473,
+      "score": 0.7000402738153935,
+      "guidance": 5.47698974609375
     },
-    "integration": 0.5026631951332092,
+    "integration": 0.5497332811355591,
     "structure": {
       "mutations": 71,
       "active_neo": 6,
       "nonzero_edges": 343,
       "native_ops": 16,
       "native_core_nonzero_edges": 293,
-      "topology_hash": "c5b89f125cff5e4e0d0990a5e59de3d9ba3b67ec96ccb266f0b620bd49366c70"
+      "topology_hash": "9efd93ab609a3d69db07ffbf5781a16b791566bee1d48566e3a6d44133a222f2"
     },
-    "text": "세대 36의 사고 사이클은 신생뉴런과 구조변화, 진화, 보상, 입력, 뇌활성, 생성 및 평가, 선택, 돌연변이 등을 통해 이루어진 일련의 업데이트 과정을 가리킵니다. 이 과정은 신생뉴런과 구조변이를 통한 진화 과정에서 시작됩니다.\n\n1. 신생뉴런 (Neuron):\n   - 신생뉴런은 지구에서 최초로 생길 때 양자화된 신생뉴런으로, 기존의 신생뉴런과 신생뉴런을 통합하여 전류를 생성합니다.\n   - 신생뉴런은 신생물로서 생명"
+    "text": "세대 37의 사고 사이클은 매우 복잡한 계산 과정을 나타내는 주제를 가진 과학 연구에 대한 개념을 가리키며, 이는 신경계에서 반응을 일관시키는 계획과 실행 과정을 설명하는 것으로, 이는 신경 신호 전달, 신경 활성화 및 보상 기능 등의 핵심 원리와 연관되어 있다고 볼 수 있습니다.\n\n1. **초파리 연결**: 여기에서 신경 신호 전달의 기본적인 원리를 설명합니다. 초파리 연결은 신경 신호를 연결하여 뇌에서 전달되는 신호를 얻거나 전달하는 것입니다.\n\n2. **LLM 언어"
   },
-  "elapsed_seconds": 152.37345814704895
+  "elapsed_seconds": 151.71250891685486
 }
