@@ -120,7 +120,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 19.222147941589355,
+    "inference_seconds": 20.060291528701782,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -130,5 +130,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 37.28725242614746
+  "total_seconds": 67.0132908821106
 }
