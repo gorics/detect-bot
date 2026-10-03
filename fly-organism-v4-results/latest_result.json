@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 34,
+  "generation": 35,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,16 +441,11 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.6875999254035571,
+  "breeder_fitness": 0.6411299609990819,
   "breeder_genome": {
-    "generation": 34,
+    "generation": 35,
     "active_neo": 6,
     "mutations": [
-      {
-        "s": 13,
-        "d": 68,
-        "w": 0.2384344208990037
-      },
       {
         "s": 54,
         "d": 71,
@@ -563,18 +558,13 @@
       },
       {
         "s": 56,
-        "d": 63,
+        "d": 24,
         "w": -0.010887225702254144
       },
       {
         "s": 4,
         "d": 70,
         "w": 0.34054638380540647
-      },
-      {
-        "s": 24,
-        "d": 68,
-        "w": 0.21436826240660092
       },
       {
         "s": 71,
@@ -619,7 +609,7 @@
       {
         "s": 73,
         "d": 37,
-        "w": 0.08816578556433018
+        "w": -0.03446443955941275
       },
       {
         "s": 68,
@@ -644,7 +634,7 @@
       {
         "s": 76,
         "d": 53,
-        "w": -0.07497509397995991
+        "w": -0.040444132396347636
       },
       {
         "s": 25,
@@ -678,7 +668,7 @@
       },
       {
         "s": 41,
-        "d": 66,
+        "d": 84,
         "w": 0.27209019417162605
       },
       {
@@ -747,11 +737,6 @@
         "w": -0.40760081881177573
       },
       {
-        "s": 43,
-        "d": 53,
-        "w": 0.34560719218386926
-      },
-      {
         "s": 52,
         "d": 6,
         "w": 0.0046266288671479375
@@ -802,14 +787,14 @@
         "w": 0.2758059866902395
       }
     ],
-    "temp": 0.8557228760230773,
-    "top_p": 0.9464499821071822,
+    "temp": 0.8740221224645763,
+    "top_p": 0.944170578493629,
     "rep": 1.0,
-    "tokens": 168,
-    "guidance": 6.00999805094034,
+    "tokens": 167,
+    "guidance": 6.063760770214148,
     "steps": 10,
-    "seed_bias": 693166753,
-    "mutation_rate": 0.09524154394374786,
+    "seed_bias": 351403063,
+    "mutation_rate": 0.08437235729214615,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -903,6 +888,12 @@
         "s": 60,
         "d": 3,
         "factor": 0.9868447397641106
+      },
+      {
+        "kind": "native_birth",
+        "s": 58,
+        "d": 12,
+        "w": -0.03916965102733547
       }
     ]
   },
@@ -1375,31 +1366,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "9173db9d3fd3526e5b225611061a2c2a6ede5cd93ec36efa58dff69f232d7859",
-    "breeder_native_nonzero_edges": 293,
-    "breeder_native_ops": 16,
+    "breeder_topology_hash": "b1cdec13b95da4ae4cc8275b47cc5d3dc5ed15a4a50d0187882aeeb221cff0ce",
+    "breeder_native_nonzero_edges": 294,
+    "breeder_native_ops": 17,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.6875999254035571,
-    "text_score": 0.7828571428571429,
+    "fitness": 0.6411299609990819,
+    "text_score": 0.6357142857142857,
     "vision": {
-      "clip_cosine": 0.22737514972686768,
-      "score": 0.6986763083934784,
-      "guidance": 6.015501022338867
+      "clip_cosine": 0.2396896779537201,
+      "score": 0.7034789744019508,
+      "guidance": 6.052940845489502
     },
-    "integration": 0.5185983180999756,
+    "integration": 0.5635388493537903,
     "structure": {
-      "mutations": 71,
+      "mutations": 68,
       "active_neo": 6,
       "nonzero_edges": 342,
-      "native_ops": 16,
-      "native_core_nonzero_edges": 293,
-      "topology_hash": "9173db9d3fd3526e5b225611061a2c2a6ede5cd93ec36efa58dff69f232d7859"
+      "native_ops": 17,
+      "native_core_nonzero_edges": 294,
+      "topology_hash": "b1cdec13b95da4ae4cc8275b47cc5d3dc5ed15a4a50d0187882aeeb221cff0ce"
     },
-    "text": "세대 34의 사고 사이클을 설명하려면, 먼저 먼저 뇌의 기능과 전달 방식을 이해하는 것이 필요합니다. 초파리와 Connectome는 뇌의 내장 신경요소를 이해하고, LLM과 Stable Diffusion은 신경공학적 기반으로 개발된 언어-예측 기술을 제공합니다. \n\n초파리: 초파리의 신경요소는 뇌의 주요 뇌활성 요소로 인지, 정보 전송과 반응을 일으키고, 이는 신경계를 활성화시킵니다. 이는 보상 기능, 신경동맥 활성화, 신경역학과 신경계의 신경"
+    "text": "세대 35의 사고 사이클은 빠르게 변화하고, 복잡하게 이루어지는 전통적인 신생뉴런과의 반응에 따라 결정적인 변화를 이끌어 내는 복잡한 신경계의 과정을 설명합니다. 이것은 신생뉴런과 관련된 여러 주요 변화를 포함합니다.\n\n1. 초파리: 초파리, 뉴런은 신생뉴런을 생성하고, 새로운 신생뉴런과 연결되어 생성됩니다. 이는 신생뉴런의 성장과 재생을 가능하게 하는 중요한 단계입니다.\n\n2. connectome: connectome는 신생뉴런과 연결되는 뇌의 전자성분을 나타내는 그래프를 말합니다. 이"
   },
-  "elapsed_seconds": 121.35472369194031
+  "elapsed_seconds": 175.5532524585724
 }
