@@ -20,7 +20,7 @@
       0.3473181128501892,
       0.22225163877010345
     ],
-    "inference_seconds": 12.662819385528564
+    "inference_seconds": 11.399272680282593
   },
   "candidate": {
     "trainable_parameters": 431616,
@@ -41,10 +41,10 @@
     "train_loss_last": 0.13926279544830322,
     "lora_weight_norm_sum": 107.05438370257616,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 12.835762023925781
+    "inference_seconds": 11.824519634246826
   },
   "selected": "incumbent",
   "selected_loss": 0.28478487581014633,
   "relative_gain_over_incumbent": 0.0,
-  "total_seconds": 129.1909122467041
+  "total_seconds": 127.07261276245117
 }
