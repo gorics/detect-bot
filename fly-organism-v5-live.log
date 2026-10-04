@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 38 native_ops 19 neo 8
-V5_FITNESS 0 0.7607381735575139 topology 72919f1429717136
-V5_EVALUATE 1 generation 38 native_ops 16 neo 8
-V5_FITNESS 1 0.6721368847833324 topology eeb3fdfb1f9f00f2
-V5_EVALUATE 2 generation 38 native_ops 17 neo 6
-V5_FITNESS 2 0.5672518722813835 topology b5e963e4ba2b3c43
-V5_EVALUATE 3 generation 38 native_ops 14 neo 6
-V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
+V5_EVALUATE 0 generation 39 native_ops 22 neo 7
+V5_FITNESS 0 0.6312049199248718 topology 80f88236f416275d
+V5_EVALUATE 1 generation 39 native_ops 15 neo 8
+V5_FITNESS 1 0.6192516016888203 topology 026c6131fc1fdf08
+V5_EVALUATE 2 generation 39 native_ops 22 neo 8
+V5_FITNESS 2 0.5815538426507507 topology 24316f270333b498
+V5_EVALUATE 3 generation 39 native_ops 15 neo 6
+V5_FITNESS 3 0.5665439341016629 topology 22b0cb4816fb3afe
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 38,
+  "generation": 39,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -449,10 +449,10 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7607381735575139,
+  "breeder_fitness": 0.6312049199248718,
   "breeder_genome": {
-    "generation": 38,
-    "active_neo": 8,
+    "generation": 39,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -610,11 +610,6 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
         "w": 0.014927237029816909
       },
       {
-        "s": 67,
-        "d": 20,
-        "w": 0.22397554385614013
-      },
-      {
         "s": 70,
         "d": 5,
         "w": 0.21214621551856255
@@ -687,12 +682,12 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
       {
         "s": 57,
         "d": 85,
-        "w": 0.1812534886086219
+        "w": 0.01597728742912302
       },
       {
         "s": 75,
         "d": 66,
-        "w": -0.0528791614477103
+        "w": -0.09331255277302107
       },
       {
         "s": 1,
@@ -733,11 +728,6 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
         "s": 37,
         "d": 11,
         "w": 0.07557864290041133
-      },
-      {
-        "s": 80,
-        "d": 31,
-        "w": 0.052313604748716824
       },
       {
         "s": 27,
@@ -823,16 +813,41 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
         "s": 51,
         "d": 84,
         "w": -0.03271183974448396
+      },
+      {
+        "s": 68,
+        "d": 68,
+        "w": 0.033976610725147446
+      },
+      {
+        "s": 15,
+        "d": 64,
+        "w": 0.19728928343813112
+      },
+      {
+        "s": 2,
+        "d": 36,
+        "w": 0.40518072932308113
+      },
+      {
+        "s": 19,
+        "d": 71,
+        "w": 0.28775806992263114
+      },
+      {
+        "s": 3,
+        "d": 68,
+        "w": 0.3385072963655789
       }
     ],
-    "temp": 0.8108966730023979,
+    "temp": 0.8121017547244306,
     "top_p": 0.99,
-    "rep": 1.0525182264220894,
-    "tokens": 171,
-    "guidance": 5.672372985859932,
-    "steps": 8,
-    "seed_bias": 329866103,
-    "mutation_rate": 0.1571451823588789,
+    "rep": 1.0766251432334573,
+    "tokens": 174,
+    "guidance": 5.791841651497752,
+    "steps": 9,
+    "seed_bias": 795128412,
+    "mutation_rate": 0.14252681530507255,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -944,6 +959,24 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
         "kind": "native_knockout",
         "s": 5,
         "d": 5
+      },
+      {
+        "kind": "native_scale",
+        "s": 60,
+        "d": 32,
+        "factor": 0.8881840168587704
+      },
+      {
+        "kind": "native_scale",
+        "s": 57,
+        "d": 35,
+        "factor": 1.5478875569129777
+      },
+      {
+        "kind": "native_scale",
+        "s": 27,
+        "d": 25,
+        "factor": 1.1350985150465291
       }
     ]
   },
@@ -1416,31 +1449,31 @@ V5_FITNESS 3 0.6609981478557824 topology 6de094631e9f0364
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "72919f142971713632ea48a3c1322da8fdfef2ec4b87255e258f7ee7fb57133a",
-    "breeder_native_nonzero_edges": 292,
-    "breeder_native_ops": 19,
+    "breeder_topology_hash": "80f88236f416275d559bc84834cd1cc9239be5d533f87b2cd157571078ce64d2",
+    "breeder_native_nonzero_edges": 293,
+    "breeder_native_ops": 22,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7607381735575139,
-    "text_score": 0.9482689655172414,
+    "fitness": 0.6312049199248718,
+    "text_score": 0.6241758241758242,
     "vision": {
-      "clip_cosine": 0.29736748337745667,
-      "score": 0.7259733185172081,
-      "guidance": 5.664218902587891
+      "clip_cosine": 0.24977044761180878,
+      "score": 0.7029840145011743,
+      "guidance": 5.879385948181152
     },
-    "integration": 0.5143638253211975,
+    "integration": 0.5105856657028198,
     "structure": {
-      "mutations": 74,
-      "active_neo": 8,
-      "nonzero_edges": 346,
-      "native_ops": 19,
-      "native_core_nonzero_edges": 292,
-      "topology_hash": "72919f142971713632ea48a3c1322da8fdfef2ec4b87255e258f7ee7fb57133a"
+      "mutations": 77,
+      "active_neo": 7,
+      "nonzero_edges": 349,
+      "native_ops": 22,
+      "native_core_nonzero_edges": 293,
+      "topology_hash": "80f88236f416275d559bc84834cd1cc9239be5d533f87b2cd157571078ce64d2"
     },
-    "text": "초파리, Connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 모두 포함한 세대 38의 사고 사이클을 설명해 드릴게요.\n\n1. **초파리 (Stable Diffusion) 연습**: 처음에는 세대 38의 신생뉴런 (Neuron, 입력)과 연결성을 만들어야 합니다. \n   - 초기에는 빨간색 신생뉴런은 세대 37의 신생뉴런으로 연결되어 있을 수 있습니다.\n  \n2. **Connectome**: 세대 38의 신생뉴런 사이에 연결된 모든 신생뉴런들을 모아서 연결"
+    "text": "네, 세대 39의 사고 사이클을 설명해 드리겠습니다:\n\n1. 신생뉴런: 이는 신생 신호를 처리하고, 새로운 정보를 전달하기 위해 생성됩니다.\n\n2. 구조변이: 이는 신생 신호에 미치는 영향을 계산합니다. 예를 들어, 신생 신호가 신생뉴런과 연결되면서, 어떤 신호가 가장 효과적으로 이신호를 전달하도록 조정될 수 있습니다.\n\n3. 진화: 신생뉴런의 개수와 구조변이는 신생 신호의 양을 조절합니다. 이로 인해 신생 신호를 더 잘 처리할 수 있게 됩니다.\n\n4. 보상: 신생 신호의 양과 신생뉴런의"
   },
-  "elapsed_seconds": 155.78031253814697
+  "elapsed_seconds": 153.0789999961853
 }
