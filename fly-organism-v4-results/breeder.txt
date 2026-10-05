@@ -1,5 +1,9 @@
-초파리 (P3)는 세대 47의 신생뉴런을 표현하고 있습니다. 이 신생뉴런은 8개의 구조변이 (Structural Variants)와 86개의 신생뉴런 (Neuronal Variants)를 가지고 있습니다.
+아래는 세대 48의 사고 사이클을 설명한 것입니다:
 
-1. **구조변이 (Structural Variants)**: 이들은 신생뉴런에 따라 다른 형태로 변형되는 신생뉴런입니다. 예를 들어, 특정 구조를 바꾸거나, 신생뉴런의 전역적인 기능을 변경할 수 있는 방법을 제공합니다.
+1. 초파리 (Neuron) : 신생뉴런을 형성합니다. 이는 신생 신호를 형성하고, 신생 신호는 신생 뇌에 전달됩니다.
 
-2. **신생뉴런 (Neuronal Variants)**
+2. connectome (Connectome) : 신생뉴런과 연결된 뇌의 노드(또는 뇌 노드)을 모델링합니다.
+
+3. LLM (Language Model) : 이는 신생 뇌에서 빠른 학습 능력을 갖춘 신호 모델입니다.
+
+4. Stable Diffusion (Stable Diffusion) 시각엽 : 이는 신생 뇌의 합리적인 시각
