@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 46 native_ops 21 neo 8
-V5_FITNESS 0 0.6889121672236254 topology 17b58541120a99c5
-V5_EVALUATE 1 generation 46 native_ops 14 neo 8
-V5_FITNESS 1 0.5701757297593721 topology 94996a78c584ffae
-V5_EVALUATE 2 generation 46 native_ops 21 neo 8
-V5_FITNESS 2 0.5930720017185136 topology e0d98936bb79ba59
-V5_EVALUATE 3 generation 46 native_ops 15 neo 6
-V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
+V5_EVALUATE 0 generation 47 native_ops 24 neo 8
+V5_FITNESS 0 0.5668668449069676 topology 182043948431da94
+V5_EVALUATE 1 generation 47 native_ops 14 neo 8
+V5_FITNESS 1 0.5750079475885732 topology 7dc610ab553e6a24
+V5_EVALUATE 2 generation 47 native_ops 22 neo 8
+V5_FITNESS 2 0.6143119605721681 topology 74be9fc44a63839b
+V5_EVALUATE 3 generation 47 native_ops 15 neo 6
+V5_FITNESS 3 0.584872268984297 topology d2e03bfc7e72874f
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 46,
+  "generation": 47,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -449,9 +449,9 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.6889121672236254,
+  "breeder_fitness": 0.6143119605721681,
   "breeder_genome": {
-    "generation": 46,
+    "generation": 47,
     "active_neo": 8,
     "mutations": [
       {
@@ -472,7 +472,7 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
       {
         "s": 13,
         "d": 68,
-        "w": 0.3654218560694209
+        "w": 0.5417797818768265
       },
       {
         "s": 17,
@@ -537,7 +537,7 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
       {
         "s": 31,
         "d": 67,
-        "w": 0.24604235304185987
+        "w": 0.31559217518339255
       },
       {
         "s": 43,
@@ -742,7 +742,7 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
       {
         "s": 79,
         "d": 44,
-        "w": 0.1701083312328747
+        "w": 0.25151601250178274
       },
       {
         "s": 46,
@@ -752,7 +752,7 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
       {
         "s": 46,
         "d": 33,
-        "w": 0.34958081054216755
+        "w": 0.37554658649973616
       },
       {
         "s": 67,
@@ -777,7 +777,7 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
       {
         "s": 14,
         "d": 37,
-        "w": -0.17644311587654382
+        "w": -0.18618714760453642
       },
       {
         "s": 75,
@@ -863,16 +863,36 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
         "s": 16,
         "d": 59,
         "w": 0.1466450225558483
+      },
+      {
+        "s": 46,
+        "d": 33,
+        "w": -0.2896888625534109
+      },
+      {
+        "s": 2,
+        "d": 22,
+        "w": -0.2756014254690262
+      },
+      {
+        "s": 47,
+        "d": 29,
+        "w": -0.1810662696924702
+      },
+      {
+        "s": 40,
+        "d": 78,
+        "w": -0.11533368321907234
       }
     ],
-    "temp": 0.6437054360311464,
-    "top_p": 0.8975811677920051,
-    "rep": 1.1105142708548819,
-    "tokens": 147,
-    "guidance": 5.94291165077761,
+    "temp": 0.6358203696818365,
+    "top_p": 0.8147439942437628,
+    "rep": 1.1022380141873962,
+    "tokens": 144,
+    "guidance": 6.120575391178893,
     "steps": 10,
-    "seed_bias": 740222229,
-    "mutation_rate": 0.13760779386223326,
+    "seed_bias": 1033221301,
+    "mutation_rate": 0.12089023908871957,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -995,6 +1015,12 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
         "s": 9,
         "d": 15,
         "factor": 0.8513714488173003
+      },
+      {
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 8,
+        "d2": 12
       }
     ]
   },
@@ -1467,31 +1493,31 @@ V5_FITNESS 3 0.6104988282374425 topology d247676678f38991
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "17b58541120a99c560f7b7c4ae96d747213d7b27ec0a70f418370e7567247061",
-    "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 21,
+    "breeder_topology_hash": "74be9fc44a63839ba9fef79eded0ec6112c1bcbca77e963762894080420b46ad",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 22,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.6889121672236254,
-    "text_score": 0.7647061994609164,
+    "fitness": 0.6143119605721681,
+    "text_score": 0.5559428571428572,
     "vision": {
-      "clip_cosine": 0.26628443598747253,
-      "score": 0.7138509300351144,
-      "guidance": 5.9188971519470215
+      "clip_cosine": 0.22436241805553436,
+      "score": 0.6975013430416585,
+      "guidance": 6.0951690673828125
     },
-    "integration": 0.508247971534729,
+    "integration": 0.5653242468833923,
     "structure": {
-      "mutations": 82,
+      "mutations": 86,
       "active_neo": 8,
-      "nonzero_edges": 356,
-      "native_ops": 21,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "17b58541120a99c560f7b7c4ae96d747213d7b27ec0a70f418370e7567247061"
+      "nonzero_edges": 359,
+      "native_ops": 22,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "74be9fc44a63839ba9fef79eded0ec6112c1bcbca77e963762894080420b46ad"
     },
-    "text": "네, 초파리, LLM, Stable Diffusion 등 다양한 신경재귀 기술들이 신생뉴런과 같은 신생뉴런에 의해 생성되고, 이들은 결국 신생뉴런과 같은 신생뉴런으로 전환됩니다. 이 과정은 신생뉴런과 같은 신생뉴런이 높은 보상과 강도를 가지게 되면서, 새로운 형태와 모델을 만드는데 사용되며, 이는 이전의 신생뉴런에 대한 복잡한 정보를 더 잘 이해하게 됩니다.\n\n이 신생뉴런이稳定的 방식으로 변할 때, 이는 신생뉴런과 같은 신생뉴"
+    "text": "초파리 (P3)는 세대 47의 신생뉴런을 표현하고 있습니다. 이 신생뉴런은 8개의 구조변이 (Structural Variants)와 86개의 신생뉴런 (Neuronal Variants)를 가지고 있습니다.\n\n1. **구조변이 (Structural Variants)**: 이들은 신생뉴런에 따라 다른 형태로 변형되는 신생뉴런입니다. 예를 들어, 특정 구조를 바꾸거나, 신생뉴런의 전역적인 기능을 변경할 수 있는 방법을 제공합니다.\n\n2. **신생뉴런 (Neuronal Variants)**"
   },
-  "elapsed_seconds": 148.09265613555908
+  "elapsed_seconds": 88.39330053329468
 }
