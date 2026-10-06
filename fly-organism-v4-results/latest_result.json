@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 50,
+  "generation": 51,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7583139903672679,
+  "breeder_fitness": 0.6152533759233555,
   "breeder_genome": {
-    "generation": 50,
+    "generation": 51,
     "active_neo": 7,
     "mutations": [
       {
@@ -504,7 +504,7 @@
       {
         "s": 24,
         "d": 68,
-        "w": 0.25296394609503564
+        "w": 0.41063358897094804
       },
       {
         "s": 36,
@@ -543,7 +543,7 @@
       },
       {
         "s": 26,
-        "d": 38,
+        "d": 63,
         "w": 0.15638536055630806
       },
       {
@@ -777,11 +777,6 @@
         "w": 0.3119341778787293
       },
       {
-        "s": 20,
-        "d": 72,
-        "w": 0.005459912539621534
-      },
-      {
         "s": 83,
         "d": 6,
         "w": 0.2758059866902395
@@ -820,16 +815,41 @@
         "s": 11,
         "d": 31,
         "w": 0.17200638168481347
+      },
+      {
+        "s": 3,
+        "d": 69,
+        "w": 0.31454926791330884
+      },
+      {
+        "s": 45,
+        "d": 20,
+        "w": 0.1671591720422374
+      },
+      {
+        "s": 75,
+        "d": 64,
+        "w": 0.2502739794794114
+      },
+      {
+        "s": 60,
+        "d": 65,
+        "w": -0.11016433315312701
+      },
+      {
+        "s": 48,
+        "d": 57,
+        "w": 0.17279567024607778
       }
     ],
-    "temp": 1.156528819714797,
-    "top_p": 0.99,
-    "rep": 1.005953385619514,
-    "tokens": 173,
-    "guidance": 5.806426632039324,
-    "steps": 7,
-    "seed_bias": 218379465,
-    "mutation_rate": 0.11912606780134499,
+    "temp": 1.1234644719174267,
+    "top_p": 0.9274042975930148,
+    "rep": 1.0211218628729097,
+    "tokens": 180,
+    "guidance": 6.183309638376826,
+    "steps": 6,
+    "seed_bias": 658922888,
+    "mutation_rate": 0.13266503784303063,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -930,6 +950,18 @@
         "s": 9,
         "d": 35,
         "d2": 54
+      },
+      {
+        "kind": "native_rewire",
+        "s": 14,
+        "d": 9,
+        "d2": 49
+      },
+      {
+        "kind": "native_rewire",
+        "s": 9,
+        "d": 28,
+        "d2": 29
       }
     ]
   },
@@ -1402,31 +1434,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "55bc3248d1f626a055fb2703f9baf0221e6c697aa0a580f6fbc5c31a5f7bf4b2",
-    "breeder_native_nonzero_edges": 296,
-    "breeder_native_ops": 17,
+    "breeder_topology_hash": "e051adf90793ffb8e585ed40d7363d486467e0d977812c1ce0710ef53fbc7cad",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 19,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7583139903672679,
-    "text_score": 0.9443254237288137,
+    "fitness": 0.6152533759233555,
+    "text_score": 0.564310599078341,
     "vision": {
-      "clip_cosine": 0.23119547963142395,
-      "score": 0.7001662370562554,
-      "guidance": 5.828897953033447
+      "clip_cosine": 0.2362833470106125,
+      "score": 0.7021505053341389,
+      "guidance": 6.196803569793701
     },
-    "integration": 0.5800584554672241,
+    "integration": 0.5505952835083008,
     "structure": {
-      "mutations": 75,
+      "mutations": 79,
       "active_neo": 7,
-      "nonzero_edges": 350,
-      "native_ops": 17,
-      "native_core_nonzero_edges": 296,
-      "topology_hash": "55bc3248d1f626a055fb2703f9baf0221e6c697aa0a580f6fbc5c31a5f7bf4b2"
+      "nonzero_edges": 354,
+      "native_ops": 19,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "e051adf90793ffb8e585ed40d7363d486467e0d977812c1ce0710ef53fbc7cad"
     },
-    "text": "세대 50의 사고 사이클은 초파리,(connectome), LLM 언어엽, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함한다. 이를 구체적으로 설명하기 위해서는 시간과 노동의 수를 고려할 것입니다. 예를 들어, 입력으로부터 뇌에서 신생뉴런의 형성을 결정하는 데 있어 신생뉴런의 형성을 계산하기 위한 신생뉴런 신적 변화를 의미하는 것과는 달리, 뇌의 신생뉴런이 신생뉴런이 결정한 신생뉴런이 생성되는 뇌활성의 변화를 의미하는 게 맞습니다. 이"
+    "text": "세대 51의 사고 사이클은 보상에 의한 신생뉴런들의 생성을 통해 시작됩니다.\n\n1. **입력** (Input): 여기서는 신생뉴런의 크기나 구조를 결정하기 위해 필요합니다.\n\n2. **선택** (Selection): 신생뉴런의 크기와 구조가 결정되면 뇌를 선택할 수 있습니다. 이 선택은 보상에 의해 결정됩니다.\n\n3. **동작**: 신생뉴런이 보상이 완성되면, 그들은 생성된 신생물체로서, 전 세계를 둘러보고 일행을 구성합니다. 이 신생물체들은 보상에 대한 반응을 일으키면서, 동일한 신생뉴런들을 생성하고 생성된 신생물체들은 보상에 대해 반"
   },
-  "elapsed_seconds": 108.37347507476807
+  "elapsed_seconds": 155.0120861530304
 }
