@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 48,
+  "generation": 49,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,15 +441,15 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.6925411423271125,
+  "breeder_fitness": 0.7149443891749192,
   "breeder_genome": {
-    "generation": 48,
+    "generation": 49,
     "active_neo": 6,
     "mutations": [
       {
         "s": 13,
         "d": 68,
-        "w": 0.2384344208990037
+        "w": 0.2252494681645081
       },
       {
         "s": 54,
@@ -662,7 +662,7 @@
         "w": 0.24894754237579658
       },
       {
-        "s": 68,
+        "s": 71,
         "d": 55,
         "w": 0.1404988637402192
       },
@@ -764,7 +764,7 @@
       {
         "s": 37,
         "d": 57,
-        "w": -0.06938135543171894
+        "w": -0.04417462335858687
       },
       {
         "s": 6,
@@ -800,16 +800,41 @@
         "s": 83,
         "d": 6,
         "w": 0.2758059866902395
+      },
+      {
+        "s": 84,
+        "d": 48,
+        "w": -0.0962009172418486
+      },
+      {
+        "s": 32,
+        "d": 19,
+        "w": -0.13058905968790752
+      },
+      {
+        "s": 65,
+        "d": 49,
+        "w": 0.1298495745240614
+      },
+      {
+        "s": 61,
+        "d": 36,
+        "w": -0.1562431767494128
+      },
+      {
+        "s": 14,
+        "d": 53,
+        "w": -0.04039661539222488
       }
     ],
-    "temp": 0.8609506808108147,
-    "top_p": 0.9691522190072257,
-    "rep": 1.0313452154329787,
-    "tokens": 164,
-    "guidance": 5.463639409090615,
+    "temp": 0.8781630312446518,
+    "top_p": 0.9673260213020498,
+    "rep": 1.0025973824046484,
+    "tokens": 167,
+    "guidance": 5.654622572578424,
     "steps": 8,
-    "seed_bias": 559796831,
-    "mutation_rate": 0.11394994540546191,
+    "seed_bias": 93788893,
+    "mutation_rate": 0.12197844881718405,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -892,6 +917,18 @@
         "s": 21,
         "d": 48,
         "w": -0.05052794485204609
+      },
+      {
+        "kind": "native_rewire",
+        "s": 32,
+        "d": 32,
+        "d2": 24
+      },
+      {
+        "kind": "native_scale",
+        "s": 60,
+        "d": 28,
+        "factor": 1.2757866310076085
       }
     ]
   },
@@ -1364,31 +1401,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "2b52b4912fde717e0491b3bf7984225b132277754f540c8986fd89c0076de970",
-    "breeder_native_nonzero_edges": 294,
-    "breeder_native_ops": 14,
+    "breeder_topology_hash": "c51655a0879cb2e11870514fed4e0f87dc342fe73aa5ae7d2e063b6c12271d51",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 16,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.6925411423271125,
-    "text_score": 0.7831261083743843,
+    "fitness": 0.7149443891749192,
+    "text_score": 0.8422285714285714,
     "vision": {
-      "clip_cosine": 0.2400786131620407,
-      "score": 0.7036306591331959,
-      "guidance": 5.470316410064697
+      "clip_cosine": 0.23116439580917358,
+      "score": 0.7001541143655777,
+      "guidance": 5.6820969581604
     },
-    "integration": 0.5366738438606262,
+    "integration": 0.5409495830535889,
     "structure": {
-      "mutations": 71,
+      "mutations": 76,
       "active_neo": 6,
-      "nonzero_edges": 344,
-      "native_ops": 14,
-      "native_core_nonzero_edges": 294,
-      "topology_hash": "2b52b4912fde717e0491b3bf7984225b132277754f540c8986fd89c0076de970"
+      "nonzero_edges": 349,
+      "native_ops": 16,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "c51655a0879cb2e11870514fed4e0f87dc342fe73aa5ae7d2e063b6c12271d51"
     },
-    "text": "아래는 세대 48의 사고 사이클을 설명한 것입니다:\n\n1. 초파리 (Neuron) : 신생뉴런을 형성합니다. 이는 신생 신호를 형성하고, 신생 신호는 신생 뇌에 전달됩니다.\n\n2. connectome (Connectome) : 신생뉴런과 연결된 뇌의 노드(또는 뇌 노드)을 모델링합니다.\n\n3. LLM (Language Model) : 이는 신생 뇌에서 빠른 학습 능력을 갖춘 신호 모델입니다.\n\n4. Stable Diffusion (Stable Diffusion) 시각엽 : 이는 신생 뇌의 합리적인 시각"
+    "text": "죄송합니다, 하지만 제가 제공하는 정보에 대해 신뢰할 수 없는 내용이거나 정보를 잘못 이해한 것 같습니다. 초파리, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 이들 중 몇 가지가 정확한 정보를 제공하는지 확인해 주세요. 이 정보를 바탕으로 그들을 정확하게 설명하거나 공유해주시면 감사하겠습니다."
   },
-  "elapsed_seconds": 156.3666956424713
+  "elapsed_seconds": 146.3319640159607
 }
