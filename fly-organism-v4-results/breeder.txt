@@ -1,1 +1,11 @@
-초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, L
+초파리, connectome, LLM, Stable Diffusion 시각엽, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하면 다음과 같은 세대 56의 사고 사이클을 구성합니다:
+
+1. **스마트 컨디션 생성:**
+   - **입력:** 신생뉴런, 
+   - **전달:** connectome, 
+   - **결과:** 뉴런,
+   - **선택:** 초기적 모델,
+
+2. **자연스러운 모델 생성:**
+   - **스마트 컨디션 생성:** 
+     - **입
