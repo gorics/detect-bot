@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 54 native_ops 15 neo 6
-V5_FITNESS 0 0.7552904798913002 topology 9736dc7a70851aa8
-V5_EVALUATE 1 generation 54 native_ops 14 neo 8
-V5_FITNESS 1 0.6329212575225073 topology 0c953b4d2f1826b3
-V5_EVALUATE 2 generation 54 native_ops 15 neo 7
-V5_FITNESS 2 0.5335577194544107 topology 86476548eb8f8f29
-V5_EVALUATE 3 generation 54 native_ops 14 neo 6
-V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
+V5_EVALUATE 0 generation 55 native_ops 16 neo 7
+V5_FITNESS 0 0.5758699259630101 topology 01e95d5bcc9daf85
+V5_EVALUATE 1 generation 55 native_ops 16 neo 8
+V5_FITNESS 1 0.5926231561698172 topology bf130e7323f7e0cc
+V5_EVALUATE 2 generation 55 native_ops 16 neo 5
+V5_FITNESS 2 0.6926543988304036 topology 0ac0990e054df770
+V5_EVALUATE 3 generation 55 native_ops 14 neo 6
+V5_FITNESS 3 0.6359527673280542 topology 7b24fd7422292ae6
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 54,
+  "generation": 55,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -449,10 +449,10 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7552904798913002,
+  "breeder_fitness": 0.6926543988304036,
   "breeder_genome": {
-    "generation": 54,
-    "active_neo": 6,
+    "generation": 55,
+    "active_neo": 5,
     "mutations": [
       {
         "s": 13,
@@ -483,11 +483,6 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
         "s": 36,
         "d": 68,
         "w": 0.2019185208646104
-      },
-      {
-        "s": 64,
-        "d": 73,
-        "w": 0.3082584947854704
       },
       {
         "s": 49,
@@ -590,11 +585,6 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
         "w": 0.22370636467844354
       },
       {
-        "s": 75,
-        "d": 19,
-        "w": 0.22484843518866798
-      },
-      {
         "s": 64,
         "d": 55,
         "w": 0.2144423835061946
@@ -695,7 +685,7 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
         "w": -0.0528791614477103
       },
       {
-        "s": 1,
+        "s": 63,
         "d": 38,
         "w": -0.46739334019630424
       },
@@ -737,7 +727,7 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
       {
         "s": 12,
         "d": 39,
-        "w": -0.40760081881177573
+        "w": -0.33050965846762864
       },
       {
         "s": 43,
@@ -776,7 +766,7 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
       },
       {
         "s": 67,
-        "d": 11,
+        "d": 43,
         "w": 0.17916128425034272
       },
       {
@@ -795,11 +785,6 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
         "w": 0.2758059866902395
       },
       {
-        "s": 37,
-        "d": 42,
-        "w": -0.04896423332542619
-      },
-      {
         "s": 27,
         "d": 52,
         "w": 0.19900729375966436
@@ -810,19 +795,29 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
         "w": 0.11043374070152286
       },
       {
-        "s": 24,
+        "s": 25,
         "d": 78,
         "w": 0.2443295205661753
+      },
+      {
+        "s": 65,
+        "d": 0,
+        "w": 0.21916214622022237
+      },
+      {
+        "s": 63,
+        "d": 27,
+        "w": -0.11806817555609067
       }
     ],
-    "temp": 0.845817173166977,
-    "top_p": 0.9592766037108933,
-    "rep": 1.025258160517269,
-    "tokens": 166,
-    "guidance": 5.327364965528123,
-    "steps": 8,
-    "seed_bias": 796389003,
-    "mutation_rate": 0.108343631819896,
+    "temp": 0.8524701564940573,
+    "top_p": 0.9367200495843613,
+    "rep": 1.0469371190205539,
+    "tokens": 160,
+    "guidance": 5.595091648335687,
+    "steps": 9,
+    "seed_bias": 353012110,
+    "mutation_rate": 0.14592788522526431,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -911,6 +906,12 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
         "s": 25,
         "d": 0,
         "w": 0.01690591578621567
+      },
+      {
+        "kind": "native_birth",
+        "s": 1,
+        "d": 4,
+        "w": -0.15478352563853046
       }
     ]
   },
@@ -1383,31 +1384,31 @@ V5_FITNESS 3 0.5816815749002627 topology 31ac1fc5993ddb9e
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "9736dc7a70851aa8f3e0a11bc2987eeeb5aa087f6be6a4d5e1377f7593ddf3f0",
-    "breeder_native_nonzero_edges": 295,
-    "breeder_native_ops": 15,
+    "breeder_topology_hash": "0ac0990e054df7701a7ae94fa27739068aec4cbda4fe0557d20a55e8c312eaac",
+    "breeder_native_nonzero_edges": 294,
+    "breeder_native_ops": 16,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7552904798913002,
-    "text_score": 0.9540000000000001,
+    "fitness": 0.6926543988304036,
+    "text_score": 0.7992313725490197,
     "vision": {
-      "clip_cosine": 0.25499117374420166,
-      "score": 0.7094465577602387,
-      "guidance": 5.346920013427734
+      "clip_cosine": 0.23412105441093445,
+      "score": 0.7013072112202644,
+      "guidance": 5.601556777954102
     },
-    "integration": 0.5149897336959839,
+    "integration": 0.5043631196022034,
     "structure": {
-      "mutations": 72,
-      "active_neo": 6,
-      "nonzero_edges": 345,
-      "native_ops": 15,
-      "native_core_nonzero_edges": 295,
-      "topology_hash": "9736dc7a70851aa8f3e0a11bc2987eeeb5aa087f6be6a4d5e1377f7593ddf3f0"
+      "mutations": 71,
+      "active_neo": 5,
+      "nonzero_edges": 344,
+      "native_ops": 16,
+      "native_core_nonzero_edges": 294,
+      "topology_hash": "0ac0990e054df7701a7ae94fa27739068aec4cbda4fe0557d20a55e8c312eaac"
     },
-    "text": "네, 하지만 '초파리 connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이' 등이 모두 포함된 언어를 설명해드리겠습니다. \n\n1. 초파리 (Supramolecular) : 이는 초파리, LLM 언어(러닝 모델)의 주요 특징과 역할을 말하며, 빛이나 물체를 바이오로 소통하기 위한 기술로, 신호를 생성 및 전달하는 역할을 합니다.\n\n2. 연결성 (Connectome) : 초파리 연결성은 신호의 통신 장치가 됩니다. 각 노드는 각 다른"
+    "text": "초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, LLM, Stable Diffusion, 뉴런, L"
   },
-  "elapsed_seconds": 153.14603209495544
+  "elapsed_seconds": 165.4224865436554
 }
