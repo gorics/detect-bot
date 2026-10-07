@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 52,
+  "generation": 53,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.6168657782351422,
+  "breeder_fitness": 0.7526322558305837,
   "breeder_genome": {
-    "generation": 52,
+    "generation": 53,
     "active_neo": 6,
     "mutations": [
       {
@@ -888,15 +888,10 @@
         "factor": 1.0162649135000061
       },
       {
-        "kind": "native_scale",
-        "s": 33,
-        "d": 35,
-        "factor": 0.8713466808991909
-      },
-      {
-        "kind": "native_knockout",
+        "kind": "native_rewire",
         "s": 28,
-        "d": 21
+        "d": 60,
+        "d2": 30
       }
     ]
   },
@@ -1369,31 +1364,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "468cfcd89a6a1ae61b563c72005ee09b2f23b431a882dbe466b50f3c2ac65d3d",
-    "breeder_native_nonzero_edges": 292,
-    "breeder_native_ops": 15,
+    "breeder_topology_hash": "4c961b521558b22f72d6e7a196460cf6ffe1f1c8167bd91681ada098d093138c",
+    "breeder_native_nonzero_edges": 293,
+    "breeder_native_ops": 14,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.6168657782351422,
-    "text_score": 0.5603428571428571,
+    "fitness": 0.7526322558305837,
+    "text_score": 0.9379407407407407,
     "vision": {
-      "clip_cosine": 0.2750975787639618,
-      "score": 0.7172880557179451,
-      "guidance": 5.471983909606934
+      "clip_cosine": 0.2695777714252472,
+      "score": 0.7151353308558465,
+      "guidance": 5.488681316375732
     },
-    "integration": 0.5425522327423096,
+    "integration": 0.52242511510849,
     "structure": {
       "mutations": 71,
       "active_neo": 6,
-      "nonzero_edges": 342,
-      "native_ops": 15,
-      "native_core_nonzero_edges": 292,
-      "topology_hash": "468cfcd89a6a1ae61b563c72005ee09b2f23b431a882dbe466b50f3c2ac65d3d"
+      "nonzero_edges": 343,
+      "native_ops": 14,
+      "native_core_nonzero_edges": 293,
+      "topology_hash": "4c961b521558b22f72d6e7a196460cf6ffe1f1c8167bd91681ada098d093138c"
     },
-    "text": "세대 52의 사고 사이클을 설명해 드릴까요?\n\n1. **초파리 (Primitive Reflex)**: 이는 신생 신호 반응을 생성하고 실행하는 능력입니다. 초파리는 신호의 전달과 반응을 원자로 사용하여 전달된 신호를 신호를 반응으로 이동시키는 역할을 합니다. 초파리를 생성하려면 신호 반응의 구조나 신호 수신의 구조가 결정됩니다.\n\n2. **LLM (Language Model)**: 이는 신뢰성이 높은 컴퓨터 언어 모델을 말합니다. LLM은 비디오나 텍스트 형식에 대한 이해를 제공하며, 이는 일반적인 언"
+    "text": "초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함한 세대 53의 사고 사이클은 다음과 같이 구성됩니다:\n\n1. **스케일 업데이트**: 신생뉴런이 신생뉴런과 같은 크기로 변환되도록 시그널을 처리합니다. 이는 신생뉴런의 크기를 증가시키며, 이로 인해 새로운 신생뉴런이 생성될 수 있습니다.\n\n2. **전체 스케일 업데이트**: 신생뉴런이 신생뉴런과 동일한 크기를 가진 새로운 신생"
   },
-  "elapsed_seconds": 156.63943719863892
+  "elapsed_seconds": 169.99482655525208
 }
