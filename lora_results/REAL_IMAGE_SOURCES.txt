@@ -1,10 +1,14 @@
-Source: Obbard Lab, University of Edinburgh — Drosophilidae photographs
-Page: https://obbard.bio.ed.ac.uk/photos.html
-License stated on source page: CC BY-NC 4.0 for academic/non-commercial use with attribution.
-Files used:
-Drosophila_melanogaster.jpg
-Drosophila_melanogaster_alt.jpg
-Drosophila_melanogaster_Pose.jpg
-Drosophila_melanogaster_female_Pose.jpg
-Drosophila_melanogaster2_female_Sussex_July2011.jpg
-Drosophila_melanogaster_female_Sussex_July2011.jpg
+Source: Wikimedia Commons (downloaded through Special:Redirect/file in .github/workflows/flybrain-real-sd-evolution.yml).
+Individual file license, author, and attribution must be verified on each Wikimedia Commons file-description page; no blanket license is asserted.
+
+Training images (real_00.jpg through real_03.jpg):
+1. Drosophila melanogaster.jpg
+2. Drosophila melanogaster 01.JPG
+3. Drosophila melanogaster 14Hari.jpg
+4. Drosophila melanogaster 1 007.jpg
+
+Held-out validation images (real_04.jpg and real_05.jpg):
+5. Drosphila melanogaster.jpg
+6. Drosophila melanogaster1.jpg
+
+Provenance is derived from the actual workflow download filenames. Preserve downloaded image hashes and exact Commons file-page URLs in future runs to ensure reproducibility.
