@@ -94,6 +94,7 @@ def train_candidate(model_id,train_paths,val_paths,out,steps):
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
+    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')
     ntrain=sum(p.numel() for p in params); ntotal=sum(p.numel() for p in pipe.unet.parameters()); scheduler=DDPMScheduler.from_config(pipe.scheduler.config)
     _,val_cases=encode_cases(pipe,val_paths,SEED+5000); base_val,base_each=eval_cases(pipe,val_cases); generate(pipe,out/"real_base.png")
