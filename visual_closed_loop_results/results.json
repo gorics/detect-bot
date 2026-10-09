@@ -1,0 +1,94 @@
+{
+  "generation": 1,
+  "model": "segmind/tiny-sd",
+  "source": "real Drosophila photographs",
+  "train_files": [
+    "real_00.jpg",
+    "real_01.jpg",
+    "real_02.jpg",
+    "real_03.jpg"
+  ],
+  "held_out_files": [
+    "real_04.jpg",
+    "real_05.jpg"
+  ],
+  "image_sha256": {
+    "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
+    "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
+    "real_02.jpg": "1a7956eaf2bad040de4be6bea6a6236d76b0c672818cf095925d681d6f3de6fd",
+    "real_03.jpg": "c1e2a1ec76e82ae582eb7638cc0f6020ea5ff5aa2e8a76ceb3de74da2058e480",
+    "real_04.jpg": "79d4d4f445b07d3707ae0100fe7cff61bf6646d4c75d4b611999d332303c482c",
+    "real_05.jpg": "1f51537846fc4bfaa275a724e67efed929ed3bf7f756db18270617d706e61c4a"
+  },
+  "connectome_group_count": 63,
+  "readout_sha256": "79d2c5d3e1901784ca4372260d184a4187c8cecbbd3a5467b3742b9f496b0a6b",
+  "sd_lora_sha256": "3e117121a99c74ad4460d53b0b47957562b446bef731ad6ea679d05bda172b3c",
+  "sd_lora_restored": true,
+  "readout_restored": true,
+  "bridge_resumed": false,
+  "bridge_train_steps": 12,
+  "baseline_heldout_real_photo_mse": 0.34447552263736725,
+  "candidate_heldout_real_photo_mse": 0.34603071212768555,
+  "baseline_per_photo": [
+    0.4178847670555115,
+    0.271066278219223
+  ],
+  "candidate_per_photo": [
+    0.41810667514801025,
+    0.27395474910736084
+  ],
+  "champion_promoted": false,
+  "strict_gate": "mean lower AND both held-out photos individually improve",
+  "training_loss_first": 0.32952606678009033,
+  "training_loss_last": 0.04022116959095001,
+  "feedback_trace": [
+    {
+      "tick": 1,
+      "neural_state_norm": 1.9339382648468018,
+      "visual_features": [
+        0.6434435248374939,
+        0.2473365068435669,
+        0.02862459048628807,
+        0.026327865198254585,
+        0.0022967252880334854,
+        0.06359885632991791
+      ],
+      "photo_source": "real_04.jpg",
+      "feedback_image": "sd_feedback_00.png"
+    },
+    {
+      "tick": 2,
+      "neural_state_norm": 1.9551005363464355,
+      "visual_features": [
+        0.6434435248374939,
+        0.2473365068435669,
+        0.02862459048628807,
+        0.026327865198254585,
+        0.0022967252880334854,
+        0.0
+      ],
+      "photo_source": "real_04.jpg",
+      "feedback_image": "sd_feedback_01.png"
+    },
+    {
+      "tick": 3,
+      "neural_state_norm": 1.9884041547775269,
+      "visual_features": [
+        0.6434435248374939,
+        0.2473365068435669,
+        0.02862459048628807,
+        0.026327865198254585,
+        0.0022967252880334854,
+        0.0
+      ],
+      "photo_source": "real_04.jpg",
+      "feedback_image": "sd_feedback_02.png"
+    }
+  ],
+  "heldout_input_brain_state_l2": 0.1585310399532318,
+  "heldout_readout_labels": [
+    "touch",
+    "touch"
+  ],
+  "caveat": "Neural states are connectome simulations and visual features engineered from photos, NOT measured subjective thoughts or true fly retinal reconstruction."
+}
