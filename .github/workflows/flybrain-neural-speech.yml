@@ -1,0 +1,76 @@
+name: FlyBrain Korean Neural Interpretation
+
+on:
+  push:
+    branches: [flybrain-ai-evolution-20260929]
+    paths:
+      - flybrain_neural_speech.py
+      - .github/workflows/flybrain-neural-speech.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-neural-interpretation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: flybrain-ai-evolution-20260929
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Dependencies
+        run: python -m pip install 'numpy<3'
+      - name: Fetch authentic FlyBrain connectome
+        run: |
+          git clone --depth 1 https://github.com/snedea/flybrain.git external/flybrain
+          test -s external/flybrain/data/connectome.bin.gz
+          test -s results/state/best_genome.npz
+      - name: Verify preserved champion and decoder on six stimuli
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          from flybrain_neural_speech import Interpreter, KINDS, connectome_matrix
+          checkpoint=Path("results/state/best_genome.npz")
+          before=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+          W=connectome_matrix(Path("external/flybrain/data/connectome.bin.gz"))
+          for kind in KINDS:
+              brain=Interpreter(W,checkpoint,seed=20261009)
+              brain.set_stimulus(kind)
+              out=brain.step()
+              assert out["predicted_behavior"]==kind,(kind,out["predicted_behavior"])
+              assert not out["observed_subjective_experience"]
+              assert not out["simulated_first_person_is_real_thought"]
+              print(kind, out["predicted_behavior"],out["korean_interpretation"])
+          after=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+          assert before==after,"Champion modified unexpectedly"
+          print("PASS six classes; champion SHA-256 unchanged:",after)
+          PY
+      - name: Simulate a continuous stream and save JSONL
+        run: |
+          mkdir -p neural_speech_results
+          python flybrain_neural_speech.py --flybrain external/flybrain \
+            --champion results/state/best_genome.npz \
+            --stimulus food --steps 40 --interval 0.005 \
+            --jsonl neural_speech_results/trace_ko.jsonl \
+            > neural_speech_results/trace_stdout.jsonl
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(s) for s in Path("neural_speech_results/trace_ko.jsonl").read_text().splitlines()]
+          assert len(rows)==40
+          assert any(r["input_origin"]=="synthetic_environment" for r in rows)
+          assert all(r["observed_subjective_experience"] is False for r in rows)
+          assert all(r["korean_interpretation"] for r in rows)
+          print("PASS continuous 40-frame simulated interpretation stream")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flybrain-korean-neural-stream
+          path: neural_speech_results/
+          retention-days: 14
