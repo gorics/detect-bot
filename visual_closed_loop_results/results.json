@@ -1,5 +1,5 @@
 {
-  "generation": 1,
+  "generation": 2,
   "model": "segmind/tiny-sd",
   "source": "real Drosophila photographs",
   "train_files": [
@@ -27,65 +27,67 @@
   "readout_restored": true,
   "bridge_resumed": false,
   "bridge_train_steps": 12,
-  "baseline_heldout_real_photo_mse": 0.34447552263736725,
-  "candidate_heldout_real_photo_mse": 0.34603071212768555,
+  "baseline_heldout_real_photo_mse": 0.34447547793388367,
+  "candidate_heldout_real_photo_mse": 0.3480527102947235,
   "baseline_per_photo": [
-    0.4178847670555115,
-    0.271066278219223
+    0.4178847074508667,
+    0.27106624841690063
   ],
   "candidate_per_photo": [
-    0.41810667514801025,
-    0.27395474910736084
+    0.4203410744667053,
+    0.2757643461227417
   ],
   "champion_promoted": false,
   "strict_gate": "mean lower AND both held-out photos individually improve",
-  "training_loss_first": 0.32952606678009033,
-  "training_loss_last": 0.04022116959095001,
+  "training_loss_first": 0.40946340560913086,
+  "training_loss_last": 0.03800781071186066,
   "feedback_trace": [
     {
       "tick": 1,
-      "neural_state_norm": 1.9339382648468018,
+      "neural_state_norm": 1.9340941905975342,
       "visual_features": [
-        0.6434435248374939,
-        0.2473365068435669,
-        0.02862459048628807,
-        0.026327865198254585,
-        0.0022967252880334854,
-        0.06359885632991791
+        0.6447983384132385,
+        0.24770422279834747,
+        0.028070813044905663,
+        0.026114437729120255,
+        0.001956375315785408,
+        0.06399655342102051
       ],
       "photo_source": "real_04.jpg",
       "feedback_image": "sd_feedback_00.png"
     },
     {
       "tick": 2,
-      "neural_state_norm": 1.9551005363464355,
+      "neural_state_norm": 1.9552741050720215,
       "visual_features": [
-        0.6434435248374939,
-        0.2473365068435669,
-        0.02862459048628807,
-        0.026327865198254585,
-        0.0022967252880334854,
-        0.0
+        0.6450834274291992,
+        0.24774086475372314,
+        0.027978448197245598,
+        0.02607717737555504,
+        0.0019012708216905594,
+        0.001154349884018302
       ],
       "photo_source": "real_04.jpg",
       "feedback_image": "sd_feedback_01.png"
     },
     {
       "tick": 3,
-      "neural_state_norm": 1.9884041547775269,
+      "neural_state_norm": 1.9885749816894531,
       "visual_features": [
-        0.6434435248374939,
-        0.2473365068435669,
-        0.02862459048628807,
-        0.026327865198254585,
-        0.0022967252880334854,
-        0.0
+        0.6450031995773315,
+        0.24772165715694427,
+        0.027998073026537895,
+        0.02608482353389263,
+        0.0019132494926452637,
+        0.0003477317513898015
       ],
       "photo_source": "real_04.jpg",
       "feedback_image": "sd_feedback_02.png"
     }
   ],
-  "heldout_input_brain_state_l2": 0.1585310399532318,
+  "experimental_candidate_loop": true,
+  "neural_conditioning_causal_ablation_mae": 0.04545760899782181,
+  "heldout_input_brain_state_l2": 0.1585310995578766,
   "heldout_readout_labels": [
     "touch",
     "touch"
