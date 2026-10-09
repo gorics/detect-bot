@@ -6,7 +6,10 @@ import numpy as np
 import torch
 
 SEED = 20260929
-random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
+# Fixed synthetic held-out data; generation-specific mutation and crossover randomness.
+GENERATION = int(os.getenv('GITHUB_RUN_ID', '0')) * 100 + int(os.getenv('GITHUB_RUN_ATTEMPT', '1'))
+TRAIN_SEED = (SEED + GENERATION * 31) % (2**32)
+random.seed(TRAIN_SEED); np.random.seed(TRAIN_SEED); torch.manual_seed(TRAIN_SEED)
 
 STIMULI = {
     "food":  {"groups":[6,32,37], "behavior":"approach food and extend the proboscis to feed"},
@@ -68,21 +71,31 @@ def accuracy(popW, popB, X, y):
     return (pred==y[None,:]).mean(1)
 
 
+def heldout_nll(W, B, X, y):
+    logits=X@W.T+B[None,:]
+    shifted=logits-logits.max(axis=1,keepdims=True)
+    log_prob=shifted-np.log(np.exp(shifted).sum(axis=1,keepdims=True))
+    return float(-log_prob[np.arange(len(y)),y].mean())
+
+
 def evolve(Wn, out: Path, generations=120, population=96):
     X,y=dataset(Wn)
     split=int(len(y)*.82)
     xt,yt=X[:split],y[:split]; xv,yv=X[split:],y[split:]
-    rng=np.random.default_rng(SEED+101)
+    rng=np.random.default_rng(TRAIN_SEED+101)
     popW=rng.normal(0,.18,(population,len(KINDS),63)).astype(np.float32)
     popB=rng.normal(0,.03,(population,len(KINDS))).astype(np.float32)
     state_dir=out/"state"; state_dir.mkdir(parents=True,exist_ok=True)
     state_path=state_dir/"best_genome.npz"
-    resumed=False
-    if state_path.exists():
-        old=np.load(state_path)
-        if old["W"].shape==(len(KINDS),63):
-            popW[0]=old["W"].astype(np.float32); popB[0]=old["B"].astype(np.float32); resumed=True
-    hist=[]; bestW=None; bestB=None; best_val=-1.0
+    if not state_path.exists(): raise RuntimeError('Incumbent evolved readout missing; refusing restart')
+    old=np.load(state_path)
+    if old['W'].shape!=(len(KINDS),63) or old['B'].shape!=(len(KINDS),):
+        raise RuntimeError('Existing evolved readout incompatible')
+    popW[0]=old['W'].astype(np.float32); popB[0]=old['B'].astype(np.float32)
+    resumed=True
+    incumbent_acc=float(accuracy(popW[:1],popB[:1],xv,yv)[0])
+    incumbent_nll=heldout_nll(popW[0],popB[0],xv,yv)
+    hist=[]; bestW=None; bestB=None; best_val=-1.0; best_nll=float('inf')
     baseline=float(accuracy(popW,popB,xv,yv).max())
     elite_n=max(8,population//8)
     for gen in range(generations):
@@ -93,9 +106,10 @@ def evolve(Wn, out: Path, generations=120, population=96):
         order=np.argsort(fit)[::-1]
         elitesW=popW[order[:elite_n]].copy(); elitesB=popB[order[:elite_n]].copy()
         val_acc=accuracy(elitesW,elitesB,xv,yv)
-        j=int(np.argmax(val_acc))
-        if float(val_acc[j])>=best_val:
-            best_val=float(val_acc[j]); bestW=elitesW[j].copy(); bestB=elitesB[j].copy()
+        val_nll=np.array([heldout_nll(elitesW[k],elitesB[k],xv,yv) for k in range(elite_n)])
+        j=int(np.lexsort((val_nll,-val_acc))[0])
+        if float(val_acc[j])>best_val+1e-12 or (abs(float(val_acc[j])-best_val)<1e-12 and float(val_nll[j])<best_nll):
+            best_val=float(val_acc[j]); best_nll=float(val_nll[j]); bestW=elitesW[j].copy(); bestB=elitesB[j].copy()
         hist.append({"generation":gen,"train_best":float(train_acc[order[0]]),"validation_best":float(val_acc[j]),"fitness_best":float(fit[order[0]])})
         # elitism + tournament-like parent sampling + annealed Gaussian mutation
         sigma=.20*(1-gen/max(generations,1))+.018
@@ -111,7 +125,7 @@ def evolve(Wn, out: Path, generations=120, population=96):
         popW=np.stack(newW[:population]); popB=np.stack(newB[:population])
     np.savez_compressed(state_path,W=bestW,B=bestB,validation_accuracy=np.float32(best_val),generations=np.int32(generations))
     (out/"evolution_history.json").write_text(json.dumps(hist,indent=2),encoding="utf-8")
-    return bestW,bestB,best_val,baseline,resumed,hist
+    return bestW,bestB,best_val,best_nll,baseline,resumed,hist,incumbent_acc,incumbent_nll
 
 
 def predict(W,B,state):
@@ -179,7 +193,7 @@ def main():
     names=[g["name"] for g in meta["groups"]]
     n,e,W,Wn,counts=load_connectome(a.flybrain/"data/connectome.bin.gz")
     np.save(a.out/"group_connectome.npy",W)
-    bestW,bestB,val,baseline,resumed,hist=evolve(Wn,a.out,a.generations,a.population)
+    bestW,bestB,val,val_nll,baseline,resumed,hist,inc_acc,inc_nll=evolve(Wn,a.out,a.generations,a.population)
     state=simulate(Wn,a.stimulus,1.05,.012,15,SEED+999)
     pred,probs=predict(bestW,bestB,state)
     top=np.argsort(np.abs(state))[-12:][::-1]
@@ -187,9 +201,9 @@ def main():
     llm_id,llm_text=run_llm(pred,state,probs,a.out)
     sd_id,sd_prompt,sd_sec=run_sd(pred,a.out)
     result={
-      "seed":SEED,
+      "seed":SEED,"generation":GENERATION,"training_seed":TRAIN_SEED,
       "connectome":{"neurons":int(n),"edges":int(e),"groups":63,"nonzero_group_edges":int(np.count_nonzero(W))},
-      "evolution":{"generations":a.generations,"population":a.population,"resumed_checkpoint":resumed,"initial_random_best_validation_accuracy":baseline,"final_best_validation_accuracy":val,"first":hist[0],"last":hist[-1]},
+      "evolution":{"generations":a.generations,"population":a.population,"resumed_checkpoint":resumed,"initial_population_best_validation_accuracy":baseline,"initial_random_best_validation_accuracy":baseline,"incumbent_validation_accuracy":inc_acc,"incumbent_validation_nll":inc_nll,"final_best_validation_accuracy":val,"final_best_validation_nll":val_nll,"first":hist[0],"last":hist[-1]},
       "demo":{"requested_stimulus":a.stimulus,"evolved_prediction":pred,"probabilities":probs,"top_groups":top_groups},
       "llm":{"model":llm_id,"output":llm_text},
       "stable_diffusion":{"model":sd_id,"prompt":sd_prompt,"inference_seconds":sd_sec,"image":"stable_diffusion_result.png"},
