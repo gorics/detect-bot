@@ -36,12 +36,12 @@
     "train_loss_first": 0.6022928953170776,
     "train_loss_last": 0.10751601308584213,
     "lora_weight_norm_sum": 104.37936986982822,
-    "inference_seconds": 19.959177255630493,
+    "inference_seconds": 18.674042463302612,
     "base_output": "sd_base_result.png",
     "lora_output": "sd_lora_result.png",
     "champion_promoted": false,
     "champion_gate": "not eligible: self-distillation validation; real-image workflow owns SD champion"
   },
-  "total_seconds": 118.87705636024475,
+  "total_seconds": 115.95550274848938,
   "scope": "Frozen base models + trainable LoRA adapters; existing adapters and the evolved FlyBrain readout are reused across generations."
 }
