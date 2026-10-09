@@ -225,7 +225,16 @@ def main():
     if accepted:
         torch.save({"bridge_state":candidate.state_dict(),"validation_real_photo_mse":challenger,
                     "generation":generation},existing)
-    active=candidate if accepted else bridge
+    # Experimental visual loop always uses the fully trained challenger, even if not promoted.
+    # A rejected challenger is never used as production champion, but can be ablated safely.
+    active=candidate
+    with torch.inference_mode():
+        primary=predict_noise(pipe,candidate,va[0])
+        zeroed=dict(va[0]); zeroed["state"]=torch.zeros_like(va[0]["state"])
+        suppressed=predict_noise(pipe,candidate,zeroed)
+        causal_delta=float(torch.mean(torch.abs(primary-suppressed)))
+    if causal_delta<=1e-9:
+        raise RuntimeError("Visual brain-to-SD causal coupling inactive")
     # Actual Stable-Diffusion VAE/UNet -> image -> anatomical connectome -> SD conditioning loop
     feedback=render_feedback(pipe,active,va[0],scheduler,Wn,a.out)
     # Determine whether changing visual input actually changes neural state
@@ -245,7 +254,7 @@ def main():
         baseline_per_photo=incumbent_scores,candidate_per_photo=candidate_scores,
         champion_promoted=accepted,strict_gate="mean lower AND both held-out photos individually improve",
         training_loss_first=training_losses[0],training_loss_last=training_losses[-1],
-        feedback_trace=feedback,heldout_input_brain_state_l2=state_separation,
+        feedback_trace=feedback,experimental_candidate_loop=True,neural_conditioning_causal_ablation_mae=causal_delta,heldout_input_brain_state_l2=state_separation,
         heldout_readout_labels=behavior,
         caveat="Neural states are connectome simulations and visual features engineered from photos, NOT measured subjective thoughts or true fly retinal reconstruction.")
     (a.out/"results.json").write_text(json.dumps(report,ensure_ascii=False,indent=2))
