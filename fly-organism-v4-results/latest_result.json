@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 61,
+  "generation": 62,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.6383901905508927,
+  "breeder_fitness": 0.7006174230419152,
   "breeder_genome": {
-    "generation": 61,
+    "generation": 62,
     "active_neo": 8,
     "mutations": [
       {
@@ -883,15 +883,16 @@
         "factor": 1.0162649135000061
       },
       {
-        "kind": "native_knockout",
-        "s": 8,
-        "d": 23
+        "kind": "native_scale",
+        "s": 21,
+        "d": 26,
+        "factor": 0.879450098589217
       },
       {
-        "kind": "native_birth",
-        "s": 42,
-        "d": 4,
-        "w": -0.07837290680181919
+        "kind": "native_rewire",
+        "s": 34,
+        "d": 32,
+        "d2": 61
       }
     ]
   },
@@ -1364,7 +1365,7 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "5ec1bc7392702360cc58623a442e026c2b0339295b2371ff0d6a0a8e06c20d3e",
+    "breeder_topology_hash": "53465d3cef6779e5fbebbb855ace45ad695ef7a6ccb94b5fdf7c538136f3f14d",
     "breeder_native_nonzero_edges": 295,
     "breeder_native_ops": 15,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
@@ -1372,23 +1373,23 @@
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.6383901905508927,
-    "text_score": 0.6351264069264069,
+    "fitness": 0.7006174230419152,
+    "text_score": 0.803657142857143,
     "vision": {
-      "clip_cosine": 0.23649953305721283,
-      "score": 0.702234817892313,
-      "guidance": 5.612284183502197
+      "clip_cosine": 0.25300532579421997,
+      "score": 0.7086720770597458,
+      "guidance": 5.627213954925537
     },
-    "integration": 0.5465866923332214,
+    "integration": 0.5272722840309143,
     "structure": {
       "mutations": 70,
       "active_neo": 8,
       "nonzero_edges": 345,
       "native_ops": 15,
       "native_core_nonzero_edges": 295,
-      "topology_hash": "5ec1bc7392702360cc58623a442e026c2b0339295b2371ff0d6a0a8e06c20d3e"
+      "topology_hash": "53465d3cef6779e5fbebbb855ace45ad695ef7a6ccb94b5fdf7c538136f3f14d"
     },
-    "text": "초파리 (Insilico)는 이 과정의 주요 구성 요소 중 하나로, \"인공 신경망\" 또는 \"인공 신경\"이라는 용어로 지칭됩니다. 이것은 초파리는 신생뉴런을 생성하고, 이뉴런이 다른 신생뉴런과 연결되면, 그것들은 인식적 기능을 발달시킬 수 있도록 만들 수 있는 신호 전달기입니다.\n\nLSM 언어판 (LLM 언어판)은 주요 신호 기반 언어 솔루션 중 하나로, 이는 일반적으로 인공 언어를 생성, 이해하거나 분석할 때 사용되는 언어를 모델로 만들어야 합니다. 따라서 이 세트의 일부로서, 이것은 학습된 신호를 �"
+    "text": "초파리(Stemcell), connectome(連鎖胞体), LLM(Learning Machine), Stable Diffusion(Stable Diffusion)는 빠른 신생물체나 신생 생물체를 만드는 기술적 분야의 핵심 단위로, 각각의 연구에 사용되고 있습니다. 다음과 같이 이해해 보세요:\n\n1. **초파리 연결형 신생물체**: 신생뉴런이 작동하기를 원하며, 이는 신생물체(단위신생)의 신생성과 생존에 중요한 역할을 합니다. 신생뉴런을 만든 방법은 연결형으로, 신생물체는 이전에 있는 신생뉴런으로부터 신생뉴런을 생성하거나, 새로운 신생물"
   },
-  "elapsed_seconds": 155.04224228858948
+  "elapsed_seconds": 156.84847688674927
 }
