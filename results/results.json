@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3795604782605,
-  "training_seed": 3139447764,
+  "generation": 3795604782606,
+  "training_seed": 3139447795,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5244016647338867,
+    "final_best_validation_nll": 0.5317564606666565,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999494078183488
+      "fitness_best": 0.9999456616715179
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.6186312437057495,
-      "touch": 0.04258369281888008,
-      "air": 0.048239871859550476,
-      "light": 0.0018182778730988503,
-      "warm": 0.13992053270339966,
-      "cool": 0.1488063931465149
+      "food": 0.6859691739082336,
+      "touch": 0.0475769080221653,
+      "air": 0.07290951907634735,
+      "light": 0.0019412410911172628,
+      "warm": 0.09799599647521973,
+      "cool": 0.09360718727111816
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 20.372146129608154,
+    "inference_seconds": 19.048072576522827,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 117.52349805831909
+  "total_seconds": 63.69979190826416
 }
