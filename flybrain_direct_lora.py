@@ -7,7 +7,9 @@ import torch
 import torch.nn.functional as F
 
 SEED = 20260929
-random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
+GENERATION = int(os.getenv('GITHUB_RUN_ID', '0')) * 100 + int(os.getenv('GITHUB_RUN_ATTEMPT', '1'))
+TRAIN_SEED = (SEED + GENERATION * 37) % (2**32)
+random.seed(TRAIN_SEED); np.random.seed(TRAIN_SEED); torch.manual_seed(TRAIN_SEED)
 
 STIMULI = {
     "food":  {"groups":[6,32,37], "behavior":"approach food and extend the proboscis to feed"},
@@ -86,6 +88,7 @@ def train_llm_lora(train_rows,holdout_rows,out: Path):
     base=AutoModelForCausalLM.from_pretrained(model_id,torch_dtype=torch.float32)
     lora_dir=out/"llm_lora"
     resumed=(lora_dir/"adapter_model.safetensors").exists()
+    if not resumed: raise RuntimeError("Incumbent SmolLM2 LoRA missing; refusing non-continuation training")
     if resumed:
         model=PeftModel.from_pretrained(base,lora_dir,is_trainable=True)
         lr=2e-4; epochs=1
@@ -112,12 +115,25 @@ def train_llm_lora(train_rows,holdout_rows,out: Path):
             if r["target"].lower() in s.lower(): hit+=1
         return hit/len(rows),outs
 
+    def heldout_nll(rows):
+        model.eval(); losses=[]
+        with torch.inference_mode():
+            for row in rows:
+                prompt=format_prompt(row)
+                enc=tok(prompt+row['target']+tok.eos_token,return_tensors='pt',truncation=True,max_length=256)
+                plen=tok(prompt,return_tensors='pt',truncation=True,max_length=256)['input_ids'].shape[1]
+                labels=enc['input_ids'].clone(); labels[:,:min(plen,labels.shape[1])]=-100
+                if not (labels!=-100).any(): raise RuntimeError('Empty held-out target tokens')
+                losses.append(float(model(**enc,labels=labels).loss))
+        return float(np.mean(losses))
+
     acc_before,out_before=score(holdout_rows)
+    nll_before=heldout_nll(holdout_rows)
     model.train(); trainable=sum(p.numel() for p in model.parameters() if p.requires_grad); total=sum(p.numel() for p in model.parameters())
     params=[p for p in model.parameters() if p.requires_grad]
     opt=torch.optim.AdamW(params,lr=lr,weight_decay=1e-4); losses=[]
     for epoch in range(epochs):
-        random.Random(SEED+900+epoch).shuffle(train_rows)
+        random.Random(TRAIN_SEED+900+epoch).shuffle(train_rows)
         for r in train_rows:
             prompt=format_prompt(r); full=prompt+r["target"]+tok.eos_token
             enc=tok(full,return_tensors="pt",truncation=True,max_length=256)
@@ -126,6 +142,7 @@ def train_llm_lora(train_rows,holdout_rows,out: Path):
             loss=model(**enc,labels=labels).loss
             opt.zero_grad(); loss.backward(); torch.nn.utils.clip_grad_norm_(params,1.0); opt.step(); losses.append(float(loss.detach()))
     acc_after,out_after=score(holdout_rows)
+    nll_after=heldout_nll(holdout_rows)
     lora_dir.mkdir(parents=True,exist_ok=True); model.save_pretrained(lora_dir)
     (out/"llm_holdout_before.json").write_text(json.dumps(out_before,ensure_ascii=False,indent=2),encoding="utf-8")
     (out/"llm_holdout_after.json").write_text(json.dumps(out_after,ensure_ascii=False,indent=2),encoding="utf-8")
@@ -133,7 +150,9 @@ def train_llm_lora(train_rows,holdout_rows,out: Path):
     return {"model":model_id,"resumed_adapter":resumed,"trainable_parameters":trainable,"total_parameters":total,
             "trainable_fraction":trainable/total,"steps":len(losses),"learning_rate":lr,"loss_first":losses[0],"loss_last":losses[-1],
             "loss_mean_first5":float(np.mean(losses[:5])),"loss_mean_last5":float(np.mean(losses[-5:])),
-            "holdout_accuracy_before":acc_before,"holdout_accuracy_after":acc_after}
+            "holdout_accuracy_before":acc_before,"holdout_accuracy_after":acc_after,
+            "holdout_nll_before":nll_before,"holdout_nll_after":nll_after,
+            "holdout_gate_note":"NLL is diagnostic until strict workflow champion gate supports it"}
 
 
 def sd_prompt(kind):
@@ -174,8 +193,14 @@ def train_sd_lora(out: Path,steps=36):
     cfg=LoraConfig(r=4,lora_alpha=4,lora_dropout=0.0,bias="none",target_modules=["to_q","to_k","to_v","to_out.0"])
     pipe.unet.add_adapter(cfg)
     resume_path=out/"sd_unet_lora.pt"; resumed=resume_path.exists()
-    if resumed:
-        old=torch.load(resume_path,map_location="cpu"); pipe.unet.load_state_dict(old["state_dict"],strict=False)
+    if not resumed: raise RuntimeError('Incumbent SD LoRA missing; refusing non-continuation training')
+    old=torch.load(resume_path,map_location='cpu',weights_only=True)
+    expected={k for k in pipe.unet.state_dict() if 'lora_' in k}
+    if not expected or set(old['state_dict'])!=expected:
+        raise RuntimeError('Incumbent SD LoRA incompatible; refusing random restart')
+    incompatible=pipe.unet.load_state_dict(old['state_dict'],strict=False)
+    if incompatible.unexpected_keys or any('lora_' in k for k in incompatible.missing_keys):
+        raise RuntimeError('Incumbent SD LoRA restoration incomplete')
     params=[p for p in pipe.unet.parameters() if p.requires_grad]
     ntrain=sum(p.numel() for p in params); ntotal=sum(p.numel() for p in pipe.unet.parameters())
     opt=torch.optim.AdamW(params,lr=3e-5 if resumed else 8e-5,weight_decay=1e-4)
@@ -233,12 +258,12 @@ def main():
     a=ap.parse_args(); a.out.mkdir(parents=True,exist_ok=True); t0=time.time()
     n,e,Wn=load_connectome(a.flybrain/"data/connectome.bin.gz")
     W,B,val=load_evolved_readout(Path("results/state/best_genome.npz"))
-    train_rows=build_lm_examples(Wn,W,B,per_kind=5,seed_offset=400)
+    train_rows=build_lm_examples(Wn,W,B,per_kind=5,seed_offset=400+7*(GENERATION%1000000))
     holdout=build_lm_examples(Wn,W,B,per_kind=1,seed_offset=777)
     (a.out/"training_examples.json").write_text(json.dumps(train_rows,ensure_ascii=False,indent=2),encoding="utf-8")
     llm=train_llm_lora(train_rows,holdout,a.out)
     sd=train_sd_lora(a.out,a.sd_steps)
-    result={"seed":SEED,"generation_mode":"resume adapters if present","connectome":{"neurons":n,"edges":e},
+    result={"seed":SEED,"generation":GENERATION,"training_seed":TRAIN_SEED,"generation_mode":"resume adapters if present","connectome":{"neurons":n,"edges":e},
             "evolved_checkpoint_validation_accuracy":val,"llm_lora":llm,"stable_diffusion_lora":sd,"total_seconds":time.time()-t0,
             "scope":"Frozen base models + trainable LoRA adapters; existing adapters and the evolved FlyBrain readout are reused across generations."}
     (a.out/"lora_results.json").write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
