@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, gc, json, math, os, shutil, time
+import argparse, gc, hashlib, json, math, os, shutil, time
 from pathlib import Path
 
 import numpy as np
@@ -9,6 +9,9 @@ from PIL import Image, ImageOps, ImageEnhance
 
 SEED=20260929
 torch.manual_seed(SEED); np.random.seed(SEED)
+# Validation remains fixed; candidate training randomness changes with each run.
+GENERATION=int(os.getenv("GITHUB_RUN_ID","0"))*100+int(os.getenv("GITHUB_RUN_ATTEMPT","1"))
+TRAIN_SEED=SEED+(GENERATION or 1)*31
 PROMPT="scientific macro photograph of Drosophila melanogaster, fruit fly, red compound eyes, transparent wings, six legs, realistic insect anatomy, specimen photography"
 TARGETS=["to_q","to_k","to_v","to_out.0"]
 
@@ -44,8 +47,14 @@ def add_lora(pipe):
 
 def load_lora_state(pipe,path):
     if not path.exists(): return False
-    d=torch.load(path,map_location="cpu")
-    pipe.unet.load_state_dict(d["state_dict"],strict=False)
+    d=torch.load(path,map_location="cpu",weights_only=True)
+    saved=d["state_dict"]
+    expected={k for k in pipe.unet.state_dict() if "lora_" in k}
+    if not expected or set(saved)!=expected:
+        raise RuntimeError(f"Existing champion LoRA incompatible: expected={len(expected)} saved={len(saved)}")
+    mismatch=pipe.unet.load_state_dict(saved,strict=False)
+    if mismatch.unexpected_keys or any("lora_" in k for k in mismatch.missing_keys):
+        raise RuntimeError("Champion LoRA weights were not fully restored")
     return True
 
 
@@ -90,32 +99,19 @@ def train_candidate(model_id,train_paths,val_paths,out,steps):
     from diffusers import DDPMScheduler
     from torchvision.transforms.functional import to_tensor
     pipe=make_pipe(model_id); params=add_lora(pipe); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')
+    # Same real-photo held-out cases for both models, different training stream per generation.
+    torch.manual_seed(TRAIN_SEED)
+    np.random.seed(TRAIN_SEED % (2**32))
     ntrain=sum(p.numel() for p in params); ntotal=sum(p.numel() for p in pipe.unet.parameters()); scheduler=DDPMScheduler.from_config(pipe.scheduler.config)
     _,val_cases=encode_cases(pipe,val_paths,SEED+5000); base_val,base_each=eval_cases(pipe,val_cases); generate(pipe,out/"real_base.png")
     opt=torch.optim.AdamW(params,lr=6e-5,weight_decay=1e-4); losses=[]
     for step in range(steps):
-        p=train_paths[step%len(train_paths)]; im=prep_image(p,128,True,SEED+step); pix=to_tensor(im).unsqueeze(0)*2-1
+        p=train_paths[step%len(train_paths)]; im=prep_image(p,128,True,TRAIN_SEED+step); pix=to_tensor(im).unsqueeze(0)*2-1
         with torch.no_grad():
             lat=pipe.vae.encode(pix).latent_dist.sample()*pipe.vae.config.scaling_factor
             tok=pipe.tokenizer(PROMPT,padding="max_length",max_length=pipe.tokenizer.model_max_length,truncation=True,return_tensors="pt"); hid=pipe.text_encoder(tok.input_ids)[0]
-        g=torch.Generator(device="cpu").manual_seed(SEED+7000+step); noise=torch.randn(lat.shape,generator=g,dtype=lat.dtype)
+        g=torch.Generator(device="cpu").manual_seed(TRAIN_SEED+7000+step); noise=torch.randn(lat.shape,generator=g,dtype=lat.dtype)
         t=torch.tensor([int(80+(step*137)%850)],dtype=torch.long); noisy=scheduler.add_noise(lat,noise,t)
         target=noise if scheduler.config.prediction_type=="epsilon" else scheduler.get_velocity(lat,noise,t)
         pipe.unet.train(); pred=pipe.unet(noisy,t,encoder_hidden_states=hid).sample
@@ -135,11 +131,16 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--images",type=Path,required=True); ap.add_argument("--out",type=Path,default=Path("lora_results")); ap.add_argument("--steps",type=int,default=72)
     a=ap.parse_args(); a.out.mkdir(parents=True,exist_ok=True); t0=time.time(); imgs=sorted([p for p in a.images.iterdir() if p.suffix.lower() in {".jpg",".jpeg",".png"}])
     if len(imgs)<6: raise RuntimeError(f"need >=6 real fly images, got {len(imgs)}")
+    hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in imgs[:6]}
+    if len(set(hashes.values())) != 6: raise RuntimeError("duplicate real Drosophila images; train/validation leakage")
     train_paths=imgs[:4]; val_paths=imgs[4:6]; model_id=os.getenv("FLY_SD_TRAIN","segmind/tiny-sd"); incumbent_path=a.out/"sd_unet_lora.pt"
     incumbent=eval_incumbent(model_id,incumbent_path,val_paths,a.out); candidate=train_candidate(model_id,train_paths,val_paths,a.out,a.steps)
-    inc=float(incumbent["real_validation_loss"]); cand=float(candidate["candidate_real_validation_loss"]); selected="candidate" if cand < inc else "incumbent"
+    inc=float(incumbent["real_validation_loss"]); cand=float(candidate["candidate_real_validation_loss"])
+    before=incumbent["each"]; after=candidate["candidate_each"]
+    # Strictly improve every fixed held-out photo, not just a lucky aggregate.
+    selected="candidate" if cand < inc-1e-8 and all(a<b-1e-8 for a,b in zip(after,before)) else "incumbent"
     if selected=="candidate": shutil.copy2(a.out/"sd_real_candidate.pt",incumbent_path)
-    result={"seed":SEED,"model":model_id,"selection_metric":"held-out real Drosophila fixed denoising loss (lower is better)","license_note":"Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.","train_images":[p.name for p in train_paths],"validation_images":[p.name for p in val_paths],"incumbent":incumbent,"candidate":candidate,"selected":selected,"selected_loss":min(inc,cand),"relative_gain_over_incumbent":max(0.0,(inc-cand)/max(inc,1e-12)),"total_seconds":time.time()-t0}
+    result={"seed":SEED,"generation":GENERATION,"training_seed":TRAIN_SEED,"image_sha256":hashes,"strict_all_photo_gate":True,"model":model_id,"selection_metric":"held-out real Drosophila fixed denoising loss (lower is better)","license_note":"Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.","train_images":[p.name for p in train_paths],"validation_images":[p.name for p in val_paths],"incumbent":incumbent,"candidate":candidate,"selected":selected,"selected_loss":min(inc,cand),"relative_gain_over_incumbent":max(0.0,(inc-cand)/max(inc,1e-12)),"total_seconds":time.time()-t0}
     (a.out/"real_sd_evolution.json").write_text(json.dumps(result,indent=2),encoding="utf-8"); print(json.dumps(result,indent=2))
 
 if __name__=="__main__": main()
