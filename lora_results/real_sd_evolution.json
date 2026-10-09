@@ -1,5 +1,16 @@
 {
   "seed": 20260929,
+  "generation": 3794828807401,
+  "training_seed": 117639713290360,
+  "image_sha256": {
+    "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
+    "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
+    "real_02.jpg": "1a7956eaf2bad040de4be6bea6a6236d76b0c672818cf095925d681d6f3de6fd",
+    "real_03.jpg": "c1e2a1ec76e82ae582eb7638cc0f6020ea5ff5aa2e8a76ceb3de74da2058e480",
+    "real_04.jpg": "79d4d4f445b07d3707ae0100fe7cff61bf6646d4c75d4b611999d332303c482c",
+    "real_05.jpg": "1f51537846fc4bfaa275a724e67efed929ed3bf7f756db18270617d706e61c4a"
+  },
+  "strict_all_photo_gate": true,
   "model": "segmind/tiny-sd",
   "selection_metric": "held-out real Drosophila fixed denoising loss (lower is better)",
   "license_note": "Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.",
@@ -15,36 +26,36 @@
   ],
   "incumbent": {
     "loaded": true,
-    "real_validation_loss": 0.28478479385375977,
+    "real_validation_loss": 0.28478483110666275,
     "each": [
-      0.34731796383857727,
-      0.22225162386894226
+      0.34731805324554443,
+      0.22225160896778107
     ],
-    "inference_seconds": 18.593669652938843
+    "inference_seconds": 10.885549306869507
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
-    "base_real_validation_loss": 0.28478479385375977,
-    "candidate_real_validation_loss": 0.28536879271268845,
-    "candidate_improvement_vs_base": -0.0020506672811630893,
+    "base_real_validation_loss": 0.28478483110666275,
+    "candidate_real_validation_loss": 0.2846622169017792,
+    "candidate_improvement_vs_base": 0.0004305503365720057,
     "base_each": [
-      0.34731796383857727,
-      0.22225162386894226
+      0.34731805324554443,
+      0.22225160896778107
     ],
     "candidate_each": [
-      0.3484344482421875,
-      0.2223031371831894
+      0.3466503620147705,
+      0.22267407178878784
     ],
-    "train_loss_first": 0.4048531949520111,
-    "train_loss_last": 0.13926278054714203,
-    "lora_weight_norm_sum": 107.05438364297152,
+    "train_loss_first": 0.3797304332256317,
+    "train_loss_last": 0.13069862127304077,
+    "lora_weight_norm_sum": 106.65071330964565,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 19.2928466796875
+    "inference_seconds": 11.008788108825684
   },
   "selected": "incumbent",
-  "selected_loss": 0.28478479385375977,
-  "relative_gain_over_incumbent": 0.0,
-  "total_seconds": 168.67574191093445
+  "selected_loss": 0.2846622169017792,
+  "relative_gain_over_incumbent": 0.0004305503365720057,
+  "total_seconds": 108.91950225830078
 }
