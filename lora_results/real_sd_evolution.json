@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3797088498601,
-  "training_seed": 117709763717560,
+  "generation": 3797088498602,
+  "training_seed": 117709763717591,
   "image_sha256": {
     "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
     "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
@@ -31,36 +31,36 @@
       0.34731796383857727,
       0.22225162386894226
     ],
-    "inference_seconds": 18.489110708236694
+    "inference_seconds": 18.529794931411743
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
     "base_real_validation_loss": 0.28478479385375977,
-    "candidate_real_validation_loss": 0.28493571281433105,
-    "candidate_improvement_vs_base": -0.0005299403754288498,
+    "candidate_real_validation_loss": 0.2841394320130348,
+    "candidate_improvement_vs_base": 0.0022661386936844168,
     "base_each": [
       0.34731796383857727,
       0.22225162386894226
     ],
     "candidate_each": [
-      0.34714704751968384,
-      0.22272437810897827
+      0.3464777171611786,
+      0.22180114686489105
     ],
-    "train_loss_first": 0.37092840671539307,
-    "train_loss_last": 0.11831561475992203,
-    "lora_weight_norm_sum": 106.54453553259373,
+    "train_loss_first": 0.3891228437423706,
+    "train_loss_last": 0.11936654150485992,
+    "lora_weight_norm_sum": 107.04268214851618,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 18.71392846107483
+    "inference_seconds": 18.38326930999756
   },
-  "selected": "incumbent",
-  "selected_loss": 0.28478479385375977,
-  "relative_gain_over_incumbent": 0.0,
+  "selected": "candidate",
+  "selected_loss": 0.2841394320130348,
+  "relative_gain_over_incumbent": 0.0022661386936844168,
   "individual_photo_improved": [
     true,
-    false
+    true
   ],
-  "champion_promoted": false,
-  "total_seconds": 167.67210507392883
+  "champion_promoted": true,
+  "total_seconds": 161.3167335987091
 }
