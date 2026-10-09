@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3794828807402,
-  "training_seed": 117639713290391,
+  "generation": 3794828807403,
+  "training_seed": 117639713290422,
   "image_sha256": {
     "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
     "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
@@ -26,36 +26,36 @@
   ],
   "incumbent": {
     "loaded": true,
-    "real_validation_loss": 0.28478487581014633,
+    "real_validation_loss": 0.28478479385375977,
     "each": [
-      0.3473181128501892,
-      0.22225163877010345
+      0.34731796383857727,
+      0.22225162386894226
     ],
-    "inference_seconds": 12.884449005126953
+    "inference_seconds": 18.56089997291565
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
-    "base_real_validation_loss": 0.28478487581014633,
-    "candidate_real_validation_loss": 0.28515928238630295,
-    "candidate_improvement_vs_base": -0.0013146996486085053,
+    "base_real_validation_loss": 0.28478479385375977,
+    "candidate_real_validation_loss": 0.28545454889535904,
+    "candidate_improvement_vs_base": -0.002351793550968878,
     "base_each": [
-      0.3473181128501892,
-      0.22225163877010345
+      0.34731796383857727,
+      0.22225162386894226
     ],
     "candidate_each": [
-      0.34697040915489197,
-      0.22334815561771393
+      0.3471892476081848,
+      0.22371985018253326
     ],
-    "train_loss_first": 0.4035247266292572,
-    "train_loss_last": 0.1382969319820404,
-    "lora_weight_norm_sum": 106.59106813371181,
+    "train_loss_first": 0.38966429233551025,
+    "train_loss_last": 0.132169708609581,
+    "lora_weight_norm_sum": 106.76010727882385,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 13.243407964706421
+    "inference_seconds": 18.21705961227417
   },
   "selected": "incumbent",
-  "selected_loss": 0.28478487581014633,
+  "selected_loss": 0.28478479385375977,
   "relative_gain_over_incumbent": 0.0,
-  "total_seconds": 124.60042309761047
+  "total_seconds": 166.3136649131775
 }
