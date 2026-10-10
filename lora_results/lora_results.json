@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3795614869120,
-  "training_seed": 929773761,
+  "generation": 3795614869121,
+  "training_seed": 929773798,
   "generation_mode": "resume adapters if present",
   "connectome": {
     "neurons": 139255,
@@ -16,14 +16,14 @@
     "trainable_fraction": 0.006804659490586179,
     "steps": 30,
     "learning_rate": 0.0002,
-    "loss_first": 1.735153773552156e-06,
-    "loss_last": 9.722068170958664e-06,
-    "loss_mean_first5": 1.4864706599837517e-06,
-    "loss_mean_last5": 7.391434292003396e-06,
+    "loss_first": 1.3642815019920818e-06,
+    "loss_last": 1.0848029887711164e-06,
+    "loss_mean_first5": 1.390772490594827e-06,
+    "loss_mean_last5": 1.0941409072984242e-06,
     "holdout_accuracy_before": 1.0,
     "holdout_accuracy_after": 1.0,
     "holdout_nll_before": 1.4929828845803665e-06,
-    "holdout_nll_after": 0.004495497800955188,
+    "holdout_nll_after": 1.0591396820321581e-06,
     "holdout_gate_note": "NLL is diagnostic until strict workflow champion gate supports it",
     "champion_promoted": false
   },
@@ -41,12 +41,12 @@
     "train_loss_first": 0.612625777721405,
     "train_loss_last": 0.10866814851760864,
     "lora_weight_norm_sum": 106.18266570568085,
-    "inference_seconds": 19.63389825820923,
+    "inference_seconds": 19.828622579574585,
     "base_output": "sd_base_result.png",
     "lora_output": "sd_lora_result.png",
     "champion_promoted": false,
     "champion_gate": "not eligible: self-distillation validation; real-image workflow owns SD champion"
   },
-  "total_seconds": 118.58619451522827,
+  "total_seconds": 123.40354371070862,
   "scope": "Frozen base models + trainable LoRA adapters; existing adapters and the evolved FlyBrain readout are reused across generations."
 }
