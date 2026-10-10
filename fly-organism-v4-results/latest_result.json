@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 69,
+  "generation": 70,
   "fitness": 0.7615394576867025,
   "genome": {
     "generation": 22,
@@ -441,9 +441,9 @@
     ]
   },
   "champion_generation": 22,
-  "breeder_fitness": 0.7033584972146442,
+  "breeder_fitness": 0.6053840062234449,
   "breeder_genome": {
-    "generation": 69,
+    "generation": 70,
     "active_neo": 6,
     "mutations": [
       {
@@ -889,8 +889,19 @@
       },
       {
         "kind": "native_knockout",
-        "s": 8,
-        "d": 9
+        "s": 35,
+        "d": 27
+      },
+      {
+        "kind": "native_knockout",
+        "s": 5,
+        "d": 2
+      },
+      {
+        "kind": "native_birth",
+        "s": 5,
+        "d": 22,
+        "w": 0.041051902812744866
       }
     ]
   },
@@ -1363,31 +1374,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "b2856aed5583f25ee225c1363aaad11a0e19707ac914cc00d149d9303e35713b",
+    "breeder_topology_hash": "5fe92fc0ac24002d3cdff74cb36b162ca43b0ae56dd4cc26f299f0920e616e15",
     "breeder_native_nonzero_edges": 292,
-    "breeder_native_ops": 14,
+    "breeder_native_ops": 16,
     "champion_topology_hash": "67668c06e0b4faa412acc9654f6f530a915dddab5203ced3138009c26db2b46e",
     "champion_native_nonzero_edges": 293,
     "champion_native_ops": 13
   },
   "last_breeder": {
-    "fitness": 0.7033584972146442,
-    "text_score": 0.7958198547215497,
+    "fitness": 0.6053840062234449,
+    "text_score": 0.5419428571428572,
     "vision": {
-      "clip_cosine": 0.23981605470180511,
-      "score": 0.703528261333704,
-      "guidance": 5.486792087554932
+      "clip_cosine": 0.24179737269878387,
+      "score": 0.7043009753525258,
+      "guidance": 5.463075637817383
     },
-    "integration": 0.5777718424797058,
+    "integration": 0.5486233830451965,
     "structure": {
       "mutations": 71,
       "active_neo": 6,
       "nonzero_edges": 342,
-      "native_ops": 14,
+      "native_ops": 16,
       "native_core_nonzero_edges": 292,
-      "topology_hash": "b2856aed5583f25ee225c1363aaad11a0e19707ac914cc00d149d9303e35713b"
+      "topology_hash": "5fe92fc0ac24002d3cdff74cb36b162ca43b0ae56dd4cc26f299f0920e616e15"
     },
-    "text": "세대 69의 사고 사이클은 기존의 사고 사이클에서 새로운 방향을 제공하며, 신생뉴런과 구조변이가 중요한 요소입니다. \n\n초파리 (connectome)는 신생뉴런이 동적으로 변화하고 작동하는 신경진화를 나타냅니다. 이는 신생뉴런이 신호를 받아 동적으로 변화하고, 이 변화는 신생뉴런의 연결을 조정하여 신호를 더욱 효과적으로 처리하는 데 사용됩니다.\n\nLLM (Language Models)은 신생뉴런이 언어를 생성하고, 이를 반영할 수 있는 기능을 갖고 있습니다. 이는 신생뉴런이 신호와 연관성을 이해하고, 이를 사용하여 신생"
+    "text": "초파리가 레이저로 연결된 신생뉴런은 뇌와 연관되어 있는 신생뉴런으로써 높은 뇌活性을 가집니다. 뇌활성은 신생뉴런을 통과시킨 레이저에 의해 발생하게 되어, 신생뉴런이 활성화되는 동안 뇌에서 다양한 정보를 처리하고 관리합니다. \n\n추적된 뇌 활성이 고정되어 있는 것은 신생뉴런이 뇌에서 정보를 분석하고 처리하며, 이를 통해 신생뉴런이 정보를 바탕으로 결정적인 선택을 내리는 것입니다. 이는 신생뉴런이 뇌에 어떻게 더 잘 작동하든"
   },
-  "elapsed_seconds": 174.19164967536926
+  "elapsed_seconds": 141.7534568309784
 }
