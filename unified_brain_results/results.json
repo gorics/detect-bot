@@ -1,0 +1,162 @@
+{
+  "generation": 1,
+  "architecture": "one recurrent connectome state, shared language+vision gradients, single optimizer, fused checkpoint",
+  "actual_neurons_in_connectome": 139255,
+  "actual_edges_in_connectome": 2698236,
+  "compressed_recurrent_neural_groups": 63,
+  "prior_readout_restored": true,
+  "prior_smollm2_lora_restored": true,
+  "prior_sd_lora_restored": true,
+  "prior_unified_champion_resumed": false,
+  "train_steps": 6,
+  "image_sha256": {
+    "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
+    "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
+    "real_02.jpg": "1a7956eaf2bad040de4be6bea6a6236d76b0c672818cf095925d681d6f3de6fd",
+    "real_03.jpg": "c1e2a1ec76e82ae582eb7638cc0f6020ea5ff5aa2e8a76ceb3de74da2058e480",
+    "real_04.jpg": "79d4d4f445b07d3707ae0100fe7cff61bf6646d4c75d4b611999d332303c482c",
+    "real_05.jpg": "1f51537846fc4bfaa275a724e67efed929ed3bf7f756db18270617d706e61c4a"
+  },
+  "baseline": {
+    "image_mse": 0.3409948945045471,
+    "language_nll": 2.356915831565857,
+    "action_accuracy": 1.0
+  },
+  "candidate": {
+    "image_mse": 0.34170128405094147,
+    "language_nll": 1.7920417785644531,
+    "action_accuracy": 1.0
+  },
+  "per_case_baseline": [
+    {
+      "photo": "real_04.jpg",
+      "stimulus": "food",
+      "image_mse": 0.42254090309143066,
+      "language_nll": 2.073732852935791,
+      "action_correct": 1
+    },
+    {
+      "photo": "real_05.jpg",
+      "stimulus": "touch",
+      "image_mse": 0.2594488859176636,
+      "language_nll": 2.640098810195923,
+      "action_correct": 1
+    }
+  ],
+  "per_case_candidate": [
+    {
+      "photo": "real_04.jpg",
+      "stimulus": "food",
+      "image_mse": 0.4186422526836395,
+      "language_nll": 1.46150541305542,
+      "action_correct": 1
+    },
+    {
+      "photo": "real_05.jpg",
+      "stimulus": "touch",
+      "image_mse": 0.2647603154182434,
+      "language_nll": 2.1225781440734863,
+      "action_correct": 1
+    }
+  ],
+  "champion_promoted": false,
+  "sd_neural_conditioning_ablation_mae": 0.03185732662677765,
+  "joint_gradient_norms": [
+    {
+      "step": 1,
+      "after_language": 0.15612436830997467,
+      "after_both": 0.15612436830997467
+    },
+    {
+      "step": 2,
+      "after_language": 0.26551204919815063,
+      "after_both": 0.26555514335632324
+    },
+    {
+      "step": 3,
+      "after_language": 0.3855105936527252,
+      "after_both": 0.3855551481246948
+    },
+    {
+      "step": 4,
+      "after_language": 0.14061138033866882,
+      "after_both": 0.14094054698944092
+    },
+    {
+      "step": 5,
+      "after_language": 0.20167018473148346,
+      "after_both": 0.19533191621303558
+    },
+    {
+      "step": 6,
+      "after_language": 0.2573115825653076,
+      "after_both": 0.25897809863090515
+    }
+  ],
+  "train_history": [
+    {
+      "step": 1,
+      "sd_loss": 0.4622977077960968,
+      "language_loss": 2.039149761199951,
+      "behavior_loss": 0.5359435677528381
+    },
+    {
+      "step": 2,
+      "sd_loss": 0.2059679627418518,
+      "language_loss": 2.4804067611694336,
+      "behavior_loss": 0.3840332329273224
+    },
+    {
+      "step": 3,
+      "sd_loss": 0.10544849187135696,
+      "language_loss": 1.7077019214630127,
+      "behavior_loss": 1.5166254043579102
+    },
+    {
+      "step": 4,
+      "sd_loss": 0.10994622111320496,
+      "language_loss": 1.7149860858917236,
+      "behavior_loss": 0.30499574542045593
+    },
+    {
+      "step": 5,
+      "sd_loss": 0.45009398460388184,
+      "language_loss": 1.9790059328079224,
+      "behavior_loss": 0.6945855021476746
+    },
+    {
+      "step": 6,
+      "sd_loss": 0.20160795748233795,
+      "language_loss": 1.949035882949829,
+      "behavior_loss": 1.2806366682052612
+    }
+  ],
+  "feedback": [
+    {
+      "frame": 0,
+      "image": "feedback_00.png",
+      "image_change_l2": 0.09216541796922684,
+      "sd_loss": 0.421639621257782
+    },
+    {
+      "frame": 1,
+      "image": "feedback_01.png",
+      "image_change_l2": 0.08067638427019119,
+      "sd_loss": 0.42136120796203613
+    },
+    {
+      "frame": 2,
+      "image": "feedback_02.png",
+      "image_change_l2": 0.00023981661070138216,
+      "sd_loss": 0.421276718378067
+    }
+  ],
+  "source_checkpoint_sha256": {
+    "readout": "79d2c5d3e1901784ca4372260d184a4187c8cecbbd3a5467b3742b9f496b0a6b",
+    "sd_lora": "c27c6988069d134ed5eea1280fa113b9c41b13b043f23fce3dadfbd999470c9a",
+    "llm_lora": "593cbb4bc4ab8d3de9e294787b50144a91a3233495b87af1d22818e68e8fca8e"
+  },
+  "seconds": 10.565349817276001,
+  "champion_gate": "Both real-photo held-out SD losses improve, Korean LM held-out NLL decreases, synthetic stimulus accuracy does not decrease",
+  "qualification": "Actual FlyBrain connectome coarse-grained to 63 groups; actual pretrained LLM and SD LoRA compute inside a single shared optimizer. This is NOT measured fly perception, consciousness or a neuron-level biological brain."
+}
