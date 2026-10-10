@@ -1,152 +1,152 @@
 [
   {
-    "kind": "food",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.99, g26=+0.97, g28=+0.71, g8=+0.67, g27=+0.66, g35=+0.60, g17=+0.39, g57=+0.37, g9=+0.34, g32=+0.32. Answer with one short behavior sentence.",
-    "target": "approach food and extend the proboscis to feed"
-  },
-  {
     "kind": "light",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.97, g2=+0.94, g60=+0.92, g28=-0.64, g27=-0.64, g35=+0.37, g25=+0.35, g0=+0.33, g21=-0.22, g9=-0.21. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.97, g2=+0.94, g60=+0.93, g27=-0.70, g28=-0.68, g35=+0.39, g0=+0.35, g57=+0.22, g3=+0.14, g17=+0.08. Answer with one short behavior sentence.",
     "target": "orient toward the bright visual field and explore"
   },
   {
     "kind": "warm",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.97, g26=-0.94, g8=+0.72, g35=+0.66, g28=-0.65, g27=-0.55, g57=+0.29, g14=+0.26, g2=+0.25, g9=+0.19. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.98, g26=-0.90, g8=+0.77, g35=+0.68, g28=-0.57, g2=+0.52, g27=-0.44, g9=+0.33, g57=+0.31, g21=-0.25. Answer with one short behavior sentence.",
     "target": "move away from the warm region while exploring"
-  },
-  {
-    "kind": "light",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.96, g2=+0.95, g28=-0.67, g60=+0.64, g27=-0.63, g0=+0.38, g25=+0.37, g57=-0.23, g3=+0.13, g8=-0.10. Answer with one short behavior sentence.",
-    "target": "orient toward the bright visual field and explore"
-  },
-  {
-    "kind": "touch",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+0.99, g26=+0.94, g35=+0.77, g28=+0.65, g27=+0.49, g2=+0.41, g57=+0.36, g10=+0.17, g17=+0.13, g3=+0.08. Answer with one short behavior sentence.",
-    "target": "orient away from touch and initiate grooming"
-  },
-  {
-    "kind": "food",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.99, g26=+0.94, g8=+0.71, g28=+0.65, g35=+0.56, g27=+0.55, g9=+0.44, g32=+0.32, g37=+0.31, g2=+0.29. Answer with one short behavior sentence.",
-    "target": "approach food and extend the proboscis to feed"
-  },
-  {
-    "kind": "touch",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.95, g35=+0.82, g28=+0.72, g2=+0.56, g27=+0.51, g10=+0.35, g57=+0.24, g25=-0.19, g17=-0.16. Answer with one short behavior sentence.",
-    "target": "orient away from touch and initiate grooming"
-  },
-  {
-    "kind": "touch",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.92, g35=+0.78, g28=+0.60, g17=-0.54, g27=+0.46, g57=+0.42, g2=+0.26, g10=+0.22, g25=+0.20. Answer with one short behavior sentence.",
-    "target": "orient away from touch and initiate grooming"
   },
   {
     "kind": "air",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.99, g35=+0.79, g26=-0.44, g11=+0.34, g57=+0.28, g17=-0.28, g8=+0.28, g5=+0.25, g28=-0.21, g2=-0.18. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.96, g26=-0.76, g35=+0.65, g28=-0.46, g2=-0.22, g8=+0.22, g27=-0.21, g11=+0.20, g21=+0.14, g19=+0.12. Answer with one short behavior sentence.",
     "target": "brace against airflow and prepare an escape response"
   },
   {
-    "kind": "cool",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.99, g26=+0.95, g28=+0.69, g35=+0.66, g8=+0.64, g27=+0.56, g2=+0.24, g57=+0.23, g23=+0.18, g6=-0.17. Answer with one short behavior sentence.",
-    "target": "reorient after cooling and reduce forward exploration"
-  },
-  {
-    "kind": "cool",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g26=+0.95, g8=+0.72, g28=+0.68, g27=+0.63, g35=+0.62, g21=-0.32, g6=-0.26, g15=+0.26, g9=+0.21. Answer with one short behavior sentence.",
-    "target": "reorient after cooling and reduce forward exploration"
-  },
-  {
-    "kind": "air",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.99, g26=+0.96, g35=+0.82, g28=+0.71, g27=+0.62, g57=+0.34, g11=+0.31, g2=-0.26, g5=+0.24, g3=+0.16. Answer with one short behavior sentence.",
-    "target": "brace against airflow and prepare an escape response"
-  },
-  {
-    "kind": "cool",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g26=+0.95, g35=+0.81, g8=+0.76, g28=+0.69, g27=+0.55, g9=+0.39, g15=+0.35, g57=+0.35, g2=+0.35. Answer with one short behavior sentence.",
-    "target": "reorient after cooling and reduce forward exploration"
-  },
-  {
-    "kind": "touch",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.96, g35=+0.80, g28=+0.69, g27=+0.60, g2=+0.50, g17=-0.45, g57=+0.42, g8=+0.20, g10=+0.19. Answer with one short behavior sentence.",
-    "target": "orient away from touch and initiate grooming"
-  },
-  {
-    "kind": "cool",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g26=+0.94, g28=+0.70, g35=+0.70, g8=+0.63, g27=+0.52, g2=+0.40, g57=+0.33, g15=+0.25, g9=+0.23. Answer with one short behavior sentence.",
-    "target": "reorient after cooling and reduce forward exploration"
-  },
-  {
-    "kind": "cool",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.98, g26=-0.74, g8=+0.69, g35=+0.66, g21=+0.48, g19=+0.41, g28=-0.40, g2=+0.32, g9=+0.31, g27=-0.23. Answer with one short behavior sentence.",
-    "target": "reorient after cooling and reduce forward exploration"
-  },
-  {
-    "kind": "light",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.96, g60=+0.90, g2=+0.88, g28=-0.68, g27=-0.65, g35=+0.24, g0=+0.20, g3=+0.19, g8=+0.17, g17=-0.16. Answer with one short behavior sentence.",
-    "target": "orient toward the bright visual field and explore"
-  },
-  {
-    "kind": "warm",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.99, g26=+0.89, g8=+0.79, g35=+0.76, g28=+0.59, g27=+0.43, g9=+0.36, g14=+0.34, g57=+0.30, g6=-0.20. Answer with one short behavior sentence.",
-    "target": "move away from the warm region while exploring"
-  },
-  {
     "kind": "food",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+1.00, g26=+0.96, g8=+0.74, g28=+0.71, g27=+0.63, g35=+0.52, g9=+0.38, g32=+0.37, g37=+0.36, g2=+0.35. Answer with one short behavior sentence.",
-    "target": "approach food and extend the proboscis to feed"
-  },
-  {
-    "kind": "warm",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.99, g26=+0.95, g35=+0.77, g8=+0.75, g28=+0.74, g27=+0.49, g9=+0.33, g17=+0.24, g2=+0.23, g57=+0.23. Answer with one short behavior sentence.",
-    "target": "move away from the warm region while exploring"
-  },
-  {
-    "kind": "warm",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.98, g26=+0.95, g8=+0.73, g28=+0.71, g35=+0.71, g27=+0.61, g2=+0.44, g17=+0.38, g57=+0.34, g9=+0.34. Answer with one short behavior sentence.",
-    "target": "move away from the warm region while exploring"
-  },
-  {
-    "kind": "warm",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.99, g26=+0.96, g28=+0.70, g35=+0.69, g8=+0.65, g27=+0.59, g57=+0.35, g2=+0.35, g21=+0.34, g19=+0.32. Answer with one short behavior sentence.",
-    "target": "move away from the warm region while exploring"
-  },
-  {
-    "kind": "food",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+1.00, g26=+0.96, g28=+0.71, g8=+0.71, g27=+0.62, g35=+0.54, g2=+0.39, g9=+0.31, g32=+0.30, g37=+0.30. Answer with one short behavior sentence.",
-    "target": "approach food and extend the proboscis to feed"
-  },
-  {
-    "kind": "food",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.99, g26=+0.96, g28=+0.72, g8=+0.69, g27=+0.63, g35=+0.56, g2=+0.35, g32=+0.33, g37=+0.32, g9=+0.31. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.98, g26=+0.96, g28=+0.70, g27=+0.61, g8=+0.60, g35=+0.50, g17=+0.39, g2=+0.37, g9=+0.26, g57=+0.20. Answer with one short behavior sentence.",
     "target": "approach food and extend the proboscis to feed"
   },
   {
     "kind": "light",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.96, g2=+0.94, g60=+0.89, g28=-0.68, g27=-0.63, g0=+0.35, g35=+0.33, g25=+0.31, g8=-0.20, g3=+0.18. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.96, g2=+0.95, g60=+0.94, g27=-0.73, g28=-0.68, g0=+0.37, g17=-0.37, g35=+0.31, g21=-0.22, g57=+0.20. Answer with one short behavior sentence.",
     "target": "orient toward the bright visual field and explore"
   },
   {
-    "kind": "touch",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.95, g35=+0.85, g28=+0.69, g27=+0.53, g2=+0.45, g10=+0.31, g57=+0.30, g17=-0.26, g21=-0.25. Answer with one short behavior sentence.",
-    "target": "orient away from touch and initiate grooming"
+    "kind": "food",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.99, g26=+0.95, g28=+0.69, g8=+0.62, g27=+0.57, g35=+0.55, g21=+0.45, g19=+0.34, g2=+0.33, g57=+0.30. Answer with one short behavior sentence.",
+    "target": "approach food and extend the proboscis to feed"
+  },
+  {
+    "kind": "warm",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.98, g8=+0.78, g35=+0.76, g9=+0.35, g14=+0.32, g17=+0.32, g2=+0.30, g57=+0.25, g6=-0.19, g19=-0.12. Answer with one short behavior sentence.",
+    "target": "move away from the warm region while exploring"
+  },
+  {
+    "kind": "cool",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g26=+0.93, g35=+0.78, g8=+0.76, g28=+0.66, g27=+0.50, g2=+0.46, g9=+0.39, g21=+0.37, g15=+0.36. Answer with one short behavior sentence.",
+    "target": "reorient after cooling and reduce forward exploration"
+  },
+  {
+    "kind": "cool",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g26=+0.86, g35=+0.80, g8=+0.76, g28=+0.55, g2=+0.40, g9=+0.37, g15=+0.35, g27=+0.34, g17=+0.33. Answer with one short behavior sentence.",
+    "target": "reorient after cooling and reduce forward exploration"
   },
   {
     "kind": "air",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.99, g35=+0.77, g26=+0.60, g28=+0.39, g2=-0.36, g11=+0.34, g57=+0.28, g5=+0.24, g27=+0.17, g17=-0.12. Answer with one short behavior sentence.",
-    "target": "brace against airflow and prepare an escape response"
-  },
-  {
-    "kind": "air",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+1.00, g26=+0.96, g35=+0.81, g28=+0.70, g27=+0.59, g57=+0.46, g17=-0.29, g11=+0.28, g21=-0.23, g5=+0.21. Answer with one short behavior sentence.",
-    "target": "brace against airflow and prepare an escape response"
-  },
-  {
-    "kind": "air",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.99, g26=+0.94, g35=+0.78, g28=+0.68, g27=+0.53, g11=+0.32, g57=+0.32, g2=-0.28, g5=+0.19, g17=+0.09. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.98, g26=+0.74, g35=+0.69, g28=+0.46, g57=+0.26, g27=+0.26, g8=-0.21, g17=+0.18, g11=+0.17, g2=-0.14. Answer with one short behavior sentence.",
     "target": "brace against airflow and prepare an escape response"
   },
   {
     "kind": "light",
-    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.97, g60=+0.93, g2=+0.91, g27=-0.69, g28=-0.67, g35=+0.40, g57=+0.24, g0=+0.24, g21=+0.16, g19=+0.15. Answer with one short behavior sentence.",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.96, g60=+0.95, g2=+0.94, g27=-0.71, g28=-0.68, g35=+0.43, g0=+0.32, g57=+0.22, g3=+0.16, g8=+0.10. Answer with one short behavior sentence.",
     "target": "orient toward the bright visual field and explore"
+  },
+  {
+    "kind": "warm",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+1.00, g26=+0.95, g8=+0.76, g35=+0.75, g28=+0.69, g27=+0.54, g2=+0.41, g57=+0.30, g14=+0.28, g9=+0.27. Answer with one short behavior sentence.",
+    "target": "move away from the warm region while exploring"
+  },
+  {
+    "kind": "light",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.96, g2=+0.95, g60=+0.95, g27=-0.72, g28=-0.68, g35=+0.41, g0=+0.36, g57=+0.24, g21=-0.17, g3=+0.16. Answer with one short behavior sentence.",
+    "target": "orient toward the bright visual field and explore"
+  },
+  {
+    "kind": "air",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.98, g26=-0.81, g35=+0.73, g28=-0.47, g2=-0.36, g27=-0.33, g21=+0.30, g57=+0.26, g19=+0.22, g11=+0.20. Answer with one short behavior sentence.",
+    "target": "brace against airflow and prepare an escape response"
+  },
+  {
+    "kind": "air",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+0.98, g26=-0.94, g35=+0.78, g28=-0.65, g27=-0.49, g21=-0.47, g57=+0.38, g19=-0.36, g2=-0.34, g5=+0.24. Answer with one short behavior sentence.",
+    "target": "brace against airflow and prepare an escape response"
+  },
+  {
+    "kind": "warm",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.98, g8=+0.78, g26=-0.76, g35=+0.73, g2=+0.50, g28=-0.40, g14=+0.35, g9=+0.32, g57=+0.29, g6=-0.23. Answer with one short behavior sentence.",
+    "target": "move away from the warm region while exploring"
+  },
+  {
+    "kind": "food",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+1.00, g26=+0.95, g28=+0.69, g27=+0.61, g8=+0.56, g35=+0.49, g2=+0.41, g9=+0.28, g57=+0.25, g32=+0.23. Answer with one short behavior sentence.",
+    "target": "approach food and extend the proboscis to feed"
+  },
+  {
+    "kind": "cool",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g35=+0.78, g8=+0.76, g2=+0.44, g15=+0.36, g9=+0.34, g57=+0.33, g21=+0.29, g19=+0.28, g6=-0.19. Answer with one short behavior sentence.",
+    "target": "reorient after cooling and reduce forward exploration"
+  },
+  {
+    "kind": "cool",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.97, g26=-0.90, g35=+0.73, g8=+0.70, g28=-0.61, g2=+0.47, g27=-0.39, g57=+0.38, g17=+0.37, g9=+0.27. Answer with one short behavior sentence.",
+    "target": "reorient after cooling and reduce forward exploration"
+  },
+  {
+    "kind": "cool",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=cool. neural_state=g60=+0.99, g26=+0.95, g35=+0.69, g28=+0.67, g8=+0.65, g27=+0.54, g2=+0.44, g57=+0.31, g21=+0.30, g9=+0.25. Answer with one short behavior sentence.",
+    "target": "reorient after cooling and reduce forward exploration"
+  },
+  {
+    "kind": "touch",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.95, g35=+0.85, g28=+0.68, g27=+0.56, g2=+0.48, g57=+0.41, g10=+0.28, g8=+0.14, g17=-0.11. Answer with one short behavior sentence.",
+    "target": "orient away from touch and initiate grooming"
+  },
+  {
+    "kind": "light",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=light. neural_state=g26=-0.97, g2=+0.95, g60=+0.90, g27=-0.72, g28=-0.67, g0=+0.38, g35=+0.36, g3=+0.20, g8=+0.12, g57=+0.10. Answer with one short behavior sentence.",
+    "target": "orient toward the bright visual field and explore"
+  },
+  {
+    "kind": "food",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.99, g26=+0.96, g28=+0.70, g27=+0.61, g8=+0.60, g35=+0.43, g17=+0.29, g9=+0.28, g2=+0.22, g37=+0.20. Answer with one short behavior sentence.",
+    "target": "approach food and extend the proboscis to feed"
+  },
+  {
+    "kind": "food",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=food. neural_state=g60=+0.95, g26=-0.92, g8=+0.67, g28=-0.61, g27=-0.48, g9=+0.36, g35=+0.36, g37=+0.28, g32=+0.27, g21=+0.25. Answer with one short behavior sentence.",
+    "target": "approach food and extend the proboscis to feed"
+  },
+  {
+    "kind": "air",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=air. neural_state=g60=+1.00, g26=+0.94, g35=+0.76, g28=+0.65, g27=+0.47, g11=+0.28, g17=-0.25, g5=+0.21, g57=+0.17, g2=-0.15. Answer with one short behavior sentence.",
+    "target": "brace against airflow and prepare an escape response"
+  },
+  {
+    "kind": "touch",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+0.99, g35=+0.86, g26=+0.55, g2=+0.39, g28=+0.32, g10=+0.32, g57=+0.30, g27=+0.20, g17=-0.10, g9=+0.10. Answer with one short behavior sentence.",
+    "target": "orient away from touch and initiate grooming"
+  },
+  {
+    "kind": "touch",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g35=+0.86, g26=-0.85, g28=-0.51, g17=-0.40, g57=+0.40, g27=-0.37, g2=+0.37, g10=+0.31, g19=+0.17. Answer with one short behavior sentence.",
+    "target": "orient away from touch and initiate grooming"
+  },
+  {
+    "kind": "warm",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=warm. neural_state=g60=+0.98, g26=-0.73, g35=+0.70, g8=+0.63, g21=+0.50, g19=+0.43, g28=-0.40, g57=+0.32, g2=+0.28, g14=+0.26. Answer with one short behavior sentence.",
+    "target": "move away from the warm region while exploring"
+  },
+  {
+    "kind": "touch",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.96, g35=+0.87, g28=+0.70, g27=+0.57, g2=+0.50, g57=+0.41, g10=+0.30, g3=+0.10, g17=-0.10. Answer with one short behavior sentence.",
+    "target": "orient away from touch and initiate grooming"
+  },
+  {
+    "kind": "touch",
+    "prompt": "Decode this simulated Drosophila connectome state into the next behavior. Evolved controller class=touch. neural_state=g60=+1.00, g26=+0.95, g35=+0.81, g28=+0.69, g27=+0.58, g2=+0.55, g57=+0.51, g17=-0.24, g10=+0.19, g3=+0.15. Answer with one short behavior sentence.",
+    "target": "orient away from touch and initiate grooming"
   }
 ]
