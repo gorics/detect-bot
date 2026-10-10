@@ -1,0 +1,123 @@
+name: FlyBrain One-Brain Joint Training
+
+on:
+  push:
+    branches: [flybrain-ai-evolution-20260929]
+    paths:
+      - flybrain_unified_brain.py
+      - .github/workflows/flybrain-one-brain.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flybrain-one-brain-joint-training
+  cancel-in-progress: false
+
+jobs:
+  jointly-train-neural-language-vision:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    env:
+      HF_HUB_DISABLE_XET: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: flybrain-ai-evolution-20260929
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU model and LoRA libraries
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'numpy<2' pillow requests safetensors accelerate transformers==4.57.1 diffusers==0.35.2 peft==0.17.1
+      - name: Retrieve original fly connectome and verify the three prior champions
+        run: |
+          git clone --depth 1 https://github.com/snedea/flybrain.git external/flybrain
+          test -s external/flybrain/data/connectome.bin.gz
+          test -s results/state/best_genome.npz
+          test -s lora_results/llm_lora/adapter_model.safetensors
+          test -s lora_results/sd_unet_lora.pt
+      - name: Download unique real Drosophila photographs
+        run: |
+          mkdir -p real_drosophila
+          python - <<'PY'
+          import hashlib, pathlib, requests, time
+          names=['Drosophila melanogaster.jpg','Drosophila melanogaster 01.JPG',
+                 'Drosophila melanogaster 14Hari.jpg','Drosophila melanogaster 1 007.jpg',
+                 'Drosphila melanogaster.jpg','Drosophila melanogaster1.jpg']
+          s=requests.Session()
+          s.headers.update({'User-Agent':'FlyBrainResearch/1.3 (github.com/gorics/detect-bot; research validation)','Accept':'image/*'})
+          for i,name in enumerate(names):
+              url='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+requests.utils.quote(name,safe='')
+              for n in range(8):
+                  try:
+                      response=s.get(url,timeout=60)
+                      response.raise_for_status()
+                      if 'image' not in response.headers.get('content-type','') or len(response.content)<10000:
+                          raise RuntimeError('not an actual image '+name)
+                      pathlib.Path('real_drosophila',f'real_{i:02d}.jpg').write_bytes(response.content)
+                      break
+                  except Exception:
+                      if n==7: raise
+                      time.sleep(min(8*2**n,60))
+              time.sleep(5)
+          paths=list(pathlib.Path('real_drosophila').glob('*.jpg'))
+          assert len(paths)==6 and len({hashlib.sha256(p.read_bytes()).digest() for p in paths})==6
+          PY
+      - name: Compile and jointly train recurrent brain, language LoRA, and SD LoRA
+        run: |
+          python -m py_compile flybrain_unified_brain.py
+          OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 python flybrain_unified_brain.py \
+            --flybrain external/flybrain \
+            --photos real_drosophila \
+            --out unified_brain_results \
+            --steps 6 | tee unified_brain_run.log
+      - name: Verify actual joint training, causal coupling, and strict champion gate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from PIL import Image
+          out=Path('unified_brain_results')
+          r=json.loads((out/'results.json').read_text())
+          assert r['prior_readout_restored'] and r['prior_smollm2_lora_restored'] and r['prior_sd_lora_restored']
+          assert len(r['train_history'])==6 and len(r['joint_gradient_norms'])==6
+          assert r['sd_neural_conditioning_ablation_mae']>0
+          assert any(x['after_language']>0 for x in r['joint_gradient_norms'])
+          assert any(x['after_both']>x['after_language'] for x in r['joint_gradient_norms']), 'SD must also change shared-core gradient'
+          assert r['candidate']['image_mse']>=0 and r['candidate']['language_nll']>=0
+          assert (out/'unified_candidate.pt').stat().st_size>10000
+          for i in range(3): Image.open(out/('feedback_%02d.png'%i)).verify()
+          if r['champion_promoted']:
+              assert (out/'unified_champion.pt').is_file()
+              assert r['candidate']['language_nll']<r['baseline']['language_nll']
+              assert r['candidate']['image_mse']<r['baseline']['image_mse']
+              assert all(x['image_mse']<y['image_mse'] for x,y in zip(r['per_case_candidate'],r['per_case_baseline']))
+          print('JOINT TRAINING PASS; champion promoted:',r['champion_promoted'])
+          PY
+      - name: Commit validated unified candidate and optional strictly improved champion
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -f unified_brain_results/
+          git diff --cached --quiet && exit 0
+          git commit -m 'FlyBrain unified brain: real joint LoRA learning and held-out gated candidate'
+          for n in 1 2 3 4; do
+            git pull --rebase origin flybrain-ai-evolution-20260929 && git push origin HEAD:flybrain-ai-evolution-20260929 && break
+            if [ "$n" -eq 4 ]; then exit 1; fi
+            sleep $((n*5))
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flybrain-unified-one-brain
+          path: |
+            unified_brain_results/
+            unified_brain_run.log
+          retention-days: 14
