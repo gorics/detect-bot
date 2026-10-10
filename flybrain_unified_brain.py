@@ -173,7 +173,24 @@ def summary(rows):
                 language_nll=float(np.mean([x["language_nll"] for x in rows])),
                 action_accuracy=float(np.mean([x["action_correct"] for x in rows])))
 
-def visualize_feedback(m,pipe,item,out):
+def neural_language(m,tok,state,max_new_tokens=16):
+    """Actual SmolLM2-LoRA greedy decoding from the same neural state as the SD UNet."""
+    prompt="Simulated fly neural signal. Describe the likely behavior in Korean: "
+    ids=torch.tensor([tok.encode(prompt,add_special_tokens=False)],dtype=torch.long)
+    generated=[]
+    with torch.inference_mode():
+        for _ in range(max_new_tokens):
+            embeddings=m.lm.get_input_embeddings()(ids)+0.15*m.lm_bridge(state).unsqueeze(1)
+            logits=m.lm(inputs_embeds=embeddings,attention_mask=torch.ones_like(ids)).logits
+            token=int(logits[0,-1].argmax().item())
+            if token==tok.eos_token_id: break
+            generated.append(token)
+            ids=torch.cat((ids,torch.tensor([[token]],dtype=torch.long)),1)
+    return {"text":tok.decode(generated,skip_special_tokens=True).strip(),
+            "token_ids":generated,"source":"real SmolLM2 inference conditioned by unified neural state"}
+
+
+def visualize_feedback(m,pipe,item,out,tok):
     from torchvision.transforms.functional import to_pil_image
     m.eval()
     visual=item["visual"];previous=item["image"]
@@ -182,6 +199,8 @@ def visualize_feedback(m,pipe,item,out):
     with torch.no_grad():
         for n in range(3):
             x,_=m.core(visual,3,old_state=old)
+            spoken=neural_language(m,tok,x)
+            behavior_probs=torch.softmax(m.core.readout(x),dim=1).squeeze(0)
             sd_loss,pred=m.diffusion_loss(x,item)
             alpha=item["scheduler"].alphas_cumprod[item["t"][0]]
             if item["scheduler"].config.prediction_type=="epsilon":
@@ -192,7 +211,9 @@ def visualize_feedback(m,pipe,item,out):
             name="feedback_%02d.png"%n;img.save(out/name)
             next_visual=image_features(img,previous)
             change=float(torch.linalg.vector_norm(next_visual-visual))
-            history.append(dict(frame=n,image=name,image_change_l2=change,sd_loss=float(sd_loss)))
+            history.append(dict(frame=n,image=name,image_change_l2=change,sd_loss=float(sd_loss),
+                                neural_language=spoken,predicted_behavior=KINDS[int(behavior_probs.argmax())],
+                                behavior_model_scores={k:float(behavior_probs[j]) for j,k in enumerate(KINDS)}))
             old=x
             visual=next_visual
             previous=img
@@ -285,7 +306,7 @@ def main():
     if promoted:
         torch.save({"generation":generation,"model":trained_state,"validation":candidate},checkpoint)
     # Trained challenger drives the experimental loop, but cannot overwrite champion on regression.
-    feedback=visualize_feedback(brain,pipe,base_cases[0][0],a.out)
+    feedback=visualize_feedback(brain,pipe,base_cases[0][0],a.out,tok)
     with torch.no_grad():
         brain.eval()
         v,_=brain.core(base_cases[0][0]["visual"],base_cases[0][1])
