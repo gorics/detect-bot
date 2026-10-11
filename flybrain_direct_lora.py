@@ -91,7 +91,7 @@ def train_llm_lora(train_rows,holdout_rows,out: Path):
     if not resumed: raise RuntimeError("Incumbent SmolLM2 LoRA missing; refusing non-continuation training")
     if resumed:
         model=PeftModel.from_pretrained(base,lora_dir,is_trainable=True)
-        lr=2e-4; epochs=1
+        lr=1e-5; epochs=1
     else:
         cfg=LoraConfig(task_type=TaskType.CAUSAL_LM,r=8,lora_alpha=16,lora_dropout=.05,
                        target_modules=["q_proj","k_proj","v_proj","o_proj"],bias="none")
