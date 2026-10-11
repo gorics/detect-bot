@@ -105,7 +105,7 @@ def train_candidate(model_id,train_paths,val_paths,out,steps):
     np.random.seed(TRAIN_SEED % (2**32))
     ntrain=sum(p.numel() for p in params); ntotal=sum(p.numel() for p in pipe.unet.parameters()); scheduler=DDPMScheduler.from_config(pipe.scheduler.config)
     _,val_cases=encode_cases(pipe,val_paths,SEED+5000); base_val,base_each=eval_cases(pipe,val_cases); generate(pipe,out/"real_base.png")
-    opt=torch.optim.AdamW(params,lr=6e-5,weight_decay=1e-4); losses=[]
+    opt=torch.optim.AdamW(params,lr=2e-5,weight_decay=1e-4); losses=[]
     for step in range(steps):
         p=train_paths[step%len(train_paths)]; im=prep_image(p,128,True,TRAIN_SEED+step); pix=to_tensor(im).unsqueeze(0)*2-1
         with torch.no_grad():
