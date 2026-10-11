@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3681823856221,
-  "training_seed": 2098879876,
+  "generation": 3795604782625,
+  "training_seed": 3139448384,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5549238324165344,
+    "final_best_validation_nll": 0.5004897713661194,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 0.9908256880733946,
-      "fitness_best": 0.9999500801532122
+      "fitness_best": 0.9999500260455534
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5253990888595581,
-      "touch": 0.08297550678253174,
-      "air": 0.10147745162248611,
-      "light": 0.0034382755402475595,
-      "warm": 0.14286532998085022,
-      "cool": 0.1438443809747696
+      "food": 0.605278491973877,
+      "touch": 0.02446935512125492,
+      "air": 0.03320225328207016,
+      "light": 0.0012571555562317371,
+      "warm": 0.1499287635087967,
+      "cool": 0.1858639270067215
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 19.150169849395752,
+    "inference_seconds": 20.026876211166382,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 36.77964544296265
+  "total_seconds": 39.342026233673096
 }
