@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3815796177505,
-  "training_seed": 2007464448,
+  "generation": 3815796177506,
+  "training_seed": 2007464479,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.5680947303771973,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5244287252426147,
+    "final_best_validation_nll": 0.44441646337509155,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999514299852308
+      "fitness_best": 0.9999494167350349
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.6166483759880066,
-      "touch": 0.04873943328857422,
-      "air": 0.051523607224226,
-      "light": 0.00211677560582757,
-      "warm": 0.16347256302833557,
-      "cool": 0.11749926209449768
+      "food": 0.5833630561828613,
+      "touch": 0.0828438326716423,
+      "air": 0.08802255988121033,
+      "light": 0.0007737024570815265,
+      "warm": 0.1267172396183014,
+      "cool": 0.11827956140041351
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 15.601086616516113,
+    "inference_seconds": 10.788997173309326,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 61.963234424591064
+  "total_seconds": 53.29917359352112
 }
