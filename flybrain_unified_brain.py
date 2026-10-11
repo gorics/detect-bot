@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Revalidate inherited champion candidate in continuation run (2026-10-12).
 """One recurrent FlyBrain workspace jointly trained through real LM and SD LoRA.
 Not a whole-neuron biological replica or a decoder of subjective experience.
 """

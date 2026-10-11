@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Revalidate inherited champion candidate in continuation run (2026-10-12).
 import argparse, gzip, json, os, random, struct, time
 from pathlib import Path
 
