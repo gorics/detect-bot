@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 75,
+  "generation": 76,
   "fitness": 0.7645946023819579,
   "genome": {
     "generation": 75,
@@ -469,9 +469,9 @@
     ]
   },
   "champion_generation": 75,
-  "breeder_fitness": 0.7645946023819579,
+  "breeder_fitness": 0.6802282965871569,
   "breeder_genome": {
-    "generation": 75,
+    "generation": 76,
     "active_neo": 6,
     "mutations": [
       {
@@ -501,7 +501,7 @@
       },
       {
         "s": 36,
-        "d": 68,
+        "d": 82,
         "w": 0.2019185208646104
       },
       {
@@ -611,7 +611,7 @@
       },
       {
         "s": 75,
-        "d": 19,
+        "d": 33,
         "w": 0.22484843518866798
       },
       {
@@ -662,12 +662,12 @@
       {
         "s": 6,
         "d": 55,
-        "w": 0.3409968478276013
+        "w": 0.37195960094120034
       },
       {
         "s": 64,
         "d": 60,
-        "w": 0.13413038605792665
+        "w": 0.23856151428632136
       },
       {
         "s": 76,
@@ -828,16 +828,36 @@
         "s": 83,
         "d": 6,
         "w": 0.2758059866902395
+      },
+      {
+        "s": 26,
+        "d": 81,
+        "w": -0.2735227102297128
+      },
+      {
+        "s": 45,
+        "d": 65,
+        "w": 0.11882055647015587
+      },
+      {
+        "s": 11,
+        "d": 40,
+        "w": 0.06267066847534442
+      },
+      {
+        "s": 23,
+        "d": 50,
+        "w": 0.14228569380380499
       }
     ],
-    "temp": 0.8609506808108147,
-    "top_p": 0.9691522190072257,
-    "rep": 1.0313452154329787,
-    "tokens": 164,
-    "guidance": 5.463639409090615,
+    "temp": 0.9422406198630324,
+    "top_p": 0.9545124176539778,
+    "rep": 1.0366484215500373,
+    "tokens": 157,
+    "guidance": 5.972909816165631,
     "steps": 8,
-    "seed_bias": 559796831,
-    "mutation_rate": 0.11394994540546191,
+    "seed_bias": 232297021,
+    "mutation_rate": 0.09845100470763776,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -932,10 +952,28 @@
         "s": 9,
         "d": 27,
         "factor": 0.8532819906939665
+      },
+      {
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 26,
+        "d2": 57
+      },
+      {
+        "kind": "native_scale",
+        "s": 34,
+        "d": 60,
+        "factor": 0.45918470130142686
+      },
+      {
+        "kind": "native_rewire",
+        "s": 39,
+        "d": 60,
+        "d2": 23
       }
     ]
   },
-  "improved": true,
+  "improved": false,
   "champion_fitness": 0.7645946023819579,
   "champion_genome": {
     "generation": 75,
@@ -1432,31 +1470,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "d0309aaeefad155750033b30f53a1c92e40274773ea0690364b6102a970c7c4c",
-    "breeder_native_nonzero_edges": 294,
-    "breeder_native_ops": 16,
+    "breeder_topology_hash": "9ad63092ecaf29c3da312a7a91006ba323be7740dc138fcff3c43ee983b25a39",
+    "breeder_native_nonzero_edges": 295,
+    "breeder_native_ops": 19,
     "champion_topology_hash": "d0309aaeefad155750033b30f53a1c92e40274773ea0690364b6102a970c7c4c",
     "champion_native_nonzero_edges": 294,
     "champion_native_ops": 16
   },
   "last_breeder": {
-    "fitness": 0.7645946023819579,
-    "text_score": 0.9572,
+    "fitness": 0.6802282965871569,
+    "text_score": 0.7115174603174603,
     "vision": {
-      "clip_cosine": 0.2889823615550995,
-      "score": 0.7227031210064888,
-      "guidance": 5.495202541351318
+      "clip_cosine": 0.26298069953918457,
+      "score": 0.712562472820282,
+      "guidance": 5.959569931030273
     },
-    "integration": 0.53297358751297,
+    "integration": 0.5982109308242798,
     "structure": {
-      "mutations": 71,
+      "mutations": 75,
       "active_neo": 6,
-      "nonzero_edges": 344,
-      "native_ops": 16,
-      "native_core_nonzero_edges": 294,
-      "topology_hash": "d0309aaeefad155750033b30f53a1c92e40274773ea0690364b6102a970c7c4c"
+      "nonzero_edges": 347,
+      "native_ops": 19,
+      "native_core_nonzero_edges": 295,
+      "topology_hash": "9ad63092ecaf29c3da312a7a91006ba323be7740dc138fcff3c43ee983b25a39"
     },
-    "text": "초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하면:\n\n초파리 (Neural Turing Machine)는 컴퓨터가 인간처럼 자연스러운 능력을 발휘하는 끈적ulence을 갖춘 기술의 핵심 요소입니다.\n\nconnectome는 인류의 신생뉴런들 간의 연결을 나타내는 디스코드 기반의 신경망입니다. 이들은 끈적ulence과 같은 신경상태를 표현하기 위해 사용됩니다.\n\nLLM은 일반적으로 컴퓨터가 빠르게 학습할 수 있는 AI로"
+    "text": "당신의 질문에 대해 더 정확한 답변을 제공할 수 없습니다. 이 문제는 이미지 및 비디오 디자인, 언어 기술, 농축적 사고, 신경학 등 다양한 분야에서 공유되는 개념과 과정을 연구한 사람들들이 다루고 있습니다. 이는 신비로운 개념들로 시작하며, 복잡한 지식들을 힘차게 모아놓은 유일한 주제입니다. 따라서, 초파리, connectome, LLM, Stable Diffusion 등의 기술과 관련된 모든 이해도를 가지는 것은 불가능합니다. 이 문제는 종종 새로운 개념과 전 세계의 신인들 중에서 공유되는"
   },
-  "elapsed_seconds": 168.41175246238708
+  "elapsed_seconds": 151.39183497428894
 }
