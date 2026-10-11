@@ -1,5 +1,5 @@
 {
-  "generation": 19,
+  "generation": 20,
   "architecture": "one recurrent connectome state, shared language+vision gradients, single optimizer, fused checkpoint",
   "actual_neurons_in_connectome": 139255,
   "actual_edges_in_connectome": 2698236,
@@ -23,8 +23,8 @@
     "action_accuracy": 1.0
   },
   "candidate": {
-    "image_mse": 0.3421172499656677,
-    "language_nll": 1.792398452758789,
+    "image_mse": 0.34460702538490295,
+    "language_nll": 1.7934748530387878,
     "action_accuracy": 1.0
   },
   "per_case_baseline": [
@@ -47,20 +47,20 @@
     {
       "photo": "real_04.jpg",
       "stimulus": "food",
-      "image_mse": 0.4221786856651306,
-      "language_nll": 1.462498664855957,
+      "image_mse": 0.4239116907119751,
+      "language_nll": 1.4644445180892944,
       "action_correct": 1
     },
     {
       "photo": "real_05.jpg",
       "stimulus": "touch",
-      "image_mse": 0.26205581426620483,
-      "language_nll": 2.122298240661621,
+      "image_mse": 0.2653023600578308,
+      "language_nll": 2.1225051879882812,
       "action_correct": 1
     }
   ],
   "champion_promoted": false,
-  "sd_neural_conditioning_ablation_mae": 0.028404155746102333,
+  "sd_neural_conditioning_ablation_mae": 0.029315315186977386,
   "joint_gradient_norms": [
     {
       "step": 1,
@@ -69,74 +69,74 @@
     },
     {
       "step": 2,
-      "after_language": 0.26522326469421387,
-      "after_both": 0.26519250869750977
+      "after_language": 0.26531025767326355,
+      "after_both": 0.26532185077667236
     },
     {
       "step": 3,
-      "after_language": 0.38521894812583923,
-      "after_both": 0.38523802161216736
+      "after_language": 0.38516199588775635,
+      "after_both": 0.38518500328063965
     },
     {
       "step": 4,
-      "after_language": 0.1364736557006836,
-      "after_both": 0.13643760979175568
+      "after_language": 0.13578955829143524,
+      "after_both": 0.1357802152633667
     },
     {
       "step": 5,
-      "after_language": 0.2094062715768814,
-      "after_both": 0.20262879133224487
+      "after_language": 0.20127679407596588,
+      "after_both": 0.19448697566986084
     },
     {
       "step": 6,
-      "after_language": 0.255424439907074,
-      "after_both": 0.2565753161907196
+      "after_language": 0.26120758056640625,
+      "after_both": 0.2620299756526947
     }
   ],
   "train_history": [
     {
       "step": 1,
-      "sd_loss": 0.5082661509513855,
-      "language_loss": 2.0543015003204346,
+      "sd_loss": 0.5243641138076782,
+      "language_loss": 2.054152011871338,
       "behavior_loss": 0.5359435677528381
     },
     {
       "step": 2,
-      "sd_loss": 0.2238723486661911,
-      "language_loss": 2.513794183731079,
+      "sd_loss": 0.1863168179988861,
+      "language_loss": 2.4841697216033936,
       "behavior_loss": 0.38403308391571045
     },
     {
       "step": 3,
-      "sd_loss": 0.11663845181465149,
-      "language_loss": 1.6956050395965576,
-      "behavior_loss": 1.5166223049163818
+      "sd_loss": 0.09006589651107788,
+      "language_loss": 1.6840274333953857,
+      "behavior_loss": 1.5166280269622803
     },
     {
       "step": 4,
-      "sd_loss": 0.11622937023639679,
-      "language_loss": 1.7259291410446167,
-      "behavior_loss": 0.3049874007701874
+      "sd_loss": 0.1276472806930542,
+      "language_loss": 1.736775517463684,
+      "behavior_loss": 0.3050529658794403
     },
     {
       "step": 5,
-      "sd_loss": 0.49483710527420044,
-      "language_loss": 2.0355050563812256,
-      "behavior_loss": 0.6945728659629822
+      "sd_loss": 0.5113495588302612,
+      "language_loss": 1.9906518459320068,
+      "behavior_loss": 0.694690465927124
     },
     {
       "step": 6,
-      "sd_loss": 0.22058594226837158,
-      "language_loss": 1.9500031471252441,
-      "behavior_loss": 1.280109167098999
+      "sd_loss": 0.18377193808555603,
+      "language_loss": 1.9435102939605713,
+      "behavior_loss": 1.2801449298858643
     }
   ],
   "feedback": [
     {
       "frame": 0,
       "image": "feedback_00.png",
-      "image_change_l2": 0.09227926284074783,
-      "sd_loss": 0.422392338514328,
+      "image_change_l2": 0.09219692647457123,
+      "sd_loss": 0.42204055190086365,
       "neural_language": {
         "text": "A. Approach and explore \nB. Use visual cues to learn and",
         "token_ids": [
@@ -161,19 +161,19 @@
       },
       "predicted_behavior": "light",
       "behavior_model_scores": {
-        "food": 0.027760688215494156,
-        "touch": 0.13083437085151672,
-        "air": 0.04186510294675827,
-        "light": 0.7429760098457336,
-        "warm": 0.045805931091308594,
-        "cool": 0.010757888667285442
+        "food": 0.02778121829032898,
+        "touch": 0.13096371293067932,
+        "air": 0.0418933667242527,
+        "light": 0.7427262663841248,
+        "warm": 0.04586370661854744,
+        "cool": 0.010771778412163258
       }
     },
     {
       "frame": 1,
       "image": "feedback_01.png",
-      "image_change_l2": 0.08073144406080246,
-      "sd_loss": 0.4223530888557434,
+      "image_change_l2": 0.08070385456085205,
+      "sd_loss": 0.422085165977478,
       "neural_language": {
         "text": "A. Approach and explore \nB. Use visual cues to learn and",
         "token_ids": [
@@ -198,19 +198,19 @@
       },
       "predicted_behavior": "light",
       "behavior_model_scores": {
-        "food": 0.025997312739491463,
-        "touch": 0.18251439929008484,
-        "air": 0.056203652173280716,
-        "light": 0.675521194934845,
-        "warm": 0.04724443703889847,
-        "cool": 0.01251901313662529
+        "food": 0.026017416268587112,
+        "touch": 0.18269670009613037,
+        "air": 0.056239575147628784,
+        "light": 0.6751987338066101,
+        "warm": 0.04731333628296852,
+        "cool": 0.012534264475107193
       }
     },
     {
       "frame": 2,
       "image": "feedback_02.png",
-      "image_change_l2": 0.00020761069026775658,
-      "sd_loss": 0.42234164476394653,
+      "image_change_l2": 0.0002354761236347258,
+      "sd_loss": 0.42215871810913086,
       "neural_language": {
         "text": "A. Approach and explore \nB. Use visual cues to learn and",
         "token_ids": [
@@ -235,12 +235,12 @@
       },
       "predicted_behavior": "light",
       "behavior_model_scores": {
-        "food": 0.025327453389763832,
-        "touch": 0.21292534470558167,
-        "air": 0.0628577396273613,
-        "light": 0.6372840404510498,
-        "warm": 0.04828156530857086,
-        "cool": 0.01332385279238224
+        "food": 0.02534325234591961,
+        "touch": 0.2130620926618576,
+        "air": 0.06287826597690582,
+        "light": 0.6370370984077454,
+        "warm": 0.04834342375397682,
+        "cool": 0.01333581656217575
       }
     }
   ],
@@ -249,7 +249,7 @@
     "sd_lora": "c27c6988069d134ed5eea1280fa113b9c41b13b043f23fce3dadfbd999470c9a",
     "llm_lora": "593cbb4bc4ab8d3de9e294787b50144a91a3233495b87af1d22818e68e8fca8e"
   },
-  "seconds": 17.125239372253418,
+  "seconds": 17.37733554840088,
   "champion_gate": "Both real-photo held-out SD losses improve, Korean LM held-out NLL decreases, synthetic stimulus accuracy does not decrease",
   "qualification": "Actual FlyBrain connectome coarse-grained to 63 groups; actual pretrained LLM and SD LoRA compute inside a single shared optimizer. This is NOT measured fly perception, consciousness or a neuron-level biological brain."
 }
