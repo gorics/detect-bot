@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3797088498624,
-  "training_seed": 117709763718273,
+  "generation": 3742193510042,
+  "training_seed": 116008019072231,
   "image_sha256": {
     "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
     "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
@@ -26,41 +26,41 @@
   ],
   "incumbent": {
     "loaded": true,
-    "real_validation_loss": 0.2841394916176796,
+    "real_validation_loss": 0.2841394543647766,
     "each": [
-      0.34647780656814575,
-      0.22180117666721344
+      0.346477746963501,
+      0.22180116176605225
     ],
-    "inference_seconds": 10.009696006774902
+    "inference_seconds": 12.341391324996948
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
-    "base_real_validation_loss": 0.2841394916176796,
-    "candidate_real_validation_loss": 0.2864089906215668,
-    "candidate_improvement_vs_base": -0.007987270586592283,
+    "base_real_validation_loss": 0.2841394543647766,
+    "candidate_real_validation_loss": 0.286914587020874,
+    "candidate_improvement_vs_base": -0.009766798005231307,
     "base_each": [
-      0.34647780656814575,
-      0.22180117666721344
+      0.346477746963501,
+      0.22180116176605225
     ],
     "candidate_each": [
-      0.3472135663032532,
-      0.22560441493988037
+      0.34858521819114685,
+      0.2252439558506012
     ],
-    "train_loss_first": 0.4297063946723938,
-    "train_loss_last": 0.143740713596344,
-    "lora_weight_norm_sum": 108.382837690413,
+    "train_loss_first": 0.43357813358306885,
+    "train_loss_last": 0.14268986880779266,
+    "lora_weight_norm_sum": 108.40399645268917,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 10.152487516403198
+    "inference_seconds": 12.588108777999878
   },
   "selected": "incumbent",
-  "selected_loss": 0.2841394916176796,
+  "selected_loss": 0.2841394543647766,
   "relative_gain_over_incumbent": 0.0,
   "individual_photo_improved": [
     false,
     false
   ],
   "champion_promoted": false,
-  "total_seconds": 95.20893621444702
+  "total_seconds": 120.57132863998413
 }
