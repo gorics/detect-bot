@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3815796177521,
-  "training_seed": 2007464944,
+  "generation": 3815796177522,
+  "training_seed": 2007464975,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.4780302345752716,
+    "final_best_validation_nll": 0.4858369529247284,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -27,8 +27,8 @@
     "last": {
       "generation": 119,
       "train_best": 1.0,
-      "validation_best": 1.0,
-      "fitness_best": 0.9999507408465433
+      "validation_best": 0.981651376146789,
+      "fitness_best": 0.999950973156956
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5959718823432922,
-      "touch": 0.07014664262533188,
-      "air": 0.06304175406694412,
-      "light": 0.0037375150714069605,
-      "warm": 0.11673327535390854,
-      "cool": 0.15036891400814056
+      "food": 0.5534200072288513,
+      "touch": 0.04877268895506859,
+      "air": 0.11165772378444672,
+      "light": 0.0035600510891526937,
+      "warm": 0.1373714804649353,
+      "cool": 0.14521799981594086
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 20.07857322692871,
+    "inference_seconds": 19.325225830078125,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 41.94139766693115
+  "total_seconds": 47.750288248062134
 }
