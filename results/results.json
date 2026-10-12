@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3815796177515,
-  "training_seed": 2007464758,
+  "generation": 3815796177516,
+  "training_seed": 2007464789,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.5680947303771973,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.49935266375541687,
+    "final_best_validation_nll": 0.5200875401496887,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999501729362237
+      "fitness_best": 0.999950389861624
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.6751944422721863,
-      "touch": 0.05321665480732918,
-      "air": 0.0238659530878067,
-      "light": 0.0026234302204102278,
-      "warm": 0.13174636662006378,
-      "cool": 0.11335320770740509
+      "food": 0.5694553256034851,
+      "touch": 0.04110502079129219,
+      "air": 0.05826583132147789,
+      "light": 0.003423788584768772,
+      "warm": 0.1496724784374237,
+      "cool": 0.1780775487422943
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 15.225081205368042,
+    "inference_seconds": 10.03785514831543,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 33.27285838127136
+  "total_seconds": 42.22921800613403
 }
