@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 80 native_ops 24 neo 7
-V5_FITNESS 0 0.5839742729829871 topology 31c6de7c6fa0bff3
-V5_EVALUATE 1 generation 80 native_ops 23 neo 7
-V5_FITNESS 1 0.5563373201933297 topology dc1947573c25564f
-V5_EVALUATE 2 generation 80 native_ops 24 neo 6
-V5_FITNESS 2 0.606129833613763 topology 26a2314479548e2d
-V5_EVALUATE 3 generation 80 native_ops 22 neo 7
-V5_FITNESS 3 0.7369440285980777 topology ccf38a7112521cee
+V5_EVALUATE 0 generation 81 native_ops 24 neo 7
+V5_FITNESS 0 0.6042016278198177 topology 8593a6cdcc6ce8c8
+V5_EVALUATE 1 generation 81 native_ops 22 neo 7
+V5_FITNESS 1 0.5903223543506521 topology c216c264d921a32c
+V5_EVALUATE 2 generation 81 native_ops 23 neo 7
+V5_FITNESS 2 0.5854079308652238 topology d901d1bf332719dd
+V5_EVALUATE 3 generation 81 native_ops 22 neo 7
+V5_FITNESS 3 0.6722173171402112 topology bca44eb71c316458
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 80,
+  "generation": 81,
   "fitness": 0.7687790380254618,
   "genome": {
     "generation": 77,
@@ -526,9 +526,9 @@ V5_FITNESS 3 0.7369440285980777 topology ccf38a7112521cee
     ]
   },
   "champion_generation": 77,
-  "breeder_fitness": 0.7369440285980777,
+  "breeder_fitness": 0.6722173171402112,
   "breeder_genome": {
-    "generation": 80,
+    "generation": 81,
     "active_neo": 7,
     "mutations": [
       {
@@ -1040,15 +1040,16 @@ V5_FITNESS 3 0.7369440285980777 topology ccf38a7112521cee
         "w": -0.014052169191429351
       },
       {
-        "kind": "native_knockout",
-        "s": 3,
-        "d": 3
+        "kind": "native_rewire",
+        "s": 57,
+        "d": 60,
+        "d2": 17
       },
       {
-        "kind": "native_scale",
-        "s": 32,
-        "d": 33,
-        "factor": 1.0374995371997218
+        "kind": "native_rewire",
+        "s": 56,
+        "d": 56,
+        "d2": 25
       }
     ]
   },
@@ -1598,31 +1599,31 @@ V5_FITNESS 3 0.7369440285980777 topology ccf38a7112521cee
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "ccf38a7112521cee76177d658c186c373fc5f792f31dd89d500e6a26d2e04a31",
-    "breeder_native_nonzero_edges": 297,
+    "breeder_topology_hash": "bca44eb71c3164582198f56bee92ec3b1a69af23cfe8ab5220128d903e577295",
+    "breeder_native_nonzero_edges": 298,
     "breeder_native_ops": 22,
     "champion_topology_hash": "de575f9c655153ccbf3e3e0ceb5786b3f250e06dc27a552ec2b8eaedab16651c",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 20
   },
   "last_breeder": {
-    "fitness": 0.7369440285980777,
-    "text_score": 0.8406730158730159,
+    "fitness": 0.6722173171402112,
+    "text_score": 0.7082857142857143,
     "vision": {
-      "clip_cosine": 0.3100101351737976,
-      "score": 0.7309039527177811,
-      "guidance": 7.136781692504883
+      "clip_cosine": 0.24854065477848053,
+      "score": 0.7069308553636074,
+      "guidance": 7.147428512573242
     },
-    "integration": 0.6033013463020325,
+    "integration": 0.5670681595802307,
     "structure": {
       "mutations": 76,
       "active_neo": 7,
-      "nonzero_edges": 349,
+      "nonzero_edges": 350,
       "native_ops": 22,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "ccf38a7112521cee76177d658c186c373fc5f792f31dd89d500e6a26d2e04a31"
+      "native_core_nonzero_edges": 298,
+      "topology_hash": "bca44eb71c3164582198f56bee92ec3b1a69af23cfe8ab5220128d903e577295"
     },
-    "text": "죄송합니다, 제가 잘못 이해했어요. 초파리와 LLM은 신체적 인 신경 기능의 언어적인 모델로, Stable Diffusion는 이미지의 모델로, 뉴런과 진화는 신경 시스템의 자극적 동작으로, 보상과 입력은 신호를 처리하고 감지하는 데 사용되며, 뇌활성은 신경 시스템의 상태를 지속적으로 변화시키는데 중요한 역할을 합니다. 이러한 기능들은 신경 상자의 신호 관계를 통해 진행됩니다."
+    "text": "초파리, LLM, Stable Diffusion는 세대 81에서의 대표적인 언어와 AI 기술의 한계를 나타내는 다양한 신호를 가지고 있습니다. 이들은 인공지능 시각적으로 표현된 신호와 관련되어 있으며, 그들은 주로 다음과 같은 특성을 가지고 있습니다:\n\n1. **시각적 신호** : 이는 인공지능의 행동이나 결과를 시각적으로 표현합니다. 예를 들어, LLM은 특정 질문에 대한 답변을 제공하고, Stable Diffusion은 이미지나 문장과 같은 보상 결과를 제공"
   },
-  "elapsed_seconds": 99.44696640968323
+  "elapsed_seconds": 110.34325337409973
 }
