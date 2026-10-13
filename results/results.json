@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3815796177530,
-  "training_seed": 2007465223,
+  "generation": 3815796177531,
+  "training_seed": 2007465254,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5320191979408264,
+    "final_best_validation_nll": 0.48471951484680176,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 0.9908256880733946,
-      "fitness_best": 0.9999463098538399
+      "fitness_best": 0.9999494405892619
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5855830311775208,
-      "touch": 0.05457225441932678,
-      "air": 0.0460011288523674,
-      "light": 0.0007704095332883298,
-      "warm": 0.18834899365901947,
-      "cool": 0.12472420185804367
+      "food": 0.6877633929252625,
+      "touch": 0.05223844572901726,
+      "air": 0.06600900739431381,
+      "light": 0.0009865800384432077,
+      "warm": 0.08802423626184464,
+      "cool": 0.10497836768627167
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 18.909531831741333,
+    "inference_seconds": 19.116514921188354,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 37.95234203338623
+  "total_seconds": 48.046382427215576
 }
