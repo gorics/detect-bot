@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3795604782627,
-  "training_seed": 3139448446,
+  "generation": 3795604782628,
+  "training_seed": 3139448477,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5030630826950073,
+    "final_best_validation_nll": 0.4193599820137024,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999486628366867
+      "fitness_best": 0.9999492334391107
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5435559749603271,
-      "touch": 0.08188930153846741,
-      "air": 0.0545484758913517,
-      "light": 0.0019571504089981318,
-      "warm": 0.18317900598049164,
-      "cool": 0.13487011194229126
+      "food": 0.6179813742637634,
+      "touch": 0.0479913093149662,
+      "air": 0.04820629581809044,
+      "light": 0.0013053931761533022,
+      "warm": 0.1553000807762146,
+      "cool": 0.12921558320522308
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 19.17738389968872,
+    "inference_seconds": 18.989797115325928,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 68.75713038444519
+  "total_seconds": 73.72509765625
 }
