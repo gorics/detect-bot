@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3815796177545,
-  "training_seed": 2007465688,
+  "generation": 3815796177546,
+  "training_seed": 2007465719,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -15,9 +15,9 @@
     "initial_population_best_validation_accuracy": 1.0,
     "initial_random_best_validation_accuracy": 1.0,
     "incumbent_validation_accuracy": 1.0,
-    "incumbent_validation_nll": 0.5680947303771973,
+    "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5333409309387207,
+    "final_best_validation_nll": 0.5191254615783691,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -27,8 +27,8 @@
     "last": {
       "generation": 119,
       "train_best": 1.0,
-      "validation_best": 1.0,
-      "fitness_best": 0.9999516602802032
+      "validation_best": 0.9908256880733946,
+      "fitness_best": 0.9999477217133972
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5534048080444336,
-      "touch": 0.06567363440990448,
-      "air": 0.0968446284532547,
-      "light": 0.003727656789124012,
-      "warm": 0.15898063778877258,
-      "cool": 0.12136862426996231
+      "food": 0.596918523311615,
+      "touch": 0.03631119802594185,
+      "air": 0.04458899423480034,
+      "light": 0.005604942329227924,
+      "warm": 0.13415321707725525,
+      "cool": 0.18242308497428894
     },
     "top_groups": [
       {
@@ -120,12 +120,12 @@
   },
   "llm": {
     "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
-    "output": "The likely next behavior in one factual sentence is to touch the food."
+    "output": "The likely next behavior in one factual sentence is to \"touch\" the food."
   },
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 9.686235189437866,
+    "inference_seconds": 19.1784086227417,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 53.103655099868774
+  "total_seconds": 38.61261248588562
 }
