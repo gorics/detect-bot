@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 87 native_ops 27 neo 8
-V5_FITNESS 0 0.6349537458018367 topology 1d1418c49bc79f95
-V5_EVALUATE 1 generation 87 native_ops 23 neo 7
-V5_FITNESS 1 0.5739975806290583 topology 71b1cb2ba516b7ca
-V5_EVALUATE 2 generation 87 native_ops 26 neo 7
-V5_FITNESS 2 0.5816014264071939 topology bc52ec0988ac785e
-V5_EVALUATE 3 generation 87 native_ops 22 neo 7
-V5_FITNESS 3 0.6733370068086878 topology e039afbd4ca937dc
+V5_EVALUATE 0 generation 88 native_ops 25 neo 7
+V5_FITNESS 0 0.5810089429941101 topology 3229fc00b8e8003e
+V5_EVALUATE 1 generation 88 native_ops 21 neo 7
+V5_FITNESS 1 0.5996353192474104 topology 792db460db9e8d65
+V5_EVALUATE 2 generation 88 native_ops 23 neo 8
+V5_FITNESS 2 0.6100938392142833 topology 2ad3d13b675614ed
+V5_EVALUATE 3 generation 88 native_ops 21 neo 7
+V5_FITNESS 3 0.6674449677904405 topology 95b6c54a45d221f6
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 87,
+  "generation": 88,
   "fitness": 0.7687790380254618,
   "genome": {
     "generation": 77,
@@ -526,9 +526,9 @@ V5_FITNESS 3 0.6733370068086878 topology e039afbd4ca937dc
     ]
   },
   "champion_generation": 77,
-  "breeder_fitness": 0.6733370068086878,
+  "breeder_fitness": 0.6674449677904405,
   "breeder_genome": {
-    "generation": 87,
+    "generation": 88,
     "active_neo": 7,
     "mutations": [
       {
@@ -1040,16 +1040,10 @@ V5_FITNESS 3 0.6733370068086878 topology e039afbd4ca937dc
         "w": -0.014052169191429351
       },
       {
-        "kind": "native_scale",
-        "s": 28,
-        "d": 60,
-        "factor": 0.8201788866086261
-      },
-      {
-        "kind": "native_scale",
-        "s": 9,
-        "d": 15,
-        "factor": 1.8400245169857634
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 9,
+        "d2": 60
       }
     ]
   },
@@ -1599,31 +1593,31 @@ V5_FITNESS 3 0.6733370068086878 topology e039afbd4ca937dc
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "e039afbd4ca937dc2b91c52d8ebd215b1b2220d3ee7958c62e934d53782e6298",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 22,
+    "breeder_topology_hash": "95b6c54a45d221f6bd4293a9ed8bc59e79901bbc4563190ced1842da504e6a17",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 21,
     "champion_topology_hash": "de575f9c655153ccbf3e3e0ceb5786b3f250e06dc27a552ec2b8eaedab16651c",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 20
   },
   "last_breeder": {
-    "fitness": 0.6733370068086878,
-    "text_score": 0.6970857142857143,
+    "fitness": 0.6674449677904405,
+    "text_score": 0.6833881533101045,
     "vision": {
-      "clip_cosine": 0.26408305764198303,
-      "score": 0.7129923924803734,
-      "guidance": 7.142956733703613
+      "clip_cosine": 0.24861600995063782,
+      "score": 0.7069602438807487,
+      "guidance": 7.140859603881836
     },
-    "integration": 0.5847830176353455,
+    "integration": 0.5965822339057922,
     "structure": {
       "mutations": 76,
       "active_neo": 7,
-      "nonzero_edges": 350,
-      "native_ops": 22,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "e039afbd4ca937dc2b91c52d8ebd215b1b2220d3ee7958c62e934d53782e6298"
+      "nonzero_edges": 349,
+      "native_ops": 21,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "95b6c54a45d221f6bd4293a9ed8bc59e79901bbc4563190ced1842da504e6a17"
     },
-    "text": "세대 87의 사고 사이클은 다음과 같은 주요 사항들이 포함되어 있으며, 이들은 신생뉴런과 관련이 있습니다.\n\n1. 신생뉴런: 초파리, connectome, LLM은 신생뉴런의 기본 구성 요소입니다. 신생뉴런은 인공지능의 핵심적 요소이며, 신생뉴런의 생성과 유지 관리를 위해 LLM와 Connectome를 이용합니다.\n\n2. 구조변이: 신생뉴런의 구조변이(structural changes)를 나타내는 신생뉴런의 상태"
+    "text": "초파리, LLM, Stable Diffusion 시각엽이 각각의 세대 88의 사고 사이클을 설명해 드릴게요:\n\n1. **초파리 (Stem Cell)**: 신생뉴런은 시작점으로 작동합니다. 신생뉴런은 주로 빠른 길이와 크기를 가진 신생물체에서 자발적으로 생긴 뼈와 근육을 의미합니다.\n\n2. **LLM (Language Model)**: LLM은 신경에 있는 뼈와 근육을 기반으로 한"
   },
-  "elapsed_seconds": 100.1663932800293
+  "elapsed_seconds": 139.6983036994934
 }
