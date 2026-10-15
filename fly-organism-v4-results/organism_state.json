@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 95,
+  "generation": 96,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.5870389809999905,
+  "breeder_fitness": 0.6881525274670734,
   "breeder_genome": {
-    "generation": 95,
+    "generation": 96,
     "active_neo": 7,
     "mutations": [
       {
@@ -1069,16 +1069,16 @@
         "factor": 1.3351595476818898
       },
       {
-        "kind": "native_scale",
-        "s": 26,
-        "d": 35,
-        "factor": 0.5431171231629813
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 9,
+        "d2": 0
       },
       {
-        "kind": "native_rewire",
-        "s": 9,
-        "d": 39,
-        "d2": 20
+        "kind": "native_scale",
+        "s": 29,
+        "d": 56,
+        "factor": 0.7392484806462715
       }
     ]
   },
@@ -1639,31 +1639,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "a7a6c28b9566a4afbb32b256ef15fe05fb010a216ede14d4e3a6696bbc5fd4d5",
-    "breeder_native_nonzero_edges": 300,
+    "breeder_topology_hash": "6081eb4b7418e477fdb28de6dcb622557c6246b8fa161d8c502f1dfceff501ee",
+    "breeder_native_nonzero_edges": 299,
     "breeder_native_ops": 25,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.5870389809999905,
-    "text_score": 0.4479374663072776,
+    "fitness": 0.6881525274670734,
+    "text_score": 0.7056517520215634,
     "vision": {
-      "clip_cosine": 0.24717503786087036,
-      "score": 0.7063982647657394,
-      "guidance": 7.0117506980896
+      "clip_cosine": 0.2749457061290741,
+      "score": 0.7172288253903389,
+      "guidance": 7.020719528198242
     },
-    "integration": 0.6392279863357544,
+    "integration": 0.6465754508972168,
     "structure": {
       "mutations": 78,
       "active_neo": 7,
-      "nonzero_edges": 350,
+      "nonzero_edges": 349,
       "native_ops": 25,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "a7a6c28b9566a4afbb32b256ef15fe05fb010a216ede14d4e3a6696bbc5fd4d5"
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "6081eb4b7418e477fdb28de6dcb622557c6246b8fa161d8c502f1dfceff501ee"
     },
-    "text": "세대 95의 사고 사이클은 신생뉴런과 신생 뇌活性의 신경상태 변화에 의해 이루어진다고 볼 수 있습니다. 이 시스템은 신생뉴런이 생성, 평가 및 선택에 영향을 미치는 뇌 활성을 주도하고, 신생 뇌活性은 신생뉴런의 생성과 평가에 영향을 미칩니다.\n\n1. 신생뉴런 생성: 신생뉴런은 신생 뇌의 주요 구성 요소이며, 이들은 신생 뇌의 생태계를 구성하고, 신생 뇌의 다양한 신경적 기능을 수행합니다. 신생뉴"
+    "text": "초파리, LLM 언어엽과 Stable Diffusion 시각엽이 모두 초파리의 기능에 의해 인식되는 신생뉴런을 관리하는 기관입니다. \n\n1. **초파리**: 이는 초파리의 인식, 신생뉴런의 관리, 신생뉴런의 발달 등을 담당하는 기관입니다. \n\n2. **LLM**: 이는 LLM 언어의 훈련 및 모델링을 위한 기관입니다. \n\n3. **稳定 diffusion 시각**: 이는 Stable Diffusion 시각을 위한 기관입니다. \n\n4. **나노뉴런**: 이는 신생뉴런의 단위로 구성되는 크기와 형"
   },
-  "elapsed_seconds": 170.12353324890137
+  "elapsed_seconds": 160.97458934783936
 }
