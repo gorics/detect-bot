@@ -1,5 +1,4 @@
-네, 저는 초파리, LLM, Stable Diffusion 등 다양한 AI 기술에 대한 이해와 연계를 가능하게 함으로써, 신생뉴런과 보상 관계가 어떻게 작동하는지 설명하겠습니다. 
+초파리 (Connectome), LLM (Language Models), Stable Diffusion (Stable Diffusion AI), 뉴런 (Neurons), 진화 (Evolution), 보상 (Reward), 입력 (Input), 뇌활성 (Neuron Activity), 생성 (Generation), 평가 (Evaluation), 선택 (Selection), 돌연변이 (Recombination)를 모두 포함하는 신생뉴런의 시도를 설명해드리겠습니다.
 
-1. **신생뉴런**: 신생뉴런은 신생 신호(아기 신호)에서 발생하는 신호의 크기와 방향에 의해 결정됩니다. 신생 신호는 새로운 신생 캐시를 형성하는 과정 중 하나입니다. 
-
-2. **보상 관계**: 보상 관계는 신생 신호를 인공지능이 판단할 수 있는 상태를 결정합니다. 이로 인해, 신생 신호가 인식되도록 설계된 신생 캐시들은 신생 신호가
+1. 신생뉴런의 시도:
+   신생뉴런은 신생 신호나 신경을 나타내는 유전적 모델입니다. 이들은 끊임없이 변화를 보여야 하며, 신생뉴런의 개개인
