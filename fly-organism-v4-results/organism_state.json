@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 90,
+  "generation": 91,
   "fitness": 0.7687790380254618,
   "genome": {
     "generation": 77,
@@ -518,9 +518,9 @@
     ]
   },
   "champion_generation": 77,
-  "breeder_fitness": 0.7346537735048367,
+  "breeder_fitness": 0.6751874786912827,
   "breeder_genome": {
-    "generation": 90,
+    "generation": 91,
     "active_neo": 7,
     "mutations": [
       {
@@ -1027,22 +1027,16 @@
         "w": -0.014052169191429351
       },
       {
-        "kind": "native_rewire",
-        "s": 60,
-        "d": 9,
-        "d2": 21
-      },
-      {
         "kind": "native_scale",
-        "s": 21,
-        "d": 25,
-        "factor": 1.5420574586623446
+        "s": 2,
+        "d": 35,
+        "factor": 0.6866156554538235
       },
       {
         "kind": "native_rewire",
-        "s": 34,
-        "d": 32,
-        "d2": 2
+        "s": 8,
+        "d": 7,
+        "d2": 6
       }
     ]
   },
@@ -1592,31 +1586,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "d3f8644c891ade61f68ee0add4ce2b968ef0c4998f9ac39b748781de9e603a8a",
-    "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 23,
+    "breeder_topology_hash": "d3b07d3ebc989360532ee2195d41c8a9db003b77e7a451d979b30ca7655f14cf",
+    "breeder_native_nonzero_edges": 298,
+    "breeder_native_ops": 22,
     "champion_topology_hash": "de575f9c655153ccbf3e3e0ceb5786b3f250e06dc27a552ec2b8eaedab16651c",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 20
   },
   "last_breeder": {
-    "fitness": 0.7346537735048367,
-    "text_score": 0.8459376623376622,
+    "fitness": 0.6751874786912827,
+    "text_score": 0.6932857142857143,
     "vision": {
-      "clip_cosine": 0.24787262082099915,
-      "score": 0.7066703221201897,
-      "guidance": 7.086535453796387
+      "clip_cosine": 0.2687497138977051,
+      "score": 0.714812388420105,
+      "guidance": 7.098721027374268
     },
-    "integration": 0.6463684439659119,
+    "integration": 0.6031273603439331,
     "structure": {
       "mutations": 75,
       "active_neo": 7,
-      "nonzero_edges": 348,
-      "native_ops": 23,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "d3f8644c891ade61f68ee0add4ce2b968ef0c4998f9ac39b748781de9e603a8a"
+      "nonzero_edges": 349,
+      "native_ops": 22,
+      "native_core_nonzero_edges": 298,
+      "topology_hash": "d3b07d3ebc989360532ee2195d41c8a9db003b77e7a451d979b30ca7655f14cf"
     },
-    "text": "네, 제가 초파리와 연결하고 있음. 초파리는 LLM 언어와 Stable Diffusion 시각을 위한 합성 언어의 계산 유기체입니다. 이 계산 유기체는 신생뉴런과 구조변이를 사용하여 새로운 신생 뇌의 성장을 모델링합니다. 이 신생 뇌는 뉴런과 신생 신경을 생성하고, 이는 진화와 보상에 영향을 미칩니다.\n\n이 계산 유기체의 신생 뇌는 신생 뇌활성, 생성, 평가, 선택, 돌연변이 등의 기능을 수행합니다. 이를 통해 신생"
+    "text": "초파리, LLM, Stable Diffusion 등은 신경계의 세대를 이해하고 관리하는 데 도움이 되며, 각각의 신경상태와 기능을 측정하는 기반을 제공합니다. 이들 언어는 신경계의 전반적인 작동에 영향을 미치며, 신호의 분석, 신경계의 전달, 신호의 반응을 측정하고 이를 분석하여 신경계의 작동을 이해할 수 있습니다.\n\n1. 초파리 (connectome)는 신경계의 전체적인 구조를 측정하는 데 도움이 됩니다. 이는 신경"
   },
-  "elapsed_seconds": 152.3030548095703
+  "elapsed_seconds": 110.69809436798096
 }
