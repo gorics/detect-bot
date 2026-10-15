@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3795604782638,
-  "training_seed": 3139448787,
+  "generation": 3681823856227,
+  "training_seed": 2098880062,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5354999303817749,
+    "final_best_validation_nll": 0.4813087284564972,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 0.9908256880733946,
-      "fitness_best": 0.9999463238782482
+      "fitness_best": 0.9999479483194591
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.595719039440155,
-      "touch": 0.06067647784948349,
-      "air": 0.04142056778073311,
-      "light": 0.001341266673989594,
-      "warm": 0.12745659053325653,
-      "cool": 0.17338603734970093
+      "food": 0.5966440439224243,
+      "touch": 0.07357801496982574,
+      "air": 0.06482259184122086,
+      "light": 0.005012391600757837,
+      "warm": 0.10812627524137497,
+      "cool": 0.1518167406320572
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 19.44969129562378,
+    "inference_seconds": 19.50288414955139,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 38.708133697509766
+  "total_seconds": 38.46213459968567
 }
