@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 91 native_ops 24 neo 7
-V5_FITNESS 0 0.5824927385113001 topology 38b6fc24e7d40624
-V5_EVALUATE 1 generation 91 native_ops 22 neo 7
-V5_FITNESS 1 0.6751874786912827 topology d3b07d3ebc989360
-V5_EVALUATE 2 generation 91 native_ops 26 neo 6
-V5_FITNESS 2 0.5701074727845454 topology 24dfadb8fab4dcd4
-V5_EVALUATE 3 generation 91 native_ops 21 neo 7
-V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
+V5_EVALUATE 0 generation 92 native_ops 24 neo 7
+V5_FITNESS 0 0.6018139458596953 topology 59663d1e956aa81e
+V5_EVALUATE 1 generation 92 native_ops 22 neo 7
+V5_FITNESS 1 0.585733076924061 topology e8a760be4516e89a
+V5_EVALUATE 2 generation 92 native_ops 23 neo 8
+V5_FITNESS 2 0.7129811886598222 topology 6a9c321d8a17bc7b
+V5_EVALUATE 3 generation 92 native_ops 21 neo 7
+V5_FITNESS 3 0.5932676653737938 topology ea0510b537689e4f
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 91,
+  "generation": 92,
   "fitness": 0.7687790380254618,
   "genome": {
     "generation": 77,
@@ -526,10 +526,10 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
     ]
   },
   "champion_generation": 77,
-  "breeder_fitness": 0.6751874786912827,
+  "breeder_fitness": 0.7129811886598222,
   "breeder_genome": {
-    "generation": 91,
-    "active_neo": 7,
+    "generation": 92,
+    "active_neo": 8,
     "mutations": [
       {
         "s": 13,
@@ -564,7 +564,7 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
       {
         "s": 49,
         "d": 75,
-        "w": 0.1580690856823066
+        "w": 0.07281695274014628
       },
       {
         "s": 40,
@@ -664,7 +664,7 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
       {
         "s": 68,
         "d": 73,
-        "w": 0.014927237029816909
+        "w": 0.11432463585077923
       },
       {
         "s": 70,
@@ -742,11 +742,6 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
         "w": 0.2746354771278136
       },
       {
-        "s": 57,
-        "d": 85,
-        "w": 0.1812534886086219
-      },
-      {
         "s": 75,
         "d": 66,
         "w": -0.0528791614477103
@@ -770,11 +765,6 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
         "s": 85,
         "d": 6,
         "w": -0.34284625248997325
-      },
-      {
-        "s": 61,
-        "d": 49,
-        "w": -0.7684698965507634
       },
       {
         "s": 71,
@@ -834,7 +824,7 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
       {
         "s": 46,
         "d": 7,
-        "w": -0.06043034692357571
+        "w": -0.001073344401553114
       },
       {
         "s": 46,
@@ -905,16 +895,46 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
         "s": 81,
         "d": 36,
         "w": -0.007376848456828504
+      },
+      {
+        "s": 56,
+        "d": 59,
+        "w": 0.014185635710961831
+      },
+      {
+        "s": 65,
+        "d": 14,
+        "w": -0.13979529027357415
+      },
+      {
+        "s": 3,
+        "d": 78,
+        "w": -0.23885173717346198
+      },
+      {
+        "s": 49,
+        "d": 34,
+        "w": 0.06679267779368268
+      },
+      {
+        "s": 21,
+        "d": 72,
+        "w": 0.09213884858242663
+      },
+      {
+        "s": 78,
+        "d": 70,
+        "w": 0.21396121502224738
       }
     ],
-    "temp": 0.8567992392250082,
-    "top_p": 0.8875220430747528,
-    "rep": 1.0245157964150542,
-    "tokens": 152,
-    "guidance": 7.05570470405984,
-    "steps": 9,
-    "seed_bias": 322501939,
-    "mutation_rate": 0.12564006839578648,
+    "temp": 0.929549365264068,
+    "top_p": 0.9257634203321609,
+    "rep": 1.0579030824025715,
+    "tokens": 174,
+    "guidance": 7.207620897268485,
+    "steps": 8,
+    "seed_bias": 889002093,
+    "mutation_rate": 0.1756525812499176,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1045,6 +1065,12 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
         "s": 8,
         "d": 7,
         "d2": 6
+      },
+      {
+        "kind": "native_rewire",
+        "s": 17,
+        "d": 21,
+        "d2": 11
       }
     ]
   },
@@ -1594,31 +1620,31 @@ V5_FITNESS 3 0.6161476922185402 topology 5c48981d29002df1
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "d3b07d3ebc989360532ee2195d41c8a9db003b77e7a451d979b30ca7655f14cf",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 22,
+    "breeder_topology_hash": "6a9c321d8a17bc7bfbfdcd1bfed5d3c4477aa64e2be7c0d899ffc934dec3aa60",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 23,
     "champion_topology_hash": "de575f9c655153ccbf3e3e0ceb5786b3f250e06dc27a552ec2b8eaedab16651c",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 20
   },
   "last_breeder": {
-    "fitness": 0.6751874786912827,
-    "text_score": 0.6932857142857143,
+    "fitness": 0.7129811886598222,
+    "text_score": 0.795750892857143,
     "vision": {
-      "clip_cosine": 0.2687497138977051,
-      "score": 0.714812388420105,
-      "guidance": 7.098721027374268
+      "clip_cosine": 0.2853616178035736,
+      "score": 0.7084824131429196,
+      "guidance": 7.220461845397949
     },
-    "integration": 0.6031273603439331,
+    "integration": 0.6130765080451965,
     "structure": {
-      "mutations": 75,
-      "active_neo": 7,
-      "nonzero_edges": 349,
-      "native_ops": 22,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "d3b07d3ebc989360532ee2195d41c8a9db003b77e7a451d979b30ca7655f14cf"
+      "mutations": 79,
+      "active_neo": 8,
+      "nonzero_edges": 354,
+      "native_ops": 23,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "6a9c321d8a17bc7bfbfdcd1bfed5d3c4477aa64e2be7c0d899ffc934dec3aa60"
     },
-    "text": "초파리, LLM, Stable Diffusion 등은 신경계의 세대를 이해하고 관리하는 데 도움이 되며, 각각의 신경상태와 기능을 측정하는 기반을 제공합니다. 이들 언어는 신경계의 전반적인 작동에 영향을 미치며, 신호의 분석, 신경계의 전달, 신호의 반응을 측정하고 이를 분석하여 신경계의 작동을 이해할 수 있습니다.\n\n1. 초파리 (connectome)는 신경계의 전체적인 구조를 측정하는 데 도움이 됩니다. 이는 신경"
+    "text": "네, 저는 초파리, LLM, Stable Diffusion 등 다양한 AI 기술에 대한 이해와 연계를 가능하게 함으로써, 신생뉴런과 보상 관계가 어떻게 작동하는지 설명하겠습니다. \n\n1. **신생뉴런**: 신생뉴런은 신생 신호(아기 신호)에서 발생하는 신호의 크기와 방향에 의해 결정됩니다. 신생 신호는 새로운 신생 캐시를 형성하는 과정 중 하나입니다. \n\n2. **보상 관계**: 보상 관계는 신생 신호를 인공지능이 판단할 수 있는 상태를 결정합니다. 이로 인해, 신생 신호가 인식되도록 설계된 신생 캐시들은 신생 신호가"
   },
-  "elapsed_seconds": 110.69809436798096
+  "elapsed_seconds": 124.96445918083191
 }
