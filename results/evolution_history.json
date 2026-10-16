@@ -603,120 +603,120 @@
     "generation": 100,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999421094507852
+    "fitness_best": 0.9999421367137984
   },
   {
     "generation": 101,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999421094507852
+    "fitness_best": 0.9999421367137984
   },
   {
     "generation": 102,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999422194741783
+    "fitness_best": 0.9999421524553327
   },
   {
     "generation": 103,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999422194741783
+    "fitness_best": 0.9999424174748128
   },
   {
     "generation": 104,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999422194741783
+    "fitness_best": 0.9999435718964378
   },
   {
     "generation": 105,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999422954679176
+    "fitness_best": 0.9999435718964378
   },
   {
     "generation": 106,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999425686510222
+    "fitness_best": 0.9999435718964378
   },
   {
     "generation": 107,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999427592883876
+    "fitness_best": 0.9999435718964378
   },
   {
     "generation": 108,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999434476994793
+    "fitness_best": 0.9999441674735863
   },
   {
     "generation": 109,
     "train_best": 1.0,
-    "validation_best": 1.0,
-    "fitness_best": 0.999943606871966
+    "validation_best": 0.9908256880733946,
+    "fitness_best": 0.9999444519344252
   },
   {
     "generation": 110,
     "train_best": 1.0,
-    "validation_best": 1.0,
-    "fitness_best": 0.999943606871966
+    "validation_best": 0.9908256880733946,
+    "fitness_best": 0.9999450638024427
   },
   {
     "generation": 111,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999441169820784
+    "fitness_best": 0.9999451541334565
   },
   {
     "generation": 112,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.9999446885703946
+    "fitness_best": 0.9999455893521372
   },
   {
     "generation": 113,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.999945218416542
+    "fitness_best": 0.9999462081395905
   },
   {
     "generation": 114,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.999945218416542
+    "fitness_best": 0.9999462081395905
   },
   {
     "generation": 115,
     "train_best": 1.0,
     "validation_best": 1.0,
-    "fitness_best": 0.999945457890135
+    "fitness_best": 0.9999468307505595
   },
   {
     "generation": 116,
     "train_best": 1.0,
-    "validation_best": 1.0,
-    "fitness_best": 0.99994593802694
+    "validation_best": 0.9908256880733946,
+    "fitness_best": 0.9999471801347681
   },
   {
     "generation": 117,
     "train_best": 1.0,
-    "validation_best": 1.0,
-    "fitness_best": 0.9999461034713022
+    "validation_best": 0.9908256880733946,
+    "fitness_best": 0.999947525026073
   },
   {
     "generation": 118,
     "train_best": 1.0,
-    "validation_best": 1.0,
-    "fitness_best": 0.9999465064938704
+    "validation_best": 0.9908256880733946,
+    "fitness_best": 0.9999476459888683
   },
   {
     "generation": 119,
     "train_best": 1.0,
-    "validation_best": 1.0,
-    "fitness_best": 0.9999466727676918
+    "validation_best": 0.9908256880733946,
+    "fitness_best": 0.999948365642922
   }
 ]
