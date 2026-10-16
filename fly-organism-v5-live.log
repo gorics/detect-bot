@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 101 native_ops 34 neo 7
-V5_FITNESS 0 0.5353215491714346 topology b477a5996d387cd1
-V5_EVALUATE 1 generation 101 native_ops 26 neo 7
-V5_FITNESS 1 0.5870911270500478 topology 7ee2c0e73fe4ba3d
-V5_EVALUATE 2 generation 101 native_ops 35 neo 7
-V5_FITNESS 2 0.6040280852363696 topology 0dd60214783b3bde
-V5_EVALUATE 3 generation 101 native_ops 25 neo 8
-V5_FITNESS 3 0.6042012535514416 topology 66d08bd86baf9703
+V5_EVALUATE 0 generation 102 native_ops 26 neo 8
+V5_FITNESS 0 0.5929792987647823 topology f01d7cfc837f8556
+V5_EVALUATE 1 generation 102 native_ops 25 neo 7
+V5_FITNESS 1 0.5926384429353533 topology 54ddc4e4d0bdb107
+V5_EVALUATE 2 generation 102 native_ops 28 neo 8
+V5_FITNESS 2 0.5784666322364429 topology a11f37ca1460f3f0
+V5_EVALUATE 3 generation 102 native_ops 25 neo 8
+V5_FITNESS 3 0.6226513291532778 topology 1a2e4558d855c12c
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 101,
+  "generation": 102,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.6042012535514416 topology 66d08bd86baf9703
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6042012535514416,
+  "breeder_fitness": 0.6226513291532778,
   "breeder_genome": {
-    "generation": 101,
+    "generation": 102,
     "active_neo": 8,
     "mutations": [
       {
@@ -1062,16 +1062,15 @@ V5_FITNESS 3 0.6042012535514416 topology 66d08bd86baf9703
         "factor": 1.3351595476818898
       },
       {
-        "kind": "native_scale",
-        "s": 9,
-        "d": 17,
-        "factor": 1.1745998051949478
+        "kind": "native_rewire",
+        "s": 56,
+        "d": 60,
+        "d2": 6
       },
       {
-        "kind": "native_rewire",
-        "s": 34,
-        "d": 8,
-        "d2": 48
+        "kind": "native_knockout",
+        "s": 57,
+        "d": 35
       }
     ]
   },
@@ -1632,31 +1631,31 @@ V5_FITNESS 3 0.6042012535514416 topology 66d08bd86baf9703
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "66d08bd86baf970324c875acd31a307003790fa3ebff4fa190d36808b709f8f8",
-    "breeder_native_nonzero_edges": 297,
+    "breeder_topology_hash": "1a2e4558d855c12cced9c90aa7d9e78339d13b1d6d1dd1b5da39a90c0f906215",
+    "breeder_native_nonzero_edges": 296,
     "breeder_native_ops": 25,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6042012535514416,
-    "text_score": 0.5280539682539682,
+    "fitness": 0.6226513291532778,
+    "text_score": 0.5464325123152709,
     "vision": {
-      "clip_cosine": 0.25702303647994995,
-      "score": 0.7102389842271805,
-      "guidance": 6.514769554138184
+      "clip_cosine": 0.2527683973312378,
+      "score": 0.7085796749591827,
+      "guidance": 6.537692070007324
     },
-    "integration": 0.5505679249763489,
+    "integration": 0.632991373538971,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 350,
+      "nonzero_edges": 349,
       "native_ops": 25,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "66d08bd86baf970324c875acd31a307003790fa3ebff4fa190d36808b709f8f8"
+      "native_core_nonzero_edges": 296,
+      "topology_hash": "1a2e4558d855c12cced9c90aa7d9e78339d13b1d6d1dd1b5da39a90c0f906215"
     },
-    "text": "초파리의 사고 사이클은 신생뉴런과 구조변이의 합으로 이루어져 있습니다. 신생뉴런은 신생 신경재사상의 첫 번째 신경재로, 이는 신생 신경재에 대한 첫 번째 탐색의 기초를 제공합니다. \n\n각 신생뉴런은 다른 신생뉴런과의 교차를 통해 이동하며, 이는 신생 신경재와의 연결을 통해 신생 신경재가 작동할 수 있게 합니다. 이러한 교차는 신생 신경재의 흐름과 관련이 있습니다.\n\n구조변이는 신생 신경재의 구조를 개선하고 개선하는 역할을"
+    "text": "세대 102의 사고 사이클을 설명하기 위해 다음과 같은 정보를 제공할 수 있습니다:\n\n1. 신생뉴런의 변화와 진화: 신생뉴런이 8개로 변환되고, 이 변화는 진화에 의해 진행됩니다.\n\n2. 구조변이의 변화와 선택: 구조변이는 신생뉴런의 성장에 중요한 역할을 합니다. 이는 신생뉴런의 성장과 전류를 결정합니다.\n\n3. 신생뉴런의 생성과 평가: 신생뉴런은 다양한 전류를 생성하여 신생 신경원을 생성하고, 이는 신생 신경원의 성장을 결정합니다. \n\n4. 신생 신경원의 �"
   },
-  "elapsed_seconds": 153.44139337539673
+  "elapsed_seconds": 157.39874458312988
 }
