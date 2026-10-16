@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3698734479325,
-  "training_seed": 114660789120004,
+  "generation": 3698734479326,
+  "training_seed": 114660789120035,
   "image_sha256": {
     "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
     "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
@@ -31,28 +31,28 @@
       0.3464777171611786,
       0.22180114686489105
     ],
-    "inference_seconds": 20.487940311431885
+    "inference_seconds": 18.388811349868774
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
     "base_real_validation_loss": 0.2841394320130348,
-    "candidate_real_validation_loss": 0.28497496247291565,
-    "candidate_improvement_vs_base": -0.002940564968267055,
+    "candidate_real_validation_loss": 0.2863767370581627,
+    "candidate_improvement_vs_base": -0.00787396887956485,
     "base_each": [
       0.3464777171611786,
       0.22180114686489105
     ],
     "candidate_each": [
-      0.3473142385482788,
-      0.2226356863975525
+      0.3481517434120178,
+      0.22460173070430756
     ],
-    "train_loss_first": 0.40252482891082764,
-    "train_loss_last": 0.12330076098442078,
-    "lora_weight_norm_sum": 107.5601042881608,
+    "train_loss_first": 0.4052087366580963,
+    "train_loss_last": 0.13583137094974518,
+    "lora_weight_norm_sum": 107.63481104373932,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 20.42010188102722
+    "inference_seconds": 18.47036838531494
   },
   "selected": "incumbent",
   "selected_loss": 0.2841394320130348,
@@ -62,5 +62,5 @@
     false
   ],
   "champion_promoted": false,
-  "total_seconds": 174.12111592292786
+  "total_seconds": 160.35338020324707
 }
