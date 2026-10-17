@@ -1,66 +1,66 @@
 {
   "seed": 20260929,
-  "generation": 3680917296702,
-  "training_seed": 114108456458691,
+  "generation": 3696252862610,
+  "training_seed": 114583859001839,
   "image_sha256": {
-    "Drosophila_melanogaster.jpg": "27af53a7691ed043db74968631cb8eaa6a222f488282bd018cff79cc337b5079",
-    "Drosophila_melanogaster2_female_Sussex_July2011.jpg": "e922023d160bc0e741437a411605cd112177f5a49dfd46130e9c6681cbf1bef6",
-    "Drosophila_melanogaster_Pose.jpg": "66ec7e678d6762b806904ceb333fef4abc7d88c0811dfcc51714c785eae932c6",
-    "Drosophila_melanogaster_alt.jpg": "2d713a009674be0b3ada1640ee04f4325617a478d1ba966bb6905d67a7e2ea62",
-    "Drosophila_melanogaster_female_Pose.jpg": "9c3fe0aae4754aeff3e59e9fa3af3cc8e93d8c91a16da97556de8af993c66148",
-    "Drosophila_melanogaster_female_Sussex_July2011.jpg": "fdf811919407f77be9d95a1a2d854a88bf9ede366651ff9f987705fb4bd8a246"
+    "real_00.jpg": "41ddfc9da29ad6924e4556375e399218aea8384691e1c6afd24f9bd835477d14",
+    "real_01.jpg": "9759dbbfbe39be71cc8944c706482e5e9e5aef3dc35e6071295a0de63b0b63db",
+    "real_02.jpg": "1a7956eaf2bad040de4be6bea6a6236d76b0c672818cf095925d681d6f3de6fd",
+    "real_03.jpg": "c1e2a1ec76e82ae582eb7638cc0f6020ea5ff5aa2e8a76ceb3de74da2058e480",
+    "real_04.jpg": "79d4d4f445b07d3707ae0100fe7cff61bf6646d4c75d4b611999d332303c482c",
+    "real_05.jpg": "1f51537846fc4bfaa275a724e67efed929ed3bf7f756db18270617d706e61c4a"
   },
   "strict_all_photo_gate": true,
   "model": "segmind/tiny-sd",
   "selection_metric": "held-out real Drosophila fixed denoising loss (lower is better)",
   "license_note": "Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.",
   "train_images": [
-    "Drosophila_melanogaster.jpg",
-    "Drosophila_melanogaster2_female_Sussex_July2011.jpg",
-    "Drosophila_melanogaster_Pose.jpg",
-    "Drosophila_melanogaster_alt.jpg"
+    "real_00.jpg",
+    "real_01.jpg",
+    "real_02.jpg",
+    "real_03.jpg"
   ],
   "validation_images": [
-    "Drosophila_melanogaster_female_Pose.jpg",
-    "Drosophila_melanogaster_female_Sussex_July2011.jpg"
+    "real_04.jpg",
+    "real_05.jpg"
   ],
   "incumbent": {
     "loaded": true,
-    "real_validation_loss": 0.18409673869609833,
+    "real_validation_loss": 0.2821713611483574,
     "each": [
-      0.22038331627845764,
-      0.147810161113739
+      0.3440244495868683,
+      0.2203182727098465
     ],
-    "inference_seconds": 20.339168310165405
+    "inference_seconds": 13.30304479598999
   },
   "candidate": {
     "trainable_parameters": 431616,
     "total_unet_parameters": 323816580,
     "steps": 72,
-    "base_real_validation_loss": 0.18409673869609833,
-    "candidate_real_validation_loss": 0.18213827908039093,
-    "candidate_improvement_vs_base": 0.01063820918055679,
+    "base_real_validation_loss": 0.2821713611483574,
+    "candidate_real_validation_loss": 0.2832399308681488,
+    "candidate_improvement_vs_base": -0.003786953131751701,
     "base_each": [
-      0.22038331627845764,
-      0.147810161113739
+      0.3440244495868683,
+      0.2203182727098465
     ],
     "candidate_each": [
-      0.2198728621006012,
-      0.14440369606018066
+      0.34528717398643494,
+      0.22119268774986267
     ],
-    "train_loss_first": 0.264592707157135,
-    "train_loss_last": 0.03201093524694443,
-    "lora_weight_norm_sum": 106.90050887316465,
+    "train_loss_first": 0.4130411446094513,
+    "train_loss_last": 0.14234738051891327,
+    "lora_weight_norm_sum": 107.47804690897465,
     "candidate_path": "lora_results/sd_real_candidate.pt",
-    "inference_seconds": 19.783643007278442
+    "inference_seconds": 13.388087034225464
   },
-  "selected": "candidate",
-  "selected_loss": 0.18213827908039093,
-  "relative_gain_over_incumbent": 0.01063820918055679,
+  "selected": "incumbent",
+  "selected_loss": 0.2821713611483574,
+  "relative_gain_over_incumbent": 0.0,
   "individual_photo_improved": [
-    true,
-    true
+    false,
+    false
   ],
-  "champion_promoted": true,
-  "total_seconds": 170.2400245666504
+  "champion_promoted": false,
+  "total_seconds": 127.16906142234802
 }
