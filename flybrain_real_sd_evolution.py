@@ -98,30 +98,7 @@ def generate(pipe,path,seed=SEED+222):
 def train_candidate(model_id,train_paths,val_paths,out,steps):
     from diffusers import DDPMScheduler
     from torchvision.transforms.functional import to_tensor
-    pipe=make_pipe(model_id); params=add_lora(pipe); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
-    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
+    pipe=make_pipe(model_id); params=add_lora(pipe)
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')
     # Same real-photo held-out cases for both models, different training stream per generation.
     torch.manual_seed(TRAIN_SEED)
@@ -163,7 +140,7 @@ def main():
     # Strictly improve every fixed held-out photo, not just a lucky aggregate.
     selected="candidate" if cand < inc-1e-8 and all(a<b-1e-8 for a,b in zip(after,before)) else "incumbent"
     if selected=="candidate": shutil.copy2(a.out/"sd_real_candidate.pt",incumbent_path)
-    result={"seed":SEED,"generation":GENERATION,"training_seed":TRAIN_SEED,"image_sha256":hashes,"strict_all_photo_gate":True,"model":model_id,"selection_metric":"held-out real Drosophila fixed denoising loss (lower is better)","license_note":"Training images: Obbard Lab Drosophilidae photos, CC BY-NC 4.0 for academic/non-commercial use; attribution retained in REAL_IMAGE_SOURCES.txt.","train_images":[p.name for p in train_paths],"validation_images":[p.name for p in val_paths],"incumbent":incumbent,"candidate":candidate,"selected":selected,"selected_loss":cand if selected=="candidate" else inc,"relative_gain_over_incumbent":((inc-cand)/max(inc,1e-12)) if selected=="candidate" else 0.0,"individual_photo_improved":[bool(a<b-1e-8) for a,b in zip(after,before)],"champion_promoted":selected=="candidate","total_seconds":time.time()-t0}
+    result={"seed":SEED,"generation":GENERATION,"training_seed":TRAIN_SEED,"image_sha256":hashes,"strict_all_photo_gate":True,"model":model_id,"selection_metric":"held-out real Drosophila fixed denoising loss (lower is better)","license_note":"Current workflow downloads real Drosophila photographs from Wikimedia Commons; image-level attribution and license must be checked against each Commons file page. Legacy Obbard Lab metadata does not describe this dataset.","train_images":[p.name for p in train_paths],"validation_images":[p.name for p in val_paths],"incumbent":incumbent,"candidate":candidate,"selected":selected,"selected_loss":cand if selected=="candidate" else inc,"relative_gain_over_incumbent":((inc-cand)/max(inc,1e-12)) if selected=="candidate" else 0.0,"individual_photo_improved":[bool(a<b-1e-8) for a,b in zip(after,before)],"champion_promoted":selected=="candidate","total_seconds":time.time()-t0}
     (a.out/"real_sd_evolution.json").write_text(json.dumps(result,indent=2),encoding="utf-8"); print(json.dumps(result,indent=2))
 
 if __name__=="__main__": main()
