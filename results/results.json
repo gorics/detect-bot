@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3679904906509,
-  "training_seed": 2740980948,
+  "generation": 3679904906510,
+  "training_seed": 2740980979,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -15,9 +15,9 @@
     "initial_population_best_validation_accuracy": 1.0,
     "initial_random_best_validation_accuracy": 1.0,
     "incumbent_validation_accuracy": 1.0,
-    "incumbent_validation_nll": 0.568094789981842,
+    "incumbent_validation_nll": 0.5680947303771973,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.5148854851722717,
+    "final_best_validation_nll": 0.5207153558731079,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999503758335777
+      "fitness_best": 0.9999497521275771
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5535427927970886,
-      "touch": 0.047078557312488556,
-      "air": 0.04655444249510765,
-      "light": 0.001875889953225851,
-      "warm": 0.16102540493011475,
-      "cool": 0.18992292881011963
+      "food": 0.4985955059528351,
+      "touch": 0.07912436872720718,
+      "air": 0.04920554906129837,
+      "light": 0.0017045304412022233,
+      "warm": 0.1549542099237442,
+      "cool": 0.21641571819782257
     },
     "top_groups": [
       {
@@ -120,12 +120,12 @@
   },
   "llm": {
     "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
-    "output": "The likely next behavior in one factual sentence is to \"touch\" the food."
+    "output": "The likely next behavior in one factual sentence is to touch the food."
   },
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 20.76610255241394,
+    "inference_seconds": 16.09970760345459,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 41.20650672912598
+  "total_seconds": 34.614320278167725
 }
