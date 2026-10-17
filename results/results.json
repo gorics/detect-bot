@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3679904906520,
-  "training_seed": 2740981289,
+  "generation": 3681823856247,
+  "training_seed": 2098880682,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -17,7 +17,7 @@
     "incumbent_validation_accuracy": 1.0,
     "incumbent_validation_nll": 0.568094789981842,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.55601567029953,
+    "final_best_validation_nll": 0.5236405730247498,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -28,7 +28,7 @@
       "generation": 119,
       "train_best": 1.0,
       "validation_best": 1.0,
-      "fitness_best": 0.9999482983657799
+      "fitness_best": 0.9999504251318285
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.5745379328727722,
-      "touch": 0.06215522065758705,
-      "air": 0.05152116343379021,
-      "light": 0.0023558195680379868,
-      "warm": 0.1753724366426468,
-      "cool": 0.13405746221542358
+      "food": 0.6502707600593567,
+      "touch": 0.05249549075961113,
+      "air": 0.06625716388225555,
+      "light": 0.0022085008677095175,
+      "warm": 0.10993582010269165,
+      "cool": 0.11883222311735153
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 19.03995418548584,
+    "inference_seconds": 19.139392137527466,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 47.120320320129395
+  "total_seconds": 46.027424812316895
 }
