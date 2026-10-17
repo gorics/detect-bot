@@ -1,7 +1,24 @@
-Source: Obbard Lab, University of Edinburgh — Drosophilidae photographs
+CURRENT REAL-IMAGE DATASET (flybrain-real-sd-evolution.yml and flybrain-one-brain.yml)
+Source: Wikimedia Commons, Special:Redirect/file.
+Downloaded filenames (mapped to real_00.jpg through real_05.jpg, respectively):
+1. Drosophila melanogaster.jpg
+2. Drosophila melanogaster 01.JPG
+3. Drosophila melanogaster 14Hari.jpg
+4. Drosophila melanogaster 1 007.jpg
+5. Drosphila melanogaster.jpg
+6. Drosophila melanogaster1.jpg
+Training split: real_00.jpg - real_03.jpg.
+Validation split: real_04.jpg and real_05.jpg.
+The workflows record SHA256 checksums of the downloaded files in their JSON results.
+Licenses and photographer attribution MUST be checked on each Commons file page; no
+single CC BY-NC 4.0 license is asserted for the current Wikimedia dataset.
+Repeated use of these two validation photos is NOT a fresh external holdout.
+
+LEGACY SOURCE RECORD (not the current workflow's image set)
+Source: Obbard Lab, University of Edinburgh - Drosophilidae photographs
 Page: https://obbard.bio.ed.ac.uk/photos.html
 License stated on source page: CC BY-NC 4.0 for academic/non-commercial use with attribution.
-Files used:
+Previously documented filenames:
 Drosophila_melanogaster.jpg
 Drosophila_melanogaster_alt.jpg
 Drosophila_melanogaster_Pose.jpg
