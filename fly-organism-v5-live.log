@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 104 native_ops 26 neo 7
-V5_FITNESS 0 0.6212363610318493 topology 43b668228bf14f22
-V5_EVALUATE 1 generation 104 native_ops 24 neo 7
-V5_FITNESS 1 0.6665069351523432 topology 68042559ae5917b2
-V5_EVALUATE 2 generation 104 native_ops 26 neo 8
-V5_FITNESS 2 0.5803866194278191 topology c6ef7ed7346cac33
-V5_EVALUATE 3 generation 104 native_ops 25 neo 8
-V5_FITNESS 3 0.641745808836951 topology 64f0938504532430
+V5_EVALUATE 0 generation 105 native_ops 26 neo 7
+V5_FITNESS 0 0.5856503125100591 topology bd7da017e6b6104b
+V5_EVALUATE 1 generation 105 native_ops 24 neo 7
+V5_FITNESS 1 0.7718546860491435 topology bdd0b26355188b44
+V5_EVALUATE 2 generation 105 native_ops 26 neo 7
+V5_FITNESS 2 0.5901524145537798 topology 3531d3e6a8dc87fd
+V5_EVALUATE 3 generation 105 native_ops 24 neo 8
+V5_FITNESS 3 0.6480374942315065 topology 28201fc5ad0e556e
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 104,
+  "generation": 105,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.641745808836951 topology 64f0938504532430
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6665069351523432,
+  "breeder_fitness": 0.7718546860491435,
   "breeder_genome": {
-    "generation": 104,
+    "generation": 105,
     "active_neo": 7,
     "mutations": [
       {
@@ -1077,10 +1077,10 @@ V5_FITNESS 3 0.641745808836951 topology 64f0938504532430
         "factor": 1.3351595476818898
       },
       {
-        "kind": "native_scale",
-        "s": 60,
-        "d": 28,
-        "factor": 1.1340237388242072
+        "kind": "native_birth",
+        "s": 49,
+        "d": 7,
+        "w": -0.0071528534143015035
       }
     ]
   },
@@ -1641,31 +1641,31 @@ V5_FITNESS 3 0.641745808836951 topology 64f0938504532430
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "68042559ae5917b27b2a5b1fa6f291ef8d23020a79e50fab8499d27efcb7ea21",
-    "breeder_native_nonzero_edges": 300,
+    "breeder_topology_hash": "bdd0b26355188b44d50fdcd31aaa3f8c34eae925ab00748d6bdd62ff01390a20",
+    "breeder_native_nonzero_edges": 301,
     "breeder_native_ops": 24,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6665069351523432,
-    "text_score": 0.6461680672268907,
+    "fitness": 0.7718546860491435,
+    "text_score": 0.9576,
     "vision": {
-      "clip_cosine": 0.27539974451065063,
-      "score": 0.7174059003591537,
-      "guidance": 7.061580657958984
+      "clip_cosine": 0.2587704658508301,
+      "score": 0.7109204816818238,
+      "guidance": 7.00417423248291
     },
-    "integration": 0.648490309715271,
+    "integration": 0.6012014150619507,
     "structure": {
       "mutations": 78,
       "active_neo": 7,
-      "nonzero_edges": 350,
+      "nonzero_edges": 351,
       "native_ops": 24,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "68042559ae5917b27b2a5b1fa6f291ef8d23020a79e50fab8499d27efcb7ea21"
+      "native_core_nonzero_edges": 301,
+      "topology_hash": "bdd0b26355188b44d50fdcd31aaa3f8c34eae925ab00748d6bdd62ff01390a20"
     },
-    "text": "세대 104의 사고 사이클은 다음과 같습니다:\n\n1. 신생뉴런: 초파리와 연결됨\n2. 입력: 신생뉴런과 연결됨\n3. 구조변이: 신생뉴런과 연결됨\n4. 진화: 신생뉴런의 성장과 발달\n5. 보상: 신생뉴런의 성장과 발달에 대한 평가\n6. 입력: 신생뉴런과 연결됨\n7. 뇌활성: 신생뉴런과 연결됨\n8. 생성: 신생뉴런의 성장과 발달에 대한 새로운 기능 생성\n9. 평가: 신생뉴런의 성장과 발"
+    "text": "세대 105의 사고 사이클을 설명해보려고 합니다. 이 사고 사이클은 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함한 것입니다.\n\n1. **시각적 사고**:\n   - **입력**: \n     - 입력은 다양한 영상 데이터로 구성됩니다.\n   - **생성**:\n     - 시각적 사고는 입력을 처리하여 신체적인 인식을 제공합니다.\n   - **생산**:\n     - 생성된 결과는 보상에 의해 결정됩니다.\n   - **평가"
   },
-  "elapsed_seconds": 170.1326208114624
+  "elapsed_seconds": 163.43933248519897
 }
