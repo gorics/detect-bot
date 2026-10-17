@@ -117,6 +117,7 @@ def train_candidate(model_id,train_paths,val_paths,out,steps):
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
+    if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training'); resumed=load_lora_state(pipe,out/'sd_unet_lora.pt')
     if not resumed: raise RuntimeError('incumbent SD LoRA missing; refusing non-continuation training')
     # Same real-photo held-out cases for both models, different training stream per generation.
     torch.manual_seed(TRAIN_SEED)
