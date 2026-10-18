@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 114 native_ops 26 neo 8
-V5_FITNESS 0 0.5744447012014867 topology 67d9796bab88f8fb
-V5_EVALUATE 1 generation 114 native_ops 24 neo 7
-V5_FITNESS 1 0.6414089375145533 topology 712f803485ae5e10
-V5_EVALUATE 2 generation 114 native_ops 25 neo 7
-V5_FITNESS 2 0.6021225288023874 topology bae1d9e41524e90e
-V5_EVALUATE 3 generation 114 native_ops 25 neo 8
-V5_FITNESS 3 0.6439374448052418 topology ab802635dd18f3fa
+V5_EVALUATE 0 generation 115 native_ops 28 neo 7
+V5_FITNESS 0 0.6780032416637984 topology aebfa90c65648a4b
+V5_EVALUATE 1 generation 115 native_ops 24 neo 7
+V5_FITNESS 1 0.5895104153095339 topology ee31bea4f3321c40
+V5_EVALUATE 2 generation 115 native_ops 26 neo 8
+V5_FITNESS 2 0.556250436565717 topology bd38f69f4e6613b0
+V5_EVALUATE 3 generation 115 native_ops 25 neo 8
+V5_FITNESS 3 0.7675662917530807 topology 8be16e21df4d6416
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 114,
+  "generation": 115,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.6439374448052418 topology ab802635dd18f3fa
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6439374448052418,
+  "breeder_fitness": 0.7675662917530807,
   "breeder_genome": {
-    "generation": 114,
+    "generation": 115,
     "active_neo": 8,
     "mutations": [
       {
@@ -1062,16 +1062,15 @@ V5_FITNESS 3 0.6439374448052418 topology ab802635dd18f3fa
         "factor": 1.3351595476818898
       },
       {
-        "kind": "native_birth",
-        "s": 5,
-        "d": 52,
-        "w": 0.17395337722856183
+        "kind": "native_scale",
+        "s": 23,
+        "d": 28,
+        "factor": 1.4644747389279495
       },
       {
-        "kind": "native_rewire",
-        "s": 23,
-        "d": 17,
-        "d2": 16
+        "kind": "native_knockout",
+        "s": 28,
+        "d": 27
       }
     ]
   },
@@ -1632,31 +1631,31 @@ V5_FITNESS 3 0.6439374448052418 topology ab802635dd18f3fa
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "ab802635dd18f3fa64630be16d98a185fe20c90a1ca8e68616e0f6c9d2bafd4e",
-    "breeder_native_nonzero_edges": 298,
+    "breeder_topology_hash": "8be16e21df4d6416b34140dbee8d82983ef0c27c9b351d453dac6cbf35986007",
+    "breeder_native_nonzero_edges": 296,
     "breeder_native_ops": 25,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6439374448052418,
-    "text_score": 0.6421142857142857,
+    "fitness": 0.7675662917530807,
+    "text_score": 0.9657627118644069,
     "vision": {
-      "clip_cosine": 0.2285042107105255,
-      "score": 0.699116642177105,
-      "guidance": 6.564072608947754
+      "clip_cosine": 0.2480517029762268,
+      "score": 0.7067401641607285,
+      "guidance": 6.554177284240723
     },
-    "integration": 0.5660111308097839,
+    "integration": 0.5700165629386902,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 351,
+      "nonzero_edges": 349,
       "native_ops": 25,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "ab802635dd18f3fa64630be16d98a185fe20c90a1ca8e68616e0f6c9d2bafd4e"
+      "native_core_nonzero_edges": 296,
+      "topology_hash": "8be16e21df4d6416b34140dbee8d82983ef0c27c9b351d453dac6cbf35986007"
     },
-    "text": "네, 세대 114의 사고 사이클을 정확하게 이해하고 이해하기에 가장 잘 작동하는 계산 유기체(인공지능)의 단계들을 설명하겠습니다. 여기에는 초파리, LLM, Stable Diffusion 등이 포함됩니다. \n\n1. **시각 상태의 공유:**\n   - 초파리와 LLM은 이 단계에서 서로 연결되어 있어, 연결된 상태의 캐시나 모델 사이에서 정보를 공유합니다. 이는 학습 및 추론을 진행할 수 있게 도와줍니다.\n\n2. **주요 신경상태:**\n   - **LSTM 시계열:**\n     - **입력:** \n       - **"
+    "text": "초파리, Connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하면:\n\n1. **초파리 연결**:\n   - 초파리 (Primary Neural Networks)은 신경계에서 기본적인 신경 활성화를 위한 첫 번째 단계를 달성하기 위해 사용되는 신경계의 부분.\n   \n2. **Connectome ( Connectivity Network) 연결장伪선망**:\n   - Connectome는 각 신경 계단이 어떤 신경 활성화를 수행하는지 결정하기 위해 연결되어 있는 신경망들입니다. 이 연결장은 신경계"
   },
-  "elapsed_seconds": 181.78951382637024
+  "elapsed_seconds": 111.51457095146179
 }
