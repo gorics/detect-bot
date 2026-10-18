@@ -1,7 +1,7 @@
 {
   "seed": 20260929,
-  "generation": 3679904906526,
-  "training_seed": 2740981475,
+  "generation": 3679904906527,
+  "training_seed": 2740981506,
   "connectome": {
     "neurons": 139255,
     "edges": 2698236,
@@ -15,9 +15,9 @@
     "initial_population_best_validation_accuracy": 1.0,
     "initial_random_best_validation_accuracy": 1.0,
     "incumbent_validation_accuracy": 1.0,
-    "incumbent_validation_nll": 0.568094789981842,
+    "incumbent_validation_nll": 0.5680947303771973,
     "final_best_validation_accuracy": 1.0,
-    "final_best_validation_nll": 0.49285653233528137,
+    "final_best_validation_nll": 0.4990021288394928,
     "first": {
       "generation": 0,
       "train_best": 1.0,
@@ -27,8 +27,8 @@
     "last": {
       "generation": 119,
       "train_best": 1.0,
-      "validation_best": 0.9908256880733946,
-      "fitness_best": 0.9999488941975869
+      "validation_best": 1.0,
+      "fitness_best": 0.9999513952134294
     },
     "champion_promoted": false
   },
@@ -36,12 +36,12 @@
     "requested_stimulus": "food",
     "evolved_prediction": "food",
     "probabilities": {
-      "food": 0.6123703718185425,
-      "touch": 0.04959871247410774,
-      "air": 0.09059469401836395,
-      "light": 0.012171671725809574,
-      "warm": 0.0645279586315155,
-      "cool": 0.17073656618595123
+      "food": 0.6142991185188293,
+      "touch": 0.05893288180232048,
+      "air": 0.05349908769130707,
+      "light": 0.0023424257524311543,
+      "warm": 0.14521251618862152,
+      "cool": 0.1257140040397644
     },
     "top_groups": [
       {
@@ -125,7 +125,7 @@
   "stable_diffusion": {
     "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
     "prompt": "scientific macro photograph of Drosophila melanogaster in a neural laboratory, fruit fly behavior: approach food and extend the proboscis to feed, visible glowing connectome pathways, microscopy, realistic anatomy, high detail",
-    "inference_seconds": 19.401095390319824,
+    "inference_seconds": 11.09040904045105,
     "image": "stable_diffusion_result.png"
   },
   "training_scope": {
@@ -135,5 +135,5 @@
       "stable-diffusion-v1-5/stable-diffusion-v1-5"
     ]
   },
-  "total_seconds": 51.048001527786255
+  "total_seconds": 34.877729177474976
 }
