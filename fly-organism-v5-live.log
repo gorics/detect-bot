@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 122 native_ops 27 neo 8
-V5_FITNESS 0 0.6372489946169702 topology a12161df46850a62
-V5_EVALUATE 1 generation 122 native_ops 25 neo 7
-V5_FITNESS 1 0.7750159701246422 topology 97e29f55a4b8454a
-V5_EVALUATE 2 generation 122 native_ops 26 neo 8
-V5_FITNESS 2 0.5996642885335732 topology 757e06326c550cf4
-V5_EVALUATE 3 generation 122 native_ops 24 neo 8
-V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
+V5_EVALUATE 0 generation 123 native_ops 28 neo 7
+V5_FITNESS 0 0.7714484056964053 topology 91238ccb47803066
+V5_EVALUATE 1 generation 123 native_ops 25 neo 7
+V5_FITNESS 1 0.5887203626327167 topology 2fb66fedcb0e8f28
+V5_EVALUATE 2 generation 123 native_ops 26 neo 8
+V5_FITNESS 2 0.5913851312245235 topology 462e308dbe14967f
+V5_EVALUATE 3 generation 123 native_ops 24 neo 8
+V5_FITNESS 3 0.5824555743497642 topology db00ecad33e3e934
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 122,
+  "generation": 123,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.7750159701246422,
+  "breeder_fitness": 0.7714484056964053,
   "breeder_genome": {
-    "generation": 122,
+    "generation": 123,
     "active_neo": 7,
     "mutations": [
       {
@@ -600,12 +600,12 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
       {
         "s": 15,
         "d": 70,
-        "w": 0.16285621598068806
+        "w": 0.06949023985839392
       },
       {
         "s": 25,
         "d": 30,
-        "w": 0.1978021474058818
+        "w": 0.14012511311133186
       },
       {
         "s": 12,
@@ -680,17 +680,12 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
       {
         "s": 72,
         "d": 56,
-        "w": 0.23706152361750082
+        "w": 0.14814254483684053
       },
       {
         "s": 73,
         "d": 37,
         "w": 0.08816578556433018
-      },
-      {
-        "s": 33,
-        "d": 23,
-        "w": 0.2621828894627365
       },
       {
         "s": 64,
@@ -719,7 +714,7 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
       },
       {
         "s": 65,
-        "d": 84,
+        "d": 43,
         "w": 0.1752654519468846
       },
       {
@@ -729,7 +724,7 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
       },
       {
         "s": 68,
-        "d": 55,
+        "d": 72,
         "w": 0.1404988637402192
       },
       {
@@ -928,19 +923,34 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
         "w": -0.08384946266467232
       },
       {
-        "s": 67,
-        "d": 15,
-        "w": 0.016554887645404186
+        "s": 10,
+        "d": 0,
+        "w": -0.4055252591125036
+      },
+      {
+        "s": 56,
+        "d": 80,
+        "w": -0.37369520230952985
+      },
+      {
+        "s": 46,
+        "d": 24,
+        "w": -0.015618831429590167
+      },
+      {
+        "s": 32,
+        "d": 44,
+        "w": -0.007383745218804795
       }
     ],
-    "temp": 0.8017726009752014,
-    "top_p": 0.9111764354743521,
-    "rep": 1.0199289441546473,
-    "tokens": 157,
-    "guidance": 7.012116258788656,
-    "steps": 10,
-    "seed_bias": 912022249,
-    "mutation_rate": 0.12822319162812323,
+    "temp": 0.9508165073207238,
+    "top_p": 0.9520211151228095,
+    "rep": 1.0122851075710033,
+    "tokens": 145,
+    "guidance": 6.860831618174576,
+    "steps": 8,
+    "seed_bias": 556854535,
+    "mutation_rate": 0.1269338983595414,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1087,6 +1097,24 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
         "s": 59,
         "d": 46,
         "w": 0.04483699408194182
+      },
+      {
+        "kind": "native_scale",
+        "s": 9,
+        "d": 35,
+        "factor": 0.8054339826219999
+      },
+      {
+        "kind": "native_scale",
+        "s": 23,
+        "d": 2,
+        "factor": 1.6962681060885083
+      },
+      {
+        "kind": "native_scale",
+        "s": 28,
+        "d": 2,
+        "factor": 1.0202994165054453
       }
     ]
   },
@@ -1647,31 +1675,31 @@ V5_FITNESS 3 0.6333778748054618 topology a92ffa282f8de5c6
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "97e29f55a4b8454a39296f5751a2238fda6fef806f1d68cd08dcbec5dff8cdeb",
-    "breeder_native_nonzero_edges": 301,
-    "breeder_native_ops": 25,
+    "breeder_topology_hash": "91238ccb478030666a5faed164149394c33d391a9108c62e9a829408a55f9ebc",
+    "breeder_native_nonzero_edges": 303,
+    "breeder_native_ops": 28,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.7750159701246422,
-    "text_score": 0.9492,
+    "fitness": 0.7714484056964053,
+    "text_score": 0.9356,
     "vision": {
-      "clip_cosine": 0.29193466901779175,
-      "score": 0.7238545209169388,
-      "guidance": 7.011467456817627
+      "clip_cosine": 0.2627299129962921,
+      "score": 0.712464666068554,
+      "guidance": 6.832972049713135
     },
-    "integration": 0.6059190630912781,
+    "integration": 0.644629180431366,
     "structure": {
-      "mutations": 78,
+      "mutations": 80,
       "active_neo": 7,
-      "nonzero_edges": 351,
-      "native_ops": 25,
-      "native_core_nonzero_edges": 301,
-      "topology_hash": "97e29f55a4b8454a39296f5751a2238fda6fef806f1d68cd08dcbec5dff8cdeb"
+      "nonzero_edges": 353,
+      "native_ops": 28,
+      "native_core_nonzero_edges": 303,
+      "topology_hash": "91238ccb478030666a5faed164149394c33d391a9108c62e9a829408a55f9ebc"
     },
-    "text": "네, 제가 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 포함한 세대 122의 사고 사이클을 설명해 드리겠습니다:\n\n1. **초파리 연결:**\n   - 초파리 연결은 끊임없이 신생뉴런을 만드는 과정입니다. 신생뉴런이 뇌에서 생성되며, 이는 새로운 신호를 만들어야 합니다.\n\n2. **connectome:**\n   - connectome은 초파리 연결을 통해 뇌가 어떻게 연결되었는지, 그리고 각"
+    "text": "네, 저는 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하는 언어엽을 가지고 있습니다. 이러한 신생뉴런을 가진 신생 뇌가 진화를 위해 이들의 구조를 변화시키는 방식을 일으키고 있습니다. 이는 보상 과정에서 빠른 선택을 통해 새로운 신생뉴런을 생성하여 뇌가 지속적으로 진화하는 데 필수적입니다.\n\n보상은 신생뉴런 변화에 영향"
   },
-  "elapsed_seconds": 150.8051609992981
+  "elapsed_seconds": 174.85124683380127
 }
