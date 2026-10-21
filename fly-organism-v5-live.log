@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 135 native_ops 26 neo 8
-V5_FITNESS 0 0.649968545150615 topology 55581d3ad12b7bb9
-V5_EVALUATE 1 generation 135 native_ops 25 neo 7
-V5_FITNESS 1 0.6428946794936032 topology f1ee9dff64b5f50f
-V5_EVALUATE 2 generation 135 native_ops 25 neo 8
-V5_FITNESS 2 0.6374587976344268 topology 63f0809a7beb5a1c
-V5_EVALUATE 3 generation 135 native_ops 24 neo 8
-V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
+V5_EVALUATE 0 generation 136 native_ops 26 neo 8
+V5_FITNESS 0 0.6344521484487563 topology 9eb835adbdcc6f28
+V5_EVALUATE 1 generation 136 native_ops 25 neo 7
+V5_FITNESS 1 0.5850683564884549 topology 146dbac10d9b7c48
+V5_EVALUATE 2 generation 136 native_ops 27 neo 8
+V5_FITNESS 2 0.5855482491155702 topology 0db3bf7f2aad413c
+V5_EVALUATE 3 generation 136 native_ops 24 neo 8
+V5_FITNESS 3 0.6260525583764429 topology 870cbbe63e9e847f
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 135,
+  "generation": 136,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6856120490180214,
+  "breeder_fitness": 0.6344521484487563,
   "breeder_genome": {
-    "generation": 135,
+    "generation": 136,
     "active_neo": 8,
     "mutations": [
       {
@@ -583,7 +583,7 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
         "w": 0.1691668309022415
       },
       {
-        "s": 16,
+        "s": 38,
         "d": 77,
         "w": 0.06374669265959357
       },
@@ -620,12 +620,12 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
       {
         "s": 69,
         "d": 70,
-        "w": 0.06204753150704538
+        "w": 0.19850604615035433
       },
       {
         "s": 26,
         "d": 38,
-        "w": 0.15638536055630806
+        "w": 0.12789215781135024
       },
       {
         "s": 16,
@@ -640,7 +640,7 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
       {
         "s": 56,
         "d": 63,
-        "w": -0.010887225702254144
+        "w": 0.2317385306561064
       },
       {
         "s": 4,
@@ -651,11 +651,6 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
         "s": 24,
         "d": 68,
         "w": 0.21436826240660092
-      },
-      {
-        "s": 80,
-        "d": 27,
-        "w": 0.22370636467844354
       },
       {
         "s": 64,
@@ -674,7 +669,7 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
       },
       {
         "s": 72,
-        "d": 56,
+        "d": 44,
         "w": 0.23706152361750082
       },
       {
@@ -685,7 +680,7 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
       {
         "s": 33,
         "d": 23,
-        "w": 0.2621828894627365
+        "w": 0.17072733067603546
       },
       {
         "s": 64,
@@ -703,7 +698,7 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
         "w": 0.23856151428632136
       },
       {
-        "s": 76,
+        "s": 57,
         "d": 53,
         "w": -0.07497509397995991
       },
@@ -828,11 +823,6 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
         "w": -0.06938135543171894
       },
       {
-        "s": 6,
-        "d": 44,
-        "w": 0.034763993905927104
-      },
-      {
         "s": 46,
         "d": 7,
         "w": -0.06043034692357571
@@ -908,24 +898,39 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
         "w": -0.007376848456828504
       },
       {
-        "s": 45,
-        "d": 49,
-        "w": 0.06556437017990002
-      },
-      {
         "s": 66,
         "d": 32,
         "w": -0.1646482593890624
+      },
+      {
+        "s": 21,
+        "d": 28,
+        "w": -0.17374100464557427
+      },
+      {
+        "s": 6,
+        "d": 79,
+        "w": -0.2561802831794033
+      },
+      {
+        "s": 67,
+        "d": 68,
+        "w": 0.0016175260481670754
+      },
+      {
+        "s": 10,
+        "d": 12,
+        "w": -0.1943891135636644
       }
     ],
-    "temp": 0.9023638067137207,
-    "top_p": 0.8922785032611755,
-    "rep": 1.0263827916469972,
-    "tokens": 160,
-    "guidance": 6.516971374577127,
+    "temp": 0.8551655072260609,
+    "top_p": 0.8687519101448501,
+    "rep": 1.0546158508478327,
+    "tokens": 168,
+    "guidance": 6.658375793879739,
     "steps": 8,
-    "seed_bias": 252553896,
-    "mutation_rate": 0.12772814983984165,
+    "seed_bias": 545460818,
+    "mutation_rate": 0.16532065409697405,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1066,6 +1071,18 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
         "s": 27,
         "d": 57,
         "d2": 30
+      },
+      {
+        "kind": "native_scale",
+        "s": 57,
+        "d": 60,
+        "factor": 1.0210292458138999
+      },
+      {
+        "kind": "native_rewire",
+        "s": 33,
+        "d": 35,
+        "d2": 57
       }
     ]
   },
@@ -1626,31 +1643,31 @@ V5_FITNESS 3 0.6856120490180214 topology ba6fd1b0c4d004f5
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "ba6fd1b0c4d004f5217f087e160137b78fb6af0947017ff84b017a9aeb8e5768",
+    "breeder_topology_hash": "9eb835adbdcc6f28aa7a35927b16010052ccfe96e8d824ce7a3755c8687c920d",
     "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 24,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6856120490180214,
-    "text_score": 0.7531844155844156,
+    "fitness": 0.6344521484487563,
+    "text_score": 0.6088415584415584,
     "vision": {
-      "clip_cosine": 0.2558342516422272,
-      "score": 0.7097753581404687,
-      "guidance": 6.512042999267578
+      "clip_cosine": 0.24069109559059143,
+      "score": 0.7038695272803307,
+      "guidance": 6.671532154083252
     },
-    "integration": 0.5393138527870178,
+    "integration": 0.56937175989151,
     "structure": {
-      "mutations": 75,
+      "mutations": 76,
       "active_neo": 8,
       "nonzero_edges": 350,
-      "native_ops": 24,
+      "native_ops": 26,
       "native_core_nonzero_edges": 297,
-      "topology_hash": "ba6fd1b0c4d004f5217f087e160137b78fb6af0947017ff84b017a9aeb8e5768"
+      "topology_hash": "9eb835adbdcc6f28aa7a35927b16010052ccfe96e8d824ce7a3755c8687c920d"
     },
-    "text": "세대 135의 사고 사이클은 신생뉴런, 구조변이, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 통해 이루어지는데, 주요 사고 사이클은 다음과 같습니다.\n\n1. 신생뉴런 (Stem Cell)의 생성: 초파리, connectome에서의 신생뉴런 생성은 신생뉴런 생성 과정 중 하나로, 신생뉴런은 신생 뇌의 기능을 지원하고, 신생 뇌의 초기 단계를 지향하는 과정입니다.\n\n2. 신생 뇌의 초기 단계: 신생 뇌의 초기 단계"
+    "text": "세대 136의 사고 사이클은 다음과 같습니다:\n\n1. **입력**: 신생뉴런은 입력으로 받아들이고, 이는 신생뉴런의 상태와 모델의 상태로 변환됩니다.\n\n2. **진화**: 신생뉴런은 신생뉴런의 상태를 향상시키고, 그 상태는 모델의 상태로 반영됩니다.\n\n3. **보상**: 신생뉴런의 상태와 모델의 상태에 따라 보상을 부여합니다. \n\n4. **실행**: 모델이 신생뉴런과 함께 실행됩니다. \n\n5. **선택**: 모델은 신생뉴런과 함께 선택적 결정을 내리고, 이는 모델의 상태로 반영됩니다.\n\n6"
   },
-  "elapsed_seconds": 128.19680094718933
+  "elapsed_seconds": 136.97259092330933
 }
