@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 133,
+  "generation": 134,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6215349407965922,
+  "breeder_fitness": 0.6140006960222836,
   "breeder_genome": {
-    "generation": 133,
+    "generation": 134,
     "active_neo": 8,
     "mutations": [
       {
@@ -1055,21 +1055,9 @@
       },
       {
         "kind": "native_rewire",
-        "s": 8,
-        "d": 15,
-        "d2": 14
-      },
-      {
-        "kind": "native_scale",
-        "s": 2,
-        "d": 21,
-        "factor": 1.986162670109676
-      },
-      {
-        "kind": "native_scale",
-        "s": 9,
-        "d": 2,
-        "factor": 0.7743868378437442
+        "s": 5,
+        "d": 0,
+        "d2": 19
       }
     ]
   },
@@ -1630,31 +1618,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "7c470823eb9c6956e52d076824f9fd9e87410ca31d3472a4e2b9e18223a92dcf",
-    "breeder_native_nonzero_edges": 296,
-    "breeder_native_ops": 26,
+    "breeder_topology_hash": "d53d247ef85fb75a3416422285606481b881587256f8802cd6f5067d78a5f9e8",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 24,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6215349407965922,
-    "text_score": 0.5464325123152709,
+    "fitness": 0.6140006960222836,
+    "text_score": 0.5191428571428571,
     "vision": {
-      "clip_cosine": 0.2706427574157715,
-      "score": 0.7155506753921509,
-      "guidance": 6.531120300292969
+      "clip_cosine": 0.26312530040740967,
+      "score": 0.7126188671588898,
+      "guidance": 6.516392230987549
     },
-    "integration": 0.6055652499198914,
+    "integration": 0.6310559511184692,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 349,
-      "native_ops": 26,
-      "native_core_nonzero_edges": 296,
-      "topology_hash": "7c470823eb9c6956e52d076824f9fd9e87410ca31d3472a4e2b9e18223a92dcf"
+      "nonzero_edges": 350,
+      "native_ops": 24,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "d53d247ef85fb75a3416422285606481b881587256f8802cd6f5067d78a5f9e8"
     },
-    "text": "세대 133의 신생뉴런은 매우 다양하며, 이들은 신생층의 전역과 구조를 형성하고 유지하는 주요 세포들로 구성됩니다. 이들은 일반적으로 신생층의 가장 기본적인 세포들 중 하나로 알려져 있으며, 이들은 신생층의 생태계를 형성하고, 다양한 행동과 행동 패턴을 나타냅니다.\n\n이들의 구조는 세포를 구성하는 세포의 형태와, 그들 간에 서로 연관된 연결을 나타냅니다. 세포의 구조는 높은 수의 신생층 세포를 형성하며, 이들은 세포들의 구조와 연결을 결정합니다. \n\n진화: 세"
+    "text": "죄송합니다, 그러나 제가 제공하는 정보에 대해 신뢰할 수 없음으로 하여 대화를 진행하려고 노력하고 있습니다. 제가 제공한 정보를 바탕으로, 초파리의 연속성과 신생뉴런이란 무엇인지, 그것이 어떻게 행동하고 결정하는지에 대한 정보를 찾지 못했습니다. 이에 대해 더 자세한 정보를 드릴 수 있는 방법을 알려주시면 감사하겠습니다."
   },
-  "elapsed_seconds": 125.42605805397034
+  "elapsed_seconds": 156.92053937911987
 }
