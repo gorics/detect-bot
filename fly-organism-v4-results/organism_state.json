@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 134,
+  "generation": 135,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6140006960222836,
+  "breeder_fitness": 0.6856120490180214,
   "breeder_genome": {
-    "generation": 134,
+    "generation": 135,
     "active_neo": 8,
     "mutations": [
       {
@@ -1055,9 +1055,9 @@
       },
       {
         "kind": "native_rewire",
-        "s": 5,
-        "d": 0,
-        "d2": 19
+        "s": 27,
+        "d": 57,
+        "d2": 30
       }
     ]
   },
@@ -1618,7 +1618,7 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "d53d247ef85fb75a3416422285606481b881587256f8802cd6f5067d78a5f9e8",
+    "breeder_topology_hash": "ba6fd1b0c4d004f5217f087e160137b78fb6af0947017ff84b017a9aeb8e5768",
     "breeder_native_nonzero_edges": 297,
     "breeder_native_ops": 24,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
@@ -1626,23 +1626,23 @@
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6140006960222836,
-    "text_score": 0.5191428571428571,
+    "fitness": 0.6856120490180214,
+    "text_score": 0.7531844155844156,
     "vision": {
-      "clip_cosine": 0.26312530040740967,
-      "score": 0.7126188671588898,
-      "guidance": 6.516392230987549
+      "clip_cosine": 0.2558342516422272,
+      "score": 0.7097753581404687,
+      "guidance": 6.512042999267578
     },
-    "integration": 0.6310559511184692,
+    "integration": 0.5393138527870178,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
       "nonzero_edges": 350,
       "native_ops": 24,
       "native_core_nonzero_edges": 297,
-      "topology_hash": "d53d247ef85fb75a3416422285606481b881587256f8802cd6f5067d78a5f9e8"
+      "topology_hash": "ba6fd1b0c4d004f5217f087e160137b78fb6af0947017ff84b017a9aeb8e5768"
     },
-    "text": "죄송합니다, 그러나 제가 제공하는 정보에 대해 신뢰할 수 없음으로 하여 대화를 진행하려고 노력하고 있습니다. 제가 제공한 정보를 바탕으로, 초파리의 연속성과 신생뉴런이란 무엇인지, 그것이 어떻게 행동하고 결정하는지에 대한 정보를 찾지 못했습니다. 이에 대해 더 자세한 정보를 드릴 수 있는 방법을 알려주시면 감사하겠습니다."
+    "text": "세대 135의 사고 사이클은 신생뉴런, 구조변이, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 통해 이루어지는데, 주요 사고 사이클은 다음과 같습니다.\n\n1. 신생뉴런 (Stem Cell)의 생성: 초파리, connectome에서의 신생뉴런 생성은 신생뉴런 생성 과정 중 하나로, 신생뉴런은 신생 뇌의 기능을 지원하고, 신생 뇌의 초기 단계를 지향하는 과정입니다.\n\n2. 신생 뇌의 초기 단계: 신생 뇌의 초기 단계"
   },
-  "elapsed_seconds": 156.92053937911987
+  "elapsed_seconds": 128.19680094718933
 }
