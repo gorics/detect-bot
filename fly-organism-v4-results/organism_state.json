@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 140,
+  "generation": 141,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.7393957627761669,
+  "breeder_fitness": 0.6223460508690828,
   "breeder_genome": {
-    "generation": 140,
+    "generation": 141,
     "active_neo": 7,
     "mutations": [
       {
@@ -1069,9 +1069,16 @@
         "factor": 1.3351595476818898
       },
       {
-        "kind": "native_knockout",
+        "kind": "native_rewire",
         "s": 60,
-        "d": 28
+        "d": 28,
+        "d2": 11
+      },
+      {
+        "kind": "native_rewire",
+        "s": 10,
+        "d": 29,
+        "d2": 28
       }
     ]
   },
@@ -1632,31 +1639,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "13e07401164e0e95bc32370b4890f9480df4fb99db3bc7ffc4ab69064f36b70b",
+    "breeder_topology_hash": "e46d726e03cdcc00c73e4ad2e63735fc96a0e26791ee207f2cefdb5ff678fcfb",
     "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 24,
+    "breeder_native_ops": 25,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.7393957627761669,
-    "text_score": 0.8537266106442577,
+    "fitness": 0.6223460508690828,
+    "text_score": 0.5470783410138249,
     "vision": {
-      "clip_cosine": 0.24873296916484833,
-      "score": 0.7070058579742908,
-      "guidance": 6.990738868713379
+      "clip_cosine": 0.26743826270103455,
+      "score": 0.7143009224534035,
+      "guidance": 7.058811187744141
     },
-    "integration": 0.6522515416145325,
+    "integration": 0.6074066758155823,
     "structure": {
       "mutations": 78,
       "active_neo": 7,
       "nonzero_edges": 349,
-      "native_ops": 24,
+      "native_ops": 25,
       "native_core_nonzero_edges": 299,
-      "topology_hash": "13e07401164e0e95bc32370b4890f9480df4fb99db3bc7ffc4ab69064f36b70b"
+      "topology_hash": "e46d726e03cdcc00c73e4ad2e63735fc96a0e26791ee207f2cefdb5ff678fcfb"
     },
-    "text": "초파리, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함한 세대 140의 사고 사이클은 신생뉴런과 관련이 매우 높습니다. 신생뉴런은 빠른 변화와 복잡한 이론을 이해하기 위해 중요한 역할을 합니다.\n\n1. 신생뉴런(7)과 관련된 사고 사이클:\n   - 신생뉴런은 기존의 신생뉴런과 관련이 있습니다. 이는 신생뉴런이 새로운 신생뉴런을 생성하고, 이 새로운 신생뉴런은"
+    "text": "세대 141의 사고 사이클은 매우 복잡하고 특별한 방식으로 이루어져 있습니다. 이 사이클은 신생뉴런과 관련이 있으며, 이들은 신생 뇌의 초기 과정에서 중요한 역할을 하는 데 사용됩니다. 이 사이클에 포함된 세 가지 주요 요소는 다음과 같습니다:\n\n1. **초파리 (Stem Cell)**:\n   초파리는 신생 뇌에서 가장 작은 세포들로, 기능이 발달하고 자리를 확장하기 위해 만들어진 세포들입니다. 초파리는 신생 뇌의 첫 번째 자원으로, 뇌에서 시작되는 새로운 생존을 위해 필요합니다"
   },
-  "elapsed_seconds": 197.13687109947205
+  "elapsed_seconds": 195.51704454421997
 }
