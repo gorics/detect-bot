@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 137,
+  "generation": 138,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.7320501386458816,
+  "breeder_fitness": 0.7565892766150978,
   "breeder_genome": {
-    "generation": 137,
+    "generation": 138,
     "active_neo": 8,
     "mutations": [
       {
@@ -1054,10 +1054,22 @@
         "factor": 1.3351595476818898
       },
       {
+        "kind": "native_birth",
+        "s": 56,
+        "d": 44,
+        "w": 0.06380499532797311
+      },
+      {
         "kind": "native_rewire",
-        "s": 0,
-        "d": 3,
-        "d2": 14
+        "s": 2,
+        "d": 2,
+        "d2": 6
+      },
+      {
+        "kind": "native_rewire",
+        "s": 26,
+        "d": 23,
+        "d2": 2
       }
     ]
   },
@@ -1618,31 +1630,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "7a85899d2ecd7b39e32011fe795bbf9f2157e5b6ac65afcc2feba95cedd2ea65",
+    "breeder_topology_hash": "27926936a77a420ece4b085ddf639978952469d939341ccac37299536a8af552",
     "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 24,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.7320501386458816,
-    "text_score": 0.8554285714285714,
+    "fitness": 0.7565892766150978,
+    "text_score": 0.9422545454545456,
     "vision": {
-      "clip_cosine": 0.261068731546402,
-      "score": 0.7118168053030968,
-      "guidance": 6.564578056335449
+      "clip_cosine": 0.23030726611614227,
+      "score": 0.6998198337852956,
+      "guidance": 6.537272930145264
     },
-    "integration": 0.5908467173576355,
+    "integration": 0.5746615529060364,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
       "nonzero_edges": 350,
-      "native_ops": 24,
+      "native_ops": 26,
       "native_core_nonzero_edges": 297,
-      "topology_hash": "7a85899d2ecd7b39e32011fe795bbf9f2157e5b6ac65afcc2feba95cedd2ea65"
+      "topology_hash": "27926936a77a420ece4b085ddf639978952469d939341ccac37299536a8af552"
     },
-    "text": "세대 137의 사고 사이클은 세대 137의 신생뉴런과 구조변이를 포함한 신생뉴런의 발전과 성장의 시계열을 나타내며, 이는 신생뉴런의 생성, 평가, 선택, 보상 등의 과정을 설명합니다.\n\n1. **초파리**: 신생뉴런의 생성에 기반한 신생뉴런의 생성과 평가를 나타냅니다.\n\n2. **Connectome**: 신생뉴런의 구조와 관련된 연결망을 의미하며, 이는 신생뉴런의 성장과 행동을 기반으로 합니다.\n\n3. **LLM**: Stable Diffusion 시각엽을 사용"
+    "text": "네, 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하므로, 세대 138의 사고 사이클은 다음과 같이 구체적으로 설명할 수 있습니다:\n\n1. **세대 138의 사고 사이클**:\n   - **신생뉴런**: 신생뉴런은 기존 신생물체를 탐사하거나 새로운 정보를 수집하는 데 사용되는 기본적인 신호 전달 단계입니다. 이 신생뉴런이 신생물체의 상태를 파악하고, 이를 통한 정보를 높이"
   },
-  "elapsed_seconds": 181.66097116470337
+  "elapsed_seconds": 126.95944952964783
 }
