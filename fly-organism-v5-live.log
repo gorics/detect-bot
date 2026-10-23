@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 144 native_ops 24 neo 8
-V5_FITNESS 0 0.6197777543261164 topology f484dde914f48df3
-V5_EVALUATE 1 generation 144 native_ops 26 neo 7
-V5_FITNESS 1 0.5891411434595917 topology a3385ff14420b055
-V5_EVALUATE 2 generation 144 native_ops 26 neo 8
-V5_FITNESS 2 0.5988446922076733 topology 2d3e58ae2d571aab
-V5_EVALUATE 3 generation 144 native_ops 25 neo 8
-V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
+V5_EVALUATE 0 generation 145 native_ops 26 neo 7
+V5_FITNESS 0 0.618554966895985 topology e04c6877a6b9389d
+V5_EVALUATE 1 generation 145 native_ops 24 neo 7
+V5_FITNESS 1 0.5654154376121858 topology 6521a72127303ad6
+V5_EVALUATE 2 generation 145 native_ops 27 neo 8
+V5_FITNESS 2 0.5456374464908407 topology 48610b795297be4b
+V5_EVALUATE 3 generation 145 native_ops 25 neo 8
+V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 144,
+  "generation": 145,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,10 +537,10 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6197777543261164,
+  "breeder_fitness": 0.618554966895985,
   "breeder_genome": {
-    "generation": 144,
-    "active_neo": 8,
+    "generation": 145,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -645,7 +645,7 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
       {
         "s": 4,
         "d": 70,
-        "w": 0.34054638380540647
+        "w": 0.39159007623975384
       },
       {
         "s": 24,
@@ -689,18 +689,13 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
       },
       {
         "s": 6,
-        "d": 55,
+        "d": 19,
         "w": 0.37195960094120034
       },
       {
         "s": 64,
         "d": 60,
-        "w": 0.23856151428632136
-      },
-      {
-        "s": 76,
-        "d": 53,
-        "w": -0.07497509397995991
+        "w": 0.2869755039746728
       },
       {
         "s": 33,
@@ -716,11 +711,6 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
         "s": 77,
         "d": 12,
         "w": 0.24894754237579658
-      },
-      {
-        "s": 68,
-        "d": 55,
-        "w": 0.1404988637402192
       },
       {
         "s": 67,
@@ -890,7 +880,7 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
       {
         "s": 73,
         "d": 36,
-        "w": 0.3318653580711412
+        "w": 0.3949493392811602
       },
       {
         "s": 81,
@@ -946,16 +936,31 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
         "s": 49,
         "d": 65,
         "w": -0.10408130600126193
+      },
+      {
+        "s": 50,
+        "d": 20,
+        "w": 0.25751616155993057
+      },
+      {
+        "s": 53,
+        "d": 58,
+        "w": -0.16860799802306295
+      },
+      {
+        "s": 18,
+        "d": 47,
+        "w": -0.014373249646105988
       }
     ],
-    "temp": 0.8823270709275807,
-    "top_p": 0.9334108788846247,
-    "rep": 1.026680000717104,
-    "tokens": 150,
-    "guidance": 7.390571418174252,
+    "temp": 0.8300964682919928,
+    "top_p": 0.9378394680128768,
+    "rep": 1.096992349479988,
+    "tokens": 138,
+    "guidance": 7.791808459498901,
     "steps": 10,
-    "seed_bias": 449715047,
-    "mutation_rate": 0.12999456290430833,
+    "seed_bias": 786403359,
+    "mutation_rate": 0.13615760987271922,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1095,6 +1100,18 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
         "kind": "native_knockout",
         "s": 27,
         "d": 35
+      },
+      {
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 35,
+        "d2": 1
+      },
+      {
+        "kind": "native_scale",
+        "s": 21,
+        "d": 25,
+        "factor": 0.6396939725475316
       }
     ]
   },
@@ -1655,31 +1672,31 @@ V5_FITNESS 3 0.5849007953422525 topology f9190d3b9e5560f3
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "f484dde914f48df378ba3af49d6102cb9f450005b9cb14d57e720ddd685d03c3",
-    "breeder_native_nonzero_edges": 296,
-    "breeder_native_ops": 24,
+    "breeder_topology_hash": "e04c6877a6b9389dc6039271761efc17fad1f7e06fc3917a5350b57286be9eed",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6197777543261164,
-    "text_score": 0.5411261904761905,
+    "fitness": 0.618554966895985,
+    "text_score": 0.5383351648351649,
     "vision": {
-      "clip_cosine": 0.27218806743621826,
-      "score": 0.7161533463001252,
-      "guidance": 7.394702911376953
+      "clip_cosine": 0.2682318687438965,
+      "score": 0.7146104288101196,
+      "guidance": 7.787345886230469
     },
-    "integration": 0.594100832939148,
+    "integration": 0.5954046249389648,
     "structure": {
-      "mutations": 81,
-      "active_neo": 8,
+      "mutations": 82,
+      "active_neo": 7,
       "nonzero_edges": 352,
-      "native_ops": 24,
-      "native_core_nonzero_edges": 296,
-      "topology_hash": "f484dde914f48df378ba3af49d6102cb9f450005b9cb14d57e720ddd685d03c3"
+      "native_ops": 26,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "e04c6877a6b9389dc6039271761efc17fad1f7e06fc3917a5350b57286be9eed"
     },
-    "text": "세대 144의 사고 사이클은 신생뉴런과 구조변이를 포함한 세부 계획을 수행하는 방식을 나타내는 일반적인 사고 시스템의 기술적 조각이다. 여기서는 세대 144의 사고 사이클을 보여주고 싶습니다.\n\n1. **Input**: 신생뉴런 (Neuron)을 입력 받습니다.\n2. **Connectome**: 입력받은 신생뉴런에서 빈번하게 연결된 구조변이 (Connectome)을 통해 새로운 신생뉴런을 생성합니다.\n3. **LSTM Layer**: 새로운 신생뉴런에 대한 신생뉴"
+    "text": "네, 신생뉴런은 초기 신호 처리 모델에서 가장 중요한 구성원 중 하나입니다. 이 신생뉴런은 여러 가지 종류로 분류할 수 있습니다:\n\n1. **구조변이 (Topology)**\n   - 이는 블록 구조를 의미하며, 이들 구조는 신생뉴런의 전송 방식을 결정합니다.\n   - 각 구조의 크기를 조정하여 신생뉴런의 신호 처리 능력과 효율성을 개선합니다.\n\n2. **진화 (Evolution)**\n   - 신생뉴런의 구조와 관련된 변화를 볼"
   },
-  "elapsed_seconds": 179.39008378982544
+  "elapsed_seconds": 160.33630347251892
 }
