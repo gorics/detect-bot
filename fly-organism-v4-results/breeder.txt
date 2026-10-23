@@ -1,8 +1,8 @@
-네, 신생뉴런은 초기 신호 처리 모델에서 가장 중요한 구성원 중 하나입니다. 이 신생뉴런은 여러 가지 종류로 분류할 수 있습니다:
+아래에서 초파리, 연결모듈 (connectome), 대형 핵신경 모델 (LLM), 스프레드 스텝 시각 해석 방법 (Stable Diffusion)을 포함하여 세대 146의 사고 내역을 설명합니다:
 
-1. **구조변이 (Topology)**
-   - 이는 블록 구조를 의미하며, 이들 구조는 신생뉴런의 전송 방식을 결정합니다.
-   - 각 구조의 크기를 조정하여 신생뉴런의 신호 처리 능력과 효율성을 개선합니다.
+1) **Système de réaction initiale**:
+    - 초파리 (Initiation of Reactions): 
+      - 기계학습 (Machine Learning)
+      - 신호 분류: 전달함수로 이루어진 신호(스케일링 함수, 이차적 분포 함수 등)
 
-2. **진화 (Evolution)**
-   - 신생뉴런의 구조와 관련된 변화를 볼
+2) **Signal propagation in the cerebral cortex**

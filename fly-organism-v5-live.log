@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 145 native_ops 26 neo 7
-V5_FITNESS 0 0.618554966895985 topology e04c6877a6b9389d
-V5_EVALUATE 1 generation 145 native_ops 24 neo 7
-V5_FITNESS 1 0.5654154376121858 topology 6521a72127303ad6
-V5_EVALUATE 2 generation 145 native_ops 27 neo 8
-V5_FITNESS 2 0.5456374464908407 topology 48610b795297be4b
-V5_EVALUATE 3 generation 145 native_ops 25 neo 8
-V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
+V5_EVALUATE 0 generation 146 native_ops 29 neo 7
+V5_FITNESS 0 0.5911135546673473 topology 049d3ed4f56a6ece
+V5_EVALUATE 1 generation 146 native_ops 25 neo 7
+V5_FITNESS 1 0.584145704070046 topology 7c7f8fbff8cd28ce
+V5_EVALUATE 2 generation 146 native_ops 29 neo 7
+V5_FITNESS 2 0.6690699330757883 topology 25188b7801781e28
+V5_EVALUATE 3 generation 146 native_ops 26 neo 8
+V5_FITNESS 3 0.582010398742585 topology a45182e7216bfcee
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 145,
+  "generation": 146,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,15 +537,15 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.618554966895985,
+  "breeder_fitness": 0.6690699330757883,
   "breeder_genome": {
-    "generation": 145,
+    "generation": 146,
     "active_neo": 7,
     "mutations": [
       {
         "s": 13,
         "d": 68,
-        "w": 0.2384344208990037
+        "w": 0.3396801981805099
       },
       {
         "s": 16,
@@ -634,7 +634,7 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
       },
       {
         "s": 27,
-        "d": 78,
+        "d": 40,
         "w": 0.17259858519218624
       },
       {
@@ -663,11 +663,6 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
         "w": 0.3226111658644244
       },
       {
-        "s": 70,
-        "d": 5,
-        "w": 0.21214621551856255
-      },
-      {
         "s": 72,
         "d": 56,
         "w": 0.23706152361750082
@@ -686,11 +681,6 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
         "s": 64,
         "d": 68,
         "w": 0.11658934234998806
-      },
-      {
-        "s": 6,
-        "d": 19,
-        "w": 0.37195960094120034
       },
       {
         "s": 64,
@@ -854,13 +844,8 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
       },
       {
         "s": 11,
-        "d": 40,
+        "d": 61,
         "w": 0.06267066847534442
-      },
-      {
-        "s": 23,
-        "d": 50,
-        "w": 0.14228569380380499
       },
       {
         "s": 56,
@@ -925,7 +910,7 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
       {
         "s": 83,
         "d": 31,
-        "w": 0.10247949646908469
+        "w": 0.2879319904279075
       },
       {
         "s": 14,
@@ -951,16 +936,26 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
         "s": 18,
         "d": 47,
         "w": -0.014373249646105988
+      },
+      {
+        "s": 15,
+        "d": 75,
+        "w": -0.4915260089234176
+      },
+      {
+        "s": 69,
+        "d": 32,
+        "w": 0.0756495562247381
       }
     ],
-    "temp": 0.8300964682919928,
-    "top_p": 0.9378394680128768,
-    "rep": 1.096992349479988,
-    "tokens": 138,
-    "guidance": 7.791808459498901,
+    "temp": 0.8265590667565047,
+    "top_p": 0.99,
+    "rep": 1.159045149304036,
+    "tokens": 141,
+    "guidance": 8.097552855004182,
     "steps": 10,
-    "seed_bias": 786403359,
-    "mutation_rate": 0.13615760987271922,
+    "seed_bias": 592905658,
+    "mutation_rate": 0.1064315463040259,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1112,6 +1107,23 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
         "s": 21,
         "d": 25,
         "factor": 0.6396939725475316
+      },
+      {
+        "kind": "native_scale",
+        "s": 8,
+        "d": 8,
+        "factor": 0.9767448935890884
+      },
+      {
+        "kind": "native_knockout",
+        "s": 39,
+        "d": 2
+      },
+      {
+        "kind": "native_birth",
+        "s": 18,
+        "d": 16,
+        "w": 0.0024254378699827025
       }
     ]
   },
@@ -1672,31 +1684,31 @@ V5_FITNESS 3 0.6139308137217364 topology c18b2361ce502abd
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "e04c6877a6b9389dc6039271761efc17fad1f7e06fc3917a5350b57286be9eed",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 26,
+    "breeder_topology_hash": "25188b7801781e28634c11a330c4ae57d01bb71e91bbae45a28b8e8e47770aa6",
+    "breeder_native_nonzero_edges": 298,
+    "breeder_native_ops": 29,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.618554966895985,
-    "text_score": 0.5383351648351649,
+    "fitness": 0.6690699330757883,
+    "text_score": 0.7314857142857143,
     "vision": {
-      "clip_cosine": 0.2682318687438965,
-      "score": 0.7146104288101196,
-      "guidance": 7.787345886230469
+      "clip_cosine": 0.2240547388792038,
+      "score": 0.6905663511653741,
+      "guidance": 8.099044799804688
     },
-    "integration": 0.5954046249389648,
+    "integration": 0.5265112519264221,
     "structure": {
-      "mutations": 82,
+      "mutations": 81,
       "active_neo": 7,
-      "nonzero_edges": 352,
-      "native_ops": 26,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "e04c6877a6b9389dc6039271761efc17fad1f7e06fc3917a5350b57286be9eed"
+      "nonzero_edges": 351,
+      "native_ops": 29,
+      "native_core_nonzero_edges": 298,
+      "topology_hash": "25188b7801781e28634c11a330c4ae57d01bb71e91bbae45a28b8e8e47770aa6"
     },
-    "text": "네, 신생뉴런은 초기 신호 처리 모델에서 가장 중요한 구성원 중 하나입니다. 이 신생뉴런은 여러 가지 종류로 분류할 수 있습니다:\n\n1. **구조변이 (Topology)**\n   - 이는 블록 구조를 의미하며, 이들 구조는 신생뉴런의 전송 방식을 결정합니다.\n   - 각 구조의 크기를 조정하여 신생뉴런의 신호 처리 능력과 효율성을 개선합니다.\n\n2. **진화 (Evolution)**\n   - 신생뉴런의 구조와 관련된 변화를 볼"
+    "text": "아래에서 초파리, 연결모듈 (connectome), 대형 핵신경 모델 (LLM), 스프레드 스텝 시각 해석 방법 (Stable Diffusion)을 포함하여 세대 146의 사고 내역을 설명합니다:\n\n1) **Système de réaction initiale**:\n    - 초파리 (Initiation of Reactions): \n      - 기계학습 (Machine Learning)\n      - 신호 분류: 전달함수로 이루어진 신호(스케일링 함수, 이차적 분포 함수 등)\n\n2) **Signal propagation in the cerebral cortex**"
   },
-  "elapsed_seconds": 160.33630347251892
+  "elapsed_seconds": 116.50038123130798
 }
