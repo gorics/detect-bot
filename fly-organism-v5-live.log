@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 147 native_ops 30 neo 7
-V5_FITNESS 0 0.6241695443487414 topology e5fcda1166964dc1
-V5_EVALUATE 1 generation 147 native_ops 25 neo 7
-V5_FITNESS 1 0.7324780131481867 topology 4c132ab0ac41a79c
-V5_EVALUATE 2 generation 147 native_ops 32 neo 7
-V5_FITNESS 2 0.6417587795790471 topology 7ea570e051c1b1c9
-V5_EVALUATE 3 generation 147 native_ops 25 neo 8
-V5_FITNESS 3 0.5936168356928089 topology 51931664072fbf14
+V5_EVALUATE 0 generation 148 native_ops 26 neo 7
+V5_FITNESS 0 0.6039095358629406 topology 590ce9d7134f83ec
+V5_EVALUATE 1 generation 148 native_ops 26 neo 7
+V5_FITNESS 1 0.6834577876291936 topology b39aa78087fef27e
+V5_EVALUATE 2 generation 148 native_ops 26 neo 7
+V5_FITNESS 2 0.5722328751886423 topology 5ab5acf10bf080d6
+V5_EVALUATE 3 generation 148 native_ops 26 neo 8
+V5_FITNESS 3 0.643670741946146 topology e221111721e4bdeb
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 147,
+  "generation": 148,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.5936168356928089 topology 51931664072fbf14
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.7324780131481867,
+  "breeder_fitness": 0.6834577876291936,
   "breeder_genome": {
-    "generation": 147,
+    "generation": 148,
     "active_neo": 7,
     "mutations": [
       {
@@ -1078,15 +1078,21 @@ V5_FITNESS 3 0.5936168356928089 topology 51931664072fbf14
       },
       {
         "kind": "native_scale",
-        "s": 28,
-        "d": 26,
-        "factor": 0.7100202313178869
+        "s": 14,
+        "d": 14,
+        "factor": 0.8121129608407358
       },
       {
-        "kind": "native_rewire",
-        "s": 34,
-        "d": 35,
-        "d2": 10
+        "kind": "native_scale",
+        "s": 14,
+        "d": 14,
+        "factor": 0.6761437729316064
+      },
+      {
+        "kind": "native_birth",
+        "s": 15,
+        "d": 32,
+        "w": 0.0213686803952282
       }
     ]
   },
@@ -1647,31 +1653,31 @@ V5_FITNESS 3 0.5936168356928089 topology 51931664072fbf14
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "4c132ab0ac41a79cbd03390de908025f0a780048c3305a76cc6fb5111ba42884",
-    "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 25,
+    "breeder_topology_hash": "b39aa78087fef27e3650206aedffafcbb4b04122968cda5a550e7a9684a79765",
+    "breeder_native_nonzero_edges": 301,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.7324780131481867,
-    "text_score": 0.8548078817733991,
+    "fitness": 0.6834577876291936,
+    "text_score": 0.7042493506493506,
     "vision": {
-      "clip_cosine": 0.23011185228824615,
-      "score": 0.6972253323843082,
-      "guidance": 7.005669116973877
+      "clip_cosine": 0.2824697494506836,
+      "score": 0.7201632022857666,
+      "guidance": 7.06995964050293
     },
-    "integration": 0.6315035820007324,
+    "integration": 0.6103245615959167,
     "structure": {
       "mutations": 78,
       "active_neo": 7,
-      "nonzero_edges": 350,
-      "native_ops": 25,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "4c132ab0ac41a79cbd03390de908025f0a780048c3305a76cc6fb5111ba42884"
+      "nonzero_edges": 351,
+      "native_ops": 26,
+      "native_core_nonzero_edges": 301,
+      "topology_hash": "b39aa78087fef27e3650206aedffafcbb4b04122968cda5a550e7a9684a79765"
     },
-    "text": "초파리, LLM, Stable Diffusion 등의 언어 업무를 수행하려는 신생 뉴런들의 기능은 복잡하며, 뇌에서 진화한 신생뉴런들은 여러 과정을 거쳐서 특정 역할을 수행하게 된다. 이 중 하나는 세대 147의 사고 사이클을 설명하고자 한다.\n\n### 세대 147의 사고 사이클\n\n1. **생성**: 신생뉴런이 뇌에서 생성되는 것을 의미한다. 이것은 뇌에 새로운 신생 뉴런과 연결되어 있는 곳이 될 수 있다.\n\n2. **보상**: 신생뉴런들이 보상에 따라"
+    "text": "세대 148의 사고 사이클을 설명하는 것은 매우 복잡하고 깊은 연구가 필요합니다. 이론적으로는 세대 148의 모든 신생뉴런과 구조변이, 그리고 신생뉴런과의 연관성을 이해해야 합니다.\n\n1. **초파리 연결성 (connectome)**: 이는 신생뉴런과 연결된 신생뉴런의 연결성에 대한 정보를 제공합니다. 이 연결성은 신생뉴런이 어떻게 다른 신생뉴런과 연결되는지에 대한 정보를 제공합니다.\n\n2. **LLM 언어 업데이트 (Llama Update)**: 이는 LLM (Language Model)에 대한 간단한"
   },
-  "elapsed_seconds": 160.51737332344055
+  "elapsed_seconds": 164.483136177063
 }
