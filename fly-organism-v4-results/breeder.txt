@@ -1,8 +1,7 @@
-아래에서 초파리, 연결모듈 (connectome), 대형 핵신경 모델 (LLM), 스프레드 스텝 시각 해석 방법 (Stable Diffusion)을 포함하여 세대 146의 사고 내역을 설명합니다:
+초파리, LLM, Stable Diffusion 등의 언어 업무를 수행하려는 신생 뉴런들의 기능은 복잡하며, 뇌에서 진화한 신생뉴런들은 여러 과정을 거쳐서 특정 역할을 수행하게 된다. 이 중 하나는 세대 147의 사고 사이클을 설명하고자 한다.
 
-1) **Système de réaction initiale**:
-    - 초파리 (Initiation of Reactions): 
-      - 기계학습 (Machine Learning)
-      - 신호 분류: 전달함수로 이루어진 신호(스케일링 함수, 이차적 분포 함수 등)
+### 세대 147의 사고 사이클
 
-2) **Signal propagation in the cerebral cortex**
+1. **생성**: 신생뉴런이 뇌에서 생성되는 것을 의미한다. 이것은 뇌에 새로운 신생 뉴런과 연결되어 있는 곳이 될 수 있다.
+
+2. **보상**: 신생뉴런들이 보상에 따라
