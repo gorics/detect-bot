@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 153,
+  "generation": 154,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6519152691526187,
+  "breeder_fitness": 0.7574763460210031,
   "breeder_genome": {
-    "generation": 153,
+    "generation": 154,
     "active_neo": 8,
     "mutations": [
       {
@@ -707,7 +707,7 @@
       {
         "s": 65,
         "d": 84,
-        "w": 0.1752654519468846
+        "w": 0.046028176967514656
       },
       {
         "s": 77,
@@ -812,7 +812,7 @@
       {
         "s": 62,
         "d": 57,
-        "w": 0.2843096550247773
+        "w": 0.15278007892463313
       },
       {
         "s": 37,
@@ -820,24 +820,14 @@
         "w": -0.06938135543171894
       },
       {
-        "s": 6,
-        "d": 44,
-        "w": 0.034763993905927104
-      },
-      {
         "s": 46,
         "d": 7,
         "w": -0.06043034692357571
       },
       {
-        "s": 46,
+        "s": 42,
         "d": 33,
         "w": 0.34958081054216755
-      },
-      {
-        "s": 67,
-        "d": 11,
-        "w": 0.17916128425034272
       },
       {
         "s": 83,
@@ -908,16 +898,31 @@
         "s": 66,
         "d": 32,
         "w": -0.1646482593890624
+      },
+      {
+        "s": 69,
+        "d": 27,
+        "w": 0.17089605118635967
+      },
+      {
+        "s": 66,
+        "d": 12,
+        "w": -0.010301682841605542
+      },
+      {
+        "s": 13,
+        "d": 58,
+        "w": -0.040560144954961505
       }
     ],
-    "temp": 0.9023638067137207,
-    "top_p": 0.8922785032611755,
-    "rep": 1.0263827916469972,
-    "tokens": 160,
-    "guidance": 6.516971374577127,
+    "temp": 1.0060996597131355,
+    "top_p": 0.8964058683459615,
+    "rep": 1.033269188051516,
+    "tokens": 152,
+    "guidance": 5.9378756222761595,
     "steps": 8,
-    "seed_bias": 252553896,
-    "mutation_rate": 0.12772814983984165,
+    "seed_bias": 929313952,
+    "mutation_rate": 0.1087042834471766,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1064,6 +1069,12 @@
         "s": 27,
         "d": 35,
         "factor": 0.7559874514045284
+      },
+      {
+        "kind": "native_scale",
+        "s": 27,
+        "d": 27,
+        "factor": 0.47251978326775684
       }
     ]
   },
@@ -1624,31 +1635,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "a3de53c5ac4d23d5f68308627ca18390969b3593ab1241473d8dfcaa459539bc",
+    "breeder_topology_hash": "bdaf0b8bc609ce3a7161f47a975bbdcd40397ab75231e22a1b80e737ae0cc636",
     "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 25,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6519152691526187,
-    "text_score": 0.6429142857142858,
+    "fitness": 0.7574763460210031,
+    "text_score": 0.9372,
     "vision": {
-      "clip_cosine": 0.2660268545150757,
-      "score": 0.7137504732608795,
-      "guidance": 6.533109188079834
+      "clip_cosine": 0.2516728341579437,
+      "score": 0.7081524053215981,
+      "guidance": 5.970804214477539
     },
-    "integration": 0.5752729773521423,
+    "integration": 0.5673046708106995,
     "structure": {
-      "mutations": 75,
+      "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 350,
-      "native_ops": 25,
+      "nonzero_edges": 351,
+      "native_ops": 26,
       "native_core_nonzero_edges": 297,
-      "topology_hash": "a3de53c5ac4d23d5f68308627ca18390969b3593ab1241473d8dfcaa459539bc"
+      "topology_hash": "bdaf0b8bc609ce3a7161f47a975bbdcd40397ab75231e22a1b80e737ae0cc636"
     },
-    "text": "네, 세대 153의 사고 사이클을 설명해드리겠습니다:\n\n1. **초파리 연결성 (Stable Diffusion):** 초파리는 신생 빠른 신경계를 사용하여, 특정한 상태 또는 사고를 기반으로 이전 상태에 의해 생성된 새로운 신경계를 생성합니다. 이것은 신생뉴런과 구조변이를 통해 이전 상태를 상호작용하고, 이로 인해 새로운 신경계가 생성될 수 있습니다.\n\n2. **Llama 언어 유기체:** 초파리는 Llama 언어를 사용하여, 문법적으로나 의미적으로 가능한 모든 단어를 생성합니다. 이는 Llama 신경계를 통해 학습되고"
+    "text": "초파리,connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 우리는 초파리가 기능하는 신생뉴런과 구조변이를 포함하는 신생뉴런의 진화에 대한 신경상태를 계산합니다. 이 신경상태가 Stable Diffusion의 성공을 나타내는 뇌活性과 생성 평가를 결정합니다. 이는 인식과 예측에 중요한 역할을 합니다.\n\n각 신경상태는 보상(보상, 은행, 상환, 학습), �"
   },
-  "elapsed_seconds": 88.79938101768494
+  "elapsed_seconds": 122.08464479446411
 }
