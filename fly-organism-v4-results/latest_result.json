@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 155,
+  "generation": 156,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.7087269745559976,
+  "breeder_fitness": 0.724955040681046,
   "breeder_genome": {
-    "generation": 155,
+    "generation": 156,
     "active_neo": 8,
     "mutations": [
       {
@@ -670,11 +670,6 @@
         "w": 0.23706152361750082
       },
       {
-        "s": 73,
-        "d": 37,
-        "w": 0.08816578556433018
-      },
-      {
         "s": 33,
         "d": 23,
         "w": 0.2621828894627365
@@ -741,7 +736,7 @@
       },
       {
         "s": 75,
-        "d": 66,
+        "d": 8,
         "w": -0.0528791614477103
       },
       {
@@ -771,18 +766,13 @@
       },
       {
         "s": 71,
-        "d": 75,
+        "d": 55,
         "w": 0.49895103067973356
       },
       {
         "s": 8,
         "d": 18,
         "w": -0.10674372775271015
-      },
-      {
-        "s": 37,
-        "d": 11,
-        "w": 0.07557864290041133
       },
       {
         "s": 80,
@@ -847,7 +837,7 @@
       {
         "s": 20,
         "d": 72,
-        "w": 0.005459912539621534
+        "w": -0.19373591576442922
       },
       {
         "s": 83,
@@ -886,7 +876,7 @@
       },
       {
         "s": 86,
-        "d": 59,
+        "d": 62,
         "w": -0.057186223545058916
       },
       {
@@ -908,16 +898,26 @@
         "s": 66,
         "d": 32,
         "w": -0.1646482593890624
+      },
+      {
+        "s": 23,
+        "d": 20,
+        "w": -0.1071288422379245
+      },
+      {
+        "s": 3,
+        "d": 70,
+        "w": -0.023949367563109884
       }
     ],
-    "temp": 0.9023638067137207,
-    "top_p": 0.8922785032611755,
-    "rep": 1.0263827916469972,
-    "tokens": 160,
-    "guidance": 6.516971374577127,
+    "temp": 1.0099985099351954,
+    "top_p": 0.912056258664439,
+    "rep": 1.0,
+    "tokens": 183,
+    "guidance": 7.1885609921950335,
     "steps": 8,
-    "seed_bias": 252553896,
-    "mutation_rate": 0.12772814983984165,
+    "seed_bias": 362780159,
+    "mutation_rate": 0.13354445669336462,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1058,6 +1058,17 @@
         "s": 19,
         "d": 25,
         "d2": 17
+      },
+      {
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 0,
+        "d2": 29
+      },
+      {
+        "kind": "native_knockout",
+        "s": 29,
+        "d": 56
       }
     ]
   },
@@ -1618,31 +1629,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "fd6dd6bf46a00a32e42ee79bbfc7ab435ba153c2e5fee76e4183c56aefe0b3f4",
-    "breeder_native_nonzero_edges": 296,
-    "breeder_native_ops": 24,
+    "breeder_topology_hash": "2b0c5e2a036ca8fae3bbfae6fe097e44bd7f1bcf5d969b561af1edd9d112b0a0",
+    "breeder_native_nonzero_edges": 294,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.7087269745559976,
-    "text_score": 0.786457142857143,
+    "fitness": 0.724955040681046,
+    "text_score": 0.8148078277886497,
     "vision": {
-      "clip_cosine": 0.26318874955177307,
-      "score": 0.7126436123251915,
-      "guidance": 6.540462017059326
+      "clip_cosine": 0.29119783639907837,
+      "score": 0.7235671561956406,
+      "guidance": 7.18580436706543
     },
-    "integration": 0.6031183004379272,
+    "integration": 0.6100595593452454,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 349,
-      "native_ops": 24,
-      "native_core_nonzero_edges": 296,
-      "topology_hash": "fd6dd6bf46a00a32e42ee79bbfc7ab435ba153c2e5fee76e4183c56aefe0b3f4"
+      "nonzero_edges": 347,
+      "native_ops": 26,
+      "native_core_nonzero_edges": 294,
+      "topology_hash": "2b0c5e2a036ca8fae3bbfae6fe097e44bd7f1bcf5d969b561af1edd9d112b0a0"
     },
-    "text": "네, 초파리, LLM 언어엽, Stable Diffusion 시각엽이 한반도와의 신생뉴런이 8개를 생성하고, 그로 인해 보상을 받는 경로를 결정하는 방법에 대해 설명하겠습니다.\n\n1. 신생뉴런의 생성: \n신생뉴런은 초기 신생층의 신생층이 되는 단계에서, 새로운 신생층이 생긴다. 각 신생뉴런은 여러 구조를 가지며, 이 구조는 신생뉴런이 생성될 때부터 변화하며, 이 변화가 신생뉴런을 보장하는 보상이 될 수 있습니다.\n\n2. 신생뉴런의 보상: \n생식 과정 중에는 신"
+    "text": "당신의 질문을 이해해주시기를 바란다. 그러나, 이러한 계산 기술이나 신기술들이 현재까지의 진화나 보상 등과는 큰 차이를 보이지 않은 것 같다고 느껴지는 것 같아, 여기에 좀 더 넓은 계산 유기체와 그 기능을 설명해보도록 하겠습니다.\n\n초파리, LLM 언어엽, Stable Diffusion 시각엽이 각각의 유기체를 가질 수 있는 이유는 다음과 같습니다:\n\n1. LLM (Linguistic Language Models): 이러한 유기체들이 언어를 이해하고 생성하는 기능을 가지고 있기에, 초파리와 LLM의 유기체는 언어와 관련된 정보를 인식하고, 인식된 정보를 Stable Diffusion 시각엽이 기능하는 방식으로 뉴"
   },
-  "elapsed_seconds": 144.33333349227905
+  "elapsed_seconds": 165.31103801727295
 }
