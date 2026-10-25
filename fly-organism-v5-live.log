@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 161 native_ops 31 neo 8
-V5_FITNESS 0 0.5898876676984155 topology b3c188d015f505e8
-V5_EVALUATE 1 generation 161 native_ops 24 neo 7
-V5_FITNESS 1 0.6484446870511145 topology 9d4d96285e1ccf1c
-V5_EVALUATE 2 generation 161 native_ops 30 neo 8
-V5_FITNESS 2 0.6886502944108531 topology fe5fe329361b0f7a
-V5_EVALUATE 3 generation 161 native_ops 24 neo 8
-V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
+V5_EVALUATE 0 generation 162 native_ops 33 neo 8
+V5_FITNESS 0 0.5968142272168719 topology 17ca29b848eb9ff5
+V5_EVALUATE 1 generation 162 native_ops 24 neo 7
+V5_FITNESS 1 0.619548004290422 topology eb370b0297e4fed2
+V5_EVALUATE 2 generation 162 native_ops 33 neo 8
+V5_FITNESS 2 0.6827327388357257 topology 11acf5861e947607
+V5_EVALUATE 3 generation 162 native_ops 26 neo 8
+V5_FITNESS 3 0.685007235766354 topology ab6d63a495b103ca
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 161,
+  "generation": 162,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6886502944108531,
+  "breeder_fitness": 0.685007235766354,
   "breeder_genome": {
-    "generation": 161,
+    "generation": 162,
     "active_neo": 8,
     "mutations": [
       {
@@ -584,7 +584,7 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       },
       {
         "s": 16,
-        "d": 48,
+        "d": 77,
         "w": 0.06374669265959357
       },
       {
@@ -593,9 +593,14 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "w": 0.25296394609503564
       },
       {
+        "s": 36,
+        "d": 71,
+        "w": 0.34418986132674934
+      },
+      {
         "s": 15,
-        "d": 66,
-        "w": 0.4092049848886282
+        "d": 70,
+        "w": 0.16285621598068806
       },
       {
         "s": 25,
@@ -605,7 +610,7 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       {
         "s": 12,
         "d": 69,
-        "w": 0.1244619027092394
+        "w": 0.16354072816316845
       },
       {
         "s": 31,
@@ -624,7 +629,7 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       },
       {
         "s": 16,
-        "d": 57,
+        "d": 72,
         "w": 0.31742328197512787
       },
       {
@@ -633,14 +638,24 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "w": 0.17259858519218624
       },
       {
+        "s": 56,
+        "d": 63,
+        "w": -0.010887225702254144
+      },
+      {
         "s": 4,
         "d": 70,
         "w": 0.34054638380540647
       },
       {
+        "s": 24,
+        "d": 68,
+        "w": 0.21436826240660092
+      },
+      {
         "s": 80,
         "d": 27,
-        "w": 0.39850906623877586
+        "w": 0.22370636467844354
       },
       {
         "s": 64,
@@ -660,7 +675,7 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       {
         "s": 72,
         "d": 56,
-        "w": 0.11597685890656392
+        "w": 0.23706152361750082
       },
       {
         "s": 73,
@@ -708,9 +723,19 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "w": 0.24894754237579658
       },
       {
+        "s": 68,
+        "d": 55,
+        "w": 0.1404988637402192
+      },
+      {
         "s": 67,
         "d": 77,
         "w": 0.18265625768602867
+      },
+      {
+        "s": 81,
+        "d": 41,
+        "w": 0.16480866791870333
       },
       {
         "s": 41,
@@ -733,9 +758,14 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "w": -0.46739334019630424
       },
       {
+        "s": 77,
+        "d": 34,
+        "w": 0.13763792143046977
+      },
+      {
         "s": 37,
         "d": 67,
-        "w": -0.11252836995534124
+        "w": 0.01241507889751095
       },
       {
         "s": 85,
@@ -743,7 +773,7 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "w": -0.3376621257483604
       },
       {
-        "s": 48,
+        "s": 61,
         "d": 49,
         "w": -0.7684698965507634
       },
@@ -753,9 +783,14 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "w": 0.49895103067973356
       },
       {
+        "s": 8,
+        "d": 18,
+        "w": -0.10674372775271015
+      },
+      {
         "s": 37,
         "d": 11,
-        "w": 0.06496584479180756
+        "w": 0.07557864290041133
       },
       {
         "s": 80,
@@ -785,7 +820,7 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       {
         "s": 62,
         "d": 57,
-        "w": 0.4552295637348379
+        "w": 0.2843096550247773
       },
       {
         "s": 37,
@@ -809,8 +844,13 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       },
       {
         "s": 67,
-        "d": 29,
+        "d": 11,
         "w": 0.17916128425034272
+      },
+      {
+        "s": 83,
+        "d": 79,
+        "w": 0.3119341778787293
       },
       {
         "s": 20,
@@ -874,48 +914,18 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
       },
       {
         "s": 66,
-        "d": 47,
+        "d": 32,
         "w": -0.1646482593890624
-      },
-      {
-        "s": 74,
-        "d": 8,
-        "w": -0.39258073260315585
-      },
-      {
-        "s": 64,
-        "d": 1,
-        "w": -0.03315832522950408
-      },
-      {
-        "s": 85,
-        "d": 69,
-        "w": 0.11123714585851795
-      },
-      {
-        "s": 36,
-        "d": 10,
-        "w": 0.3525586988590391
-      },
-      {
-        "s": 50,
-        "d": 27,
-        "w": 0.2294417956562568
-      },
-      {
-        "s": 77,
-        "d": 36,
-        "w": 0.04341037420701585
       }
     ],
-    "temp": 0.8853905877961987,
-    "top_p": 0.8156865168129301,
-    "rep": 1.0677863741862617,
-    "tokens": 156,
-    "guidance": 6.4970770898554635,
-    "steps": 6,
-    "seed_bias": 920673199,
-    "mutation_rate": 0.10793827419261544,
+    "temp": 0.9023638067137207,
+    "top_p": 0.8922785032611755,
+    "rep": 1.0263827916469972,
+    "tokens": 160,
+    "guidance": 6.516971374577127,
+    "steps": 8,
+    "seed_bias": 252553896,
+    "mutation_rate": 0.12772814983984165,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1052,44 +1062,22 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
         "factor": 1.3351595476818898
       },
       {
-        "kind": "native_knockout",
-        "s": 10,
-        "d": 60
+        "kind": "native_rewire",
+        "s": 28,
+        "d": 23,
+        "d2": 47
       },
       {
         "kind": "native_scale",
-        "s": 60,
-        "d": 28,
-        "factor": 2.5
+        "s": 35,
+        "d": 2,
+        "factor": 0.9004158468054941
       },
       {
         "kind": "native_rewire",
-        "s": 33,
-        "d": 27,
-        "d2": 51
-      },
-      {
-        "kind": "native_knockout",
-        "s": 60,
-        "d": 0
-      },
-      {
-        "kind": "native_scale",
         "s": 2,
-        "d": 19,
-        "factor": 0.5606296605194286
-      },
-      {
-        "kind": "native_rewire",
-        "s": 60,
-        "d": 26,
-        "d2": 56
-      },
-      {
-        "kind": "native_scale",
-        "s": 60,
-        "d": 58,
-        "factor": 1.158420761814081
+        "d": 35,
+        "d2": 51
       }
     ]
   },
@@ -1650,31 +1638,31 @@ V5_FITNESS 3 0.6008892914895274 topology 57854bd3ea3de565
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "fe5fe329361b0f7acc64360f24b5705164ac8ce6cc1824b4c3b0ebdb6e89da36",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "ab6d63a495b103ca31a85d2d440d8b2169d38489c3b4bc02bcb28f5766dad9ae",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6886502944108531,
-    "text_score": 0.7196126984126985,
+    "fitness": 0.685007235766354,
+    "text_score": 0.7030857142857143,
     "vision": {
-      "clip_cosine": 0.22978931665420532,
-      "score": 0.6996178334951401,
-      "guidance": 6.5043792724609375
+      "clip_cosine": 0.25965040922164917,
+      "score": 0.7112636595964432,
+      "guidance": 6.518394947052002
     },
-    "integration": 0.6752009987831116,
+    "integration": 0.6545920968055725,
     "structure": {
-      "mutations": 73,
+      "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 346,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "fe5fe329361b0f7acc64360f24b5705164ac8ce6cc1824b4c3b0ebdb6e89da36"
+      "nonzero_edges": 350,
+      "native_ops": 26,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "ab6d63a495b103ca31a85d2d440d8b2169d38489c3b4bc02bcb28f5766dad9ae"
     },
-    "text": "네, 초파리, LLM, Stable Diffusion 시각엽과 연결되어 있는 계산 유기체는 신생뉴런과 관련된 특성을 나타내는 계산 유기체 중 하나입니다. 이 유기체은 신생뉴런과 같은 신생 신호 전달 역할을 수행합니다.\n\n그러나, 이 유기체의 주요 기능은 LLM(Language Model, 언어 모델)이 아니라 Stable Diffusion 시각엽입니다. Stable Diffusion는 AI 어시스턴트인 Stable Diffusion AI에서 사용됩니다. 이 유기체은 Stable Diffusion 시각엽이 사용한 정보를 받아들이고, 그 결과를 다시 LLM로 보낼 수 있습니다.\n\n정확"
+    "text": "세대 162의 사고 사이클은 신생뉴런과 구조변이를 포함한 다양한 신경상태를 공유하는 계산 유기체의 주요 과정을 설명합니다. \n\n1. **신생뉴런**:\n   - 신생뉴런은 초파리, LLM, Stable Diffusion 시각엽을 통해 생성된 빠르게 변화를 일으키는 놈이며, 이들은 신생뉴런의 기능을 결정합니다.\n\n2. **구조변이**:\n   - 구조변이는 신생뉴런이 생성될 때마다 생성된 신생뉴런의 상태를 결정합니다. 이는 놈들의 구조와 방식을"
   },
-  "elapsed_seconds": 151.06123280525208
+  "elapsed_seconds": 145.85388708114624
 }
