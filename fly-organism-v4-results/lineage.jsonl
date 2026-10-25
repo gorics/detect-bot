@@ -149,3 +149,4 @@
 {"generation": 161, "breeder_fitness": 0.6886502944108531, "champion_fitness": 0.7871207945289215, "improved": false, "breeder_hash": "fe5fe329361b0f7acc64360f24b5705164ac8ce6cc1824b4c3b0ebdb6e89da36", "native_ops": 30}
 {"generation": 162, "breeder_fitness": 0.685007235766354, "champion_fitness": 0.7871207945289215, "improved": false, "breeder_hash": "ab6d63a495b103ca31a85d2d440d8b2169d38489c3b4bc02bcb28f5766dad9ae", "native_ops": 26}
 {"generation": 163, "breeder_fitness": 0.6972566832439135, "champion_fitness": 0.7871207945289215, "improved": false, "breeder_hash": "9d456202abaecd9a68525cc21ea74c8a2b6b9224ddc5ecf0aa0079def7cf1059", "native_ops": 24}
+{"generation": 164, "breeder_fitness": 0.6290627145401354, "champion_fitness": 0.7871207945289215, "improved": false, "breeder_hash": "5df21d861cb6aa2b9e90b91dd03a9a9be8c9e224996b311b6634a0464cbd6d2e", "native_ops": 24}
