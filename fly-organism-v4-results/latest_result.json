@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 168,
+  "generation": 169,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.671781150526509,
+  "breeder_fitness": 0.6905373943945907,
   "breeder_genome": {
-    "generation": 168,
+    "generation": 169,
     "active_neo": 7,
     "mutations": [
       {
@@ -1070,9 +1070,21 @@
       },
       {
         "kind": "native_birth",
-        "s": 21,
-        "d": 27,
-        "w": 0.15131779615915475
+        "s": 23,
+        "d": 43,
+        "w": -0.027784258420119935
+      },
+      {
+        "kind": "native_rewire",
+        "s": 11,
+        "d": 0,
+        "d2": 23
+      },
+      {
+        "kind": "native_scale",
+        "s": 23,
+        "d": 8,
+        "factor": 0.786876587265641
       }
     ]
   },
@@ -1633,31 +1645,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "883979f65f9eb40d9a527aafbe2e5c9eaa38b7c33b0097b7b061205b158c38b6",
+    "breeder_topology_hash": "46f4fa977848280684cefd5f3f36a279b0097507ef2caae8a1aaeb2c8f230c38",
     "breeder_native_nonzero_edges": 301,
-    "breeder_native_ops": 24,
+    "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.671781150526509,
-    "text_score": 0.6781759103641456,
+    "fitness": 0.6905373943945907,
+    "text_score": 0.7084285714285714,
     "vision": {
-      "clip_cosine": 0.25052785873413086,
-      "score": 0.707705864906311,
-      "guidance": 7.049076080322266
+      "clip_cosine": 0.3142372965812683,
+      "score": 0.7325525456666946,
+      "guidance": 7.033497333526611
     },
-    "integration": 0.6325058341026306,
+    "integration": 0.6116970777511597,
     "structure": {
       "mutations": 78,
       "active_neo": 7,
       "nonzero_edges": 351,
-      "native_ops": 24,
+      "native_ops": 26,
       "native_core_nonzero_edges": 301,
-      "topology_hash": "883979f65f9eb40d9a527aafbe2e5c9eaa38b7c33b0097b7b061205b158c38b6"
+      "topology_hash": "46f4fa977848280684cefd5f3f36a279b0097507ef2caae8a1aaeb2c8f230c38"
     },
-    "text": "세대 168의 사고 사이클은 신생뉴런과 연결된 구조변이를 통해 기존의 신생뉴런을 개선하고 확장하는 신생 신경계의 작동 방식입니다. 이 사이클은 신생뉴런과 신생 신경계의 작동 속도와 효율성을 향상시키는데重要作用합니다.\n\n1. **초파리** : 신생뉴런의 초기 상태를 나타내는 신경 상태를 말합니다.\n2. **connectome** : 신생뉴런과 연결된 신생 신경계를 나타냅니다.\n3. **LLM** : 신생 신경계의 전신인 뇌에서 생성되는 신"
+    "text": "초파리, LLM, Stable Diffusion, 신생뉴런, 뇌활성, 생성, 뉴런, 진화, 보상, 선택, 패턴, 변화, 모델의 성장, 신생물의 생리적 변화, 생성물의 성장, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물"
   },
-  "elapsed_seconds": 150.3813192844391
+  "elapsed_seconds": 176.41773319244385
 }
