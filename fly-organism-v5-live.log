@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 169 native_ops 25 neo 7
-V5_FITNESS 0 0.596063389371758 topology c145ee87dff25c32
-V5_EVALUATE 1 generation 169 native_ops 26 neo 7
-V5_FITNESS 1 0.6905373943945907 topology 46f4fa9778482806
-V5_EVALUATE 2 generation 169 native_ops 27 neo 8
-V5_FITNESS 2 0.5732761179256597 topology e0c4c82878e94c2a
-V5_EVALUATE 3 generation 169 native_ops 26 neo 8
-V5_FITNESS 3 0.6405290000403893 topology d9e9a62330834d3f
+V5_EVALUATE 0 generation 170 native_ops 29 neo 8
+V5_FITNESS 0 0.6133272726337721 topology e7441ca757bc85cf
+V5_EVALUATE 1 generation 170 native_ops 26 neo 7
+V5_FITNESS 1 0.6510463227985472 topology 510a522e72208f53
+V5_EVALUATE 2 generation 170 native_ops 27 neo 7
+V5_FITNESS 2 0.5904734850132013 topology 918512dea3517aad
+V5_EVALUATE 3 generation 170 native_ops 26 neo 8
+V5_FITNESS 3 0.5471670715030426 topology 4543394e30e900fe
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 169,
+  "generation": 170,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.6405290000403893 topology d9e9a62330834d3f
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6905373943945907,
+  "breeder_fitness": 0.6510463227985472,
   "breeder_genome": {
-    "generation": 169,
+    "generation": 170,
     "active_neo": 7,
     "mutations": [
       {
@@ -1078,21 +1078,21 @@ V5_FITNESS 3 0.6405290000403893 topology d9e9a62330834d3f
       },
       {
         "kind": "native_birth",
-        "s": 23,
-        "d": 43,
-        "w": -0.027784258420119935
-      },
-      {
-        "kind": "native_rewire",
-        "s": 11,
-        "d": 0,
-        "d2": 23
+        "s": 38,
+        "d": 7,
+        "w": 0.07798553080879694
       },
       {
         "kind": "native_scale",
-        "s": 23,
+        "s": 60,
         "d": 8,
-        "factor": 0.786876587265641
+        "factor": 0.8775621292968725
+      },
+      {
+        "kind": "native_scale",
+        "s": 15,
+        "d": 60,
+        "factor": 1.148202488577908
       }
     ]
   },
@@ -1653,7 +1653,7 @@ V5_FITNESS 3 0.6405290000403893 topology d9e9a62330834d3f
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "46f4fa977848280684cefd5f3f36a279b0097507ef2caae8a1aaeb2c8f230c38",
+    "breeder_topology_hash": "510a522e72208f538991c6aecd370cd7ae73dd07a1a2b50ab8d5b1b692de64c3",
     "breeder_native_nonzero_edges": 301,
     "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
@@ -1661,23 +1661,23 @@ V5_FITNESS 3 0.6405290000403893 topology d9e9a62330834d3f
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6905373943945907,
-    "text_score": 0.7084285714285714,
+    "fitness": 0.6510463227985472,
+    "text_score": 0.6205142857142857,
     "vision": {
-      "clip_cosine": 0.3142372965812683,
-      "score": 0.7325525456666946,
-      "guidance": 7.033497333526611
+      "clip_cosine": 0.2319321632385254,
+      "score": 0.7004535436630249,
+      "guidance": 7.056716442108154
     },
-    "integration": 0.6116970777511597,
+    "integration": 0.6572956442832947,
     "structure": {
       "mutations": 78,
       "active_neo": 7,
       "nonzero_edges": 351,
       "native_ops": 26,
       "native_core_nonzero_edges": 301,
-      "topology_hash": "46f4fa977848280684cefd5f3f36a279b0097507ef2caae8a1aaeb2c8f230c38"
+      "topology_hash": "510a522e72208f538991c6aecd370cd7ae73dd07a1a2b50ab8d5b1b692de64c3"
     },
-    "text": "초파리, LLM, Stable Diffusion, 신생뉴런, 뇌활성, 생성, 뉴런, 진화, 보상, 선택, 패턴, 변화, 모델의 성장, 신생물의 생리적 변화, 생성물의 성장, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물의 생리적 변화, 신생물"
+    "text": "세대 170의 사고 사이클은 신생뉴런과 구조변이, 그리고 신생뉴런의 진화, 보상, 생성, 평가, 선택, 돌연변이 등을 포함하여 매우 복잡하고 고도화된 과정을 나타냅니다. 이 과정을 이해하려면 세 번째 레벨의 신생뉴런에 대한 이해를 필수적입니다. \n\n1. 신생뉴런: 이는 신생 신호 처리 기관으로서 신생뉴런이 뇌에 어떤 정보를 받아들이는지를 결정하는 데 사용됩니다. 신생뉴런에는 여러 개의 신생 신호를 가지고 있으며, 이는 신"
   },
-  "elapsed_seconds": 176.41773319244385
+  "elapsed_seconds": 125.64743280410767
 }
