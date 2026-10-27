@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 171,
+  "generation": 172,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -529,9 +529,9 @@
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.5887493851650216,
+  "breeder_fitness": 0.713585075388897,
   "breeder_genome": {
-    "generation": 171,
+    "generation": 172,
     "active_neo": 8,
     "mutations": [
       {
@@ -1055,21 +1055,14 @@
       },
       {
         "kind": "native_scale",
-        "s": 3,
-        "d": 5,
-        "factor": 1.5651192097844366
+        "s": 35,
+        "d": 2,
+        "factor": 0.5153259992571368
       },
       {
-        "kind": "native_scale",
-        "s": 60,
-        "d": 17,
-        "factor": 0.9355414445249174
-      },
-      {
-        "kind": "native_birth",
-        "s": 16,
-        "d": 55,
-        "w": 0.025048198668210397
+        "kind": "native_knockout",
+        "s": 15,
+        "d": 35
       }
     ]
   },
@@ -1630,31 +1623,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "8f84d395df2b5b4505b5cdbc1f2090491ea46a7cd3f893bfef6ae1ba3ded0ab4",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 26,
+    "breeder_topology_hash": "f79e611eb33581b2b4e2b282fe7b42e547f1db853f8f7b0703d1ab11f9ef5047",
+    "breeder_native_nonzero_edges": 296,
+    "breeder_native_ops": 25,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.5887493851650216,
-    "text_score": 0.47137142857142855,
+    "fitness": 0.713585075388897,
+    "text_score": 0.8142904761904762,
     "vision": {
-      "clip_cosine": 0.27780264616012573,
-      "score": 0.7183430320024491,
-      "guidance": 6.5144147872924805
+      "clip_cosine": 0.22764962911605835,
+      "score": 0.6987833553552628,
+      "guidance": 6.520992755889893
     },
-    "integration": 0.564140796661377,
+    "integration": 0.6065828204154968,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 351,
-      "native_ops": 26,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "8f84d395df2b5b4505b5cdbc1f2090491ea46a7cd3f893bfef6ae1ba3ded0ab4"
+      "nonzero_edges": 349,
+      "native_ops": 25,
+      "native_core_nonzero_edges": 296,
+      "topology_hash": "f79e611eb33581b2b4e2b282fe7b42e547f1db853f8f7b0703d1ab11f9ef5047"
     },
-    "text": "세대 171의 사고 사이클은 다음과 같이 구성됩니다:\n\n1. 입력 (Input): 세대 171의 신생뉴런이 받아온 정보를 기반으로 작동합니다.\n\n2. 뇌활성 (Activation): 신생뉴런이 신호를 생성하고, 이는 신경계에서 활동하는 전신에 의해 반응합니다.\n\n3. 뇌정신기 (Neuron)의 발달 (Synapse Formation): 뇌정신기의 연결이 형성되며, 신생뉴런이 전신에 의해 전달됩니다.\n\n4. 신경적 신호 (Neural Signal)의 감소 (Depolarization): 뇌정신기가 신호"
+    "text": "세대 172의 사고 사이클은 다음과 같이 구체적으로 분석할 수 있습니다:\n\n1. **초파리 (Connectome)**: 신생뉴런이 신생 신경계에 연결되어 있으며, 이는 신경 기관의 구조 변화를 나타냅니다.\n\n2. **LLM (Language Models)**: 신생 신경계에 의해 생성된 언어 모델입니다.\n\n3. **Stable Diffusion (Diffusion Style Transfer)**: Stable Diffusion를 사용하여 뉴런에 대한 신경계의 변화를 표현합니다.\n\n4. **RBF (Radial Basis Function)**: 뉴런 간의 연결 강도를 결정하는 레이어 모델입니다.\n\n5."
   },
-  "elapsed_seconds": 176.25029110908508
+  "elapsed_seconds": 162.17310905456543
 }

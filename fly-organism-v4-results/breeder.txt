@@ -1,9 +1,11 @@
-세대 171의 사고 사이클은 다음과 같이 구성됩니다:
+세대 172의 사고 사이클은 다음과 같이 구체적으로 분석할 수 있습니다:
 
-1. 입력 (Input): 세대 171의 신생뉴런이 받아온 정보를 기반으로 작동합니다.
+1. **초파리 (Connectome)**: 신생뉴런이 신생 신경계에 연결되어 있으며, 이는 신경 기관의 구조 변화를 나타냅니다.
 
-2. 뇌활성 (Activation): 신생뉴런이 신호를 생성하고, 이는 신경계에서 활동하는 전신에 의해 반응합니다.
+2. **LLM (Language Models)**: 신생 신경계에 의해 생성된 언어 모델입니다.
 
-3. 뇌정신기 (Neuron)의 발달 (Synapse Formation): 뇌정신기의 연결이 형성되며, 신생뉴런이 전신에 의해 전달됩니다.
+3. **Stable Diffusion (Diffusion Style Transfer)**: Stable Diffusion를 사용하여 뉴런에 대한 신경계의 변화를 표현합니다.
 
-4. 신경적 신호 (Neural Signal)의 감소 (Depolarization): 뇌정신기가 신호
+4. **RBF (Radial Basis Function)**: 뉴런 간의 연결 강도를 결정하는 레이어 모델입니다.
+
+5.
