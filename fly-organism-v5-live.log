@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 178 native_ops 32 neo 5
-V5_FITNESS 0 0.5882296133781331 topology 357f8772f5160954
-V5_EVALUATE 1 generation 178 native_ops 26 neo 7
-V5_FITNESS 1 0.5861377623697399 topology 1c47cd0e34fcef56
-V5_EVALUATE 2 generation 178 native_ops 30 neo 7
-V5_FITNESS 2 0.5812864658063819 topology e36c403f1a2ddb76
-V5_EVALUATE 3 generation 178 native_ops 26 neo 8
-V5_FITNESS 3 0.7529319003606637 topology 53444971dba878ee
+V5_EVALUATE 0 generation 179 native_ops 29 neo 8
+V5_FITNESS 0 0.5352149918441044 topology 70661d511f02d406
+V5_EVALUATE 1 generation 179 native_ops 26 neo 7
+V5_FITNESS 1 0.5796652254954235 topology 7f81512d4fdfe434
+V5_EVALUATE 2 generation 179 native_ops 29 neo 8
+V5_FITNESS 2 0.5515369031680554 topology 6689b99322f93b34
+V5_EVALUATE 3 generation 179 native_ops 26 neo 8
+V5_FITNESS 3 0.6419842851151383 topology 7cd25d733d449da9
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 178,
+  "generation": 179,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.7529319003606637 topology 53444971dba878ee
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.7529319003606637,
+  "breeder_fitness": 0.6419842851151383,
   "breeder_genome": {
-    "generation": 178,
+    "generation": 179,
     "active_neo": 8,
     "mutations": [
       {
@@ -1064,18 +1064,20 @@ V5_FITNESS 3 0.7529319003606637 topology 53444971dba878ee
       {
         "kind": "native_scale",
         "s": 60,
-        "d": 10,
-        "factor": 0.5604691383604976
+        "d": 19,
+        "factor": 1.649484939199001
       },
       {
-        "kind": "native_knockout",
-        "s": 25,
-        "d": 27
+        "kind": "native_scale",
+        "s": 28,
+        "d": 19,
+        "factor": 1.3709340276037312
       },
       {
-        "kind": "native_knockout",
-        "s": 23,
-        "d": 2
+        "kind": "native_rewire",
+        "s": 26,
+        "d": 21,
+        "d2": 45
       }
     ]
   },
@@ -1636,31 +1638,31 @@ V5_FITNESS 3 0.7529319003606637 topology 53444971dba878ee
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "53444971dba878eeee0d4f5c7c0b295aee3005b65147abcc773597005bae262d",
-    "breeder_native_nonzero_edges": 295,
+    "breeder_topology_hash": "7cd25d733d449da91b717c15084c1e63c360601e50fdcf7d0cd0bef8a4304f7e",
+    "breeder_native_nonzero_edges": 297,
     "breeder_native_ops": 26,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.7529319003606637,
-    "text_score": 0.9324,
+    "fitness": 0.6419842851151383,
+    "text_score": 0.6098803234501348,
     "vision": {
-      "clip_cosine": 0.2403302788734436,
-      "score": 0.703728808760643,
-      "guidance": 6.535525798797607
+      "clip_cosine": 0.2930757999420166,
+      "score": 0.7242995619773864,
+      "guidance": 6.5051984786987305
     },
-    "integration": 0.5633811950683594,
+    "integration": 0.5603094696998596,
     "structure": {
       "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 348,
+      "nonzero_edges": 350,
       "native_ops": 26,
-      "native_core_nonzero_edges": 295,
-      "topology_hash": "53444971dba878eeee0d4f5c7c0b295aee3005b65147abcc773597005bae262d"
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "7cd25d733d449da91b717c15084c1e63c360601e50fdcf7d0cd0bef8a4304f7e"
     },
-    "text": "초파리, connectome, LLM, Stable Diffusion 시각엽, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하려면, 초파리는 뉴런에 대한 입력을 받고, 뇌에서 이 뉴런과 연결된 뉴런의 상태를 변경하며, 이는 뇌의 상태를 결정하는 레이어로 바뀌게 됩니다. 이 과정은 보통 신생뉴런의 생성과 평가를 나타냅니다.\n\n이렇게 연결되면서, 뉴런은 뇌의 합성으로 이루어집니다."
+    "text": "세대 179의 사고 사이클은 신생뉴런과 구조변이, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 그리고 신생뉴런과 구조변이 모두 포함될 수 있습니다. \n\n아래는 세대 179의 사고 사이클의 기본 순서를 나타냅니다:\n\n1. 신생뉴런 = 8\n2. 구조변이 = 75\n\n이 식은 신생뉴런이 생성되는 과정에서 발생하는 다양한 변이와 변화를 나타냅니다. 신생뉴런이 생성되면, 신생뉴런과의 연결이 형성되어, 이로 인"
   },
-  "elapsed_seconds": 184.0690097808838
+  "elapsed_seconds": 153.9608497619629
 }
