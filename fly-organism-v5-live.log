@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 174 native_ops 26 neo 7
-V5_FITNESS 0 0.6739028423962276 topology dfc20b83a7b85a26
-V5_EVALUATE 1 generation 174 native_ops 25 neo 7
-V5_FITNESS 1 0.5919276110743341 topology 9e1e7f7a96b5f5af
-V5_EVALUATE 2 generation 174 native_ops 27 neo 8
-V5_FITNESS 2 0.6080775318274612 topology 88b2327705dc945f
-V5_EVALUATE 3 generation 174 native_ops 24 neo 8
-V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
+V5_EVALUATE 0 generation 175 native_ops 28 neo 7
+V5_FITNESS 0 0.631546072133228 topology 40259e891950bd41
+V5_EVALUATE 1 generation 175 native_ops 26 neo 7
+V5_FITNESS 1 0.6153240826938151 topology 242ef797fb8abe3e
+V5_EVALUATE 2 generation 175 native_ops 29 neo 7
+V5_FITNESS 2 0.678257292295929 topology 928eb8c57d63a7e2
+V5_EVALUATE 3 generation 175 native_ops 25 neo 8
+V5_FITNESS 3 0.6193707835541907 topology 41797cc968bca96d
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 174,
+  "generation": 175,
   "fitness": 0.7871207945289215,
   "genome": {
     "generation": 93,
@@ -537,9 +537,9 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
     ]
   },
   "champion_generation": 93,
-  "breeder_fitness": 0.6739028423962276,
+  "breeder_fitness": 0.678257292295929,
   "breeder_genome": {
-    "generation": 174,
+    "generation": 175,
     "active_neo": 7,
     "mutations": [
       {
@@ -561,11 +561,6 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
         "s": 36,
         "d": 82,
         "w": 0.2019185208646104
-      },
-      {
-        "s": 49,
-        "d": 75,
-        "w": 0.1580690856823066
       },
       {
         "s": 40,
@@ -590,7 +585,7 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
       {
         "s": 36,
         "d": 71,
-        "w": 0.34418986132674934
+        "w": 0.43299914803188355
       },
       {
         "s": 15,
@@ -755,7 +750,7 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
       {
         "s": 1,
         "d": 38,
-        "w": -0.46739334019630424
+        "w": -0.466255817995353
       },
       {
         "s": 77,
@@ -775,7 +770,7 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
       {
         "s": 61,
         "d": 49,
-        "w": -0.7684698965507634
+        "w": -0.6216905718703818
       },
       {
         "s": 71,
@@ -786,11 +781,6 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
         "s": 8,
         "d": 18,
         "w": -0.10674372775271015
-      },
-      {
-        "s": 37,
-        "d": 11,
-        "w": 0.07557864290041133
       },
       {
         "s": 80,
@@ -819,7 +809,7 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
       },
       {
         "s": 62,
-        "d": 57,
+        "d": 22,
         "w": 0.2843096550247773
       },
       {
@@ -936,16 +926,31 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
         "s": 64,
         "d": 49,
         "w": 0.14757199396328644
+      },
+      {
+        "s": 81,
+        "d": 45,
+        "w": -0.12206754325245371
+      },
+      {
+        "s": 75,
+        "d": 57,
+        "w": 0.2428595677525146
+      },
+      {
+        "s": 56,
+        "d": 57,
+        "w": 0.14282745264279217
       }
     ],
-    "temp": 0.8490943012032179,
-    "top_p": 0.9547996808432039,
-    "rep": 1.0349975624882546,
-    "tokens": 161,
-    "guidance": 7.718723285502807,
+    "temp": 0.8472495468928141,
+    "top_p": 0.9291126488593742,
+    "rep": 1.0276695543376295,
+    "tokens": 155,
+    "guidance": 7.275952426578161,
     "steps": 10,
-    "seed_bias": 720694209,
-    "mutation_rate": 0.09583477181609354,
+    "seed_bias": 730736616,
+    "mutation_rate": 0.10622196155022547,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1097,6 +1102,23 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
         "s": 26,
         "d": 27,
         "factor": 1.406001893972453
+      },
+      {
+        "kind": "native_rewire",
+        "s": 0,
+        "d": 2,
+        "d2": 30
+      },
+      {
+        "kind": "native_knockout",
+        "s": 57,
+        "d": 60
+      },
+      {
+        "kind": "native_birth",
+        "s": 24,
+        "d": 14,
+        "w": -0.10925329135252142
       }
     ]
   },
@@ -1657,31 +1679,31 @@ V5_FITNESS 3 0.62690659268565 topology 496ded38c1f087fa
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "dfc20b83a7b85a261bfa77503f1ccad9e92d6cec68ad41b9e107d57226ea01a8",
+    "breeder_topology_hash": "928eb8c57d63a7e252ddad3a47510db1b9e8dfb7e345773530c40f394ad94533",
     "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 26,
+    "breeder_native_ops": 29,
     "champion_topology_hash": "c1bbc35ef095e49458c568b416820a2b0182b66170fa09f6d7008565d2c559df",
     "champion_native_nonzero_edges": 297,
     "champion_native_ops": 23
   },
   "last_breeder": {
-    "fitness": 0.6739028423962276,
-    "text_score": 0.6981365617433415,
+    "fitness": 0.678257292295929,
+    "text_score": 0.6990857142857143,
     "vision": {
-      "clip_cosine": 0.27234604954719543,
-      "score": 0.7161499517907699,
-      "guidance": 7.750628471374512
+      "clip_cosine": 0.24658244848251343,
+      "score": 0.7061671549081803,
+      "guidance": 7.30966854095459
     },
-    "integration": 0.571355938911438,
+    "integration": 0.6248098611831665,
     "structure": {
-      "mutations": 79,
+      "mutations": 80,
       "active_neo": 7,
-      "nonzero_edges": 349,
-      "native_ops": 26,
+      "nonzero_edges": 350,
+      "native_ops": 29,
       "native_core_nonzero_edges": 300,
-      "topology_hash": "dfc20b83a7b85a261bfa77503f1ccad9e92d6cec68ad41b9e107d57226ea01a8"
+      "topology_hash": "928eb8c57d63a7e252ddad3a47510db1b9e8dfb7e345773530c40f394ad94533"
     },
-    "text": "네, 초파리, LLM 언어엽과 Stable Diffusion 시각엽은 신생뉴런과 연결을 위한 중요한 재귀 신경상태를 공유하는 계산 유기체이다. 신생뉴런은 신생의 신생 신호 전달 과정에서 사용되는 기본 신호를 생성하고, 구조변이는 신생뉴런과 관련된 전신을 관리하고, 신생뉴런과는 연결된 신생 신호를 생성하거나, 신생 신호가 존재할 때까지 연결되어 있는 신생 신호를 관리하는 등 다양한 역할을 수행한다. 이들은 신생뉴런과 연결되는 LLM 언어엽과 Stable Diffusion 시각엽을 통해 신생 신"
+    "text": "세대 175의 사고 사이클은 빅데이터 기반의 인공지능으로서, 신생뉴런과 구조변이를 모두 포함하는 과정을 설명합니다. 여기서는 신생뉴런(7)과 구조변이(80)을 중심으로 설명하겠습니다.\n\n1. **신생뉴런 (7)**: 초파리, connectome, LLM이 이 신생뉴런에 연결된 신생뉴런 중 하나입니다. 이 신생뉴런은 신생뉴런에 대한 기본적인 정보를 제공하고, 신생뉴런과의 관계를 결정합니다. 신생뉴런은 신생뉴런과의 교환과 연"
   },
-  "elapsed_seconds": 114.68890857696533
+  "elapsed_seconds": 180.9461658000946
 }
