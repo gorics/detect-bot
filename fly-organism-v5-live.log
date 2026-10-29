@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 182 native_ops 32 neo 7
-V5_FITNESS 0 0.6837893335548204 topology 347705bdfe108f95
-V5_EVALUATE 1 generation 182 native_ops 29 neo 8
-V5_FITNESS 1 0.5883721902117587 topology 7c6018ad8cd91f02
-V5_EVALUATE 2 generation 182 native_ops 33 neo 8
-V5_FITNESS 2 0.6041040941660493 topology 4491ec300dea2943
-V5_EVALUATE 3 generation 182 native_ops 29 neo 8
-V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
+V5_EVALUATE 0 generation 183 native_ops 35 neo 7
+V5_FITNESS 0 0.6346141198768099 topology f7d2eaff8aee4fd0
+V5_EVALUATE 1 generation 183 native_ops 31 neo 8
+V5_FITNESS 1 0.620070837542148 topology 0aab0ca69691b16f
+V5_EVALUATE 2 generation 183 native_ops 34 neo 7
+V5_FITNESS 2 0.7338889951379375 topology 6245b9c69a6fed10
+V5_EVALUATE 3 generation 183 native_ops 31 neo 8
+V5_FITNESS 3 0.651974817286217 topology b8732c2d66868032
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 182,
+  "generation": 183,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6837893335548204,
+  "breeder_fitness": 0.7338889951379375,
   "breeder_genome": {
-    "generation": 182,
+    "generation": 183,
     "active_neo": 7,
     "mutations": [
       {
@@ -638,11 +638,6 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
         "w": -0.13291464922355767
       },
       {
-        "s": 12,
-        "d": 69,
-        "w": 0.16354072816316845
-      },
-      {
         "s": 31,
         "d": 67,
         "w": 0.24604235304185987
@@ -690,12 +685,12 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
       {
         "s": 64,
         "d": 55,
-        "w": 0.2144423835061946
+        "w": 0.25007155609421694
       },
       {
         "s": 74,
         "d": 34,
-        "w": 0.3226111658644244
+        "w": 0.23247385367314183
       },
       {
         "s": 85,
@@ -710,7 +705,7 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
       {
         "s": 73,
         "d": 37,
-        "w": 0.08816578556433018
+        "w": -0.03593014294239112
       },
       {
         "s": 64,
@@ -764,7 +759,7 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
       },
       {
         "s": 71,
-        "d": 66,
+        "d": 68,
         "w": 0.2746354771278136
       },
       {
@@ -800,7 +795,7 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
       {
         "s": 61,
         "d": 49,
-        "w": -0.7684698965507634
+        "w": -0.7953042261841825
       },
       {
         "s": 71,
@@ -868,7 +863,7 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
         "w": 0.34958081054216755
       },
       {
-        "s": 67,
+        "s": 58,
         "d": 11,
         "w": 0.17916128425034272
       },
@@ -948,19 +943,24 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
         "w": -0.003378380411915142
       },
       {
-        "s": 15,
+        "s": 34,
         "d": 44,
         "w": -0.1672821558659061
+      },
+      {
+        "s": 29,
+        "d": 10,
+        "w": 0.2458937847103429
       }
     ],
-    "temp": 0.9350359422765062,
-    "top_p": 0.9617641042303818,
-    "rep": 1.0149145964941624,
+    "temp": 0.9148657829356605,
+    "top_p": 0.9294372288527655,
+    "rep": 1.0,
     "tokens": 149,
-    "guidance": 7.150537712550811,
+    "guidance": 6.629197438972358,
     "steps": 9,
-    "seed_bias": 449289237,
-    "mutation_rate": 0.12552714757648023,
+    "seed_bias": 467725867,
+    "mutation_rate": 0.1313964373603103,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1148,6 +1148,18 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
         "s": 11,
         "d": 2,
         "factor": 1.7118585575714953
+      },
+      {
+        "kind": "native_rewire",
+        "s": 21,
+        "d": 21,
+        "d2": 18
+      },
+      {
+        "kind": "native_scale",
+        "s": 35,
+        "d": 57,
+        "factor": 0.571830384422922
       }
     ]
   },
@@ -1748,31 +1760,31 @@ V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "347705bdfe108f959e8c7e64d15f841b1330745d92ef811d1d958b9f08eaa625",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "6245b9c69a6fed108362906f6a256e46225905050b72a6df52e85796fa37d076",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 34,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6837893335548204,
-    "text_score": 0.6954857142857143,
+    "fitness": 0.7338889951379375,
+    "text_score": 0.8618285714285714,
     "vision": {
-      "clip_cosine": 0.25435101985931396,
-      "score": 0.7091968977451325,
-      "guidance": 7.161897659301758
+      "clip_cosine": 0.24729233980178833,
+      "score": 0.7064440125226975,
+      "guidance": 6.650344371795654
     },
-    "integration": 0.6729959845542908,
+    "integration": 0.6045729517936707,
     "structure": {
       "mutations": 74,
       "active_neo": 7,
-      "nonzero_edges": 347,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "347705bdfe108f959e8c7e64d15f841b1330745d92ef811d1d958b9f08eaa625"
+      "nonzero_edges": 346,
+      "native_ops": 34,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "6245b9c69a6fed108362906f6a256e46225905050b72a6df52e85796fa37d076"
     },
-    "text": "아래는 초파리, LLM, Stable Diffusion 등 신생 뉴런과 관련된 세 가지 계산 유기체 기법의 주요 특징 및 그들의 신생뉴런과 구조변이의 주요 요소들을 설명드립니다:\n\n1. 초파리 (Stemcell)\n- 초파리는 신생 뉴런의 생존과 생애를 기반으로 한다.\n- 초파리의 신생뉴런은 7개 (7개의 신생 뉴런)을 가지고 있다.\n- 신생뉴런의 기본 구조변이는 74개 (74개의 신생 뉴런)를 가지고 있다"
+    "text": "당신의 질문은 매우 복잡하고 깊은 과제입니다. 이에 대한 답변은 복잡한 언어와 신경과학에 대한 이해를 바탕으로 하지 않습니다. 저는 현재 이론적인 내용을 다루는 언어를 가지고 있지 않아요. 하지만 신경과학과 인공지능의 기술을 활용한 예시로 초파리, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 다루는 다양한 연구와 아이디어를 포함하는 것이 있습니다. 더 자세한 정보를 요구하시면,"
   },
-  "elapsed_seconds": 161.36190843582153
+  "elapsed_seconds": 171.83324790000916
 }
