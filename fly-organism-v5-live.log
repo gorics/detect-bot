@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 181 native_ops 30 neo 8
-V5_FITNESS 0 0.5824810220787049 topology e3da8eca01e199a1
-V5_EVALUATE 1 generation 181 native_ops 29 neo 8
-V5_FITNESS 1 0.5803255567099039 topology 34990b7b26a5c271
-V5_EVALUATE 2 generation 181 native_ops 31 neo 6
-V5_FITNESS 2 0.5364543126420047 topology 7c456332466f4391
-V5_EVALUATE 3 generation 181 native_ops 31 neo 8
-V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
+V5_EVALUATE 0 generation 182 native_ops 32 neo 7
+V5_FITNESS 0 0.6837893335548204 topology 347705bdfe108f95
+V5_EVALUATE 1 generation 182 native_ops 29 neo 8
+V5_FITNESS 1 0.5883721902117587 topology 7c6018ad8cd91f02
+V5_EVALUATE 2 generation 182 native_ops 33 neo 8
+V5_FITNESS 2 0.6041040941660493 topology 4491ec300dea2943
+V5_EVALUATE 3 generation 182 native_ops 29 neo 8
+V5_FITNESS 3 0.5942448823677623 topology 764dd55fb5f2a13e
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 181,
+  "generation": 182,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,10 +577,10 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6436915703081342,
+  "breeder_fitness": 0.6837893335548204,
   "breeder_genome": {
-    "generation": 181,
-    "active_neo": 8,
+    "generation": 182,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -600,17 +600,12 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
       {
         "s": 46,
         "d": 73,
-        "w": 0.16934542687604243
+        "w": 0.17551635120945921
       },
       {
         "s": 36,
         "d": 82,
         "w": 0.2019185208646104
-      },
-      {
-        "s": 64,
-        "d": 73,
-        "w": 0.3082584947854704
       },
       {
         "s": 49,
@@ -640,7 +635,7 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
       {
         "s": 25,
         "d": 30,
-        "w": 0.1978021474058818
+        "w": -0.13291464922355767
       },
       {
         "s": 12,
@@ -703,7 +698,7 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
         "w": 0.3226111658644244
       },
       {
-        "s": 70,
+        "s": 85,
         "d": 5,
         "w": 0.21214621551856255
       },
@@ -718,14 +713,9 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
         "w": 0.08816578556433018
       },
       {
-        "s": 33,
-        "d": 23,
-        "w": 0.2621828894627365
-      },
-      {
         "s": 64,
         "d": 68,
-        "w": 0.11658934234998806
+        "w": -0.05622942175251182
       },
       {
         "s": 6,
@@ -764,8 +754,8 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
       },
       {
         "s": 67,
-        "d": 77,
-        "w": 0.18265625768602867
+        "d": 62,
+        "w": -0.09931817194303766
       },
       {
         "s": 81,
@@ -773,7 +763,7 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
         "w": 0.16480866791870333
       },
       {
-        "s": 41,
+        "s": 71,
         "d": 66,
         "w": 0.2746354771278136
       },
@@ -963,14 +953,14 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
         "w": -0.1672821558659061
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
-    "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "temp": 0.9350359422765062,
+    "top_p": 0.9617641042303818,
+    "rep": 1.0149145964941624,
+    "tokens": 149,
+    "guidance": 7.150537712550811,
+    "steps": 9,
+    "seed_bias": 449289237,
+    "mutation_rate": 0.12552714757648023,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1152,6 +1142,12 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
         "s": 35,
         "d": 10,
         "d2": 27
+      },
+      {
+        "kind": "native_scale",
+        "s": 11,
+        "d": 2,
+        "factor": 1.7118585575714953
       }
     ]
   },
@@ -1752,31 +1748,31 @@ V5_FITNESS 3 0.6436915703081342 topology 7861f8ae9ec781e0
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "7861f8ae9ec781e0757abe91db02cbedf4e6a12d07e2eea7a72c17058eebbaf2",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "347705bdfe108f959e8c7e64d15f841b1330745d92ef811d1d958b9f08eaa625",
+    "breeder_native_nonzero_edges": 298,
+    "breeder_native_ops": 32,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6436915703081342,
-    "text_score": 0.6126024213075061,
+    "fitness": 0.6837893335548204,
+    "text_score": 0.6954857142857143,
     "vision": {
-      "clip_cosine": 0.2547706961631775,
-      "score": 0.7093605715036393,
-      "guidance": 7.235052108764648
+      "clip_cosine": 0.25435101985931396,
+      "score": 0.7091968977451325,
+      "guidance": 7.161897659301758
     },
-    "integration": 0.605950117111206,
+    "integration": 0.6729959845542908,
     "structure": {
-      "mutations": 76,
-      "active_neo": 8,
-      "nonzero_edges": 350,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "7861f8ae9ec781e0757abe91db02cbedf4e6a12d07e2eea7a72c17058eebbaf2"
+      "mutations": 74,
+      "active_neo": 7,
+      "nonzero_edges": 347,
+      "native_ops": 32,
+      "native_core_nonzero_edges": 298,
+      "topology_hash": "347705bdfe108f959e8c7e64d15f841b1330745d92ef811d1d958b9f08eaa625"
     },
-    "text": "죄송합니다만, 현재 제가 알고 있는 모든 정보에서 생존 가능성이 있는 새로운 신생 빅 엔진의 성격은 \"신생뉴런 = 8, 구조변이 = 76\" 이지, 신규 탐욕을 일으키면서 진화를 가속화한 신생 언어 약자와 관련이 없습니다. \n\n그러나, \"새로운 블록체인 트랜잭션\"이라는 기술을 제안하고 있다고 생각하는데, 이런 트렌젝션이 새로운 신생 빅 엔진에 매우 중요하게 작용할 수 있습니다.\n\n또한 신생 빅 엔진에서는 \"보상\"과 \"입력\"이 기존의 뉴런에 의해"
+    "text": "아래는 초파리, LLM, Stable Diffusion 등 신생 뉴런과 관련된 세 가지 계산 유기체 기법의 주요 특징 및 그들의 신생뉴런과 구조변이의 주요 요소들을 설명드립니다:\n\n1. 초파리 (Stemcell)\n- 초파리는 신생 뉴런의 생존과 생애를 기반으로 한다.\n- 초파리의 신생뉴런은 7개 (7개의 신생 뉴런)을 가지고 있다.\n- 신생뉴런의 기본 구조변이는 74개 (74개의 신생 뉴런)를 가지고 있다"
   },
-  "elapsed_seconds": 111.48610186576843
+  "elapsed_seconds": 161.36190843582153
 }
