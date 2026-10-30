@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 185 native_ops 32 neo 8
-V5_FITNESS 0 0.6895186715291833 topology 20035de9ee4fbf17
-V5_EVALUATE 1 generation 185 native_ops 30 neo 8
-V5_FITNESS 1 0.6844164406552542 topology df5a94b11e94792d
-V5_EVALUATE 2 generation 185 native_ops 33 neo 8
-V5_FITNESS 2 0.6204682966816544 topology 2b372b0179e4377e
-V5_EVALUATE 3 generation 185 native_ops 29 neo 8
-V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
+V5_EVALUATE 0 generation 186 native_ops 35 neo 7
+V5_FITNESS 0 0.6728613590182304 topology 72be2721505cbca4
+V5_EVALUATE 1 generation 186 native_ops 31 neo 8
+V5_FITNESS 1 0.627421886979084 topology 6a979d6b6d994bd5
+V5_EVALUATE 2 generation 186 native_ops 35 neo 8
+V5_FITNESS 2 0.5894192871982843 topology 89073bc4fe0f48ee
+V5_EVALUATE 3 generation 186 native_ops 29 neo 8
+V5_FITNESS 3 0.6251810602662544 topology 61effd3ebaaa59cd
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 185,
+  "generation": 186,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,10 +577,10 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6895186715291833,
+  "breeder_fitness": 0.6728613590182304,
   "breeder_genome": {
-    "generation": 185,
-    "active_neo": 8,
+    "generation": 186,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -653,7 +653,7 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
         "w": 0.24604235304185987
       },
       {
-        "s": 69,
+        "s": 18,
         "d": 35,
         "w": 0.14987056708493673
       },
@@ -673,7 +673,7 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
         "w": 0.17259858519218624
       },
       {
-        "s": 56,
+        "s": 80,
         "d": 63,
         "w": -0.010887225702254144
       },
@@ -720,7 +720,7 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
       {
         "s": 33,
         "d": 23,
-        "w": 0.2621828894627365
+        "w": 0.23290399610061452
       },
       {
         "s": 64,
@@ -779,7 +779,7 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
       },
       {
         "s": 57,
-        "d": 85,
+        "d": 43,
         "w": 0.1812534886086219
       },
       {
@@ -903,11 +903,6 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
         "w": 0.014565668390036278
       },
       {
-        "s": 23,
-        "d": 50,
-        "w": 0.14228569380380499
-      },
-      {
         "s": 56,
         "d": 79,
         "w": 0.09911180419786583
@@ -976,16 +971,26 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
         "s": 49,
         "d": 19,
         "w": 0.09859199668803925
+      },
+      {
+        "s": 38,
+        "d": 77,
+        "w": -0.03309938570646902
+      },
+      {
+        "s": 41,
+        "d": 41,
+        "w": 0.23064242870391813
       }
     ],
-    "temp": 1.110946021471626,
+    "temp": 1.1831646396233098,
     "top_p": 0.99,
-    "rep": 1.0722158650514795,
-    "tokens": 168,
-    "guidance": 7.062159171732106,
-    "steps": 7,
-    "seed_bias": 585925902,
-    "mutation_rate": 0.08045370382918916,
+    "rep": 1.0377663254970095,
+    "tokens": 166,
+    "guidance": 6.6828238227533365,
+    "steps": 6,
+    "seed_bias": 713786501,
+    "mutation_rate": 0.1004837096339757,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1173,6 +1178,24 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
         "s": 27,
         "d": 25,
         "factor": 0.723037805681417
+      },
+      {
+        "kind": "native_scale",
+        "s": 32,
+        "d": 37,
+        "factor": 0.9976465829589171
+      },
+      {
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 19,
+        "d2": 27
+      },
+      {
+        "kind": "native_birth",
+        "s": 30,
+        "d": 20,
+        "w": -0.03355446014865026
       }
     ]
   },
@@ -1773,31 +1796,31 @@ V5_FITNESS 3 0.5889001379335248 topology 21bde3d32f9db1df
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "20035de9ee4fbf170c3d54a66e1674b1bac42284c8ff78696618a430a66c524b",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "72be2721505cbca47bca7fc12be2031fda8ca8e1e2dbeedb9f7fb298ddf18f36",
+    "breeder_native_nonzero_edges": 301,
+    "breeder_native_ops": 35,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6895186715291833,
-    "text_score": 0.7286857142857143,
+    "fitness": 0.6728613590182304,
+    "text_score": 0.6766626373626374,
     "vision": {
-      "clip_cosine": 0.2750019431114197,
-      "score": 0.7172507578134537,
-      "guidance": 7.068114280700684
+      "clip_cosine": 0.24590063095092773,
+      "score": 0.7059012460708618,
+      "guidance": 6.680023193359375
     },
-    "integration": 0.5969512462615967,
+    "integration": 0.6449095010757446,
     "structure": {
-      "mutations": 79,
-      "active_neo": 8,
+      "mutations": 80,
+      "active_neo": 7,
       "nonzero_edges": 352,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "20035de9ee4fbf170c3d54a66e1674b1bac42284c8ff78696618a430a66c524b"
+      "native_ops": 35,
+      "native_core_nonzero_edges": 301,
+      "topology_hash": "72be2721505cbca47bca7fc12be2031fda8ca8e1e2dbeedb9f7fb298ddf18f36"
     },
-    "text": "네, 저는 초파리connectome와 Stable diffusion 기반의 모델에서 사용되는 신생뉴런에 대해 자세히 설명해 드리겠습니다:\n\n1. 신생뉴런 (Primary Neuron):\n\n신생뉴런은 새로운 행동, 새로운 감정과 신념을 창출할 뿐만 아니라, 신생 채널의 활성화 및 작전을 수행하게 합니다. 신생뉴런들은 각 층에서 다양한 전략을 활용하고, 특정 작업을 수행할 수 있습니다. \n\n2. 세대 185의 사고 사이클 (Thought-Switching Cycle):\n\n1. 충적성: 신생뉴런들이 모든 물질을 적극적으로 충집시키며 행동을 이동시킬 때, 신"
+    "text": "세대 186의 사고 사이클은 빛의 반응, 신생 높은 신생 블록(초파리), 진화, 복잡한 뉴런, 보상계, 뇌활성, 신생 블록의 활동, 뇌의 성장, 디지털 자극, 생성 등과 같은 다양한 학습 기능과 과정들을 포함하고 있습니다. \n\n아래는 세대 186의 사고 사이클의 일부분의 예:\n\n1. **시작에 관한 과정**: 전통적으로, 인간에게 기저가, 신생 높은 블록, 진화, 뉴런, 그리고 이는 �"
   },
-  "elapsed_seconds": 170.9655463695526
+  "elapsed_seconds": 167.15971422195435
 }
