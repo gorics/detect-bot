@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 187 native_ops 36 neo 8
-V5_FITNESS 0 0.5907440372873337 topology f610dd8715cce69f
-V5_EVALUATE 1 generation 187 native_ops 29 neo 8
-V5_FITNESS 1 0.5563527883332022 topology 95f6f999888b6000
-V5_EVALUATE 2 generation 187 native_ops 37 neo 8
-V5_FITNESS 2 0.5806942612201242 topology e5a05c27e7b2b8f9
-V5_EVALUATE 3 generation 187 native_ops 31 neo 8
-V5_FITNESS 3 0.6597020450485187 topology 9f60d1c34cc0558e
+V5_EVALUATE 0 generation 188 native_ops 32 neo 8
+V5_FITNESS 0 0.5870198058995992 topology ed28d1a7a1068060
+V5_EVALUATE 1 generation 188 native_ops 31 neo 8
+V5_FITNESS 1 0.5953277650350388 topology 43bd35695a3b979f
+V5_EVALUATE 2 generation 188 native_ops 33 neo 8
+V5_FITNESS 2 0.581885241154843 topology e261f688af7b2039
+V5_EVALUATE 3 generation 188 native_ops 31 neo 8
+V5_FITNESS 3 0.6181279492681073 topology d2c6e984c880a720
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 187,
+  "generation": 188,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.6597020450485187 topology 9f60d1c34cc0558e
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6597020450485187,
+  "breeder_fitness": 0.6181279492681073,
   "breeder_genome": {
-    "generation": 187,
+    "generation": 188,
     "active_neo": 8,
     "mutations": [
       {
@@ -1138,20 +1138,20 @@ V5_FITNESS 3 0.6597020450485187 topology 9f60d1c34cc0558e
       },
       {
         "kind": "native_knockout",
-        "s": 60,
-        "d": 33
+        "s": 32,
+        "d": 32
       },
       {
         "kind": "native_rewire",
-        "s": 35,
-        "d": 33,
-        "d2": 26
+        "s": 9,
+        "d": 21,
+        "d2": 31
       },
       {
         "kind": "native_scale",
-        "s": 10,
-        "d": 10,
-        "factor": 1.2254413190409192
+        "s": 60,
+        "d": 56,
+        "factor": 1.871537940188387
       }
     ]
   },
@@ -1752,31 +1752,31 @@ V5_FITNESS 3 0.6597020450485187 topology 9f60d1c34cc0558e
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "9f60d1c34cc0558ed6c96b888e4269855f1f3a4e279f7184882f8b77170ff866",
-    "breeder_native_nonzero_edges": 297,
+    "breeder_topology_hash": "d2c6e984c880a72008534c8d29d369c60161576ac89463bbf18e3f97343a732a",
+    "breeder_native_nonzero_edges": 298,
     "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6597020450485187,
-    "text_score": 0.6251476190476191,
+    "fitness": 0.6181279492681073,
+    "text_score": 0.5637181996086106,
     "vision": {
-      "clip_cosine": 0.28175434470176697,
-      "score": 0.7198841944336891,
-      "guidance": 7.216153144836426
+      "clip_cosine": 0.24709317088127136,
+      "score": 0.7063663366436959,
+      "guidance": 7.234181880950928
     },
-    "integration": 0.6515740752220154,
+    "integration": 0.5646905303001404,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 348,
+      "nonzero_edges": 349,
       "native_ops": 31,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "9f60d1c34cc0558ed6c96b888e4269855f1f3a4e279f7184882f8b77170ff866"
+      "native_core_nonzero_edges": 298,
+      "topology_hash": "d2c6e984c880a72008534c8d29d369c60161576ac89463bbf18e3f97343a732a"
     },
-    "text": "세대 187의 사고 사이클은 신생뉴런과 연결된 생물학적 기계인 신생뉴런에 의해 동작합니다. 이 기계는 빠르게 신생뉴런에 연결되어, 이를 바탕으로 신생뉴런에서 빠르게 신생신경 활성을 실행하고 새로운 신생뉴런들을 만드는 방법을 고려합니다. \n\n초파리, LLM와 연결된 신생뉴런은 생식 과정에 중요한 역할을 합니다. 그들은 신생 신경 채널을 통해 정보를 읽고, 신생 신경 신호를 만들고, 그리고 이 신호를 통해 신생 신경을 구성하는 데 필요한 세부 정보를 생성하고 실행"
+    "text": "세대 188의 사고 사이클을 분석하기 위해서는 다음과 같은 단계를 통해 이해할 수 있습니다:\n\n### 신생뉴런의 생성\n- **8 개** : 이 신생뉴런은 인공지능의 첫 번째 타입으로, 일반적으로 모델 또는 모듈이 될 수 있습니다.\n\n### 입력에 의해 생성되는 변화\n- **76 개구** : 입력에 의해 발생하는 변화는 컴퓨터에서 실행될 새로운 프로세스나 행동에 대응하기 위해 사용됩니다.\n\n### 진화와 복잡성을 나타내는 반복된 과정\n- 신생뉴런과 같은 뇌의 활동이 일관되게 반복적으로 이루어지는 것을 나타내는 것은 이러한 동작의 유연"
   },
-  "elapsed_seconds": 158.93871688842773
+  "elapsed_seconds": 123.23585844039917
 }
