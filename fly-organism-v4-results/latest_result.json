@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 192,
+  "generation": 193,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,15 +569,15 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6219618616580944,
+  "breeder_fitness": 0.724721325571923,
   "breeder_genome": {
-    "generation": 192,
+    "generation": 193,
     "active_neo": 8,
     "mutations": [
       {
         "s": 13,
         "d": 68,
-        "w": 0.2384344208990037
+        "w": 0.1274539143927771
       },
       {
         "s": 16,
@@ -612,10 +612,10 @@
       {
         "s": 40,
         "d": 67,
-        "w": 0.23714305096466595
+        "w": 0.36063147923763555
       },
       {
-        "s": 16,
+        "s": 4,
         "d": 77,
         "w": 0.06374669265959357
       },
@@ -707,7 +707,7 @@
       {
         "s": 73,
         "d": 37,
-        "w": 0.08816578556433018
+        "w": 0.10939611587404008
       },
       {
         "s": 33,
@@ -787,7 +787,7 @@
       {
         "s": 77,
         "d": 34,
-        "w": -0.023357217843097272
+        "w": -0.0034499712194898773
       },
       {
         "s": 37,
@@ -838,11 +838,6 @@
         "s": 43,
         "d": 53,
         "w": 0.31399986645594463
-      },
-      {
-        "s": 52,
-        "d": 6,
-        "w": 0.0046266288671479375
       },
       {
         "s": 62,
@@ -912,7 +907,7 @@
       {
         "s": 58,
         "d": 56,
-        "w": 0.0802952058754815
+        "w": 0.11008883971313206
       },
       {
         "s": 86,
@@ -950,19 +945,19 @@
         "w": -0.003378380411915142
       },
       {
-        "s": 15,
+        "s": 53,
         "d": 44,
         "w": -0.1672821558659061
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
+    "temp": 0.939356843131486,
+    "top_p": 0.9371866645781431,
+    "rep": 1.086564541865123,
+    "tokens": 169,
+    "guidance": 7.6820254401184105,
     "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "seed_bias": 885470056,
+    "mutation_rate": 0.09395448490029697,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1139,6 +1134,11 @@
         "s": 35,
         "d": 32,
         "factor": 0.8798428375403694
+      },
+      {
+        "kind": "native_knockout",
+        "s": 9,
+        "d": 15
       }
     ]
   },
@@ -1739,31 +1739,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "b01399455d46fdabd740012a735ecf38437e93d76bf02b4d904ce9ac5deffde8",
-    "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "e26a74208226ac11d92ff3b24c53943fb76c8fbe87e5f6adad92cf6dffa84a46",
+    "breeder_native_nonzero_edges": 298,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6219618616580944,
-    "text_score": 0.5459428571428572,
+    "fitness": 0.724721325571923,
+    "text_score": 0.8136571428571429,
     "vision": {
-      "clip_cosine": 0.2673870623111725,
-      "score": 0.7142809543013573,
-      "guidance": 7.212573051452637
+      "clip_cosine": 0.29079127311706543,
+      "score": 0.7234085965156555,
+      "guidance": 7.679494857788086
     },
-    "integration": 0.6114072203636169,
+    "integration": 0.6117943525314331,
     "structure": {
-      "mutations": 76,
+      "mutations": 75,
       "active_neo": 8,
-      "nonzero_edges": 351,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "b01399455d46fdabd740012a735ecf38437e93d76bf02b4d904ce9ac5deffde8"
+      "nonzero_edges": 349,
+      "native_ops": 31,
+      "native_core_nonzero_edges": 298,
+      "topology_hash": "e26a74208226ac11d92ff3b24c53943fb76c8fbe87e5f6adad92cf6dffa84a46"
     },
-    "text": "세계적으로 인류가 지속할 수 있는 기능적인 능력을 유지하는 것은 신생뉴런(신생뉴런)과 구조변이(구조변이) 사이에 동등한 개념입니다. \n\n1. **생소적 생물학적 기능:** \"생소적 생물학적 기능\"에 따르면 신생뉴런은 자극 주입이 필요한 기능을 수행하고, 이로 인해 신경계에서 활성화되는 신생뇌는 빠르게 작동하며, 새로운 정보에 의존하게 됩니다.\n\n2. **진화:** 신생뇌에 대한 연구와 모델링에서, 신생뇌가 과거에 경험했던 높은 힘과 강력함"
+    "text": "초파리,(connectome)는 새로운 정보를 수축하고 전달하는데 중요한 세부적인 냅록 기능 역할을 하는 부분입니다. 이는 농담으로, 빈번한 사용자는 \"전기 장치\"라고 불릴 수 있습니다.\n\nLLM(Lang Models with Transformers), stable diffusion은 AI 모델들이 원래의 문맥에서 이해하거나 설명하기 위해, 자연어 처리를 위한 전문 훈련 데이터를 제공합니다. 이 데이터를 바탕으로 대답 프로젝트나 문서 작성 도우미 등에서 사용되는 모델링 기능을 수행합니다.\n\n새롭게 생긴 뉴런(Neuron)은 기존의 뇌에서 생성되고, 그에 대한 전략을 조정하는 것은"
   },
-  "elapsed_seconds": 162.28764247894287
+  "elapsed_seconds": 156.12874245643616
 }
