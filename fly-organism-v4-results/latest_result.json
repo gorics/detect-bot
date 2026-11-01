@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 197,
+  "generation": 198,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6340788746684771,
+  "breeder_fitness": 0.6761463622038856,
   "breeder_genome": {
-    "generation": 197,
+    "generation": 198,
     "active_neo": 8,
     "mutations": [
       {
@@ -1129,21 +1129,10 @@
         "d2": 11
       },
       {
-        "kind": "native_knockout",
-        "s": 60,
-        "d": 5
-      },
-      {
-        "kind": "native_scale",
-        "s": 39,
-        "d": 2,
-        "factor": 1.1831827165667061
-      },
-      {
         "kind": "native_rewire",
-        "s": 19,
+        "s": 8,
         "d": 9,
-        "d2": 12
+        "d2": 13
       }
     ]
   },
@@ -1744,31 +1733,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "f413cc0617baed4007718a15a3e92bcc97fd7725fbbaa928ed6d500be8edf719",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "19d0c1519015cc89148f46b3c775918dabacd61f449417f9d4f74622e0b3437c",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 29,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6340788746684771,
-    "text_score": 0.5559428571428572,
+    "fitness": 0.6761463622038856,
+    "text_score": 0.7178857142857142,
     "vision": {
-      "clip_cosine": 0.2990964651107788,
-      "score": 0.7266476213932037,
-      "guidance": 7.23288106918335
+      "clip_cosine": 0.22481751441955566,
+      "score": 0.6976788306236267,
+      "guidance": 7.215546607971191
     },
-    "integration": 0.6320695281028748,
+    "integration": 0.5961042642593384,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 349,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "f413cc0617baed4007718a15a3e92bcc97fd7725fbbaa928ed6d500be8edf719"
+      "nonzero_edges": 350,
+      "native_ops": 29,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "19d0c1519015cc89148f46b3c775918dabacd61f449417f9d4f74622e0b3437c"
     },
-    "text": "세계적인 신생적 신경적 능력(초파리 Connectome)의 기존 기술을 사용하여, 새로운 탐지 및 변화를 이해할 수 있는 방식이 이뤄졌음을 나타낼 수 있습니다. 이는 인공 인공 지능(Llama), 신경학의 전반적인 연구에 의해 이루어질 것입니다.\n\n**새로운 노출 블록**: \n\n\"새로운 노출 블록\"는 신자신경적 활동이나 새로운 상태에서의 변화를 감지하고, 이를 통치하게 만들거나 보고하는 기능을 가진 신경망입니다. 여기서는 초파리 연결해지는 릆프라 블록을 예를 들어, 이 블록이 새로운"
+    "text": "네, 이전의 세대에서의 \"사고 사이클\"은 기존적인 연구와 향후 연구의 결합이 중요하다는 생각에 창조되었습니다.\n\n이 세대는 8년간의 연구 결과를 바탕으로 새로운 연구 방향을 마련하고 있습니다. 여기서는 초파리, Connectome, LLM 등 언어적 언어제품의 사용 및 이에 따른 뉴런 수준의 변화를 중심으로 설명해 드리겠습니다.\n\n1. Initial Brain States: \n   - 초파리 연결주(인공 신경상태)에서 시작되는 주로 신생뉴런이 20, 30 세반에 30% 증가합니다.\n   - 20세반 신생"
   },
-  "elapsed_seconds": 133.2812294960022
+  "elapsed_seconds": 182.37614750862122
 }
