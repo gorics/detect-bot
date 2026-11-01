@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 198 native_ops 34 neo 8
-V5_FITNESS 0 0.6283948805565892 topology 9a23e2bf65a03b0a
-V5_EVALUATE 1 generation 198 native_ops 31 neo 8
-V5_FITNESS 1 0.6585465322106281 topology cf14a2d588b58186
-V5_EVALUATE 2 generation 198 native_ops 32 neo 8
-V5_FITNESS 2 0.6681416195304076 topology 71ae68cb8c33a11a
-V5_EVALUATE 3 generation 198 native_ops 29 neo 8
-V5_FITNESS 3 0.6761463622038856 topology 19d0c1519015cc89
+V5_EVALUATE 0 generation 199 native_ops 32 neo 8
+V5_FITNESS 0 0.5966817407228229 topology 8278585dab33cdda
+V5_EVALUATE 1 generation 199 native_ops 31 neo 8
+V5_FITNESS 1 0.5897381596657691 topology 655ce4ad86d3fa46
+V5_EVALUATE 2 generation 199 native_ops 32 neo 8
+V5_FITNESS 2 0.6385004591716841 topology 9f60cfc39d1cf8f3
+V5_EVALUATE 3 generation 199 native_ops 30 neo 8
+V5_FITNESS 3 0.6876775851675461 topology 7ae7caee5e27c1df
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 198,
+  "generation": 199,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.6761463622038856 topology 19d0c1519015cc89
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6761463622038856,
+  "breeder_fitness": 0.6876775851675461,
   "breeder_genome": {
-    "generation": 198,
+    "generation": 199,
     "active_neo": 8,
     "mutations": [
       {
@@ -1137,10 +1137,16 @@ V5_FITNESS 3 0.6761463622038856 topology 19d0c1519015cc89
         "d2": 11
       },
       {
+        "kind": "native_scale",
+        "s": 2,
+        "d": 28,
+        "factor": 0.6245901728781548
+      },
+      {
         "kind": "native_rewire",
-        "s": 8,
-        "d": 9,
-        "d2": 13
+        "s": 39,
+        "d": 35,
+        "d2": 31
       }
     ]
   },
@@ -1741,31 +1747,31 @@ V5_FITNESS 3 0.6761463622038856 topology 19d0c1519015cc89
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "19d0c1519015cc89148f46b3c775918dabacd61f449417f9d4f74622e0b3437c",
+    "breeder_topology_hash": "7ae7caee5e27c1dfcf8628dd9eefe74811f13de3bd83e68b0e41c1de0b1fa8ca",
     "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 29,
+    "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6761463622038856,
-    "text_score": 0.7178857142857142,
+    "fitness": 0.6876775851675461,
+    "text_score": 0.7175492063492064,
     "vision": {
-      "clip_cosine": 0.22481751441955566,
-      "score": 0.6976788306236267,
-      "guidance": 7.215546607971191
+      "clip_cosine": 0.26786062121391296,
+      "score": 0.7144656422734261,
+      "guidance": 7.214993000030518
     },
-    "integration": 0.5961042642593384,
+    "integration": 0.6256869435310364,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
       "nonzero_edges": 350,
-      "native_ops": 29,
+      "native_ops": 30,
       "native_core_nonzero_edges": 299,
-      "topology_hash": "19d0c1519015cc89148f46b3c775918dabacd61f449417f9d4f74622e0b3437c"
+      "topology_hash": "7ae7caee5e27c1dfcf8628dd9eefe74811f13de3bd83e68b0e41c1de0b1fa8ca"
     },
-    "text": "네, 이전의 세대에서의 \"사고 사이클\"은 기존적인 연구와 향후 연구의 결합이 중요하다는 생각에 창조되었습니다.\n\n이 세대는 8년간의 연구 결과를 바탕으로 새로운 연구 방향을 마련하고 있습니다. 여기서는 초파리, Connectome, LLM 등 언어적 언어제품의 사용 및 이에 따른 뉴런 수준의 변화를 중심으로 설명해 드리겠습니다.\n\n1. Initial Brain States: \n   - 초파리 연결주(인공 신경상태)에서 시작되는 주로 신생뉴런이 20, 30 세반에 30% 증가합니다.\n   - 20세반 신생"
+    "text": "이 문제에서 사용된 층은 초파리, LLM, Stable Diffusion에 해당한다.\n\n아래의 내용은 인공 지능에 대한 일반적인 사고 사이클 기법을 전달하며, \"세대 199\"이라는 의미는 여기서는 잘못되었다고 가정하여 설명합니다.\n\n---\n\n**일반적인 사고 사이클 기법**\n\n1. **인식:** 신호 및 정보 (신생뉴런)의 감지\n2. **분석:** 인식된 정보를 처리 및 추론하기 위해 신생뉴런을 구성하고 실행.\n3. **결과:** 추론된 결과가 출력된다.\n4. **반응:** 인식된 정보를 다른 신생뉴런으로 전달하거나, 결정적 결과가 발생"
   },
-  "elapsed_seconds": 182.37614750862122
+  "elapsed_seconds": 169.9355652332306
 }
