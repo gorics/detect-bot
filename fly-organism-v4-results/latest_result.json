@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 209,
+  "generation": 210,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.775725202478091,
+  "breeder_fitness": 0.6568274822401377,
   "breeder_genome": {
-    "generation": 209,
+    "generation": 210,
     "active_neo": 8,
     "mutations": [
       {
@@ -1140,15 +1140,21 @@
       },
       {
         "kind": "native_scale",
-        "s": 35,
-        "d": 32,
-        "factor": 1.168782405093934
+        "s": 57,
+        "d": 57,
+        "factor": 0.568956344404969
       },
       {
         "kind": "native_rewire",
-        "s": 60,
-        "d": 8,
-        "d2": 15
+        "s": 2,
+        "d": 0,
+        "d2": 32
+      },
+      {
+        "kind": "native_rewire",
+        "s": 27,
+        "d": 17,
+        "d2": 46
       }
     ]
   },
@@ -1749,31 +1755,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "886fc580f5078836b81bf340726b9b9fa28eb94734eafdea4a6d17a3e944e752",
+    "breeder_topology_hash": "eb0e16054004c7c41919e353d39f608c53f1301f5a624df32e790b4ebe54bd68",
     "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 30,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.775725202478091,
-    "text_score": 0.9456,
+    "fitness": 0.6568274822401377,
+    "text_score": 0.6301142857142857,
     "vision": {
-      "clip_cosine": 0.2732541561126709,
-      "score": 0.7165691208839416,
-      "guidance": 6.664895057678223
+      "clip_cosine": 0.2689066231250763,
+      "score": 0.7148735830187798,
+      "guidance": 6.607274055480957
     },
-    "integration": 0.6404120922088623,
+    "integration": 0.6308192610740662,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
       "nonzero_edges": 352,
-      "native_ops": 30,
+      "native_ops": 31,
       "native_core_nonzero_edges": 298,
-      "topology_hash": "886fc580f5078836b81bf340726b9b9fa28eb94734eafdea4a6d17a3e944e752"
+      "topology_hash": "eb0e16054004c7c41919e353d39f608c53f1301f5a624df32e790b4ebe54bd68"
     },
-    "text": "네, 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하는 세대 209의 사고 사이클은 다음과 같이 분석할 수 있습니다:\n\n1. **신생뉴런:** 초기 신생뉴런(8)을 생성합니다.\n2. **구조변이:** 78 가지 구조변이가 생성됩니다.\n3. **진화:** 신생뉴런과 구조변이의 상태 변화를 기록하고 관찰합니다.\n4. **보상:** 이 결과를 사용하여 새로운 신생뉴런이나"
+    "text": "세대 210의 사고 사이클은 다음과 같습니다:\n\n1. **초파리 연결**: 신생뉴런과 구조변이가 신호를 전달하며, 이는 복잡한 신경망 동작의 원인 중 하나입니다.\n\n2. **LSTM 모델**: 신생뉴런에서 얻은 입력을 LSTM 모델로 전파하여, 새로운 정보를 수집하고 처리합니다. 이 과정은 LSTM 모델의 학습을 돕습니다.\n\n3. **Connectome**: LRM와 함께 연결된 신경元들, 즉 신생뉴런과 연결되어 있는 구조변이, 이들은 신경망의 작동에 필수적입니다"
   },
-  "elapsed_seconds": 174.9329390525818
+  "elapsed_seconds": 164.27193689346313
 }
