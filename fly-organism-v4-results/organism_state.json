@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 215,
+  "generation": 216,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,10 +569,10 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7357780714537907,
+  "breeder_fitness": 0.719098519144206,
   "breeder_genome": {
-    "generation": 215,
-    "active_neo": 8,
+    "generation": 216,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -582,7 +582,7 @@
       {
         "s": 16,
         "d": 71,
-        "w": 0.22454935031537981
+        "w": 0.2846405422144257
       },
       {
         "s": 48,
@@ -658,11 +658,6 @@
         "s": 16,
         "d": 72,
         "w": 0.31742328197512787
-      },
-      {
-        "s": 27,
-        "d": 78,
-        "w": 0.17259858519218624
       },
       {
         "s": 56,
@@ -850,11 +845,6 @@
         "w": 0.2843096550247773
       },
       {
-        "s": 37,
-        "d": 57,
-        "w": -0.06938135543171894
-      },
-      {
         "s": 6,
         "d": 44,
         "w": 0.034763993905927104
@@ -895,7 +885,7 @@
         "w": 0.11882055647015587
       },
       {
-        "s": 11,
+        "s": 31,
         "d": 40,
         "w": 0.014565668390036278
       },
@@ -912,7 +902,7 @@
       {
         "s": 58,
         "d": 56,
-        "w": 0.0802952058754815
+        "w": 0.11169930795130698
       },
       {
         "s": 86,
@@ -953,16 +943,21 @@
         "s": 15,
         "d": 44,
         "w": -0.1672821558659061
+      },
+      {
+        "s": 53,
+        "d": 22,
+        "w": -0.03335999071002227
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
-    "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "temp": 1.115804156771226,
+    "top_p": 0.9466677939620552,
+    "rep": 1.1095664597293564,
+    "tokens": 166,
+    "guidance": 7.398849728647899,
+    "steps": 6,
+    "seed_bias": 995690498,
+    "mutation_rate": 0.08932994389282649,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1139,6 +1134,12 @@
         "s": 2,
         "d": 3,
         "factor": 0.9574591629278456
+      },
+      {
+        "kind": "native_scale",
+        "s": 27,
+        "d": 28,
+        "factor": 1.0125361788015512
       }
     ]
   },
@@ -1739,31 +1740,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "0b9149ab1d2f8b3b8609c8e4aa00f5c274d071f46d58d55f35645511019f4091",
+    "breeder_topology_hash": "7cd83a610deee7ddc330964753e40e94df5aac4404c74f37a480968ff1e0e82c",
     "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 30,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7357780714537907,
-    "text_score": 0.8848160714285714,
+    "fitness": 0.719098519144206,
+    "text_score": 0.804457142857143,
     "vision": {
-      "clip_cosine": 0.26208019256591797,
-      "score": 0.712211275100708,
-      "guidance": 7.221725940704346
+      "clip_cosine": 0.25362712144851685,
+      "score": 0.7089145773649216,
+      "guidance": 7.397796630859375
     },
-    "integration": 0.5402277708053589,
+    "integration": 0.6385518312454224,
     "structure": {
-      "mutations": 76,
-      "active_neo": 8,
-      "nonzero_edges": 351,
-      "native_ops": 30,
+      "mutations": 75,
+      "active_neo": 7,
+      "nonzero_edges": 349,
+      "native_ops": 31,
       "native_core_nonzero_edges": 300,
-      "topology_hash": "0b9149ab1d2f8b3b8609c8e4aa00f5c274d071f46d58d55f35645511019f4091"
+      "topology_hash": "7cd83a610deee7ddc330964753e40e94df5aac4404c74f37a480968ff1e0e82c"
     },
-    "text": "네, 저는 초파리, LLM과 Stable Diffusion 시각엽이 연결된 계산 유기체의 인터랙션 계획서입니다. 이 계산을 실행하려면, 초파리를 먼저 사용하고, 이를 통해 LLM은 파트너로 사용됩니다. LLM은 학습한 정보를 받아 사용자의 문구나 데이터들을 이해해주는 역할을 합니다. 이 기반으로 Stable Diffusion 시각엽이 적용되는 허용될 수 있습니다.\n\n이렇게 구성되어 있는 초파리는, 신생뉴런 (input), 진화 (evolution)에 따라 보상 (reward)를 얻고, 이 결과로 새로운 신체적 상태 (mutation)를 결정합니다. 이것이 신생뉴런의 형태를 결정하는"
+    "text": "초파리는 신생뉴런과 구조변이와 관련된 심리학적 인공지능 기술의 학문적으로 알려진 엔진으로, 신생신천이 개개인의 생명을 관리하고 이해하며 새로운 정보에 반응할 수 있게 돕는 역할을 한다.\n\nconnectome은 연결체로써 각 신경망에서 신경요소를 모아서 연결되어 있는 지점을 정점으로 관리한 개념이다.\nLLM은 Langmuir Membrane 단말을 통해 특정 이동과 분해 과정 중 간단한 주제에서 일관되게 변화하도록 도와주는 방식의 artificial intelligence.\nStable Diffusion은 디자인한 대답 형상을 추천하는 AI"
   },
-  "elapsed_seconds": 164.66032576560974
+  "elapsed_seconds": 116.36847496032715
 }
