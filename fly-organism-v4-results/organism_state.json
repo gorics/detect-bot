@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 221,
+  "generation": 222,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.5919701769372281,
+  "breeder_fitness": 0.6235129757953599,
   "breeder_genome": {
-    "generation": 221,
+    "generation": 222,
     "active_neo": 8,
     "mutations": [
       {
@@ -1140,9 +1140,20 @@
       },
       {
         "kind": "native_scale",
-        "s": 60,
-        "d": 28,
-        "factor": 0.8107764370368835
+        "s": 26,
+        "d": 60,
+        "factor": 1.122124913706182
+      },
+      {
+        "kind": "native_knockout",
+        "s": 35,
+        "d": 29
+      },
+      {
+        "kind": "native_rewire",
+        "s": 2,
+        "d": 8,
+        "d2": 2
       }
     ]
   },
@@ -1743,31 +1754,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "113758142ab986ba4dcddb9a7d8c4df42562b51b0da7f873bb58d505e5047a07",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 29,
+    "breeder_topology_hash": "958b64b7263cd9ba9326b4551e183521fa47cd0c9fd7c46c9ce0876db3c88614",
+    "breeder_native_nonzero_edges": 296,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.5919701769372281,
-    "text_score": 0.46737142857142855,
+    "fitness": 0.6235129757953599,
+    "text_score": 0.5507428571428572,
     "vision": {
-      "clip_cosine": 0.2650608420372009,
-      "score": 0.7133737283945084,
-      "guidance": 6.581247806549072
+      "clip_cosine": 0.23842203617095947,
+      "score": 0.7029845941066742,
+      "guidance": 6.6225972175598145
     },
-    "integration": 0.6041691899299622,
+    "integration": 0.6385871767997742,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
-      "nonzero_edges": 352,
-      "native_ops": 29,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "113758142ab986ba4dcddb9a7d8c4df42562b51b0da7f873bb58d505e5047a07"
+      "nonzero_edges": 350,
+      "native_ops": 31,
+      "native_core_nonzero_edges": 296,
+      "topology_hash": "958b64b7263cd9ba9326b4551e183521fa47cd0c9fd7c46c9ce0876db3c88614"
     },
-    "text": "세대 221의 사고 사이클은 신생뉴런과 구조변이 사이에 이르게 하는 과정을 설명합니다. 이 사이클은 신생뉴런 개요, 학습, 모델 성장 및 결정을 나타냅니다.\n\n1. **신생뉴런 개요**: 신생뉴런은 주로 신생 신호 역할을 해야 하지만, 기존의 전역적 신호나 지표에 의존하지 않습니다. 이들은 다양한 단계의 신호를 감지하고, 이 단계에서의 결과물을 저장합니다.\n   \n2. **구조변이 (Synapse)**: 신생뉴런은 연결된 신호와 그 연결의"
+    "text": "세대 222의 사고 사이클은 세세한 이해와 결정에 대한 결정적 인식과 결정을 나타내며, 이 사이클은 신생뉴런의 변화와 그 변화에 따른 신생물의 변화에 영향을 미치며, 이 변화들은 신생물에게 보상을주는 반응에 의해 발생합니다.\n\n이 동작은 여러 유전자의 변화와 생존 환경에서 발생하는 것들이 주로 작용하며, 이러한 상황에서 신생물은 신생뉴런(신생물의 신생층)을 통해 새로운 기능을 추가하거나 새로운 형태를 만드는 것으로 간주됩니다. \n\n또한, 신생물이 변화하는 것은"
   },
-  "elapsed_seconds": 162.29474258422852
+  "elapsed_seconds": 118.2413923740387
 }
