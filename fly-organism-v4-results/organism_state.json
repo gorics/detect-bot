@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 219,
+  "generation": 220,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7453254346849302,
+  "breeder_fitness": 0.6563875758108733,
   "breeder_genome": {
-    "generation": 219,
+    "generation": 220,
     "active_neo": 8,
     "mutations": [
       {
@@ -1129,21 +1129,16 @@
         "d2": 11
       },
       {
-        "kind": "native_knockout",
-        "s": 39,
-        "d": 60
+        "kind": "native_rewire",
+        "s": 21,
+        "d": 3,
+        "d2": 4
       },
       {
         "kind": "native_scale",
-        "s": 60,
-        "d": 21,
-        "factor": 0.7216493190539144
-      },
-      {
-        "kind": "native_scale",
-        "s": 23,
-        "d": 2,
-        "factor": 0.7065996423864274
+        "s": 25,
+        "d": 60,
+        "factor": 0.6788401951290646
       }
     ]
   },
@@ -1744,31 +1739,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "db22e1123df0639dcec11468394a8f76a1bc31cd03649354e3a963fc7e50b233",
+    "breeder_topology_hash": "a6a9e152a6138420720ddc55575c0ed35486e256d450e34b88cca28af949e54b",
     "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 31,
+    "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7453254346849302,
-    "text_score": 0.8699658848614072,
+    "fitness": 0.6563875758108733,
+    "text_score": 0.6417142857142857,
     "vision": {
-      "clip_cosine": 0.25410258769989014,
-      "score": 0.7091000092029571,
-      "guidance": 7.217735767364502
+      "clip_cosine": 0.24235329031944275,
+      "score": 0.7045177832245827,
+      "guidance": 7.209589958190918
     },
-    "integration": 0.649426281452179,
+    "integration": 0.6326635479927063,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
       "nonzero_edges": 350,
-      "native_ops": 31,
+      "native_ops": 30,
       "native_core_nonzero_edges": 299,
-      "topology_hash": "db22e1123df0639dcec11468394a8f76a1bc31cd03649354e3a963fc7e50b233"
+      "topology_hash": "a6a9e152a6138420720ddc55575c0ed35486e256d450e34b88cca28af949e54b"
     },
-    "text": "죄송합니다, 그러나 이러한 단어에 대한 확신과 전문성을 제한하여 직접적인 정보를 제공할 수 없습니다. 초파리, LLM(지능형 모델), Stable Diffusion 시각제작 기술, 뉴런, 진화, 보상, 입력 등의 정보는 기계 학습 기술과 인공지능에 대한 세부 이해와 관련된 내용일 수 있습니다. 이들 단어들이 특정 개념이나 현상의 주요 요인일 가능성이 높습니다. 그러나 이러한 지식은 현재 우리의 경험과 자격을 충족시키지 않는 것으로 보입니다. 저는 일반적인 지식과 기술에 대한 이해를 바탕으로 대답을 할 수 없습니다."
+    "text": "세계의 생태계가 변화하면서, 신생뉴런(인자), 그리고 세대는 어떻게 결정되나요? \n\n초파리는 이러한 생태계 변화에 대한 중요한 정보로, 신생뉴런은 세대, 즉 신생 끼소기나 생물체가 성장하기 위해 필요로 하는 새로운 유전자 개방물(자연에서만 발견되는 새로운 물질)을 제공합니다.\n\nLMM 언어엽도 인류의 성장과 발달에 미치는 영향을 이해하는데 crucial한 역할을 합니다. 이 언어는 인간과 동물 간에 종속적인 의사결정을 통해 세대와 신생뉴런을 결정합니다.\n\nStable Diffusion 시각엽은 인공지능의 미래를 예"
   },
-  "elapsed_seconds": 93.20750308036804
+  "elapsed_seconds": 176.1079273223877
 }
