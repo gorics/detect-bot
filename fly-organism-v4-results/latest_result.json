@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 226,
+  "generation": 227,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7074474559685833,
+  "breeder_fitness": 0.7785259980416166,
   "breeder_genome": {
-    "generation": 226,
+    "generation": 227,
     "active_neo": 7,
     "mutations": [
       {
@@ -622,7 +622,7 @@
       {
         "s": 6,
         "d": 68,
-        "w": 0.25296394609503564
+        "w": 0.09921626211201318
       },
       {
         "s": 36,
@@ -795,11 +795,6 @@
         "w": -0.023357217843097272
       },
       {
-        "s": 37,
-        "d": 67,
-        "w": 0.01241507889751095
-      },
-      {
         "s": 85,
         "d": 6,
         "w": -0.3376621257483604
@@ -823,11 +818,6 @@
         "s": 37,
         "d": 11,
         "w": 0.07557864290041133
-      },
-      {
-        "s": 80,
-        "d": 64,
-        "w": 0.052313604748716824
       },
       {
         "s": 27,
@@ -900,7 +890,7 @@
         "w": -0.2735227102297128
       },
       {
-        "s": 45,
+        "s": 56,
         "d": 65,
         "w": 0.11882055647015587
       },
@@ -983,16 +973,26 @@
         "s": 46,
         "d": 29,
         "w": 0.11068483874088737
+      },
+      {
+        "s": 68,
+        "d": 68,
+        "w": -0.11561593372677284
+      },
+      {
+        "s": 24,
+        "d": 41,
+        "w": -0.10135595220842859
       }
     ],
-    "temp": 0.8104630568556291,
-    "top_p": 0.9675875325861393,
-    "rep": 1.090239037922908,
-    "tokens": 142,
-    "guidance": 6.703306702139184,
+    "temp": 0.8609502814994874,
+    "top_p": 0.99,
+    "rep": 1.0956030495207243,
+    "tokens": 166,
+    "guidance": 6.3891377664803635,
     "steps": 7,
-    "seed_bias": 1006492283,
-    "mutation_rate": 0.09214074874670339,
+    "seed_bias": 323475674,
+    "mutation_rate": 0.0900184298854623,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1168,6 +1168,24 @@
         "kind": "native_knockout",
         "s": 56,
         "d": 60
+      },
+      {
+        "kind": "native_scale",
+        "s": 6,
+        "d": 35,
+        "factor": 0.9190647791620264
+      },
+      {
+        "kind": "native_rewire",
+        "s": 35,
+        "d": 27,
+        "d2": 24
+      },
+      {
+        "kind": "native_scale",
+        "s": 27,
+        "d": 19,
+        "factor": 1.8377673319150096
       }
     ]
   },
@@ -1768,31 +1786,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "a07b6b09eb992ab66cf116b25b46357e25147a4b2335ec932a2c26dd1810348e",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "c28d56550780fd446d6b99d7cba4eb20d07ef9834fbf24a35fe406da008321cb",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 33,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7074474559685833,
-    "text_score": 0.7681512605042017,
+    "fitness": 0.7785259980416166,
+    "text_score": 0.9496,
     "vision": {
-      "clip_cosine": 0.26500892639160156,
-      "score": 0.7082052176694076,
-      "guidance": 6.746895790100098
+      "clip_cosine": 0.26365038752555847,
+      "score": 0.7128236511349678,
+      "guidance": 6.443507194519043
     },
-    "integration": 0.6395031213760376,
+    "integration": 0.6525470018386841,
     "structure": {
       "mutations": 82,
       "active_neo": 7,
       "nonzero_edges": 353,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "a07b6b09eb992ab66cf116b25b46357e25147a4b2335ec932a2c26dd1810348e"
+      "native_ops": 33,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "c28d56550780fd446d6b99d7cba4eb20d07ef9834fbf24a35fe406da008321cb"
     },
-    "text": "네, 당신의 질문은 신생 신호요소와 신생 신생뉴런의 변화에 대해 이야기하고 있습니다. 신생뉴런과 신생뉴런의 변화에 관한 내용은 초파리 (Stem) 이론에 의해 설명되며, 이는 LLM 언어 모델이나 Stable Diffusion 시각 모델 등에서 사용됩니다. \n\n1. 초파리: 신생 신호요소의 시작 과정입니다.\n\n2. 연결모양 (Connectome): 신생 신호요소의 연결 방향성을 나타내는 그래픽 디자인 플랫폼입니다.\n   \n3. LLM 언어 모델"
+    "text": "초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하면 다음과 같은 신경적 기능과 상호작용에 관한 내용을 제시할 수 있습니다:\n\n1. 신생뉴런: 인체의 초기 생존자들은 새로운 신생 뼈를 생성하며, 이는 빠른 신비로운 변환 과정에서 시작됩니다. 각 뼈에는 7 개의 구조변이가 포함되어 있습니다.\n\n2. 구조변이 (Growth Factor): 이는 뼈에 직접적으로 연결되는 신생 뼄대와 뼈의 �"
   },
-  "elapsed_seconds": 161.66801738739014
+  "elapsed_seconds": 125.36247611045837
 }
