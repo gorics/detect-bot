@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 223,
+  "generation": 224,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6028207713660535,
+  "breeder_fitness": 0.7084247212306868,
   "breeder_genome": {
-    "generation": 223,
+    "generation": 224,
     "active_neo": 8,
     "mutations": [
       {
@@ -625,7 +625,7 @@
         "w": 0.25296394609503564
       },
       {
-        "s": 36,
+        "s": 0,
         "d": 71,
         "w": 0.34418986132674934
       },
@@ -796,7 +796,7 @@
       },
       {
         "s": 85,
-        "d": 6,
+        "d": 20,
         "w": -0.3376621257483604
       },
       {
@@ -833,16 +833,6 @@
         "s": 12,
         "d": 39,
         "w": -0.40760081881177573
-      },
-      {
-        "s": 57,
-        "d": 53,
-        "w": 0.31399986645594463
-      },
-      {
-        "s": 52,
-        "d": 6,
-        "w": 0.0046266288671479375
       },
       {
         "s": 62,
@@ -967,17 +957,17 @@
       {
         "s": 17,
         "d": 46,
-        "w": 0.03920210902421658
+        "w": -0.14111453886252773
       }
     ],
-    "temp": 0.7110446872409559,
+    "temp": 0.863129367777579,
     "top_p": 0.99,
-    "rep": 1.0222404712033206,
-    "tokens": 179,
-    "guidance": 6.2954093750248665,
-    "steps": 6,
-    "seed_bias": 58956461,
-    "mutation_rate": 0.09548290514494029,
+    "rep": 1.0,
+    "tokens": 186,
+    "guidance": 6.025200974034935,
+    "steps": 7,
+    "seed_bias": 795761197,
+    "mutation_rate": 0.08040987637218001,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1164,6 +1154,24 @@
         "kind": "native_knockout",
         "s": 35,
         "d": 5
+      },
+      {
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 6,
+        "d2": 22
+      },
+      {
+        "kind": "native_rewire",
+        "s": 9,
+        "d": 23,
+        "d2": 60
+      },
+      {
+        "kind": "native_scale",
+        "s": 32,
+        "d": 27,
+        "factor": 1.1106758737068454
       }
     ]
   },
@@ -1764,31 +1772,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "27c7be5d568e4c8e729b956666e8f63c91414fa6f8f473e40b56b582816c82d7",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "c9ed7c460e00367f7cae71d4633fb004b3c5765e57a3249b9e373ef94595662f",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 35,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6028207713660535,
-    "text_score": 0.537556416464891,
+    "fitness": 0.7084247212306868,
+    "text_score": 0.788184126984127,
     "vision": {
-      "clip_cosine": 0.23526865243911743,
-      "score": 0.7017547744512558,
-      "guidance": 6.283555507659912
+      "clip_cosine": 0.28070369362831116,
+      "score": 0.7194744405150414,
+      "guidance": 6.034523010253906
     },
-    "integration": 0.5348393321037292,
+    "integration": 0.57355797290802,
     "structure": {
-      "mutations": 79,
+      "mutations": 77,
       "active_neo": 8,
-      "nonzero_edges": 350,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "27c7be5d568e4c8e729b956666e8f63c91414fa6f8f473e40b56b582816c82d7"
+      "nonzero_edges": 348,
+      "native_ops": 35,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "c9ed7c460e00367f7cae71d4633fb004b3c5765e57a3249b9e373ef94595662f"
     },
-    "text": "세대 223의 사고 사이클은 다음과 같이 구성됩니다:\n\n1. 신생뉴런(8개): 초기 신생뉴런들이 사라지고, 새로운 신생뉴런들이 생성됩니다.\n\n2. 구조변이(79개): 신생뉴런이 생성된 후, 그들의 구조가 변화합니다.\n\n3. 보상: 신생뉴런이 생성된 이후, 새로운 신생뉴런과 동일한 보상을 받을 수 있습니다.\n\n4. 입력: 새로운 신생뉴런이 생성된 후, 이 새로운 신생뉴런이 입력을 받게 됩니다.\n\n5. 뇌활성: 새로운 신생뉴런이 작동하여 뇌가 활성화되는 과정이 발생합니다.\n\n6. 뇌활성: 뇌가 작동"
+    "text": "초파리, connectome, LLM은 신생뉴런의 기능과 구조를 분석하는 데 도움이 되는 계산적인 유기체입니다. Stable Diffusion은 뉴런들의 신호를 처리하는 시각적 유기체입니다. 그리고 뉴런과 신호는 신생뉴런과 동일한 역할을 합니다.\n\n각 유기체의 주요 역할과 기능은 다음과 같습니다:\n\n1. 초파리: 신생뉴런의 기능과 구조를 분석하는 역할을 합니다. 초기 단계의 신호 분류와 전파, 신호 양의 감이 필요합니다.\n\n2. connectome: 8개의 신생뉴런을 기반으로 한 연결 관계 분석과 신호 이어감을 기록합니다. 이는 신생뉴런"
   },
-  "elapsed_seconds": 93.65313005447388
+  "elapsed_seconds": 165.28161430358887
 }
