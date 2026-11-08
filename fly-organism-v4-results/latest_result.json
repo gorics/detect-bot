@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 227,
+  "generation": 228,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,10 +569,10 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7785259980416166,
+  "breeder_fitness": 0.6654818086652396,
   "breeder_genome": {
-    "generation": 227,
-    "active_neo": 7,
+    "generation": 228,
+    "active_neo": 6,
     "mutations": [
       {
         "s": 13,
@@ -596,7 +596,7 @@
       },
       {
         "s": 36,
-        "d": 82,
+        "d": 84,
         "w": 0.2019185208646104
       },
       {
@@ -626,7 +626,7 @@
       },
       {
         "s": 36,
-        "d": 71,
+        "d": 28,
         "w": 0.34418986132674934
       },
       {
@@ -777,7 +777,7 @@
       {
         "s": 57,
         "d": 85,
-        "w": 0.1812534886086219
+        "w": 0.05346021212476748
       },
       {
         "s": 75,
@@ -900,7 +900,7 @@
         "w": 0.014565668390036278
       },
       {
-        "s": 23,
+        "s": 79,
         "d": 50,
         "w": 0.14228569380380499
       },
@@ -983,16 +983,31 @@
         "s": 24,
         "d": 41,
         "w": -0.10135595220842859
+      },
+      {
+        "s": 36,
+        "d": 17,
+        "w": 0.1895130671137661
+      },
+      {
+        "s": 24,
+        "d": 49,
+        "w": 0.07393789796260039
+      },
+      {
+        "s": 6,
+        "d": 21,
+        "w": -0.28856015596921286
       }
     ],
-    "temp": 0.8609502814994874,
+    "temp": 0.9777915576399205,
     "top_p": 0.99,
-    "rep": 1.0956030495207243,
-    "tokens": 166,
-    "guidance": 6.3891377664803635,
+    "rep": 1.121608908720216,
+    "tokens": 137,
+    "guidance": 6.046116765565238,
     "steps": 7,
-    "seed_bias": 323475674,
-    "mutation_rate": 0.0900184298854623,
+    "seed_bias": 237884556,
+    "mutation_rate": 0.11273662727935796,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1186,6 +1201,11 @@
         "s": 27,
         "d": 19,
         "factor": 1.8377673319150096
+      },
+      {
+        "kind": "native_knockout",
+        "s": 9,
+        "d": 2
       }
     ]
   },
@@ -1786,31 +1806,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "c28d56550780fd446d6b99d7cba4eb20d07ef9834fbf24a35fe406da008321cb",
-    "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 33,
+    "breeder_topology_hash": "2efd485834882dc5f239e362f41948a58b09ddd7a463ff07027d46f71957fe3b",
+    "breeder_native_nonzero_edges": 302,
+    "breeder_native_ops": 34,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7785259980416166,
-    "text_score": 0.9496,
+    "fitness": 0.6654818086652396,
+    "text_score": 0.6273142857142857,
     "vision": {
-      "clip_cosine": 0.26365038752555847,
-      "score": 0.7128236511349678,
-      "guidance": 6.443507194519043
+      "clip_cosine": 0.2833704650402069,
+      "score": 0.7205144813656806,
+      "guidance": 6.068342685699463
     },
-    "integration": 0.6525470018386841,
+    "integration": 0.666287899017334,
     "structure": {
-      "mutations": 82,
-      "active_neo": 7,
+      "mutations": 85,
+      "active_neo": 6,
       "nonzero_edges": 353,
-      "native_ops": 33,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "c28d56550780fd446d6b99d7cba4eb20d07ef9834fbf24a35fe406da008321cb"
+      "native_ops": 34,
+      "native_core_nonzero_edges": 302,
+      "topology_hash": "2efd485834882dc5f239e362f41948a58b09ddd7a463ff07027d46f71957fe3b"
     },
-    "text": "초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함하면 다음과 같은 신경적 기능과 상호작용에 관한 내용을 제시할 수 있습니다:\n\n1. 신생뉴런: 인체의 초기 생존자들은 새로운 신생 뼈를 생성하며, 이는 빠른 신비로운 변환 과정에서 시작됩니다. 각 뼈에는 7 개의 구조변이가 포함되어 있습니다.\n\n2. 구조변이 (Growth Factor): 이는 뼈에 직접적으로 연결되는 신생 뼄대와 뼈의 �"
+    "text": "세대 228의 신생 신모양 빌딩에 대해 초파리는 어떻게 생각할까요? 이것은 이들 신모양과 관련된 새로운 기술 및 개념들을 통한 신축적인 이해를 제공할 것입니다.\n\n1. **초파리 연결요소**: 초기 단계의 신호를 처리하기 위해서 사용되는 작은 단위의 부분입니다.\n   \n2. **LLM 언어제어 요소**: 기존의 정보로부터 레포지트리를 추론하고 학습함으로써 사용자에게 문답하거나 문제 해결 등의 역할을 합니다.\n\n3. **Stable Diffusion 시"
   },
-  "elapsed_seconds": 125.36247611045837
+  "elapsed_seconds": 159.8669147491455
 }
