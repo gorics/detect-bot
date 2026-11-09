@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 229,
+  "generation": 230,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.765190542753405,
+  "breeder_fitness": 0.6539915556233762,
   "breeder_genome": {
-    "generation": 229,
+    "generation": 230,
     "active_neo": 8,
     "mutations": [
       {
@@ -1129,9 +1129,16 @@
         "d2": 11
       },
       {
-        "kind": "native_knockout",
-        "s": 25,
-        "d": 60
+        "kind": "native_scale",
+        "s": 23,
+        "d": 9,
+        "factor": 1.0810562965480883
+      },
+      {
+        "kind": "native_scale",
+        "s": 9,
+        "d": 27,
+        "factor": 0.8626868123910673
       }
     ]
   },
@@ -1732,31 +1739,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "a3f83eb7520daa1f183a265f5500d0927e2e72928bfc75700d452e97f6865f0d",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 29,
+    "breeder_topology_hash": "cd03aff85db2def24a7289d6e7ce4198ab6df0d10a20d340905d289676626096",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.765190542753405,
-    "text_score": 0.9560000000000001,
+    "fitness": 0.6539915556233762,
+    "text_score": 0.6389142857142858,
     "vision": {
-      "clip_cosine": 0.23337692022323608,
-      "score": 0.701016998887062,
-      "guidance": 7.222940444946289
+      "clip_cosine": 0.27760833501815796,
+      "score": 0.7182672506570816,
+      "guidance": 7.209481716156006
     },
-    "integration": 0.5928141474723816,
+    "integration": 0.5841816067695618,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 349,
-      "native_ops": 29,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "a3f83eb7520daa1f183a265f5500d0927e2e72928bfc75700d452e97f6865f0d"
+      "nonzero_edges": 350,
+      "native_ops": 30,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "cd03aff85db2def24a7289d6e7ce4198ab6df0d10a20d340905d289676626096"
     },
-    "text": "초파리 Connectome, LLM (Large Language Model) 및 Stable Diffusion, 뉴런, 진화, 보상을 위한 학습, 입력, 뇌활성, 생성, 평가와 선택, 돌연변이는 이 분야에서 매우 중요한 계산적 업무이며, 다양한 방법으로 가능합니다:\n\n1. **정상 신생뉴런**: 초파리는 높은 길이, 작은 크기의 신생뉴런들이 생성됩니다. 이들은 초기적인 측면에서 뉘앙스, 과학적 이해, 행동 기반에 대해 연구하고 있습니다.\n\n2. **양종 신생뉴런**: 정확히는 둘째 신생뉴런과 두 번째 신생뉴런입니다"
+    "text": "사고 사이클 (SAS)은 컴퓨터나 인공지능에 따라 매우 다양한 분석 과정을 나타냅니다. 이 세대의 사고 사이클에서 초파리와 연결해 주는 신생뉴런은 매우 중요합니다. 이 신생뉴런의 성분 중 일부는:\n\n1. **구조변이**: 초파리는 이러한 신생뉴런을 구성하는 원소의 수를 결정하는 중요한 부분입니다. 그들은 빈도를 조절하거나 양을 늘려 캔테노의 양을 조정할 수 있습니다.\n\n2. **진화**: 신생뉴런이 어떻게 지능을 형성하고 변화하면서 진화한지를 설명하는 방법입니다.\n\n3. **생존: 입력**: 입력는 신"
   },
-  "elapsed_seconds": 109.39274573326111
+  "elapsed_seconds": 127.07651472091675
 }
