@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 233 native_ops 33 neo 8
-V5_FITNESS 0 0.7630581789055269 topology f598bbdb1cfdb854
-V5_EVALUATE 1 generation 233 native_ops 30 neo 8
-V5_FITNESS 1 0.7441753630883239 topology 8ca8038c045358e8
-V5_EVALUATE 2 generation 233 native_ops 33 neo 8
-V5_FITNESS 2 0.5726354155481657 topology 2b034cb6a3f7779e
-V5_EVALUATE 3 generation 233 native_ops 29 neo 8
-V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
+V5_EVALUATE 0 generation 234 native_ops 34 neo 8
+V5_FITNESS 0 0.5963767006284133 topology e5dc86abe06da4d8
+V5_EVALUATE 1 generation 234 native_ops 30 neo 8
+V5_FITNESS 1 0.618466592062066 topology 690b15ae4ba7ec09
+V5_EVALUATE 2 generation 234 native_ops 35 neo 8
+V5_FITNESS 2 0.6238440422610531 topology f618ef560eda326d
+V5_EVALUATE 3 generation 234 native_ops 30 neo 8
+V5_FITNESS 3 0.6252124486511925 topology 21269c7651ddc207
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 233,
+  "generation": 234,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7630581789055269,
+  "breeder_fitness": 0.6252124486511925,
   "breeder_genome": {
-    "generation": 233,
+    "generation": 234,
     "active_neo": 8,
     "mutations": [
       {
@@ -713,6 +713,11 @@ V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
         "w": 0.23706152361750082
       },
       {
+        "s": 73,
+        "d": 37,
+        "w": 0.08816578556433018
+      },
+      {
         "s": 33,
         "d": 23,
         "w": 0.2621828894627365
@@ -736,6 +741,11 @@ V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
         "s": 76,
         "d": 53,
         "w": -0.07497509397995991
+      },
+      {
+        "s": 25,
+        "d": 32,
+        "w": 0.24311710685629662
       },
       {
         "s": 65,
@@ -951,36 +961,16 @@ V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
         "s": 15,
         "d": 44,
         "w": -0.1672821558659061
-      },
-      {
-        "s": 44,
-        "d": 13,
-        "w": -0.05181676979966883
-      },
-      {
-        "s": 18,
-        "d": 61,
-        "w": 0.3046359848820921
-      },
-      {
-        "s": 73,
-        "d": 8,
-        "w": -0.0836795219729054
-      },
-      {
-        "s": 60,
-        "d": 36,
-        "w": -0.13458984647803268
       }
     ],
-    "temp": 1.0117626774708324,
-    "top_p": 0.9132296048415625,
-    "rep": 1.0706546903353393,
-    "tokens": 175,
-    "guidance": 8.519436662666104,
-    "steps": 8,
-    "seed_bias": 126355905,
-    "mutation_rate": 0.09745790866147604,
+    "temp": 1.0453400531225232,
+    "top_p": 0.9485875291284671,
+    "rep": 1.0814002764590627,
+    "tokens": 168,
+    "guidance": 7.2035203604346245,
+    "steps": 7,
+    "seed_bias": 157678956,
+    "mutation_rate": 0.10433784272984443,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1147,33 +1137,16 @@ V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
         "d2": 11
       },
       {
-        "kind": "native_birth",
-        "s": 8,
-        "d": 57,
-        "w": -0.03048807440566379
+        "kind": "native_scale",
+        "s": 19,
+        "d": 23,
+        "factor": 0.4874485696299697
       },
       {
         "kind": "native_scale",
-        "s": 60,
-        "d": 39,
-        "factor": 1.063537185762698
-      },
-      {
-        "kind": "native_knockout",
         "s": 26,
-        "d": 19
-      },
-      {
-        "kind": "native_rewire",
-        "s": 28,
-        "d": 21,
-        "d2": 33
-      },
-      {
-        "kind": "native_scale",
-        "s": 21,
-        "d": 21,
-        "factor": 0.530013159551369
+        "d": 27,
+        "factor": 1.009933272641147
       }
     ]
   },
@@ -1774,31 +1747,31 @@ V5_FITNESS 3 0.6038824178475463 topology 92959105894af649
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "f598bbdb1cfdb8549ebc07fd6b85f9b4bfad25d9c7a7676b311f244fbec38c20",
-    "breeder_native_nonzero_edges": 301,
-    "breeder_native_ops": 33,
+    "breeder_topology_hash": "21269c7651ddc2071c9d4f31b078c6a01d82f28d911c944ccbb9ebb6318d49ab",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7630581789055269,
-    "text_score": 0.9544,
+    "fitness": 0.6252124486511925,
+    "text_score": 0.5539428571428572,
     "vision": {
-      "clip_cosine": 0.24521848559379578,
-      "score": 0.7056352093815804,
-      "guidance": 8.519015312194824
+      "clip_cosine": 0.28537559509277344,
+      "score": 0.7212964820861816,
+      "guidance": 7.238924503326416
     },
-    "integration": 0.5656024813652039,
+    "integration": 0.5932332873344421,
     "structure": {
-      "mutations": 78,
+      "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 352,
-      "native_ops": 33,
-      "native_core_nonzero_edges": 301,
-      "topology_hash": "f598bbdb1cfdb8549ebc07fd6b85f9b4bfad25d9c7a7676b311f244fbec38c20"
+      "nonzero_edges": 350,
+      "native_ops": 30,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "21269c7651ddc2071c9d4f31b078c6a01d82f28d911c944ccbb9ebb6318d49ab"
     },
-    "text": "당신이 제공한 정보를 통해 초파리나 연결지, LLM 언어문제, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 분석하고 있습니다. 이 세대를 사용하는 과정을 다룬 것이 목표입니다.\n\n### 초파리 (Connectome)\n초파리 연결지에서는 신생뉴런과 구조변이는 주요한 요소입니다. 신생뉴런은 기존 유전학에서 제시된 단계에서 시작되는 최소 크기를 갖춘 신규 캐시로 인공 신경을 지향합니다. 이는 신생층에서 시작하여 전통적 신경 기반에서부터 유전학적 신경 기"
+    "text": "세대 234에서는 단일 신생뉴런이 주요 역할을 합니다. 이 신생뉴런은 LLM과 관련이 있다. \n\n아래는 세대 234의 세 가지 중요한 동작에 대해 다룹니다:\n\n1. **생산**: 신생뉴런은 학습된 모델이 만들어낸 새로운 정보를 저장하고 활용합니다. 이로 인해 전수적인 정보가 더 많은 빠른 과정에서 수집됩니다.\n\n2. **활성화**: 신생뉴런은 모델이 학습한 곡선을 기록하며, 이 곡선을 통해 데이터를 분석하여 학습 성공률을 고려하여 신생뉴런의 위치를 결정합니다. \n\n3. **"
   },
-  "elapsed_seconds": 169.05880308151245
+  "elapsed_seconds": 217.15327978134155
 }
