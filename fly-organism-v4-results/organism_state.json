@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 232,
+  "generation": 233,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6427823151954052,
+  "breeder_fitness": 0.7630581789055269,
   "breeder_genome": {
-    "generation": 232,
+    "generation": 233,
     "active_neo": 8,
     "mutations": [
       {
@@ -705,11 +705,6 @@
         "w": 0.23706152361750082
       },
       {
-        "s": 73,
-        "d": 37,
-        "w": 0.08816578556433018
-      },
-      {
         "s": 33,
         "d": 23,
         "w": 0.2621828894627365
@@ -733,11 +728,6 @@
         "s": 76,
         "d": 53,
         "w": -0.07497509397995991
-      },
-      {
-        "s": 25,
-        "d": 32,
-        "w": 0.24311710685629662
       },
       {
         "s": 65,
@@ -953,16 +943,36 @@
         "s": 15,
         "d": 44,
         "w": -0.1672821558659061
+      },
+      {
+        "s": 44,
+        "d": 13,
+        "w": -0.05181676979966883
+      },
+      {
+        "s": 18,
+        "d": 61,
+        "w": 0.3046359848820921
+      },
+      {
+        "s": 73,
+        "d": 8,
+        "w": -0.0836795219729054
+      },
+      {
+        "s": 60,
+        "d": 36,
+        "w": -0.13458984647803268
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
-    "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "temp": 1.0117626774708324,
+    "top_p": 0.9132296048415625,
+    "rep": 1.0706546903353393,
+    "tokens": 175,
+    "guidance": 8.519436662666104,
+    "steps": 8,
+    "seed_bias": 126355905,
+    "mutation_rate": 0.09745790866147604,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1139,6 +1149,23 @@
         "s": 60,
         "d": 39,
         "factor": 1.063537185762698
+      },
+      {
+        "kind": "native_knockout",
+        "s": 26,
+        "d": 19
+      },
+      {
+        "kind": "native_rewire",
+        "s": 28,
+        "d": 21,
+        "d2": 33
+      },
+      {
+        "kind": "native_scale",
+        "s": 21,
+        "d": 21,
+        "factor": 0.530013159551369
       }
     ]
   },
@@ -1739,31 +1766,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "f9f88e6ce5b6e4b4e042af26fa61bb26b8457fc913c341cd3dcddb4e06d809ac",
-    "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "f598bbdb1cfdb8549ebc07fd6b85f9b4bfad25d9c7a7676b311f244fbec38c20",
+    "breeder_native_nonzero_edges": 301,
+    "breeder_native_ops": 33,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6427823151954052,
-    "text_score": 0.6321142857142857,
+    "fitness": 0.7630581789055269,
+    "text_score": 0.9544,
     "vision": {
-      "clip_cosine": 0.27544599771499634,
-      "score": 0.709420629143715,
-      "guidance": 7.204438209533691
+      "clip_cosine": 0.24521848559379578,
+      "score": 0.7056352093815804,
+      "guidance": 8.519015312194824
     },
-    "integration": 0.5515869855880737,
+    "integration": 0.5656024813652039,
     "structure": {
-      "mutations": 76,
+      "mutations": 78,
       "active_neo": 8,
-      "nonzero_edges": 351,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "f9f88e6ce5b6e4b4e042af26fa61bb26b8457fc913c341cd3dcddb4e06d809ac"
+      "nonzero_edges": 352,
+      "native_ops": 33,
+      "native_core_nonzero_edges": 301,
+      "topology_hash": "f598bbdb1cfdb8549ebc07fd6b85f9b4bfad25d9c7a7676b311f244fbec38c20"
     },
-    "text": "아래는 세대 232에서의 신생뉴런과 구조변이 간략하게 정리를 한 것.\n\n1. **초파리**: 초기 신생자, 신생물체에서부터 출발할 수 있는 기능적 기능적인 신호를 받아서 행동하거나 기능 수행하고 행동을 제어하는 전수성 신호가 발전하게 된다.\n\n2. **connectome**: 이들은 각 뇌의 구조에 대한 전체적인 모니터링을 나타내며 신생신경학적 특성에 따른 모든 신장(단지 생존구조), 연결관계, 복잡한 과정 등을 측정하며, 신생뉴런의 신경수도가 얼마나 많은가지를 나타낼 수"
+    "text": "당신이 제공한 정보를 통해 초파리나 연결지, LLM 언어문제, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 분석하고 있습니다. 이 세대를 사용하는 과정을 다룬 것이 목표입니다.\n\n### 초파리 (Connectome)\n초파리 연결지에서는 신생뉴런과 구조변이는 주요한 요소입니다. 신생뉴런은 기존 유전학에서 제시된 단계에서 시작되는 최소 크기를 갖춘 신규 캐시로 인공 신경을 지향합니다. 이는 신생층에서 시작하여 전통적 신경 기반에서부터 유전학적 신경 기"
   },
-  "elapsed_seconds": 135.56159949302673
+  "elapsed_seconds": 169.05880308151245
 }
