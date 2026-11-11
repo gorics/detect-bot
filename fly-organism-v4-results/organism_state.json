@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 236,
+  "generation": 237,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,15 +569,15 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6578284423412254,
+  "breeder_fitness": 0.6277041687798867,
   "breeder_genome": {
-    "generation": 236,
-    "active_neo": 8,
+    "generation": 237,
+    "active_neo": 6,
     "mutations": [
       {
         "s": 13,
         "d": 68,
-        "w": 0.2384344208990037
+        "w": 0.4271725846389956
       },
       {
         "s": 16,
@@ -625,11 +625,6 @@
         "w": 0.25296394609503564
       },
       {
-        "s": 15,
-        "d": 70,
-        "w": 0.16285621598068806
-      },
-      {
         "s": 25,
         "d": 30,
         "w": 0.1978021474058818
@@ -667,7 +662,7 @@
       {
         "s": 56,
         "d": 63,
-        "w": -0.010887225702254144
+        "w": -0.08510619973306542
       },
       {
         "s": 4,
@@ -756,7 +751,7 @@
       },
       {
         "s": 67,
-        "d": 77,
+        "d": 21,
         "w": 0.18265625768602867
       },
       {
@@ -940,9 +935,9 @@
         "w": -0.005729559360677623
       },
       {
-        "s": 0,
+        "s": 60,
         "d": 5,
-        "w": -0.003378380411915142
+        "w": 0.09291852227818112
       },
       {
         "s": 15,
@@ -978,16 +973,21 @@
         "s": 34,
         "d": 45,
         "w": 0.067136679637865
+      },
+      {
+        "s": 86,
+        "d": 47,
+        "w": -0.20850303940487389
       }
     ],
-    "temp": 0.9666173904313182,
-    "top_p": 0.904910815275299,
-    "rep": 1.0968278420806206,
-    "tokens": 167,
-    "guidance": 7.385646535071644,
+    "temp": 0.9474235216115817,
+    "top_p": 0.9317775774330597,
+    "rep": 1.1287975937284702,
+    "tokens": 174,
+    "guidance": 7.497550661906039,
     "steps": 8,
-    "seed_bias": 421380179,
-    "mutation_rate": 0.1352864919879819,
+    "seed_bias": 239359635,
+    "mutation_rate": 0.1237128469238578,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1176,6 +1176,24 @@
         "s": 56,
         "d": 60,
         "factor": 0.8395638336607751
+      },
+      {
+        "kind": "native_rewire",
+        "s": 19,
+        "d": 23,
+        "d2": 1
+      },
+      {
+        "kind": "native_scale",
+        "s": 21,
+        "d": 60,
+        "factor": 1.8401480442502733
+      },
+      {
+        "kind": "native_rewire",
+        "s": 10,
+        "d": 58,
+        "d2": 57
       }
     ]
   },
@@ -1776,31 +1794,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "bb080213405fdfac4b0875b448f0056fd4def243f93120ee7e360a4a930de3e5",
-    "breeder_native_nonzero_edges": 302,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "773baff798db3f87bc95c27b346a996b9961a10f12ad3d59857bb306dda893d9",
+    "breeder_native_nonzero_edges": 301,
+    "breeder_native_ops": 35,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6578284423412254,
-    "text_score": 0.6421142857142857,
+    "fitness": 0.6277041687798867,
+    "text_score": 0.5889549783549783,
     "vision": {
-      "clip_cosine": 0.27668434381484985,
-      "score": 0.7179068940877915,
-      "guidance": 7.366211414337158
+      "clip_cosine": 0.2476380169391632,
+      "score": 0.7065788266062737,
+      "guidance": 7.463953495025635
     },
-    "integration": 0.5936412811279297,
+    "integration": 0.5564128756523132,
     "structure": {
       "mutations": 81,
-      "active_neo": 8,
-      "nonzero_edges": 356,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 302,
-      "topology_hash": "bb080213405fdfac4b0875b448f0056fd4def243f93120ee7e360a4a930de3e5"
+      "active_neo": 6,
+      "nonzero_edges": 351,
+      "native_ops": 35,
+      "native_core_nonzero_edges": 301,
+      "topology_hash": "773baff798db3f87bc95c27b346a996b9961a10f12ad3d59857bb306dda893d9"
     },
-    "text": "당신이 말씀하신 내용은 신생뉴런과 구조변이의 중요성을 강조하고 있습니다. 신생뉴런은 새로운 신생물이나 생물의 시작점에서 생성되는 신생한 신생물이 될 수 있어, 이는 신생물이 생존하기 위해 필요한 기본적인 부분을 포함합니다.\n\n구조변이는 신생물이 원래 형태나 모양을 유지하면서, 그 변화를 통해 신생물의 지능과 행동력을 발전시킵니다. 이것은 신생물이 사회적 관계를 형성하거나 새로운 기술이나 방법을 배워야 하는 중요한 역할을 합니다.\n\n\"보상\", \"입력\", \"블록제시\", \"진화\", \"생존\", 그리고 \"생명\" 등 다양한 요"
+    "text": "초파리의 세대 237의 사고 사이클은 다음과 같은 역할을 하는 것으로 간주됩니다:\n\n1. 신생뉴런 (New Neurons): 이 단계에서 새롭게 형성된 신생뉴런들이 생성되고 있습니다.\n\n2. 구조변이 (Structural Changes): 이러한 새로운 신생뉴런들이 신생뉴런과 연결되는 조직에 변화를 일으킵니다.\n\n3. 신생뉴런-구조 변경 (Synaptic Changes of New Neurons and Structure Changes of Neural Organization):\n   - 신생뉴런은 다른 신생뉴런과 연결하여 구성된 과정이 이루어집니다.\n   - 각 신생뉴런이 서로 연결되어 협력하며 이들의 연결도 변화합니다.\n\n4. 신생뉴원-자지적"
   },
-  "elapsed_seconds": 218.30127573013306
+  "elapsed_seconds": 182.7904691696167
 }
