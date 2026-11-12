@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 241 native_ops 30 neo 8
-V5_FITNESS 0 0.6218502267655814 topology 9bc7d1838e8735a1
-V5_EVALUATE 1 generation 241 native_ops 31 neo 8
-V5_FITNESS 1 0.6133662975712049 topology a93b99830d651dda
-V5_EVALUATE 2 generation 241 native_ops 31 neo 8
-V5_FITNESS 2 0.6833298350726461 topology efe03a7a3ab612bc
-V5_EVALUATE 3 generation 241 native_ops 30 neo 8
-V5_FITNESS 3 0.6838278857484356 topology 0cfaafcfdcfa84dc
+V5_EVALUATE 0 generation 242 native_ops 33 neo 8
+V5_FITNESS 0 0.565951488622586 topology d0e519cf470af693
+V5_EVALUATE 1 generation 242 native_ops 29 neo 8
+V5_FITNESS 1 0.623083390544267 topology c4e7c52b0d0a7299
+V5_EVALUATE 2 generation 242 native_ops 31 neo 8
+V5_FITNESS 2 0.5863407655353018 topology e6e083e9f618be0a
+V5_EVALUATE 3 generation 242 native_ops 30 neo 8
+V5_FITNESS 3 0.6243962978690148 topology a46d9ae617d48ac5
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 241,
+  "generation": 242,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.6838278857484356 topology 0cfaafcfdcfa84dc
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6838278857484356,
+  "breeder_fitness": 0.6243962978690148,
   "breeder_genome": {
-    "generation": 241,
+    "generation": 242,
     "active_neo": 8,
     "mutations": [
       {
@@ -1139,14 +1139,14 @@ V5_FITNESS 3 0.6838278857484356 topology 0cfaafcfdcfa84dc
       {
         "kind": "native_scale",
         "s": 10,
-        "d": 57,
-        "factor": 1.077779401473006
+        "d": 39,
+        "factor": 0.6908463854818688
       },
       {
-        "kind": "native_rewire",
-        "s": 0,
-        "d": 0,
-        "d2": 46
+        "kind": "native_birth",
+        "s": 52,
+        "d": 31,
+        "w": 0.05295097069443447
       }
     ]
   },
@@ -1747,31 +1747,31 @@ V5_FITNESS 3 0.6838278857484356 topology 0cfaafcfdcfa84dc
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "0cfaafcfdcfa84dc0c48aa45ef2e33aa186282eab1db3d57eb4e5b84d451a23b",
-    "breeder_native_nonzero_edges": 299,
+    "breeder_topology_hash": "a46d9ae617d48ac585fb869c73fddca0e0fc9a51881d032505dacf00e204852e",
+    "breeder_native_nonzero_edges": 300,
     "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6838278857484356,
-    "text_score": 0.7126857142857143,
+    "fitness": 0.6243962978690148,
+    "text_score": 0.5643428571428571,
     "vision": {
-      "clip_cosine": 0.308110773563385,
-      "score": 0.7301632016897202,
-      "guidance": 7.194493770599365
+      "clip_cosine": 0.27877211570739746,
+      "score": 0.7101798602690299,
+      "guidance": 7.242194652557373
     },
-    "integration": 0.5670192241668701,
+    "integration": 0.5940065979957581,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 350,
+      "nonzero_edges": 351,
       "native_ops": 30,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "0cfaafcfdcfa84dc0c48aa45ef2e33aa186282eab1db3d57eb4e5b84d451a23b"
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "a46d9ae617d48ac585fb869c73fddca0e0fc9a51881d032505dacf00e204852e"
     },
-    "text": "초파리 연결주사, LLM 이어징 언어와 Stable Diffusion 시각은 각각 새로운 신생 뇌가 동서울에 위치하여 신생뉴런과 구조변이를 형성하며, 신생뉴런은 8개이며 LLM은 76개의 신생뉴런을 나타내고 있습니다.\n\n그러나 이러한 기계적 모델링은 현재 최신 연구와 정확한 신생 뇌 데이터가 제공되지 않아 제한적인 가정(예: 세대 241)로 간주되며, 인공 지능의 학습 및 발전은 계속되고 있습니다. 따라서 특정 모델의 구현에 대한 확실한 정보는 아직 존재하지 않습니다.\n\n다음은 이"
+    "text": "초파리 (Inferred Primate Network)는 인간이 어떤 특정 문제에 대해 결정적인 상황을 형성하거나 변화시키거나, 그 과정의 특징을 이해하는 과정을 대비하고 있습니다. 이 언어엽은 신생뉴런과 관련된 여러 주요한 과학적 원리와 연관성을 다룹니다.\n\n1. **입력**: 이 측면은 신생뉴런과 연결되어야 하며, 이것이 신규 정보를 인식하거나 새로운 행동 방향을 제안하는 데 필요한 중요한 단계입니다.\n\n2. **생존 기술**: 이 측면에서 신생뉴런은 '사고 향상을 위한 자원'으로, 이는 기능이 발달하기 위해 필요한"
   },
-  "elapsed_seconds": 132.215824842453
+  "elapsed_seconds": 111.81563091278076
 }
