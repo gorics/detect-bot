@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 239 native_ops 38 neo 8
-V5_FITNESS 0 0.6065279770933635 topology 9e9535977d6f8d56
-V5_EVALUATE 1 generation 239 native_ops 31 neo 8
-V5_FITNESS 1 0.6257251162129753 topology 8e16f0d80118db42
-V5_EVALUATE 2 generation 239 native_ops 37 neo 8
-V5_FITNESS 2 0.587828455103668 topology 0331971eb61eac27
-V5_EVALUATE 3 generation 239 native_ops 31 neo 8
-V5_FITNESS 3 0.5852878664041483 topology adff1ea36b3b7adb
+V5_EVALUATE 0 generation 240 native_ops 32 neo 8
+V5_FITNESS 0 0.5869370166595171 topology b3d3ae152322d3ed
+V5_EVALUATE 1 generation 240 native_ops 29 neo 8
+V5_FITNESS 1 0.6689983708904357 topology 345ec49aa3a35c4f
+V5_EVALUATE 2 generation 240 native_ops 33 neo 8
+V5_FITNESS 2 0.5804624849555657 topology 23e64ed661dbd054
+V5_EVALUATE 3 generation 240 native_ops 29 neo 8
+V5_FITNESS 3 0.6526663357040219 topology fcedf53ee4c51aa7
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 239,
+  "generation": 240,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.5852878664041483 topology adff1ea36b3b7adb
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6257251162129753,
+  "breeder_fitness": 0.6689983708904357,
   "breeder_genome": {
-    "generation": 239,
+    "generation": 240,
     "active_neo": 8,
     "mutations": [
       {
@@ -1147,21 +1147,10 @@ V5_FITNESS 3 0.5852878664041483 topology adff1ea36b3b7adb
         "d2": 11
       },
       {
-        "kind": "native_scale",
-        "s": 10,
-        "d": 8,
-        "factor": 0.8913690055323125
-      },
-      {
-        "kind": "native_birth",
-        "s": 49,
-        "d": 52,
-        "w": -0.023404878770177603
-      },
-      {
-        "kind": "native_knockout",
-        "s": 60,
-        "d": 2
+        "kind": "native_rewire",
+        "s": 8,
+        "d": 19,
+        "d2": 9
       }
     ]
   },
@@ -1762,31 +1751,31 @@ V5_FITNESS 3 0.5852878664041483 topology adff1ea36b3b7adb
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "8e16f0d80118db42eb3b3ce959e8f7adde2f56e0469f05e4f8c82010a366ad00",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "345ec49aa3a35c4f3294065b243e0e121b00d5177e9d08204cd04e2a9b04d80e",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 29,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6257251162129753,
-    "text_score": 0.5583428571428571,
+    "fitness": 0.6689983708904357,
+    "text_score": 0.6545142857142857,
     "vision": {
-      "clip_cosine": 0.293271005153656,
-      "score": 0.711955561141173,
-      "guidance": 6.6306681632995605
+      "clip_cosine": 0.29691052436828613,
+      "score": 0.7257951045036316,
+      "guidance": 6.600519180297852
     },
-    "integration": 0.608871340751648,
+    "integration": 0.620463490486145,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
-      "nonzero_edges": 352,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "8e16f0d80118db42eb3b3ce959e8f7adde2f56e0469f05e4f8c82010a366ad00"
+      "nonzero_edges": 351,
+      "native_ops": 29,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "345ec49aa3a35c4f3294065b243e0e121b00d5177e9d08204cd04e2a9b04d80e"
     },
-    "text": "세계의 역사적 변화는 기존 농사와의 대립에서 시작되어야 하며, 이는 인간의 삶과 기술 발전의 주요 원인 중 하나입니다. 이는 신생 신념 끼치기, 새로운 도구의 개발 및 사용, 그리고 개인의 행동과 문화에 영향을 미칠 수 있습니다.\n\n초파리 (Neural Plasticity) 는 신장은 시간과 공간에 따라 변화하는 신생 신장을 의미합니다. 이것은 신장이 특정 영역 또는 기능을 개선하거나 변경할 때 발생할 수 있는 반응을 제한하기 때문입니다.\n\nConnectome는 신장 간 연결성을 고려하여 신장"
+    "text": "세대 240의 사고 사이클은 이하로 구성됩니다:\n\n1. **초파리**: 신생뉴런의 기본적인 신경상태. 각 뉴런은 서로 연결되어 동작합니다.\n\n2. **Connecting Neurons (CNN)**: 이들은 각 신생뉴런과 연결되며, 이들은 신생뉴런에 턱없이 중요한 역할을 합니다.\n\n3. **Stable Diffusion**: 이 신경상태의 반복적이고 정규적인 변화를 보여주는 유기체. 이는 다양한 신경적 전환과 행동 패턴에 의존합니다.\n\n4. **Lemm**: This is a computational model of language generation in natural"
   },
-  "elapsed_seconds": 174.37382078170776
+  "elapsed_seconds": 162.98284935951233
 }
