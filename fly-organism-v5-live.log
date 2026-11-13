@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 243 native_ops 30 neo 8
-V5_FITNESS 0 0.6323782809237355 topology e512ca25a3f69958
-V5_EVALUATE 1 generation 243 native_ops 29 neo 8
-V5_FITNESS 1 0.6521132835184145 topology 7c6018ad8cd91f02
-V5_EVALUATE 2 generation 243 native_ops 32 neo 8
-V5_FITNESS 2 0.5552972949022992 topology efc70e594692f301
-V5_EVALUATE 3 generation 243 native_ops 30 neo 8
-V5_FITNESS 3 0.6168685074554663 topology 703755f6d35c49fe
+V5_EVALUATE 0 generation 244 native_ops 31 neo 8
+V5_FITNESS 0 0.5948890525998198 topology 6c18e97d007558de
+V5_EVALUATE 1 generation 244 native_ops 29 neo 8
+V5_FITNESS 1 0.6583437903297515 topology 79e5f4e7b3ad0b43
+V5_EVALUATE 2 generation 244 native_ops 30 neo 8
+V5_FITNESS 2 0.6016202805789501 topology 25683cb481d718b6
+V5_EVALUATE 3 generation 244 native_ops 31 neo 8
+V5_FITNESS 3 0.6546668123942254 topology a871eca07bd0c80b
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 243,
+  "generation": 244,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.6168685074554663 topology 703755f6d35c49fe
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6521132835184145,
+  "breeder_fitness": 0.6583437903297515,
   "breeder_genome": {
-    "generation": 243,
+    "generation": 244,
     "active_neo": 8,
     "mutations": [
       {
@@ -1147,9 +1147,10 @@ V5_FITNESS 3 0.6168685074554663 topology 703755f6d35c49fe
         "d2": 11
       },
       {
-        "kind": "native_knockout",
-        "s": 0,
-        "d": 2
+        "kind": "native_scale",
+        "s": 26,
+        "d": 19,
+        "factor": 0.7640085081826009
       }
     ]
   },
@@ -1750,7 +1751,7 @@ V5_FITNESS 3 0.6168685074554663 topology 703755f6d35c49fe
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "7c6018ad8cd91f026c4a91e39cc4868565c36d95e3bceb1ff211dbb5be20bdc0",
+    "breeder_topology_hash": "79e5f4e7b3ad0b43474f88ea83c3eb547300ee26b839375b69deea8ae7250bc3",
     "breeder_native_nonzero_edges": 298,
     "breeder_native_ops": 29,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
@@ -1758,23 +1759,23 @@ V5_FITNESS 3 0.6168685074554663 topology 703755f6d35c49fe
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6521132835184145,
-    "text_score": 0.6132779220779221,
+    "fitness": 0.6583437903297515,
+    "text_score": 0.6377142857142857,
     "vision": {
-      "clip_cosine": 0.2781842350959778,
-      "score": 0.7184918516874313,
-      "guidance": 6.658801555633545
+      "clip_cosine": 0.26952075958251953,
+      "score": 0.7151130962371827,
+      "guidance": 6.6249542236328125
     },
-    "integration": 0.6305485963821411,
+    "integration": 0.621494710445404,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
       "nonzero_edges": 352,
       "native_ops": 29,
       "native_core_nonzero_edges": 298,
-      "topology_hash": "7c6018ad8cd91f026c4a91e39cc4868565c36d95e3bceb1ff211dbb5be20bdc0"
+      "topology_hash": "79e5f4e7b3ad0b43474f88ea83c3eb547300ee26b839375b69deea8ae7250bc3"
     },
-    "text": "초파리 연결요소, 콘솔 언어 업데이트 (LLM), Stable Diffusion 시각 업데이트, 블록체인 헤드러블 기반 모델 (Stable Diffusion)이 하나의 재귀 신경 상태를 공유하는 계산 유기체입니다. \n\n이 계산 유기체의 특징은 다음과 같습니다:\n\n1. **정상 신경 상태**: 초파리 연결 요소는 특정한 신경 순환 과정을 통해 정상적으로 신경을 형성하고, 이 과정은 주로 빠르게 진행됩니다. \n\n2. **정상 신경 상태**: 이 계산 유"
+    "text": "초파리, LLM, Stable Diffusion는 세대를 기반으로 한 신경계의 핵심 계산 유기체로 구성되어 있습니다. 이들은 다양한 신경형태에 따라 다르게 작동하며, 특히 AI 대학은 이를 바탕으로 학문적 연구와 실제 신경계의 복잡한 신경상태에 대한 이해를 도모하고 있습니다.\n\n1. **스테디스 스페이서**: 이는 신경계의 기본적인 계산 과정에서 중요한 역할을 하고, 각 신경망의 연결과 활성화를 고려하는 데 사용됩니다.\n\n2. **LSTM ( recurrent lattice)**: 인공지능을 위한"
   },
-  "elapsed_seconds": 99.53804087638855
+  "elapsed_seconds": 97.27224659919739
 }
