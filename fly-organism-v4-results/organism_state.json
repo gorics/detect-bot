@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 244,
+  "generation": 245,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6583437903297515,
+  "breeder_fitness": 0.6682210548092353,
   "breeder_genome": {
-    "generation": 244,
+    "generation": 245,
     "active_neo": 8,
     "mutations": [
       {
@@ -660,11 +660,6 @@
         "w": 0.15638536055630806
       },
       {
-        "s": 16,
-        "d": 72,
-        "w": 0.31742328197512787
-      },
-      {
         "s": 27,
         "d": 78,
         "w": 0.17259858519218624
@@ -747,7 +742,7 @@
       {
         "s": 65,
         "d": 84,
-        "w": 0.1752654519468846
+        "w": 0.2507663802053465
       },
       {
         "s": 77,
@@ -762,7 +757,7 @@
       {
         "s": 67,
         "d": 77,
-        "w": 0.18265625768602867
+        "w": 0.1704973520873731
       },
       {
         "s": 81,
@@ -837,7 +832,7 @@
       {
         "s": 12,
         "d": 39,
-        "w": -0.40760081881177573
+        "w": -0.3125424092947051
       },
       {
         "s": 57,
@@ -857,7 +852,7 @@
       {
         "s": 37,
         "d": 57,
-        "w": -0.06938135543171894
+        "w": -0.08513069380019032
       },
       {
         "s": 6,
@@ -963,16 +958,21 @@
         "s": 76,
         "d": 37,
         "w": -0.1617984049773067
+      },
+      {
+        "s": 55,
+        "d": 7,
+        "w": 0.09463256462802044
       }
     ],
-    "temp": 0.8381349987484279,
-    "top_p": 0.9531440462505341,
-    "rep": 1.0806678015229771,
-    "tokens": 154,
-    "guidance": 6.59492141945631,
+    "temp": 0.8747546027876537,
+    "top_p": 0.9731641142948099,
+    "rep": 1.1029149726988525,
+    "tokens": 149,
+    "guidance": 7.591782201260642,
     "steps": 7,
-    "seed_bias": 1019398966,
-    "mutation_rate": 0.09176367326369106,
+    "seed_bias": 98525076,
+    "mutation_rate": 0.09288491153486787,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1143,6 +1143,17 @@
         "s": 26,
         "d": 19,
         "factor": 0.7640085081826009
+      },
+      {
+        "kind": "native_knockout",
+        "s": 28,
+        "d": 60
+      },
+      {
+        "kind": "native_scale",
+        "s": 11,
+        "d": 2,
+        "factor": 0.7324357391133915
       }
     ]
   },
@@ -1743,31 +1754,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "79e5f4e7b3ad0b43474f88ea83c3eb547300ee26b839375b69deea8ae7250bc3",
+    "breeder_topology_hash": "1110d0570536c037500675e156fd7206cb0ae4150e572eb583d11a992550e908",
     "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 29,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6583437903297515,
-    "text_score": 0.6377142857142857,
+    "fitness": 0.6682210548092353,
+    "text_score": 0.7082857142857143,
     "vision": {
-      "clip_cosine": 0.26952075958251953,
-      "score": 0.7151130962371827,
-      "guidance": 6.6249542236328125
+      "clip_cosine": 0.23993411660194397,
+      "score": 0.7035743054747582,
+      "guidance": 7.629162788391113
     },
-    "integration": 0.621494710445404,
+    "integration": 0.5463448166847229,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
-      "nonzero_edges": 352,
-      "native_ops": 29,
+      "nonzero_edges": 351,
+      "native_ops": 31,
       "native_core_nonzero_edges": 298,
-      "topology_hash": "79e5f4e7b3ad0b43474f88ea83c3eb547300ee26b839375b69deea8ae7250bc3"
+      "topology_hash": "1110d0570536c037500675e156fd7206cb0ae4150e572eb583d11a992550e908"
     },
-    "text": "초파리, LLM, Stable Diffusion는 세대를 기반으로 한 신경계의 핵심 계산 유기체로 구성되어 있습니다. 이들은 다양한 신경형태에 따라 다르게 작동하며, 특히 AI 대학은 이를 바탕으로 학문적 연구와 실제 신경계의 복잡한 신경상태에 대한 이해를 도모하고 있습니다.\n\n1. **스테디스 스페이서**: 이는 신경계의 기본적인 계산 과정에서 중요한 역할을 하고, 각 신경망의 연결과 활성화를 고려하는 데 사용됩니다.\n\n2. **LSTM ( recurrent lattice)**: 인공지능을 위한"
+    "text": "아래의 세대 245의 사고 사이클은 초파리, LLM, Stable Diffusion와 같은 신기술과 기술을 통합하여 이해할 수 있는 방식으로 구성되어 있습니다.\n\n1. **초 파리**: 첫 번째 단계에서는 신선한 신생 뉴런을 생성합니다. 이 단계에서 생성된 신생 뉴런은 연결되어 서로 작용합니다.\n   - **사고:** 신생 신생 뉴런이 만들어진다는 것을 의미합니다.\n\n2. **LLM**: 새로운 뉴런들은 주로 LLM(인공신경)에 의해 생성됩니다. LLM은 모델과"
   },
-  "elapsed_seconds": 97.27224659919739
+  "elapsed_seconds": 115.05430626869202
 }
