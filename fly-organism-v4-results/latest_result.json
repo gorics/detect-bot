@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 247,
+  "generation": 248,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,10 +569,10 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7181683835339541,
+  "breeder_fitness": 0.7433427476987727,
   "breeder_genome": {
-    "generation": 247,
-    "active_neo": 7,
+    "generation": 248,
+    "active_neo": 8,
     "mutations": [
       {
         "s": 13,
@@ -720,11 +720,6 @@
         "w": 0.11658934234998806
       },
       {
-        "s": 6,
-        "d": 55,
-        "w": 0.37195960094120034
-      },
-      {
         "s": 64,
         "d": 60,
         "w": 0.23856151428632136
@@ -761,7 +756,7 @@
       },
       {
         "s": 81,
-        "d": 41,
+        "d": 56,
         "w": 0.16480866791870333
       },
       {
@@ -870,11 +865,6 @@
         "w": 0.17916128425034272
       },
       {
-        "s": 20,
-        "d": 72,
-        "w": 0.005459912539621534
-      },
-      {
         "s": 83,
         "d": 6,
         "w": 0.2758059866902395
@@ -958,16 +948,21 @@
         "s": 68,
         "d": 10,
         "w": -0.10957797114578648
+      },
+      {
+        "s": 69,
+        "d": 42,
+        "w": -0.05592919627002854
       }
     ],
-    "temp": 0.9977503760890237,
-    "top_p": 0.9892372304471708,
-    "rep": 1.0674348213110223,
-    "tokens": 169,
-    "guidance": 7.715424844150993,
+    "temp": 0.9917670819280652,
+    "top_p": 0.9899036450131223,
+    "rep": 1.0725708935669156,
+    "tokens": 163,
+    "guidance": 8.283211436918233,
     "steps": 8,
-    "seed_bias": 78592269,
-    "mutation_rate": 0.11410576917940296,
+    "seed_bias": 449560758,
+    "mutation_rate": 0.10059185052500456,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1149,6 +1144,11 @@
         "s": 2,
         "d": 17,
         "d2": 53
+      },
+      {
+        "kind": "native_knockout",
+        "s": 60,
+        "d": 0
       }
     ]
   },
@@ -1749,31 +1749,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "923d46abc8a1ba1d9b8dcecc233c629afe02bd588108698e806fab12ae144b56",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "d9fbbb47298a2dc11d9c83455bc0ab93146ece82a538b557fbb07ae472ee7ad5",
+    "breeder_native_nonzero_edges": 297,
+    "breeder_native_ops": 32,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7181683835339541,
-    "text_score": 0.7805551020408164,
+    "fitness": 0.7433427476987727,
+    "text_score": 0.8665302107728337,
     "vision": {
-      "clip_cosine": 0.24061185121536255,
-      "score": 0.7038386219739914,
-      "guidance": 7.712676525115967
+      "clip_cosine": 0.2587105631828308,
+      "score": 0.7108971196413041,
+      "guidance": 8.251312255859375
     },
-    "integration": 0.702156662940979,
+    "integration": 0.6395313143730164,
     "structure": {
-      "mutations": 77,
-      "active_neo": 7,
-      "nonzero_edges": 349,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "923d46abc8a1ba1d9b8dcecc233c629afe02bd588108698e806fab12ae144b56"
+      "mutations": 76,
+      "active_neo": 8,
+      "nonzero_edges": 348,
+      "native_ops": 32,
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "d9fbbb47298a2dc11d9c83455bc0ab93146ece82a538b557fbb07ae472ee7ad5"
     },
-    "text": "세대 247는 신생적인 신경계 기능의 핵심적 과정을 다루며 다양한 신경상태의 변화와 신호 처리에 관련한 기회를 제공합니다. 세대 247의 초파리는 인터랜드 신경상태를 비롯하여 LLM(더이상 최선)과 stable diffusion(이미지 압축 압도법)을 함께 기반으로 하여 핵심적인 의미를 가집니다. \n\n아래는 세대 247의 세부 내용입니다.\n\n- **입력**: 초기의 신경상태로는 신생뉴런과 구조변이가 존재한다. \n- **진화**:\n    - **전역변화**:"
+    "text": "초파리, 연결 모음, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이, 모든 요소를 기준으로 합의해보면:\n\n초파리와 연결된 모델은 보통 빠른 시간 내에 새로운 신경적 성장을 만들어낼 수 있습니다. 이 동물들은 매우 빠르게 신생 린제니를 만들어 가는 데 초점을 맞추며, 이 결과를 사용해 새로운 린제니를 생성하고, 이를 다시 신성장으로 만들게 합니다.\nLLM (Large Language Model), 이들은 매우 빠르게 바인딩된"
   },
-  "elapsed_seconds": 176.68190836906433
+  "elapsed_seconds": 182.30493593215942
 }
