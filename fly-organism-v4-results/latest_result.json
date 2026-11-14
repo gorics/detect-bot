@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 246,
+  "generation": 247,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,10 +569,10 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6809275092585381,
+  "breeder_fitness": 0.7181683835339541,
   "breeder_genome": {
-    "generation": 246,
-    "active_neo": 8,
+    "generation": 247,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -661,7 +661,7 @@
       },
       {
         "s": 27,
-        "d": 78,
+        "d": 2,
         "w": 0.17259858519218624
       },
       {
@@ -766,13 +766,13 @@
       },
       {
         "s": 41,
-        "d": 66,
+        "d": 7,
         "w": 0.2746354771278136
       },
       {
         "s": 57,
         "d": 85,
-        "w": 0.1812534886086219
+        "w": 0.3163820176791979
       },
       {
         "s": 75,
@@ -861,11 +861,6 @@
       },
       {
         "s": 46,
-        "d": 7,
-        "w": -0.06043034692357571
-      },
-      {
-        "s": 46,
         "d": 33,
         "w": 0.34958081054216755
       },
@@ -896,7 +891,7 @@
       },
       {
         "s": 11,
-        "d": 40,
+        "d": 15,
         "w": 0.014565668390036278
       },
       {
@@ -926,7 +921,7 @@
       },
       {
         "s": 81,
-        "d": 36,
+        "d": 54,
         "w": -0.007376848456828504
       },
       {
@@ -953,16 +948,26 @@
         "s": 15,
         "d": 44,
         "w": -0.1672821558659061
+      },
+      {
+        "s": 53,
+        "d": 76,
+        "w": -0.12535831686944668
+      },
+      {
+        "s": 68,
+        "d": 10,
+        "w": -0.10957797114578648
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
-    "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "temp": 0.9977503760890237,
+    "top_p": 0.9892372304471708,
+    "rep": 1.0674348213110223,
+    "tokens": 169,
+    "guidance": 7.715424844150993,
+    "steps": 8,
+    "seed_bias": 78592269,
+    "mutation_rate": 0.11410576917940296,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1138,6 +1143,12 @@
         "s": 15,
         "d": 48,
         "w": -0.05027747586627613
+      },
+      {
+        "kind": "native_rewire",
+        "s": 2,
+        "d": 17,
+        "d2": 53
       }
     ]
   },
@@ -1738,31 +1749,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "39327d527bf37a9128965d8f3336e26f8998237f7df691f417235102c68fe9db",
+    "breeder_topology_hash": "923d46abc8a1ba1d9b8dcecc233c629afe02bd588108698e806fab12ae144b56",
     "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 30,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6809275092585381,
-    "text_score": 0.721152380952381,
+    "fitness": 0.7181683835339541,
+    "text_score": 0.7805551020408164,
     "vision": {
-      "clip_cosine": 0.24851132929325104,
-      "score": 0.7069194184243679,
-      "guidance": 7.240242958068848
+      "clip_cosine": 0.24061185121536255,
+      "score": 0.7038386219739914,
+      "guidance": 7.712676525115967
     },
-    "integration": 0.5934311151504517,
+    "integration": 0.702156662940979,
     "structure": {
-      "mutations": 76,
-      "active_neo": 8,
-      "nonzero_edges": 350,
-      "native_ops": 30,
+      "mutations": 77,
+      "active_neo": 7,
+      "nonzero_edges": 349,
+      "native_ops": 31,
       "native_core_nonzero_edges": 299,
-      "topology_hash": "39327d527bf37a9128965d8f3336e26f8998237f7df691f417235102c68fe9db"
+      "topology_hash": "923d46abc8a1ba1d9b8dcecc233c629afe02bd588108698e806fab12ae144b56"
     },
-    "text": "초파리, LLM과 stable diffusion 시각애, 인공지능은 같은 층에서 시작되었으며, 모든 것은 신생뉴런(8개)과 구조변이(76개)를 기반으로 합니다. 여기서 설명해 드리겠습니다.\n\n1. 신생뉴런(8개):\n- LLM: 이는 인간이나 machine learning 모델로 나타나는 정보가 주요한 일부입니다.\n- 초파리: 초기적인 형태를 갖추고 있는 신생 새로운 신호를 표현합니다.\n- Stable Diffusion: 새로운 신규 데이터를 처리하고 추출하는 과정이라고 볼 수 있습니다. \n\n2. 구조변이(76개):\n- LLM: 이는 LLM의 구조적인 모델"
+    "text": "세대 247는 신생적인 신경계 기능의 핵심적 과정을 다루며 다양한 신경상태의 변화와 신호 처리에 관련한 기회를 제공합니다. 세대 247의 초파리는 인터랜드 신경상태를 비롯하여 LLM(더이상 최선)과 stable diffusion(이미지 압축 압도법)을 함께 기반으로 하여 핵심적인 의미를 가집니다. \n\n아래는 세대 247의 세부 내용입니다.\n\n- **입력**: 초기의 신경상태로는 신생뉴런과 구조변이가 존재한다. \n- **진화**:\n    - **전역변화**:"
   },
-  "elapsed_seconds": 171.85467720031738
+  "elapsed_seconds": 176.68190836906433
 }
