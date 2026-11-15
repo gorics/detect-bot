@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 252 native_ops 32 neo 8
-V5_FITNESS 0 0.7760932525029183 topology 1c68e4f17db91532
-V5_EVALUATE 1 generation 252 native_ops 31 neo 8
-V5_FITNESS 1 0.59794469069376 topology 142a6a0be2ac005b
-V5_EVALUATE 2 generation 252 native_ops 32 neo 8
-V5_FITNESS 2 0.5775610052885505 topology 25f30dd4817707ca
-V5_EVALUATE 3 generation 252 native_ops 31 neo 8
-V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
+V5_EVALUATE 0 generation 253 native_ops 35 neo 8
+V5_FITNESS 0 0.5859460555161392 topology 5a469394cf6d1480
+V5_EVALUATE 1 generation 253 native_ops 29 neo 8
+V5_FITNESS 1 0.5779903081835565 topology af6461dce0cbbcfe
+V5_EVALUATE 2 generation 253 native_ops 34 neo 8
+V5_FITNESS 2 0.6563472135656627 topology e52d5f7d7de2bbca
+V5_EVALUATE 3 generation 253 native_ops 31 neo 8
+V5_FITNESS 3 0.5848154772737347 topology 691c421374b922e1
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 252,
+  "generation": 253,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7760932525029183,
+  "breeder_fitness": 0.6563472135656627,
   "breeder_genome": {
-    "generation": 252,
+    "generation": 253,
     "active_neo": 8,
     "mutations": [
       {
@@ -690,7 +690,7 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
       {
         "s": 24,
         "d": 68,
-        "w": 0.21436826240660092
+        "w": 0.41290507631266204
       },
       {
         "s": 64,
@@ -705,7 +705,7 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
       {
         "s": 70,
         "d": 5,
-        "w": 0.21214621551856255
+        "w": 0.20272463809690128
       },
       {
         "s": 72,
@@ -739,7 +739,7 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
       },
       {
         "s": 76,
-        "d": 53,
+        "d": 33,
         "w": -0.07497509397995991
       },
       {
@@ -785,7 +785,7 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
       {
         "s": 75,
         "d": 66,
-        "w": -0.0528791614477103
+        "w": 0.1924291364151614
       },
       {
         "s": 1,
@@ -810,7 +810,7 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
       {
         "s": 61,
         "d": 49,
-        "w": -0.7684698965507634
+        "w": -0.753856215891438
       },
       {
         "s": 71,
@@ -878,7 +878,7 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
         "w": 0.34958081054216755
       },
       {
-        "s": 67,
+        "s": 1,
         "d": 11,
         "w": 0.17916128425034272
       },
@@ -986,16 +986,26 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
         "s": 72,
         "d": 13,
         "w": 0.1729656645925838
+      },
+      {
+        "s": 51,
+        "d": 6,
+        "w": 0.027064989262833912
+      },
+      {
+        "s": 59,
+        "d": 41,
+        "w": -0.2964668581178895
       }
     ],
-    "temp": 0.8007207637830426,
-    "top_p": 0.9648282629410885,
-    "rep": 1.1026469925369224,
+    "temp": 0.8741631178526187,
+    "top_p": 0.9697614972683907,
+    "rep": 1.1102388801851704,
     "tokens": 165,
-    "guidance": 6.066312400224367,
+    "guidance": 6.415759231085373,
     "steps": 7,
-    "seed_bias": 122103334,
-    "mutation_rate": 0.10317466212172595,
+    "seed_bias": 601717526,
+    "mutation_rate": 0.12187016970984621,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1184,6 +1194,17 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
         "s": 11,
         "d": 2,
         "d2": 61
+      },
+      {
+        "kind": "native_knockout",
+        "s": 23,
+        "d": 19
+      },
+      {
+        "kind": "native_scale",
+        "s": 6,
+        "d": 9,
+        "factor": 0.9796960936436208
       }
     ]
   },
@@ -1784,31 +1805,31 @@ V5_FITNESS 3 0.5686713320263095 topology fe22e514494113b2
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "1c68e4f17db915320524742a1ed03640c594c7f6fb17b4998a536710677fa062",
-    "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "e52d5f7d7de2bbca4f897ee25f5685a41b7837e9b38572570eb1a61bc66580e5",
+    "breeder_native_nonzero_edges": 302,
+    "breeder_native_ops": 34,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7760932525029183,
-    "text_score": 0.9552,
+    "fitness": 0.6563472135656627,
+    "text_score": 0.6403613445378151,
     "vision": {
-      "clip_cosine": 0.2547663450241089,
-      "score": 0.7093588745594025,
-      "guidance": 6.119748115539551
+      "clip_cosine": 0.24106773734092712,
+      "score": 0.7040164175629616,
+      "guidance": 6.397285461425781
     },
-    "integration": 0.6342995762825012,
+    "integration": 0.624206006526947,
     "structure": {
-      "mutations": 81,
+      "mutations": 83,
       "active_neo": 8,
-      "nonzero_edges": 355,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "1c68e4f17db915320524742a1ed03640c594c7f6fb17b4998a536710677fa062"
+      "nonzero_edges": 356,
+      "native_ops": 34,
+      "native_core_nonzero_edges": 302,
+      "topology_hash": "e52d5f7d7de2bbca4f897ee25f5685a41b7837e9b38572570eb1a61bc66580e5"
     },
-    "text": "초파리, Connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상을 받아들이는 신생뉴런의 활성화와 반응을 기반으로 합니다. 이들은 뇌 내에서 특정 정보를 분석하고 행동 방식에 영향을 미치며, 이를 통해 신생물이 다른 곳으로 간주될 수 있습니다.\n\n\"수명\"이라는 단어로, 신생뉴런은 새로운 정보를 받아들일 수 있고, 이 정보는 뇌를 \"새로운 방향으로 이동시키는 것\"이라고 이해됩니다. 이는 신생물이 새로운 환경에서 스스로 결정할 수 있도록 하는 것입니다.\n\n\"신생물의 생존과 발전\"이라는 주제"
+    "text": "세대 253의 사고 사이클에 대한 예로 이룰 수 있는 방법 중 하나는 신생뉴런과 같은 간접적인 변화와 유전적 반응으로 이루어진 것들입니다. 이러한 기계학습 시스템은 새로운 정보 또는 데이터로부터 신뢰성 있고 적합한 가설을 찾습니다.\n\n1. **초파리**: 초파리는 신생뉴런을 제작하여 새로운 정보 또는 동일한 정보를 받아들이며, 이를 신속하게 정확히 학습합니다. 따라서, 초파리는 시간과 힘을 사용하여 새로운 정보나 정보를 더 잘 이해하고 정확하게 추론할 수 있습니다.\n\n2. **LLM (Language Model)**: LLM은 입력한 자연어"
   },
-  "elapsed_seconds": 166.3296127319336
+  "elapsed_seconds": 120.28096127510071
 }
