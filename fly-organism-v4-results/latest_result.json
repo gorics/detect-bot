@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 251,
+  "generation": 252,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7349333943929814,
+  "breeder_fitness": 0.7760932525029183,
   "breeder_genome": {
-    "generation": 251,
+    "generation": 252,
     "active_neo": 8,
     "mutations": [
       {
@@ -592,7 +592,7 @@
       {
         "s": 46,
         "d": 73,
-        "w": 0.16934542687604243
+        "w": 0.05452797259702988
       },
       {
         "s": 36,
@@ -683,11 +683,6 @@
         "s": 24,
         "d": 68,
         "w": 0.21436826240660092
-      },
-      {
-        "s": 80,
-        "d": 27,
-        "w": 0.28459931780699826
       },
       {
         "s": 64,
@@ -963,16 +958,36 @@
         "s": 76,
         "d": 37,
         "w": -0.1617984049773067
+      },
+      {
+        "s": 14,
+        "d": 56,
+        "w": 0.06652023681110682
+      },
+      {
+        "s": 15,
+        "d": 32,
+        "w": 0.10118608072261581
+      },
+      {
+        "s": 42,
+        "d": 84,
+        "w": -0.021180535444596048
+      },
+      {
+        "s": 72,
+        "d": 13,
+        "w": 0.1729656645925838
       }
     ],
-    "temp": 0.8381349987484279,
-    "top_p": 0.9531440462505341,
-    "rep": 1.0806678015229771,
-    "tokens": 154,
-    "guidance": 6.59492141945631,
+    "temp": 0.8007207637830426,
+    "top_p": 0.9648282629410885,
+    "rep": 1.1026469925369224,
+    "tokens": 165,
+    "guidance": 6.066312400224367,
     "steps": 7,
-    "seed_bias": 1019398966,
-    "mutation_rate": 0.09176367326369106,
+    "seed_bias": 122103334,
+    "mutation_rate": 0.10317466212172595,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1155,6 +1170,12 @@
         "s": 28,
         "d": 35,
         "factor": 0.8784867642045092
+      },
+      {
+        "kind": "native_rewire",
+        "s": 11,
+        "d": 2,
+        "d2": 61
       }
     ]
   },
@@ -1755,31 +1776,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "7a6dfe8ea7570492cf48cf46e039ac40763814f4c604cc546c44431931cf6b87",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "1c68e4f17db915320524742a1ed03640c594c7f6fb17b4998a536710677fa062",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 32,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7349333943929814,
-    "text_score": 0.8586285714285714,
+    "fitness": 0.7760932525029183,
+    "text_score": 0.9552,
     "vision": {
-      "clip_cosine": 0.2417871505022049,
-      "score": 0.7042969886958599,
-      "guidance": 6.603304386138916
+      "clip_cosine": 0.2547663450241089,
+      "score": 0.7093588745594025,
+      "guidance": 6.119748115539551
     },
-    "integration": 0.6181763410568237,
+    "integration": 0.6342995762825012,
     "structure": {
-      "mutations": 78,
+      "mutations": 81,
       "active_neo": 8,
-      "nonzero_edges": 352,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "7a6dfe8ea7570492cf48cf46e039ac40763814f4c604cc546c44431931cf6b87"
+      "nonzero_edges": 355,
+      "native_ops": 32,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "1c68e4f17db915320524742a1ed03640c594c7f6fb17b4998a536710677fa062"
     },
-    "text": "초파리, 초파리connectome와 Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이를 모두 포함한 세대 251의 사고 사이클에 대해 살펴보겠습니다.\n\n### 1. 2001년부터 시작된 초기 스타일\n\n초파리는 주로 19세기 후반에서 전반적으로 활동했습니다. 이 시기는 신생뉴런과 구조변이의 발달을 기반으로 하며, 신생뉴런 개설이 가장 중요한 특징이었습니다.\n\n- **구조변이: 78 ("
+    "text": "초파리, Connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상을 받아들이는 신생뉴런의 활성화와 반응을 기반으로 합니다. 이들은 뇌 내에서 특정 정보를 분석하고 행동 방식에 영향을 미치며, 이를 통해 신생물이 다른 곳으로 간주될 수 있습니다.\n\n\"수명\"이라는 단어로, 신생뉴런은 새로운 정보를 받아들일 수 있고, 이 정보는 뇌를 \"새로운 방향으로 이동시키는 것\"이라고 이해됩니다. 이는 신생물이 새로운 환경에서 스스로 결정할 수 있도록 하는 것입니다.\n\n\"신생물의 생존과 발전\"이라는 주제"
   },
-  "elapsed_seconds": 94.98605489730835
+  "elapsed_seconds": 166.3296127319336
 }
