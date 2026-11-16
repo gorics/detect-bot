@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 256 native_ops 40 neo 8
-V5_FITNESS 0 0.6979200352676804 topology 8c35e895d9bca2c8
-V5_EVALUATE 1 generation 256 native_ops 30 neo 8
-V5_FITNESS 1 0.693004424274126 topology 8223abb6e8ab3a1a
-V5_EVALUATE 2 generation 256 native_ops 40 neo 8
-V5_FITNESS 2 0.6343707822898474 topology bd4c96b673cd8640
-V5_EVALUATE 3 generation 256 native_ops 30 neo 8
-V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
+V5_EVALUATE 0 generation 257 native_ops 43 neo 7
+V5_FITNESS 0 0.6811103226520921 topology 403f658af81510a0
+V5_EVALUATE 1 generation 257 native_ops 29 neo 8
+V5_FITNESS 1 0.5920376372765581 topology f57ad767fa4b727e
+V5_EVALUATE 2 generation 257 native_ops 41 neo 8
+V5_FITNESS 2 0.6756882414952706 topology 9e662e9fde85b7b7
+V5_EVALUATE 3 generation 257 native_ops 29 neo 8
+V5_FITNESS 3 0.6305844899094086 topology 7448927c0c339071
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 256,
+  "generation": 257,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,10 +577,10 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6979200352676804,
+  "breeder_fitness": 0.6811103226520921,
   "breeder_genome": {
-    "generation": 256,
-    "active_neo": 8,
+    "generation": 257,
+    "active_neo": 7,
     "mutations": [
       {
         "s": 13,
@@ -588,7 +588,7 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
         "w": 0.2384344208990037
       },
       {
-        "s": 16,
+        "s": 48,
         "d": 71,
         "w": -0.44924932476473556
       },
@@ -640,7 +640,7 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
       {
         "s": 31,
         "d": 67,
-        "w": 0.24604235304185987
+        "w": 0.3032753953924642
       },
       {
         "s": 69,
@@ -793,11 +793,6 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
         "w": -0.017019990802016438
       },
       {
-        "s": 8,
-        "d": 18,
-        "w": -0.10674372775271015
-      },
-      {
         "s": 37,
         "d": 11,
         "w": 0.07557864290041133
@@ -813,7 +808,7 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
         "w": -0.40760081881177573
       },
       {
-        "s": 57,
+        "s": 32,
         "d": 53,
         "w": 0.31399986645594463
       },
@@ -840,7 +835,7 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
       {
         "s": 46,
         "d": 7,
-        "w": -0.06043034692357571
+        "w": -0.03436856589935537
       },
       {
         "s": 46,
@@ -991,16 +986,26 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
         "s": 71,
         "d": 60,
         "w": -0.10709033957072077
+      },
+      {
+        "s": 29,
+        "d": 20,
+        "w": -0.02997557851873005
+      },
+      {
+        "s": 71,
+        "d": 27,
+        "w": 0.11302937428537592
       }
     ],
-    "temp": 0.8680215191974316,
-    "top_p": 0.9548764879358353,
-    "rep": 1.1690345180258088,
-    "tokens": 190,
-    "guidance": 7.081940084445623,
+    "temp": 0.8310102317258563,
+    "top_p": 0.964376085132508,
+    "rep": 1.1368407246477017,
+    "tokens": 175,
+    "guidance": 7.164999433611367,
     "steps": 5,
-    "seed_bias": 352499629,
-    "mutation_rate": 0.105514842980682,
+    "seed_bias": 227830285,
+    "mutation_rate": 0.09320750719320064,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1235,6 +1240,24 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
         "s": 44,
         "d": 37,
         "w": 0.02167046960446565
+      },
+      {
+        "kind": "native_rewire",
+        "s": 21,
+        "d": 35,
+        "d2": 12
+      },
+      {
+        "kind": "native_scale",
+        "s": 35,
+        "d": 10,
+        "factor": 1.595892326013902
+      },
+      {
+        "kind": "native_rewire",
+        "s": 27,
+        "d": 9,
+        "d2": 38
       }
     ]
   },
@@ -1835,31 +1858,31 @@ V5_FITNESS 3 0.5357122343750066 topology a4301286e82a7a6c
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "8c35e895d9bca2c82e541106866d8ee8400352416e8b2bf461c547d12375a204",
+    "breeder_topology_hash": "403f658af81510a0143deed2ca644058b02d192d90ec1d2b78d8421481d8a657",
     "breeder_native_nonzero_edges": 306,
-    "breeder_native_ops": 40,
+    "breeder_native_ops": 43,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6979200352676804,
-    "text_score": 0.7342857142857143,
+    "fitness": 0.6811103226520921,
+    "text_score": 0.6489142857142858,
     "vision": {
-      "clip_cosine": 0.27304109930992126,
-      "score": 0.7164860287308693,
-      "guidance": 7.095484256744385
+      "clip_cosine": 0.2554353177547455,
+      "score": 0.7096197739243507,
+      "guidance": 7.18076753616333
     },
-    "integration": 0.6357836723327637,
+    "integration": 0.7521331906318665,
     "structure": {
-      "mutations": 82,
-      "active_neo": 8,
-      "nonzero_edges": 355,
-      "native_ops": 40,
+      "mutations": 83,
+      "active_neo": 7,
+      "nonzero_edges": 356,
+      "native_ops": 43,
       "native_core_nonzero_edges": 306,
-      "topology_hash": "8c35e895d9bca2c82e541106866d8ee8400352416e8b2bf461c547d12375a204"
+      "topology_hash": "403f658af81510a0143deed2ca644058b02d192d90ec1d2b78d8421481d8a657"
     },
-    "text": "초파리와 연결주로 구성된 신생뉴런은 빠르게 변화하고 발전하여 새로운 신호를 만들어내는 것을 방해하지 않습니다. 이것은 신생아들의 첫 번째 신경망으로 인식력을 향상시킨다고 볼 수 있습니다.\n\n단위적으로, 초파리는 각 입력 데이터에 따라 신경망의 전달 역할을 수행합니다. 이 과정은 빨리 완벽하게 동일한 결과를 얻게 됩니다. 그러나 이런 단위에서는 일관성을 유지하기 어렵습니다.\n\nConnectome은 초파리를 통해 학습되는 신경장치들입니다. 이들은 특정한 기능(예: 영양소 분비)에서 가장 효과적인 모델로 작동해야 합니다.\n\nLLM은 연결주로부터 원자바인 (RNA RNA) 또는 스토"
+    "text": "초파리, 초파리(Llama)은 AI 기술에 대한 이해와 개발을 위한 학습 데이터셋으로 사용되는 일반적인 모델입니다. 이를 통해 인공지능인류 간의 이해도를 증진하고, 지식과 훈련된 지식을 활용해 새로운 알고리즘과 모델을 개발할 수 있습니다.\n\nConnectome은 인공지능에서 정보와 행동에 직접적으로 연결될 수 있는 연결 장치입니다. 이들은 여러 신호나 정보를 쉽게 동작시키고 통신하고 전달하며, 인터넷이나 다른 자원에 의해 정보를 얻거나 수집합니다.\n\nLLM은 언어 모델로서, 인공지능에서 언어를 이해하고 표현하는 역할을 합니다. 이는 자연스럽게 말"
   },
-  "elapsed_seconds": 85.98596096038818
+  "elapsed_seconds": 178.04260396957397
 }
