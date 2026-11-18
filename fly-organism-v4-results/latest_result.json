@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 262,
+  "generation": 263,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6777390882566466,
+  "breeder_fitness": 0.7636126462624339,
   "breeder_genome": {
-    "generation": 262,
+    "generation": 263,
     "active_neo": 8,
     "mutations": [
       {
@@ -631,7 +631,7 @@
       },
       {
         "s": 25,
-        "d": 30,
+        "d": 22,
         "w": 0.1978021474058818
       },
       {
@@ -657,7 +657,7 @@
       {
         "s": 16,
         "d": 72,
-        "w": 0.31742328197512787
+        "w": 0.2571478260777996
       },
       {
         "s": 27,
@@ -666,7 +666,7 @@
       },
       {
         "s": 56,
-        "d": 63,
+        "d": 27,
         "w": -0.010887225702254144
       },
       {
@@ -717,7 +717,7 @@
       {
         "s": 64,
         "d": 68,
-        "w": 0.11658934234998806
+        "w": 0.11366924125044182
       },
       {
         "s": 6,
@@ -836,7 +836,7 @@
       },
       {
         "s": 43,
-        "d": 53,
+        "d": 74,
         "w": 0.31399986645594463
       },
       {
@@ -953,16 +953,31 @@
         "s": 15,
         "d": 44,
         "w": -0.1672821558659061
+      },
+      {
+        "s": 54,
+        "d": 81,
+        "w": -0.22167496494203248
+      },
+      {
+        "s": 67,
+        "d": 40,
+        "w": -0.04485614768053114
+      },
+      {
+        "s": 3,
+        "d": 46,
+        "w": 0.07971053554444973
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
+    "temp": 1.0703086497261336,
+    "top_p": 0.9559049952601927,
+    "rep": 1.0416047835839233,
+    "tokens": 173,
+    "guidance": 7.3015054935712405,
     "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "seed_bias": 633954973,
+    "mutation_rate": 0.11814188304038498,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1133,6 +1148,12 @@
         "s": 10,
         "d": 58,
         "d2": 55
+      },
+      {
+        "kind": "native_rewire",
+        "s": 39,
+        "d": 2,
+        "d2": 30
       }
     ]
   },
@@ -1733,31 +1754,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "2717f0a14682292bcc06bb03fa5ec03870312db501553bed580c8bb1bed10f9f",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 29,
+    "breeder_topology_hash": "7466b647945e085a7ba51745a78c230bed1f14daec2d49d067eea3628c16622b",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6777390882566466,
-    "text_score": 0.7226857142857143,
+    "fitness": 0.7636126462624339,
+    "text_score": 0.9496,
     "vision": {
-      "clip_cosine": 0.23643696308135986,
-      "score": 0.7022104156017304,
-      "guidance": 7.224164962768555
+      "clip_cosine": 0.2555502653121948,
+      "score": 0.709664603471756,
+      "guidance": 7.3386006355285645
     },
-    "integration": 0.5818918943405151,
+    "integration": 0.5677361488342285,
     "structure": {
-      "mutations": 76,
+      "mutations": 79,
       "active_neo": 8,
-      "nonzero_edges": 350,
-      "native_ops": 29,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "2717f0a14682292bcc06bb03fa5ec03870312db501553bed580c8bb1bed10f9f"
+      "nonzero_edges": 353,
+      "native_ops": 30,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "7466b647945e085a7ba51745a78c230bed1f14daec2d49d067eea3628c16622b"
     },
-    "text": "당신이 요구한 세대 262의 사고 사이클에 대해 세부 정보를 제공합니다:\n\n1. **초파리 연결장기 상태 (connectome)**: 이 연계된 상태는 냉각된 신체의 일부를 구성하는 장치로서, 신체 기능을 정의하고 전달하는 역할을 합니다.\n\n2. **LLM(언어 업무 모델)**: 언어 작업 또는 문장 처리를 수행하는 모델을 의미합니다. 이 모델은 자연어 처리에 대한 지속적인 학습에 필요한 빠르고 효과적인 방식으로 실행됩니다.\n\n3. **Stable Diffusion(시각적 자동화)**: 이는 사용자가 원하는 이미지 디자인이나"
+    "text": "물론입니다. 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 모두 포함하면 다음과 같습니다:\n\n1. 세대 263의 신생뉴런 수: \n   - 8개의 신생뉴런\n\n2. 신생뉴런의 총 진화:\n   - 79 개의 신생뉴런이 전세계적인 신생뉴런들의 진화과정을 통해 생성되었습니다.\n\n3. 뇌 활성을 결정하는 신생뉴런에 대한 고유한 보상과 신상은 뼈활성에서 시작되고 있습니다.\n\n4. 뇌는 다양한 콜레스테롤"
   },
-  "elapsed_seconds": 173.0529887676239
+  "elapsed_seconds": 101.9893536567688
 }
