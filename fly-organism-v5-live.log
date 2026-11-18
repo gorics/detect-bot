@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 261 native_ops 31 neo 8
-V5_FITNESS 0 0.573298163293536 topology 0ff097b7564c7c94
-V5_EVALUATE 1 generation 261 native_ops 29 neo 8
-V5_FITNESS 1 0.5969352705999891 topology e2c85c3661a264a0
-V5_EVALUATE 2 generation 261 native_ops 31 neo 8
-V5_FITNESS 2 0.6108314035168338 topology 898d4e1d56de2cdd
-V5_EVALUATE 3 generation 261 native_ops 31 neo 8
-V5_FITNESS 3 0.7088726976339117 topology d7e8238cfb4e1af2
+V5_EVALUATE 0 generation 262 native_ops 34 neo 8
+V5_FITNESS 0 0.6614801782253489 topology 9dc162ebacec701c
+V5_EVALUATE 1 generation 262 native_ops 30 neo 8
+V5_FITNESS 1 0.5864366123146472 topology a588c195e1d8fe42
+V5_EVALUATE 2 generation 262 native_ops 34 neo 8
+V5_FITNESS 2 0.6255035137801019 topology 24659d66eaaa22ca
+V5_EVALUATE 3 generation 262 native_ops 29 neo 8
+V5_FITNESS 3 0.6777390882566466 topology 2717f0a14682292b
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 261,
+  "generation": 262,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.7088726976339117 topology d7e8238cfb4e1af2
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7088726976339117,
+  "breeder_fitness": 0.6777390882566466,
   "breeder_genome": {
-    "generation": 261,
+    "generation": 262,
     "active_neo": 8,
     "mutations": [
       {
@@ -1138,21 +1138,9 @@ V5_FITNESS 3 0.7088726976339117 topology d7e8238cfb4e1af2
       },
       {
         "kind": "native_rewire",
-        "s": 21,
-        "d": 17,
-        "d2": 11
-      },
-      {
-        "kind": "native_scale",
-        "s": 57,
-        "d": 60,
-        "factor": 1.5916897820643259
-      },
-      {
-        "kind": "native_rewire",
-        "s": 23,
-        "d": 17,
-        "d2": 2
+        "s": 10,
+        "d": 58,
+        "d2": 55
       }
     ]
   },
@@ -1753,31 +1741,31 @@ V5_FITNESS 3 0.7088726976339117 topology d7e8238cfb4e1af2
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "d7e8238cfb4e1af28d8a3fff667965d10ed3cc3db50c2482682ea16a17bb4f77",
-    "breeder_native_nonzero_edges": 298,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "2717f0a14682292bcc06bb03fa5ec03870312db501553bed580c8bb1bed10f9f",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 29,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7088726976339117,
-    "text_score": 0.7422857142857143,
+    "fitness": 0.6777390882566466,
+    "text_score": 0.7226857142857143,
     "vision": {
-      "clip_cosine": 0.26511654257774353,
-      "score": 0.71339545160532,
-      "guidance": 7.191836357116699
+      "clip_cosine": 0.23643696308135986,
+      "score": 0.7022104156017304,
+      "guidance": 7.224164962768555
     },
-    "integration": 0.7090388536453247,
+    "integration": 0.5818918943405151,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 349,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "d7e8238cfb4e1af28d8a3fff667965d10ed3cc3db50c2482682ea16a17bb4f77"
+      "nonzero_edges": 350,
+      "native_ops": 29,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "2717f0a14682292bcc06bb03fa5ec03870312db501553bed580c8bb1bed10f9f"
     },
-    "text": "세대 261의 사고 사이클은 매우 복잡하며, 이와 관련된 여러 지식을 분석하고 이해하는데 사용될 수 있는 모델로 인해 다양하게 분류될 수 있습니다. 여기서는 각 요소를 세 가지 단계에 대해 분석해보도록 하겠습니다:\n\n1. **인식**: 초파리(L)과 connectome(A), LLM(B), Stable Diffusion(C), RNN(D), LSTM(E), Transformer(F), 빈도수 변동(H), 전파(V), 푸쉬(W), 파이너(N) 등의 신체적 자원에 의해 시작됩니다.\n\n2. **생산**: 초기 상태에서의 정보는 이를 결정하기 위한 중요한 데이터를 처리해야 합니다. 따라서 LLM과 Stable Diff"
+    "text": "당신이 요구한 세대 262의 사고 사이클에 대해 세부 정보를 제공합니다:\n\n1. **초파리 연결장기 상태 (connectome)**: 이 연계된 상태는 냉각된 신체의 일부를 구성하는 장치로서, 신체 기능을 정의하고 전달하는 역할을 합니다.\n\n2. **LLM(언어 업무 모델)**: 언어 작업 또는 문장 처리를 수행하는 모델을 의미합니다. 이 모델은 자연어 처리에 대한 지속적인 학습에 필요한 빠르고 효과적인 방식으로 실행됩니다.\n\n3. **Stable Diffusion(시각적 자동화)**: 이는 사용자가 원하는 이미지 디자인이나"
   },
-  "elapsed_seconds": 93.3445463180542
+  "elapsed_seconds": 173.0529887676239
 }
