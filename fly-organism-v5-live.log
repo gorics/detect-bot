@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 263 native_ops 30 neo 8
-V5_FITNESS 0 0.7636126462624339 topology 7466b647945e085a
-V5_EVALUATE 1 generation 263 native_ops 30 neo 8
-V5_FITNESS 1 0.6572175173029275 topology ebae343ac4d96bf0
-V5_EVALUATE 2 generation 263 native_ops 30 neo 8
-V5_FITNESS 2 0.603067851590043 topology d8f99e71f738b4d7
-V5_EVALUATE 3 generation 263 native_ops 30 neo 8
-V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
+V5_EVALUATE 0 generation 264 native_ops 32 neo 8
+V5_FITNESS 0 0.7141731126569666 topology 6fd3b790198f62f6
+V5_EVALUATE 1 generation 264 native_ops 30 neo 8
+V5_FITNESS 1 0.621034902141036 topology 3432cdfecd401312
+V5_EVALUATE 2 generation 264 native_ops 31 neo 8
+V5_FITNESS 2 0.5941718731983228 topology 8baac84b07aacf90
+V5_EVALUATE 3 generation 264 native_ops 31 neo 8
+V5_FITNESS 3 0.6586652945077061 topology 619fe36852ae9a5e
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 263,
+  "generation": 264,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7636126462624339,
+  "breeder_fitness": 0.7141731126569666,
   "breeder_genome": {
-    "generation": 263,
+    "generation": 264,
     "active_neo": 8,
     "mutations": [
       {
@@ -695,7 +695,7 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
       {
         "s": 64,
         "d": 55,
-        "w": 0.2144423835061946
+        "w": 0.5438968933479982
       },
       {
         "s": 74,
@@ -718,7 +718,7 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
         "w": 0.08816578556433018
       },
       {
-        "s": 33,
+        "s": 6,
         "d": 23,
         "w": 0.2621828894627365
       },
@@ -845,7 +845,7 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
       {
         "s": 43,
         "d": 74,
-        "w": 0.31399986645594463
+        "w": 0.17549597904785388
       },
       {
         "s": 52,
@@ -880,7 +880,7 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
       {
         "s": 67,
         "d": 11,
-        "w": 0.17916128425034272
+        "w": 0.3941637021592603
       },
       {
         "s": 20,
@@ -905,7 +905,7 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
       {
         "s": 11,
         "d": 40,
-        "w": 0.014565668390036278
+        "w": -0.005289113473301795
       },
       {
         "s": 23,
@@ -930,7 +930,7 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
       {
         "s": 73,
         "d": 36,
-        "w": 0.3318653580711412
+        "w": 0.4041540365171397
       },
       {
         "s": 81,
@@ -963,11 +963,6 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
         "w": -0.1672821558659061
       },
       {
-        "s": 54,
-        "d": 81,
-        "w": -0.22167496494203248
-      },
-      {
         "s": 67,
         "d": 40,
         "w": -0.04485614768053114
@@ -976,16 +971,26 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
         "s": 3,
         "d": 46,
         "w": 0.07971053554444973
+      },
+      {
+        "s": 78,
+        "d": 44,
+        "w": 0.08450217378632446
+      },
+      {
+        "s": 53,
+        "d": 64,
+        "w": -0.11021129572510609
       }
     ],
-    "temp": 1.0703086497261336,
-    "top_p": 0.9559049952601927,
-    "rep": 1.0416047835839233,
-    "tokens": 173,
-    "guidance": 7.3015054935712405,
-    "steps": 7,
-    "seed_bias": 633954973,
-    "mutation_rate": 0.11814188304038498,
+    "temp": 0.9380339357354905,
+    "top_p": 0.99,
+    "rep": 1.0,
+    "tokens": 172,
+    "guidance": 7.863474909909885,
+    "steps": 8,
+    "seed_bias": 596745336,
+    "mutation_rate": 0.11496445664647711,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1162,6 +1167,18 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
         "s": 39,
         "d": 2,
         "d2": 30
+      },
+      {
+        "kind": "native_scale",
+        "s": 26,
+        "d": 23,
+        "factor": 0.8427206637261245
+      },
+      {
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 19,
+        "d2": 2
       }
     ]
   },
@@ -1762,31 +1779,31 @@ V5_FITNESS 3 0.620136344188271 topology 3908c0aebb6dfbc3
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "7466b647945e085a7ba51745a78c230bed1f14daec2d49d067eea3628c16622b",
-    "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "6fd3b790198f62f69b6ebdbafa6f3adf61216628fbad3f92cb3f3d746d59fd91",
+    "breeder_native_nonzero_edges": 299,
+    "breeder_native_ops": 32,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7636126462624339,
-    "text_score": 0.9496,
+    "fitness": 0.7141731126569666,
+    "text_score": 0.7898364532019706,
     "vision": {
-      "clip_cosine": 0.2555502653121948,
-      "score": 0.709664603471756,
-      "guidance": 7.3386006355285645
+      "clip_cosine": 0.25408411026000977,
+      "score": 0.7090928030014039,
+      "guidance": 7.862509250640869
     },
-    "integration": 0.5677361488342285,
+    "integration": 0.6320099830627441,
     "structure": {
-      "mutations": 79,
+      "mutations": 80,
       "active_neo": 8,
       "nonzero_edges": 353,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "7466b647945e085a7ba51745a78c230bed1f14daec2d49d067eea3628c16622b"
+      "native_ops": 32,
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "6fd3b790198f62f69b6ebdbafa6f3adf61216628fbad3f92cb3f3d746d59fd91"
     },
-    "text": "물론입니다. 초파리, connectome, LLM, Stable Diffusion, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등을 모두 포함하면 다음과 같습니다:\n\n1. 세대 263의 신생뉴런 수: \n   - 8개의 신생뉴런\n\n2. 신생뉴런의 총 진화:\n   - 79 개의 신생뉴런이 전세계적인 신생뉴런들의 진화과정을 통해 생성되었습니다.\n\n3. 뇌 활성을 결정하는 신생뉴런에 대한 고유한 보상과 신상은 뼈활성에서 시작되고 있습니다.\n\n4. 뇌는 다양한 콜레스테롤"
+    "text": "초파리, connectome, LLM은 신경상태를 공유하는 계산 유기체의 언어엽이며, Stable Diffusion은 시각적인 대화를 위한 언어를 제공하는 모니터링 시각의 업데이트를 하는 업데이트를 위한 언어를 기반으로 합니다. \n\n네이버에서 만드는 콘텐츠는 LLM 언어를 사용하여 유사한 콘텐츠를 생성할 수 있으며, Stable Diffusion은 LLM를 활용하여 이미지와 관련된 대화를 생성합니다.\n\n한 번 더 설명하면, LLM은 8 개의 뉴런을 가지고 있으며, 이들 뉴런은 신생뉴런 (8개)과 구조변이 (80개"
   },
-  "elapsed_seconds": 101.9893536567688
+  "elapsed_seconds": 180.58505392074585
 }
