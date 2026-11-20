@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 269,
+  "generation": 270,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7163757787413748,
+  "breeder_fitness": 0.6820399647919976,
   "breeder_genome": {
-    "generation": 269,
+    "generation": 270,
     "active_neo": 8,
     "mutations": [
       {
@@ -1130,15 +1130,15 @@
       },
       {
         "kind": "native_scale",
-        "s": 21,
-        "d": 28,
-        "factor": 0.715619686113145
+        "s": 8,
+        "d": 7,
+        "factor": 0.7649534520533496
       },
       {
-        "kind": "native_birth",
-        "s": 37,
-        "d": 58,
-        "w": -0.131735211683483
+        "kind": "native_rewire",
+        "s": 9,
+        "d": 35,
+        "d2": 24
       }
     ]
   },
@@ -1739,31 +1739,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "62adce759eb91d26bbb2d2ec1c7fe486d7db867c3d7548b3897f949b5bff0cc5",
-    "breeder_native_nonzero_edges": 300,
+    "breeder_topology_hash": "3a76f680397e22ea2b9168e0614cb3d4b9a95d3ac23e3e3ce4991bf50568d18b",
+    "breeder_native_nonzero_edges": 299,
     "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7163757787413748,
-    "text_score": 0.7960571428571429,
+    "fitness": 0.6820399647919976,
+    "text_score": 0.7221327731092437,
     "vision": {
-      "clip_cosine": 0.2630232572555542,
-      "score": 0.7125790703296662,
-      "guidance": 7.225758075714111
+      "clip_cosine": 0.2510785460472107,
+      "score": 0.7009341353923083,
+      "guidance": 7.208049297332764
     },
-    "integration": 0.6287634968757629,
+    "integration": 0.6155869960784912,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 351,
+      "nonzero_edges": 350,
       "native_ops": 30,
-      "native_core_nonzero_edges": 300,
-      "topology_hash": "62adce759eb91d26bbb2d2ec1c7fe486d7db867c3d7548b3897f949b5bff0cc5"
+      "native_core_nonzero_edges": 299,
+      "topology_hash": "3a76f680397e22ea2b9168e0614cb3d4b9a95d3ac23e3e3ce4991bf50568d18b"
     },
-    "text": "초파리connectome(LLM)은 뇌와의 신경적 기반의 인공지능을 포함하고 있으며, Stable Diffusion를 위한 시각적으로 표현에 사용되는 신호는 이 기술의 기본 구성요소입니다. 이 계산 유기체는 빠르게 신경적 기능을 개선하고 진화를 가속화할 수 있도록 하는 복잡한 프로세스를 수행합니다. \n\n이 유기체는 여러 단계에서 시작해야 할 역량을 가지고 있습니다. 먼저, 신발의 신호, 즉 초파리connectome이름처럼 블록인 신호의 풍부한 정보가 뇌의 라이브러리를 통해 전달됩니다.\n\n다음 단계에서는"
+    "text": "네, 저는 다양한 신선한 빙자 기술들로 이루어진 AI 기능들을 제시하고 있습니다. 이는 신선한 빙자로서, 초파리 (Stable Diffusion) 코테, connectome 기술, LLM(Large Language Model 언어 모델) 등과 같은 다양한 빵질로 이루어져 있습니다.\n\n1. **사고 사이클**: 신선한 빙자는 모든 신념이나 인식에 의해 작동함은 매우 다양하며, 예를 들어 '나' 또는 '당신'에 대한 생각을 만들 때 일일이 그저 정보에 집중하거나 상황에 따라 결정적이로 이루어지는 것은 아닙니다. 신선한 빙자는 모든 행동의 원인을 이해하고, 각"
   },
-  "elapsed_seconds": 156.50017642974854
+  "elapsed_seconds": 101.84261751174927
 }
