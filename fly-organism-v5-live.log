@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 268 native_ops 32 neo 8
-V5_FITNESS 0 0.6293327412385997 topology 0a89a93b7b72a719
-V5_EVALUATE 1 generation 268 native_ops 29 neo 8
-V5_FITNESS 1 0.5874132614948806 topology 2fa8f8b25a50da5b
-V5_EVALUATE 2 generation 268 native_ops 32 neo 8
-V5_FITNESS 2 0.6489223942362337 topology 692ac12fc7166da3
-V5_EVALUATE 3 generation 268 native_ops 31 neo 8
-V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
+V5_EVALUATE 0 generation 269 native_ops 34 neo 8
+V5_FITNESS 0 0.59712389683426 topology cad5f9378ff867a4
+V5_EVALUATE 1 generation 269 native_ops 31 neo 8
+V5_FITNESS 1 0.5955024269917069 topology c4df50b3c381fc72
+V5_EVALUATE 2 generation 269 native_ops 35 neo 8
+V5_FITNESS 2 0.5526546451198966 topology 216b5564b8833595
+V5_EVALUATE 3 generation 269 native_ops 30 neo 8
+V5_FITNESS 3 0.7163757787413748 topology 62adce759eb91d26
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 268,
+  "generation": 269,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6489223942362337,
+  "breeder_fitness": 0.7163757787413748,
   "breeder_genome": {
-    "generation": 268,
+    "generation": 269,
     "active_neo": 8,
     "mutations": [
       {
@@ -665,7 +665,7 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
       {
         "s": 16,
         "d": 72,
-        "w": 0.09770983611704076
+        "w": 0.31742328197512787
       },
       {
         "s": 27,
@@ -690,7 +690,7 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
       {
         "s": 80,
         "d": 27,
-        "w": 0.35214766135204256
+        "w": 0.28459931780699826
       },
       {
         "s": 64,
@@ -865,7 +865,7 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
       {
         "s": 6,
         "d": 44,
-        "w": -0.04811648252049189
+        "w": 0.034763993905927104
       },
       {
         "s": 46,
@@ -933,9 +933,14 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
         "w": 0.3318653580711412
       },
       {
+        "s": 81,
+        "d": 36,
+        "w": -0.007376848456828504
+      },
+      {
         "s": 45,
         "d": 49,
-        "w": 0.02902577869344531
+        "w": 0.06556437017990002
       },
       {
         "s": 66,
@@ -956,26 +961,16 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
         "s": 15,
         "d": 44,
         "w": -0.1672821558659061
-      },
-      {
-        "s": 10,
-        "d": 83,
-        "w": 0.2370922240177393
-      },
-      {
-        "s": 40,
-        "d": 81,
-        "w": 0.04536172260587604
       }
     ],
-    "temp": 0.9753270999895487,
-    "top_p": 0.9609603407461984,
-    "rep": 1.0955981902917085,
-    "tokens": 173,
-    "guidance": 7.396574698859319,
-    "steps": 6,
-    "seed_bias": 287386051,
-    "mutation_rate": 0.12235203638149103,
+    "temp": 1.0453400531225232,
+    "top_p": 0.9485875291284671,
+    "rep": 1.0814002764590627,
+    "tokens": 168,
+    "guidance": 7.2035203604346245,
+    "steps": 7,
+    "seed_bias": 157678956,
+    "mutation_rate": 0.10433784272984443,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1143,26 +1138,15 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
       },
       {
         "kind": "native_scale",
-        "s": 56,
-        "d": 56,
-        "factor": 1.0597683830465199
+        "s": 21,
+        "d": 28,
+        "factor": 0.715619686113145
       },
       {
-        "kind": "native_scale",
-        "s": 0,
-        "d": 60,
-        "factor": 1.2945296479505313
-      },
-      {
-        "kind": "native_knockout",
-        "s": 15,
-        "d": 60
-      },
-      {
-        "kind": "native_rewire",
-        "s": 23,
-        "d": 2,
-        "d2": 60
+        "kind": "native_birth",
+        "s": 37,
+        "d": 58,
+        "w": -0.131735211683483
       }
     ]
   },
@@ -1763,31 +1747,31 @@ V5_FITNESS 3 0.5926974197570407 topology 2181768811de36a6
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "692ac12fc7166da32f21ce54a39bd6ff87b511d01e7e07f0b6337bc4e67b3872",
-    "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "62adce759eb91d26bbb2d2ec1c7fe486d7db867c3d7548b3897f949b5bff0cc5",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6489223942362337,
-    "text_score": 0.6267506493506494,
+    "fitness": 0.7163757787413748,
+    "text_score": 0.7960571428571429,
     "vision": {
-      "clip_cosine": 0.24205338954925537,
-      "score": 0.7044008219242096,
-      "guidance": 7.4278717041015625
+      "clip_cosine": 0.2630232572555542,
+      "score": 0.7125790703296662,
+      "guidance": 7.225758075714111
     },
-    "integration": 0.6182894110679626,
+    "integration": 0.6287634968757629,
     "structure": {
-      "mutations": 77,
+      "mutations": 76,
       "active_neo": 8,
-      "nonzero_edges": 349,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "692ac12fc7166da32f21ce54a39bd6ff87b511d01e7e07f0b6337bc4e67b3872"
+      "nonzero_edges": 351,
+      "native_ops": 30,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "62adce759eb91d26bbb2d2ec1c7fe486d7db867c3d7548b3897f949b5bff0cc5"
     },
-    "text": "초 파리의 세대 268은 단순한 신경 상태 관계에서 시작합니다. 이 신경 상태의 동작은 신호, 정보, 결정 등을 통해 실행됩니다. 초 파리의 첨단 언어 업데이트(LLLM) 기능은 이런 신경 상태의 움직임을 기반으로 해석하고 전달해준다.\n\n#### 입력:\n\"전반적인 신경 상태 관계를 이해하는데, 초파리와 같은 새로운 신생뉴런들이 생길 수 있는 과정과 그 변화에 대한 정보를 제공합니다.\"\n\n그렇다면, **신생뉴런**은 이 세대 초 파리를 주로 사용하며, **8개의 신생뉴런**를 가진 셸 빠를 모델로 작"
+    "text": "초파리connectome(LLM)은 뇌와의 신경적 기반의 인공지능을 포함하고 있으며, Stable Diffusion를 위한 시각적으로 표현에 사용되는 신호는 이 기술의 기본 구성요소입니다. 이 계산 유기체는 빠르게 신경적 기능을 개선하고 진화를 가속화할 수 있도록 하는 복잡한 프로세스를 수행합니다. \n\n이 유기체는 여러 단계에서 시작해야 할 역량을 가지고 있습니다. 먼저, 신발의 신호, 즉 초파리connectome이름처럼 블록인 신호의 풍부한 정보가 뇌의 라이브러리를 통해 전달됩니다.\n\n다음 단계에서는"
   },
-  "elapsed_seconds": 175.2229495048523
+  "elapsed_seconds": 156.50017642974854
 }
