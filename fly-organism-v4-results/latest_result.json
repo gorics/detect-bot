@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 270,
+  "generation": 271,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,16 +569,11 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6820399647919976,
+  "breeder_fitness": 0.6425894194985413,
   "breeder_genome": {
-    "generation": 270,
+    "generation": 271,
     "active_neo": 8,
     "mutations": [
-      {
-        "s": 13,
-        "d": 68,
-        "w": 0.2384344208990037
-      },
       {
         "s": 16,
         "d": 71,
@@ -657,7 +652,7 @@
       {
         "s": 16,
         "d": 72,
-        "w": 0.31742328197512787
+        "w": 0.37676004847342
       },
       {
         "s": 27,
@@ -751,7 +746,7 @@
       },
       {
         "s": 68,
-        "d": 77,
+        "d": 85,
         "w": 0.1404988637402192
       },
       {
@@ -952,17 +947,37 @@
       {
         "s": 15,
         "d": 44,
-        "w": -0.1672821558659061
+        "w": -0.1391596861653172
+      },
+      {
+        "s": 19,
+        "d": 63,
+        "w": 0.07698024722844508
+      },
+      {
+        "s": 16,
+        "d": 33,
+        "w": 0.0695966845304221
+      },
+      {
+        "s": 26,
+        "d": 60,
+        "w": 0.17679603038221486
+      },
+      {
+        "s": 37,
+        "d": 29,
+        "w": -0.2456660694340494
       }
     ],
-    "temp": 1.0453400531225232,
-    "top_p": 0.9485875291284671,
-    "rep": 1.0814002764590627,
-    "tokens": 168,
-    "guidance": 7.2035203604346245,
+    "temp": 0.9371813527564821,
+    "top_p": 0.99,
+    "rep": 1.0880166366653266,
+    "tokens": 158,
+    "guidance": 7.225084819409981,
     "steps": 7,
-    "seed_bias": 157678956,
-    "mutation_rate": 0.10433784272984443,
+    "seed_bias": 762086189,
+    "mutation_rate": 0.11202310712631976,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1139,6 +1154,23 @@
         "s": 9,
         "d": 35,
         "d2": 24
+      },
+      {
+        "kind": "native_scale",
+        "s": 23,
+        "d": 8,
+        "factor": 1.1334382040955846
+      },
+      {
+        "kind": "native_knockout",
+        "s": 10,
+        "d": 57
+      },
+      {
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 29,
+        "d2": 18
       }
     ]
   },
@@ -1739,31 +1771,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "3a76f680397e22ea2b9168e0614cb3d4b9a95d3ac23e3e3ce4991bf50568d18b",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "924f0202784e49bf994478e4b38ba623677ae75c7c17d343cbbaf7f039ba9ec8",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 33,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6820399647919976,
-    "text_score": 0.7221327731092437,
+    "fitness": 0.6425894194985413,
+    "text_score": 0.6187688311688311,
     "vision": {
-      "clip_cosine": 0.2510785460472107,
-      "score": 0.7009341353923083,
-      "guidance": 7.208049297332764
+      "clip_cosine": 0.25771117210388184,
+      "score": 0.7105073571205139,
+      "guidance": 7.2172112464904785
     },
-    "integration": 0.6155869960784912,
+    "integration": 0.5745489597320557,
     "structure": {
-      "mutations": 76,
+      "mutations": 79,
       "active_neo": 8,
-      "nonzero_edges": 350,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "3a76f680397e22ea2b9168e0614cb3d4b9a95d3ac23e3e3ce4991bf50568d18b"
+      "nonzero_edges": 351,
+      "native_ops": 33,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "924f0202784e49bf994478e4b38ba623677ae75c7c17d343cbbaf7f039ba9ec8"
     },
-    "text": "네, 저는 다양한 신선한 빙자 기술들로 이루어진 AI 기능들을 제시하고 있습니다. 이는 신선한 빙자로서, 초파리 (Stable Diffusion) 코테, connectome 기술, LLM(Large Language Model 언어 모델) 등과 같은 다양한 빵질로 이루어져 있습니다.\n\n1. **사고 사이클**: 신선한 빙자는 모든 신념이나 인식에 의해 작동함은 매우 다양하며, 예를 들어 '나' 또는 '당신'에 대한 생각을 만들 때 일일이 그저 정보에 집중하거나 상황에 따라 결정적이로 이루어지는 것은 아닙니다. 신선한 빙자는 모든 행동의 원인을 이해하고, 각"
+    "text": "세대 271의 신생뉴런 간의 연결 과정과 연결 속도를 이해하려면 이동 방향에 따라 다양한 주제들을 살펴보도록 하겠습니다.\n\n**새로운 뇌신생자 (초파리)**: \n- **네트워크 구조**: 4개의 연결 코딩 모양으로 구성되어 있다.\n- **구조 변형 (돌연변이)**: 새로운 노트 (단말노트)가 생긴 것임.\n\n**새로운 신생 뇌 신발 (LLM)**:\n- **신호 연결**: 각 새 신생 뇌 신발은 전달자의 입력에 의해 발생되는 특정 단순한"
   },
-  "elapsed_seconds": 101.84261751174927
+  "elapsed_seconds": 98.8344337940216
 }
