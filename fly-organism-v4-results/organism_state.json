@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 274,
+  "generation": 275,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7385552775402476,
+  "breeder_fitness": 0.6494749182287094,
   "breeder_genome": {
-    "generation": 274,
+    "generation": 275,
     "active_neo": 8,
     "mutations": [
       {
@@ -1129,21 +1129,22 @@
         "d2": 11
       },
       {
-        "kind": "native_rewire",
-        "s": 60,
-        "d": 37,
-        "d2": 26
+        "kind": "native_scale",
+        "s": 35,
+        "d": 34,
+        "factor": 0.8114882212551102
       },
       {
-        "kind": "native_knockout",
-        "s": 10,
-        "d": 60
+        "kind": "native_rewire",
+        "s": 33,
+        "d": 27,
+        "d2": 11
       },
       {
         "kind": "native_birth",
-        "s": 16,
-        "d": 7,
-        "w": 0.08482870521629962
+        "s": 14,
+        "d": 8,
+        "w": 0.13452127641215508
       }
     ]
   },
@@ -1744,7 +1745,7 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "9de3c09323325816455d38584d931b47675560d61c2ecb9f0d5bb35f4032237e",
+    "breeder_topology_hash": "250624ead2b930a4e8a77d1ea436e1d04b326e37aa0e39d0e360df240c355fe7",
     "breeder_native_nonzero_edges": 299,
     "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
@@ -1752,23 +1753,23 @@
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7385552775402476,
-    "text_score": 0.8818285714285714,
+    "fitness": 0.6494749182287094,
+    "text_score": 0.6297142857142857,
     "vision": {
-      "clip_cosine": 0.24731899797916412,
-      "score": 0.7064544092118741,
-      "guidance": 7.250896453857422
+      "clip_cosine": 0.26423144340515137,
+      "score": 0.7130502629280091,
+      "guidance": 7.220800399780273
     },
-    "integration": 0.5826146602630615,
+    "integration": 0.591719388961792,
     "structure": {
       "mutations": 76,
       "active_neo": 8,
       "nonzero_edges": 350,
       "native_ops": 31,
       "native_core_nonzero_edges": 299,
-      "topology_hash": "9de3c09323325816455d38584d931b47675560d61c2ecb9f0d5bb35f4032237e"
+      "topology_hash": "250624ead2b930a4e8a77d1ea436e1d04b326e37aa0e39d0e360df240c355fe7"
     },
-    "text": "네, 초파리,(connectome), LLM, (Stable Diffusion) 이 274세기의 신생층에 가까운 신경학적 모델입니다. 이것은 인간의 신경系统的 재정적으로 이해하고 조작할 수 있는 기능들, 특히 간단한 신경 신호 관찰과 대화 등을 위한 기본적인 모델을 말합니다.\n\n1. **신생뉴런**: 여기서는 \"구조변이\"로 사용됩니다. 이것은 신생층이나 신경계에서 만든 새로운 신경 핀들을 나타내므로, 이것은 신생층 내부에서 일어나는 변화를 표현합니다.\n\n2. **진화**: 여기서는 시간과 신경계의 변화에 대해 강조하는 내용입니다. 이"
+    "text": "초파리connectome에서 시작한 세대18275의 과정은 신생뉴런과 연결성을 지속적으로 바꾸는 반복적인 반복적 콜레크스 기법을 수행하는 방식으로 이뤄집니다. 신생뉴런이 인류에게 어떤 정보에 적절히 반응할 것인지 결정하는 데 그들의 결정적인 영향을 미칩니다.\n\n1. 새로운 신생뉴런의 수와 구조를 지속적으로 변형하고 유지하며 동안 이들이 인공지능과 같은 뇌에 영향을 미칠 때, 블록체인과 AI의 혼동을 방해하지 않고 신규뉴런이 존재함을 알리는 것입니다.\n2. 신생뉴"
   },
-  "elapsed_seconds": 182.5411777496338
+  "elapsed_seconds": 152.06411623954773
 }
