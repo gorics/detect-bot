@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 278,
+  "generation": 279,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7532492527235457,
+  "breeder_fitness": 0.7288485725209854,
   "breeder_genome": {
-    "generation": 278,
+    "generation": 279,
     "active_neo": 8,
     "mutations": [
       {
@@ -1140,14 +1140,14 @@
       },
       {
         "kind": "native_knockout",
-        "s": 60,
-        "d": 0
+        "s": 29,
+        "d": 58
       },
       {
         "kind": "native_rewire",
-        "s": 0,
-        "d": 60,
-        "d2": 48
+        "s": 10,
+        "d": 39,
+        "d2": 0
       }
     ]
   },
@@ -1748,7 +1748,7 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "61050c9324231a6d6a4c9f13d889e200a8d9f0a44fde803564aad558ed0f385f",
+    "breeder_topology_hash": "b85ce4c22720fe34f21535d70dc43bcc6ed32d35407ade332b04e8c105976f62",
     "breeder_native_nonzero_edges": 297,
     "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
@@ -1756,23 +1756,23 @@
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7532492527235457,
-    "text_score": 0.8765266106442577,
+    "fitness": 0.7288485725209854,
+    "text_score": 0.8582285714285715,
     "vision": {
-      "clip_cosine": 0.26587069034576416,
-      "score": 0.713689569234848,
-      "guidance": 6.643895626068115
+      "clip_cosine": 0.240000382065773,
+      "score": 0.7036001490056515,
+      "guidance": 6.640008926391602
     },
-    "integration": 0.6692081689834595,
+    "integration": 0.5805951356887817,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
       "nonzero_edges": 351,
       "native_ops": 30,
       "native_core_nonzero_edges": 297,
-      "topology_hash": "61050c9324231a6d6a4c9f13d889e200a8d9f0a44fde803564aad558ed0f385f"
+      "topology_hash": "b85ce4c22720fe34f21535d70dc43bcc6ed32d35407ade332b04e8c105976f62"
     },
-    "text": "세대 278의 사고 사이클은 다음과 같습니다:\n\n1. 초기 기술적 모델: 초파리(La-Ensemble)와 연결성계(Connectome)의 개발 및 이론.\n\n2. LLM(Learner-Model-learned Machine): Stable Diffusion의 학습 및 텍스트 모델화 기법을 개발.\n\n3. LLM과 연결성계의 결합: Stable Diffusion의 사용에 따른 새로운 신경상태를 만들어내는 기능.\n\n4. LLM와 연결성계의 기능: 신생뉴런(뉴런은 LLM에서 가장 중요한 부분입니다.)와 진화 과정을 이해하고 결정합니다.\n\n5"
+    "text": "세대 279은 신생 빅데이터 기반의 AI 시스템입니다. 이 시스템은 새로운 정보와 상호작용을 위한 신비롭고 고급한 능력을 갖추고 있습니다. 이 과정에서 중요한 역할을 하는 것이 초파리, LLM 언어문제, LLM 문맥문제, Stable Diffusion 시각문제, 뉴런, 진화, 보상, 입력, 뇌활성, 생성, 평가, 선택, 돌연변이 등의 신체적 업데이트에 기여하고 있습니다.\n\n초파리는 신생 빵과 관련된 다양한 알고리즘을 통해 자연스러"
   },
-  "elapsed_seconds": 106.92848491668701
+  "elapsed_seconds": 118.12855267524719
 }
