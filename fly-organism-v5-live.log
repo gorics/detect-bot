@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 277 native_ops 35 neo 8
-V5_FITNESS 0 0.585393624993224 topology c4748ed3639783c7
-V5_EVALUATE 1 generation 277 native_ops 30 neo 8
-V5_FITNESS 1 0.6663336495135399 topology 29fae5cdabe03314
-V5_EVALUATE 2 generation 277 native_ops 35 neo 8
-V5_FITNESS 2 0.5935936850782002 topology a8e69860b1f67331
-V5_EVALUATE 3 generation 277 native_ops 30 neo 8
-V5_FITNESS 3 0.5915479083767259 topology 20867854ba3ab911
+V5_EVALUATE 0 generation 278 native_ops 32 neo 8
+V5_FITNESS 0 0.5966578814526589 topology 724fcf45ae830f6b
+V5_EVALUATE 1 generation 278 native_ops 30 neo 8
+V5_FITNESS 1 0.7532492527235457 topology 61050c9324231a6d
+V5_EVALUATE 2 generation 278 native_ops 31 neo 8
+V5_FITNESS 2 0.5920056080051584 topology 9f26b1cb9a5ff36f
+V5_EVALUATE 3 generation 278 native_ops 29 neo 8
+V5_FITNESS 3 0.6430528180331824 topology 92dd52815badb7f9
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 277,
+  "generation": 278,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.5915479083767259 topology 20867854ba3ab911
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6663336495135399,
+  "breeder_fitness": 0.7532492527235457,
   "breeder_genome": {
-    "generation": 277,
+    "generation": 278,
     "active_neo": 8,
     "mutations": [
       {
@@ -1147,16 +1147,15 @@ V5_FITNESS 3 0.5915479083767259 topology 20867854ba3ab911
         "d2": 11
       },
       {
-        "kind": "native_scale",
-        "s": 10,
-        "d": 39,
-        "factor": 0.8521468774961563
+        "kind": "native_knockout",
+        "s": 60,
+        "d": 0
       },
       {
-        "kind": "native_scale",
-        "s": 32,
-        "d": 32,
-        "factor": 0.9669959881686937
+        "kind": "native_rewire",
+        "s": 0,
+        "d": 60,
+        "d2": 48
       }
     ]
   },
@@ -1757,31 +1756,31 @@ V5_FITNESS 3 0.5915479083767259 topology 20867854ba3ab911
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "29fae5cdabe033141ed7fa30d7cacea0fffe68c5987ea9a132d3eab74eb6bdae",
-    "breeder_native_nonzero_edges": 298,
+    "breeder_topology_hash": "61050c9324231a6d6a4c9f13d889e200a8d9f0a44fde803564aad558ed0f385f",
+    "breeder_native_nonzero_edges": 297,
     "breeder_native_ops": 30,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6663336495135399,
-    "text_score": 0.6485142857142857,
+    "fitness": 0.7532492527235457,
+    "text_score": 0.8765266106442577,
     "vision": {
-      "clip_cosine": 0.2597852945327759,
-      "score": 0.7113162648677827,
-      "guidance": 6.6357855796813965
+      "clip_cosine": 0.26587069034576416,
+      "score": 0.713689569234848,
+      "guidance": 6.643895626068115
     },
-    "integration": 0.6590046882629395,
+    "integration": 0.6692081689834595,
     "structure": {
       "mutations": 78,
       "active_neo": 8,
-      "nonzero_edges": 352,
+      "nonzero_edges": 351,
       "native_ops": 30,
-      "native_core_nonzero_edges": 298,
-      "topology_hash": "29fae5cdabe033141ed7fa30d7cacea0fffe68c5987ea9a132d3eab74eb6bdae"
+      "native_core_nonzero_edges": 297,
+      "topology_hash": "61050c9324231a6d6a4c9f13d889e200a8d9f0a44fde803564aad558ed0f385f"
     },
-    "text": "세대 277의 사고 사이클은 다음과 같습니다:\n\n1. **초파리 (Stable)**: 세대 초기의 모델로서, 신생의 빠르게 변화되는 신념에 대응하여 최적화된 상태를 유지하고 있습니다.\n\n2. **LLM (Generative Language Models)**: LLM은 신선한 정보를 추출하기 위한 기능으로, 그들의 빠르고 효과적인 학습 알고리즘들로 구성되어 있습니다.\n\n3. **Stable Diffusion**: 이는 Stable Diffusion가 만든 새로운 모델로서, 이미지를 분석하고 디자인을 만들어내는 데 사용됩니다. 이 모델은 새로운 �"
+    "text": "세대 278의 사고 사이클은 다음과 같습니다:\n\n1. 초기 기술적 모델: 초파리(La-Ensemble)와 연결성계(Connectome)의 개발 및 이론.\n\n2. LLM(Learner-Model-learned Machine): Stable Diffusion의 학습 및 텍스트 모델화 기법을 개발.\n\n3. LLM과 연결성계의 결합: Stable Diffusion의 사용에 따른 새로운 신경상태를 만들어내는 기능.\n\n4. LLM와 연결성계의 기능: 신생뉴런(뉴런은 LLM에서 가장 중요한 부분입니다.)와 진화 과정을 이해하고 결정합니다.\n\n5"
   },
-  "elapsed_seconds": 177.06217193603516
+  "elapsed_seconds": 106.92848491668701
 }
