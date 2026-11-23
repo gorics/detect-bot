@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 281,
+  "generation": 282,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6929510807767738,
+  "breeder_fitness": 0.7215323783310275,
   "breeder_genome": {
-    "generation": 281,
+    "generation": 282,
     "active_neo": 7,
     "mutations": [
       {
@@ -596,7 +596,7 @@
       },
       {
         "s": 36,
-        "d": 82,
+        "d": 52,
         "w": 0.2019185208646104
       },
       {
@@ -680,14 +680,9 @@
         "w": 0.34054638380540647
       },
       {
-        "s": 24,
-        "d": 68,
-        "w": 0.21436826240660092
-      },
-      {
         "s": 71,
         "d": 27,
-        "w": 0.28459931780699826
+        "w": 0.2654476206835655
       },
       {
         "s": 64,
@@ -963,16 +958,31 @@
         "s": 40,
         "d": 49,
         "w": -0.013478890867275002
+      },
+      {
+        "s": 71,
+        "d": 61,
+        "w": -0.5343239553431456
+      },
+      {
+        "s": 10,
+        "d": 28,
+        "w": 0.10275224668484094
+      },
+      {
+        "s": 48,
+        "d": 13,
+        "w": -0.28447392420238965
       }
     ],
-    "temp": 0.8311821065644176,
-    "top_p": 0.9617220545902615,
-    "rep": 1.025405761598481,
-    "tokens": 172,
-    "guidance": 5.916007182288729,
+    "temp": 0.8178694903753378,
+    "top_p": 0.9561713336275706,
+    "rep": 1.0545091237633888,
+    "tokens": 159,
+    "guidance": 6.481286170786392,
     "steps": 7,
-    "seed_bias": 161773946,
-    "mutation_rate": 0.0842999203320347,
+    "seed_bias": 793764566,
+    "mutation_rate": 0.09070982657372674,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1160,6 +1170,23 @@
         "s": 9,
         "d": 26,
         "d2": 51
+      },
+      {
+        "kind": "native_birth",
+        "s": 39,
+        "d": 47,
+        "w": 0.05171721665343854
+      },
+      {
+        "kind": "native_knockout",
+        "s": 33,
+        "d": 27
+      },
+      {
+        "kind": "native_scale",
+        "s": 60,
+        "d": 58,
+        "factor": 0.7585739517714304
       }
     ]
   },
@@ -1760,31 +1787,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "dca99b58b8ea7bd0624b895c6503cafbca15c4d74195e795431516a03d25ac1e",
-    "breeder_native_nonzero_edges": 297,
-    "breeder_native_ops": 32,
+    "breeder_topology_hash": "0d729afed762c33b146fc8d521656326270bf71fd50975250796b6b74922065f",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 35,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6929510807767738,
-    "text_score": 0.7086857142857143,
+    "fitness": 0.7215323783310275,
+    "text_score": 0.8000571428571429,
     "vision": {
-      "clip_cosine": 0.23424001038074493,
-      "score": 0.7013536040484906,
-      "guidance": 5.932242393493652
+      "clip_cosine": 0.2701856791973114,
+      "score": 0.7153724148869515,
+      "guidance": 6.475277900695801
     },
-    "integration": 0.7165910005569458,
+    "integration": 0.6378591656684875,
     "structure": {
-      "mutations": 78,
+      "mutations": 80,
       "active_neo": 7,
-      "nonzero_edges": 350,
-      "native_ops": 32,
-      "native_core_nonzero_edges": 297,
-      "topology_hash": "dca99b58b8ea7bd0624b895c6503cafbca15c4d74195e795431516a03d25ac1e"
+      "nonzero_edges": 352,
+      "native_ops": 35,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "0d729afed762c33b146fc8d521656326270bf71fd50975250796b6b74922065f"
     },
-    "text": "세대 281의 신생뉴런과 구조변이 사이클은 매우 특별한 방법으로 이루어진다. 이는 신생뉴런을 생성하고, 신생뉴런의 구조를 변화시키는 데 중요한 역할을 하는 놈(변이)가, 이러한 놈이 만들어 놓이는 과정을 나타내는 식으로 표현된다.\n\n아래와 예로 설명해보면, 신생뉴런이 생성되는 단계와 그 사이의 역할이 설명될 수 있다.\n\n1. 신생뉴런 생성: 초파리, connectome, LLM이 신생뉴런의 생성 단계를 나타내며, 신생뉴런의 개개인은 각각이 신생뉴런의 형태와 크기를"
+    "text": "네, 기술적으로는 이 문제는 매우 복잡한 학문에 대한 이해가 필요하며, 일반적인 학자용 대화가 되는 언어를 사용할 수 없습니다. 그러나 일반적으로 다음과 같은 접근 방식으로 진행할 수 있습니다:\n\n1. 초파리: 이는 신생 뉴런 개요에 대한 일반적인 정보를 제공합니다.\n\n2. Connectome: 이는 신경망의 구성 요소들의 연결 상태를 나타내는 그래픽 인터페이스입니다.\n\n3. LLM: 이는 인공지능 모델들에 대해 설명하거나 학습하기 위한 알고리즘들입니다.\n\n4. Stable Diffusion: 이는 뉴런과 관련된 신경공"
   },
-  "elapsed_seconds": 129.0527651309967
+  "elapsed_seconds": 187.89844703674316
 }
