@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 286 native_ops 33 neo 8
-V5_FITNESS 0 0.5824470557674492 topology 59fbc645d8b3c2a0
-V5_EVALUATE 1 generation 286 native_ops 30 neo 8
-V5_FITNESS 1 0.6367115804826589 topology b1488bb4a9d42598
-V5_EVALUATE 2 generation 286 native_ops 32 neo 8
-V5_FITNESS 2 0.5894653945130433 topology 0ac8a87719b6c9af
-V5_EVALUATE 3 generation 286 native_ops 29 neo 8
-V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
+V5_EVALUATE 0 generation 287 native_ops 31 neo 8
+V5_FITNESS 0 0.658117910577354 topology a5e5f7088b401aa4
+V5_EVALUATE 1 generation 287 native_ops 30 neo 8
+V5_FITNESS 1 0.5763810859773832 topology 663352588b47dc9b
+V5_EVALUATE 2 generation 287 native_ops 31 neo 8
+V5_FITNESS 2 0.6634737055261569 topology 716d6a7548fb8235
+V5_EVALUATE 3 generation 287 native_ops 29 neo 8
+V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 286,
+  "generation": 287,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6367115804826589,
+  "breeder_fitness": 0.6634737055261569,
   "breeder_genome": {
-    "generation": 286,
+    "generation": 287,
     "active_neo": 8,
     "mutations": [
       {
@@ -628,7 +628,7 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
         "w": 0.06374669265959357
       },
       {
-        "s": 6,
+        "s": 30,
         "d": 68,
         "w": 0.25296394609503564
       },
@@ -640,7 +640,7 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
       {
         "s": 15,
         "d": 70,
-        "w": 0.16285621598068806
+        "w": 0.2892398759546486
       },
       {
         "s": 25,
@@ -711,11 +711,6 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
         "s": 70,
         "d": 5,
         "w": 0.21214621551856255
-      },
-      {
-        "s": 72,
-        "d": 56,
-        "w": 0.23706152361750082
       },
       {
         "s": 73,
@@ -885,7 +880,7 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
       {
         "s": 67,
         "d": 11,
-        "w": 0.17916128425034272
+        "w": 0.254522390411417
       },
       {
         "s": 83,
@@ -953,11 +948,6 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
         "w": 0.06556437017990002
       },
       {
-        "s": 66,
-        "d": 32,
-        "w": -0.1646482593890624
-      },
-      {
         "s": 37,
         "d": 38,
         "w": -0.005729559360677623
@@ -971,16 +961,31 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
         "s": 76,
         "d": 37,
         "w": -0.1617984049773067
+      },
+      {
+        "s": 75,
+        "d": 41,
+        "w": 0.20822890422046708
+      },
+      {
+        "s": 51,
+        "d": 4,
+        "w": -0.0431256932339118
+      },
+      {
+        "s": 70,
+        "d": 47,
+        "w": 0.2643462475483715
       }
     ],
-    "temp": 0.8381349987484279,
-    "top_p": 0.9531440462505341,
-    "rep": 1.0806678015229771,
-    "tokens": 154,
-    "guidance": 6.59492141945631,
+    "temp": 0.9000988058630455,
+    "top_p": 0.9806763672135794,
+    "rep": 1.1177126656720886,
+    "tokens": 183,
+    "guidance": 7.494387535488473,
     "steps": 7,
-    "seed_bias": 1019398966,
-    "mutation_rate": 0.09176367326369106,
+    "seed_bias": 445363154,
+    "mutation_rate": 0.09756828577931685,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1157,6 +1162,12 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
         "s": 56,
         "d": 26,
         "w": 0.07390741956601445
+      },
+      {
+        "kind": "native_birth",
+        "s": 16,
+        "d": 31,
+        "w": 0.06735626785758835
       }
     ]
   },
@@ -1757,31 +1768,31 @@ V5_FITNESS 3 0.6265622253467493 topology 287cfe495b938784
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "b1488bb4a9d42598063570eecb9bac8a1890ee70bbe29d4706992971eed73e08",
-    "breeder_native_nonzero_edges": 299,
-    "breeder_native_ops": 30,
+    "breeder_topology_hash": "716d6a7548fb823597a128ff7aa71e890e92335818efdb84ce59aa8ad02d191f",
+    "breeder_native_nonzero_edges": 301,
+    "breeder_native_ops": 31,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6367115804826589,
-    "text_score": 0.5841142857142857,
+    "fitness": 0.6634737055261569,
+    "text_score": 0.6629142857142858,
     "vision": {
-      "clip_cosine": 0.2507793605327606,
-      "score": 0.7078039506077767,
-      "guidance": 6.57946252822876
+      "clip_cosine": 0.254304975271225,
+      "score": 0.7091789403557778,
+      "guidance": 7.553418159484863
     },
-    "integration": 0.630446195602417,
+    "integration": 0.608693540096283,
     "structure": {
-      "mutations": 78,
+      "mutations": 79,
       "active_neo": 8,
-      "nonzero_edges": 353,
-      "native_ops": 30,
-      "native_core_nonzero_edges": 299,
-      "topology_hash": "b1488bb4a9d42598063570eecb9bac8a1890ee70bbe29d4706992971eed73e08"
+      "nonzero_edges": 355,
+      "native_ops": 31,
+      "native_core_nonzero_edges": 301,
+      "topology_hash": "716d6a7548fb823597a128ff7aa71e890e92335818efdb84ce59aa8ad02d191f"
     },
-    "text": "초파리, LLM, 연결론, Stable Diffusion, 빈도, 자연선택, 반응, 학습, 가정, 뇌동맥, 전자성질, 동물적, 자연사, 생물학적, 신경망, 감정, 인식, 이해, 반응, 감정적 반응, 기억, 인식, 반응적 반응, 행동, 결정, 변화, 성장, 기능."
+    "text": "초파리 (Brain-Connectome Project)는 인공지능 모델이 인간의 신체에 연결된 뼈와 기관을 이해하고 표현하는데 사용되는 기술으로, 이는 레이블링 문제와 같은 신경계의 조작을 수행할 수 있게 함.\n\nLSTM(Layer-Attention-Memo) 능력을 활용한 신호 모델은 신체에서 발생하는 빛이나 물질을 응답하기 위한 다양한 기반의 학습 및 예측 모델이 되는데, 이로써 쾌적한 가상 세계와 관련된 정보가 가능하게 됩니다.\n\nStable diffusion는 AI 디자인과 생성 모델에서 이용되는 패턴과 상징 표현 기법입니다. 그들은 디트레이션 (Deep Learning Technology), 텐서플"
   },
-  "elapsed_seconds": 99.66202163696289
+  "elapsed_seconds": 176.31410908699036
 }
