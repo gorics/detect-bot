@@ -1,15 +1,15 @@
-V5_EVALUATE 0 generation 287 native_ops 31 neo 8
-V5_FITNESS 0 0.658117910577354 topology a5e5f7088b401aa4
-V5_EVALUATE 1 generation 287 native_ops 30 neo 8
-V5_FITNESS 1 0.5763810859773832 topology 663352588b47dc9b
-V5_EVALUATE 2 generation 287 native_ops 31 neo 8
-V5_FITNESS 2 0.6634737055261569 topology 716d6a7548fb8235
-V5_EVALUATE 3 generation 287 native_ops 29 neo 8
-V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
+V5_EVALUATE 0 generation 288 native_ops 34 neo 7
+V5_FITNESS 0 0.6140938077894373 topology 4ef5ecea2b53ca92
+V5_EVALUATE 1 generation 288 native_ops 30 neo 8
+V5_FITNESS 1 0.6628106246454091 topology f2824bc3225dc486
+V5_EVALUATE 2 generation 288 native_ops 34 neo 8
+V5_FITNESS 2 0.6853848259474133 topology 9a5ed4207d3e3af9
+V5_EVALUATE 3 generation 288 native_ops 31 neo 8
+V5_FITNESS 3 0.5912929774080187 topology 97baa09929e691ef
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 287,
+  "generation": 288,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -577,9 +577,9 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6634737055261569,
+  "breeder_fitness": 0.6853848259474133,
   "breeder_genome": {
-    "generation": 287,
+    "generation": 288,
     "active_neo": 8,
     "mutations": [
       {
@@ -610,7 +610,7 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
       {
         "s": 64,
         "d": 73,
-        "w": 0.3082584947854704
+        "w": 0.41923173061640256
       },
       {
         "s": 49,
@@ -680,7 +680,7 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
       {
         "s": 56,
         "d": 63,
-        "w": -0.010887225702254144
+        "w": 0.10426790947484786
       },
       {
         "s": 4,
@@ -709,7 +709,7 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
       },
       {
         "s": 70,
-        "d": 5,
+        "d": 68,
         "w": 0.21214621551856255
       },
       {
@@ -745,7 +745,7 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
       {
         "s": 25,
         "d": 32,
-        "w": 0.24311710685629662
+        "w": 0.058686490407882985
       },
       {
         "s": 65,
@@ -830,7 +830,7 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
       {
         "s": 80,
         "d": 64,
-        "w": 0.052313604748716824
+        "w": 0.03849702813025804
       },
       {
         "s": 27,
@@ -935,7 +935,7 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
       {
         "s": 73,
         "d": 36,
-        "w": 0.3318653580711412
+        "w": 0.2914451162658049
       },
       {
         "s": 81,
@@ -978,14 +978,14 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
         "w": 0.2643462475483715
       }
     ],
-    "temp": 0.9000988058630455,
-    "top_p": 0.9806763672135794,
-    "rep": 1.1177126656720886,
-    "tokens": 183,
-    "guidance": 7.494387535488473,
+    "temp": 0.7947944672631694,
+    "top_p": 0.99,
+    "rep": 1.116532498051057,
+    "tokens": 167,
+    "guidance": 6.581267684805626,
     "steps": 7,
-    "seed_bias": 445363154,
-    "mutation_rate": 0.09756828577931685,
+    "seed_bias": 478172634,
+    "mutation_rate": 0.07709662298771548,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1168,6 +1168,23 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
         "s": 16,
         "d": 31,
         "w": 0.06735626785758835
+      },
+      {
+        "kind": "native_scale",
+        "s": 35,
+        "d": 39,
+        "factor": 0.9847929732238783
+      },
+      {
+        "kind": "native_knockout",
+        "s": 35,
+        "d": 21
+      },
+      {
+        "kind": "native_scale",
+        "s": 23,
+        "d": 17,
+        "factor": 0.9014864981609018
       }
     ]
   },
@@ -1768,31 +1785,31 @@ V5_FITNESS 3 0.5804243852438056 topology 31f330552b6e5228
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "716d6a7548fb823597a128ff7aa71e890e92335818efdb84ce59aa8ad02d191f",
-    "breeder_native_nonzero_edges": 301,
-    "breeder_native_ops": 31,
+    "breeder_topology_hash": "9a5ed4207d3e3af903a1c674485cf33976bdf88fb8266fa2ba934baeb416f082",
+    "breeder_native_nonzero_edges": 300,
+    "breeder_native_ops": 34,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6634737055261569,
-    "text_score": 0.6629142857142858,
+    "fitness": 0.6853848259474133,
+    "text_score": 0.7278857142857142,
     "vision": {
-      "clip_cosine": 0.254304975271225,
-      "score": 0.7091789403557778,
-      "guidance": 7.553418159484863
+      "clip_cosine": 0.2583925724029541,
+      "score": 0.7107731032371521,
+      "guidance": 6.602587699890137
     },
-    "integration": 0.608693540096283,
+    "integration": 0.5899348855018616,
     "structure": {
       "mutations": 79,
       "active_neo": 8,
-      "nonzero_edges": 355,
-      "native_ops": 31,
-      "native_core_nonzero_edges": 301,
-      "topology_hash": "716d6a7548fb823597a128ff7aa71e890e92335818efdb84ce59aa8ad02d191f"
+      "nonzero_edges": 354,
+      "native_ops": 34,
+      "native_core_nonzero_edges": 300,
+      "topology_hash": "9a5ed4207d3e3af903a1c674485cf33976bdf88fb8266fa2ba934baeb416f082"
     },
-    "text": "초파리 (Brain-Connectome Project)는 인공지능 모델이 인간의 신체에 연결된 뼈와 기관을 이해하고 표현하는데 사용되는 기술으로, 이는 레이블링 문제와 같은 신경계의 조작을 수행할 수 있게 함.\n\nLSTM(Layer-Attention-Memo) 능력을 활용한 신호 모델은 신체에서 발생하는 빛이나 물질을 응답하기 위한 다양한 기반의 학습 및 예측 모델이 되는데, 이로써 쾌적한 가상 세계와 관련된 정보가 가능하게 됩니다.\n\nStable diffusion는 AI 디자인과 생성 모델에서 이용되는 패턴과 상징 표현 기법입니다. 그들은 디트레이션 (Deep Learning Technology), 텐서플"
+    "text": "초파리(Primavera), Connectome(Connectome)은 일반적으로 신체적 신경계나 기능에 대한 상호작용을 관리하기 위해 사용되는 신경신경학 연습 모델입니다. 이 모델은 신경계를 이해하고 의사결정을 하도록 도우미로 작동합니다.\n\nLLM(Laion-10B)은 일반적으로 AI 알고리즘을 학습해주는 모델입니다. 이는 AI에 대한 강력한 기술이며, 인공 지능의 발전과 관련된 다양한 분야에서 중요한 역할을 합니다.\n\nStable Diffusion은 이미지 학습 앱이 되며, 이를 통해 새로운 정보와 개념들을 만들어낼 수 있습니다. \n\n네트워크의"
   },
-  "elapsed_seconds": 176.31410908699036
+  "elapsed_seconds": 119.9722216129303
 }
