@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 290,
+  "generation": 291,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.701490330725579,
+  "breeder_fitness": 0.7094808894336115,
   "breeder_genome": {
-    "generation": 290,
+    "generation": 291,
     "active_neo": 7,
     "mutations": [
       {
@@ -580,14 +580,14 @@
         "w": 0.2384344208990037
       },
       {
-        "s": 16,
+        "s": 8,
         "d": 71,
         "w": 0.22454935031537981
       },
       {
         "s": 48,
         "d": 63,
-        "w": 0.23631686563047385
+        "w": 0.30991278111949566
       },
       {
         "s": 46,
@@ -596,7 +596,7 @@
       },
       {
         "s": 36,
-        "d": 82,
+        "d": 18,
         "w": 0.2019185208646104
       },
       {
@@ -612,7 +612,7 @@
       {
         "s": 40,
         "d": 67,
-        "w": 0.23714305096466595
+        "w": 0.1798497367758919
       },
       {
         "s": 16,
@@ -703,11 +703,6 @@
         "s": 70,
         "d": 68,
         "w": 0.21214621551856255
-      },
-      {
-        "s": 73,
-        "d": 37,
-        "w": 0.08816578556433018
       },
       {
         "s": 33,
@@ -832,7 +827,7 @@
       {
         "s": 12,
         "d": 39,
-        "w": -0.40760081881177573
+        "w": -0.5996424954956171
       },
       {
         "s": 57,
@@ -995,14 +990,14 @@
         "w": 0.38262828001507515
       }
     ],
-    "temp": 0.76017470465151,
+    "temp": 0.7623299069117077,
     "top_p": 0.99,
-    "rep": 1.121948614454201,
-    "tokens": 144,
-    "guidance": 6.397280922737375,
+    "rep": 1.107393649584882,
+    "tokens": 168,
+    "guidance": 6.613568776287938,
     "steps": 7,
-    "seed_bias": 739340339,
-    "mutation_rate": 0.06470364698440331,
+    "seed_bias": 884801610,
+    "mutation_rate": 0.07070685109707275,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1237,6 +1232,18 @@
         "s": 26,
         "d": 2,
         "factor": 1.4206234310543897
+      },
+      {
+        "kind": "native_scale",
+        "s": 23,
+        "d": 27,
+        "factor": 1.062845497931947
+      },
+      {
+        "kind": "native_scale",
+        "s": 2,
+        "d": 39,
+        "factor": 1.1744668576939779
       }
     ]
   },
@@ -1837,31 +1844,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "83d09b74cb95fe8a33d63c4638288e300d09b014a50208a2bf7b1e25e4803254",
-    "breeder_native_nonzero_edges": 301,
-    "breeder_native_ops": 40,
+    "breeder_topology_hash": "40b9a3ecaa007f6f510f744a4764f6dcb3b9afb98705e5d1a899fcfa29c2c9f4",
+    "breeder_native_nonzero_edges": 302,
+    "breeder_native_ops": 42,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.701490330725579,
-    "text_score": 0.7840571428571429,
+    "fitness": 0.7094808894336115,
+    "text_score": 0.8066198547215497,
     "vision": {
-      "clip_cosine": 0.2588822841644287,
-      "score": 0.7109640908241273,
-      "guidance": 6.456403732299805
+      "clip_cosine": 0.2694287896156311,
+      "score": 0.7150772279500961,
+      "guidance": 6.665731430053711
     },
-    "integration": 0.548941969871521,
+    "integration": 0.5366185307502747,
     "structure": {
-      "mutations": 84,
+      "mutations": 83,
       "active_neo": 7,
-      "nonzero_edges": 356,
-      "native_ops": 40,
-      "native_core_nonzero_edges": 301,
-      "topology_hash": "83d09b74cb95fe8a33d63c4638288e300d09b014a50208a2bf7b1e25e4803254"
+      "nonzero_edges": 355,
+      "native_ops": 42,
+      "native_core_nonzero_edges": 302,
+      "topology_hash": "40b9a3ecaa007f6f510f744a4764f6dcb3b9afb98705e5d1a899fcfa29c2c9f4"
     },
-    "text": "세대 290에서의 사고 사이클은 다음과 같습니다:\n\n1. **초파리 연결모달**:\n   - 이 기능은 신생뉴런과 다른 신경재현에 의해 작동합니다. 이를 통해 신생뉴런들이 신호를 받아와서 반응하도록 하는데, 이는 신경진화에 필수적입니다.\n\n2. **Connectome 모델**:\n   - Connectome은 신경계의 전자적인 통신망으로 각 신생뉴런과 연비 관계를 정하는 역할을 합니다.\n\n3. **LLM**: \n   - LLM은 AI 모델로서, 이는 학"
+    "text": "초파리는 신생뉴런과 연결된 신자체로, 전달되는 정보를 빠르게 바꾸고, 이 정보에 대한 새로운 상황을 모니터링하고 이를 기록하는 데 사용됩니다. \n\nConnectome은 신생뉴런과 연결되어 있는 뇌의 전체적인 상태를 나타냅니다. LLM은 Connectomes에서 추출한 정보들을 학습시키며, Stable Diffusion는 LLM의 예측 결과를 사용하여 이미지 또는 맵을 제작합니다.\n\nStable Diffusion 시각기는 AI 알고리즘이 Stable Diffusion 모델로 훈련된 영상을 사용하여 샘플화되며, 이것은 인공지능(IA)와 인간의 상호 작용을 가능하게 합니다"
   },
-  "elapsed_seconds": 169.25998282432556
+  "elapsed_seconds": 111.44872379302979
 }
