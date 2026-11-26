@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 288,
+  "generation": 289,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6853848259474133,
+  "breeder_fitness": 0.6846339240263266,
   "breeder_genome": {
-    "generation": 288,
+    "generation": 289,
     "active_neo": 8,
     "mutations": [
       {
@@ -632,7 +632,7 @@
       {
         "s": 15,
         "d": 70,
-        "w": 0.2892398759546486
+        "w": 0.21556980304813492
       },
       {
         "s": 25,
@@ -722,7 +722,7 @@
       {
         "s": 6,
         "d": 55,
-        "w": 0.37195960094120034
+        "w": 0.33810627647465546
       },
       {
         "s": 64,
@@ -968,16 +968,36 @@
         "s": 70,
         "d": 47,
         "w": 0.2643462475483715
+      },
+      {
+        "s": 50,
+        "d": 34,
+        "w": -0.202362138192522
+      },
+      {
+        "s": 30,
+        "d": 70,
+        "w": 0.2720199502047473
+      },
+      {
+        "s": 67,
+        "d": 56,
+        "w": 0.0179649036215551
+      },
+      {
+        "s": 21,
+        "d": 86,
+        "w": -0.32029272312554413
       }
     ],
-    "temp": 0.7947944672631694,
-    "top_p": 0.99,
-    "rep": 1.116532498051057,
-    "tokens": 167,
-    "guidance": 6.581267684805626,
+    "temp": 0.727063855781218,
+    "top_p": 0.9771137393088639,
+    "rep": 1.1280110124983622,
+    "tokens": 155,
+    "guidance": 7.101694821915876,
     "steps": 7,
-    "seed_bias": 478172634,
-    "mutation_rate": 0.07709662298771548,
+    "seed_bias": 338867412,
+    "mutation_rate": 0.0726263080854534,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1177,6 +1197,23 @@
         "s": 23,
         "d": 17,
         "factor": 0.9014864981609018
+      },
+      {
+        "kind": "native_knockout",
+        "s": 26,
+        "d": 23
+      },
+      {
+        "kind": "native_rewire",
+        "s": 23,
+        "d": 23,
+        "d2": 50
+      },
+      {
+        "kind": "native_birth",
+        "s": 34,
+        "d": 5,
+        "w": -0.001215311246157484
       }
     ]
   },
@@ -1777,31 +1814,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "9a5ed4207d3e3af903a1c674485cf33976bdf88fb8266fa2ba934baeb416f082",
+    "breeder_topology_hash": "bae105ac491449c2e8cf9525ea80eb926e2c9c273e84023f0c644690cecc6e32",
     "breeder_native_nonzero_edges": 300,
-    "breeder_native_ops": 34,
+    "breeder_native_ops": 37,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6853848259474133,
-    "text_score": 0.7278857142857142,
+    "fitness": 0.6846339240263266,
+    "text_score": 0.7170857142857143,
     "vision": {
-      "clip_cosine": 0.2583925724029541,
-      "score": 0.7107731032371521,
-      "guidance": 6.602587699890137
+      "clip_cosine": 0.2537814974784851,
+      "score": 0.7089747840166092,
+      "guidance": 7.1080641746521
     },
-    "integration": 0.5899348855018616,
+    "integration": 0.6093166470527649,
     "structure": {
-      "mutations": 79,
+      "mutations": 83,
       "active_neo": 8,
-      "nonzero_edges": 354,
-      "native_ops": 34,
+      "nonzero_edges": 357,
+      "native_ops": 37,
       "native_core_nonzero_edges": 300,
-      "topology_hash": "9a5ed4207d3e3af903a1c674485cf33976bdf88fb8266fa2ba934baeb416f082"
+      "topology_hash": "bae105ac491449c2e8cf9525ea80eb926e2c9c273e84023f0c644690cecc6e32"
     },
-    "text": "초파리(Primavera), Connectome(Connectome)은 일반적으로 신체적 신경계나 기능에 대한 상호작용을 관리하기 위해 사용되는 신경신경학 연습 모델입니다. 이 모델은 신경계를 이해하고 의사결정을 하도록 도우미로 작동합니다.\n\nLLM(Laion-10B)은 일반적으로 AI 알고리즘을 학습해주는 모델입니다. 이는 AI에 대한 강력한 기술이며, 인공 지능의 발전과 관련된 다양한 분야에서 중요한 역할을 합니다.\n\nStable Diffusion은 이미지 학습 앱이 되며, 이를 통해 새로운 정보와 개념들을 만들어낼 수 있습니다. \n\n네트워크의"
+    "text": "초파리는 신생뉴런과 구조변환의 신경적 반응을 전달하고 이를 보전시키는데 역할을 합니다. 이들은 인공지능은 신경에서 정보를 처리하는데 중요한 영역으로 작동합니다.\n\nLSTM (Long Short Term Memory)은 인공지능에 주요한 신경망 기법 중 하나입니다. 그들이 신경 시스템의 정보 처리에 중요한 역할을 하는데 있습니다. \n\nLLM은 학습된 신경망이 데이터를 분석하여 훈련된 새로운 데이터를 예측하거나 추론하는데 도움을 줍니다.\n\nStable Diffusion은 인공지능에 의해 모델링된 이미지를"
   },
-  "elapsed_seconds": 119.9722216129303
+  "elapsed_seconds": 187.87776732444763
 }
