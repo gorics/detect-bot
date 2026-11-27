@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 293,
+  "generation": 294,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6223407436537198,
+  "breeder_fitness": 0.6397194790394488,
   "breeder_genome": {
-    "generation": 293,
+    "generation": 294,
     "active_neo": 6,
     "mutations": [
       {
@@ -581,7 +581,7 @@
       },
       {
         "s": 8,
-        "d": 71,
+        "d": 35,
         "w": 0.22454935031537981
       },
       {
@@ -761,7 +761,7 @@
       },
       {
         "s": 41,
-        "d": 66,
+        "d": 50,
         "w": 0.2746354771278136
       },
       {
@@ -866,7 +866,7 @@
       },
       {
         "s": 83,
-        "d": 79,
+        "d": 29,
         "w": 0.3119341778787293
       },
       {
@@ -980,11 +980,6 @@
         "w": -0.2912848146874782
       },
       {
-        "s": 60,
-        "d": 16,
-        "w": 0.38262828001507515
-      },
-      {
         "s": 27,
         "d": 62,
         "w": -0.48290204065757936
@@ -998,16 +993,21 @@
         "s": 62,
         "d": 45,
         "w": -0.012219038662757434
+      },
+      {
+        "s": 28,
+        "d": 82,
+        "w": -0.10116036003124379
       }
     ],
-    "temp": 0.7182390170786905,
+    "temp": 0.6651803844315407,
     "top_p": 0.99,
-    "rep": 1.155528921532993,
-    "tokens": 164,
-    "guidance": 5.227583643858812,
+    "rep": 1.1048324425403415,
+    "tokens": 163,
+    "guidance": 5.383075272702357,
     "steps": 7,
-    "seed_bias": 244906900,
-    "mutation_rate": 0.06261931389263588,
+    "seed_bias": 209320341,
+    "mutation_rate": 0.05867053696640501,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1290,6 +1290,24 @@
         "s": 2,
         "d": 9,
         "w": 0.12846491597586582
+      },
+      {
+        "kind": "native_rewire",
+        "s": 17,
+        "d": 9,
+        "d2": 52
+      },
+      {
+        "kind": "native_scale",
+        "s": 2,
+        "d": 27,
+        "factor": 0.8551373302081
+      },
+      {
+        "kind": "native_rewire",
+        "s": 60,
+        "d": 5,
+        "d2": 2
       }
     ]
   },
@@ -1890,31 +1908,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "b9ed81f48b1c6567de555f3cc5215f57d01c871dec370fe283086c08a3e55714",
-    "breeder_native_nonzero_edges": 305,
-    "breeder_native_ops": 48,
+    "breeder_topology_hash": "21781d65adae9c436e842d7e9962f8d80343a7cac082f5b76b9131c45f61ea61",
+    "breeder_native_nonzero_edges": 304,
+    "breeder_native_ops": 51,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6223407436537198,
-    "text_score": 0.5573055690072639,
+    "fitness": 0.6397194790394488,
+    "text_score": 0.6219688311688312,
     "vision": {
-      "clip_cosine": 0.2536107003688812,
-      "score": 0.7089081731438637,
-      "guidance": 5.319972515106201
+      "clip_cosine": 0.27020537853240967,
+      "score": 0.7153800976276398,
+      "guidance": 5.438940048217773
     },
-    "integration": 0.584640383720398,
+    "integration": 0.5224430561065674,
     "structure": {
       "mutations": 85,
       "active_neo": 6,
-      "nonzero_edges": 355,
-      "native_ops": 48,
-      "native_core_nonzero_edges": 305,
-      "topology_hash": "b9ed81f48b1c6567de555f3cc5215f57d01c871dec370fe283086c08a3e55714"
+      "nonzero_edges": 353,
+      "native_ops": 51,
+      "native_core_nonzero_edges": 304,
+      "topology_hash": "21781d65adae9c436e842d7e9962f8d80343a7cac082f5b76b9131c45f61ea61"
     },
-    "text": "초파리 연결주에서 새로운 신호를 형성하기 위한 신생뉴런은 6개입니다. 이들은 기존에 생성된 신호나 전달된 정보를 바탕으로 새로운 신호를 얻습니다.\n\n신생뉴런과 관련된 중요한 요소들을 살펴보겠습니다:\n\n1. **인식과 예측**: 새로운 신호는 이미지와 영양소 등을 통해 인식되며, 이를 예측하고 반응합니다. 이것은 신장 내의 신경요구 조절 및 결정과정을 포함합니다.\n\n2. **전달**: 신생뉴런은 다른 신호(입력)로부터 얻어진 정보를 전송합니다.\n   \n3. **작용**: 특정한 작업 또는 행동을 수행하여 신호"
+    "text": "세대 294의 사고 사이클은 신생뉴런과 구조변이를 기반으로 하며, 이들 기능들은 신생뉴런과 구조변이와의 상호작용을 통해 작동합니다. 이 과정은 여러 단계들을 거쳐야 합니다:\n\n1. **입력**: 신생뉴런과 같은 신생 땅에 들어갑니다.\n2. **진화**: 신생뉴런들이 신생 땅에서 배운 전통적인 정보를 활용하여 새로운 정보를 창출합니다.\n3. **보상**: 이 정보는 신생 땅에서 얻은 정보에 맞춰 보상을 받습니다.\n4. **입력**: 이 보상이 받으면"
   },
-  "elapsed_seconds": 179.9104871749878
+  "elapsed_seconds": 203.09389472007751
 }
