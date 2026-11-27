@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 291,
+  "generation": 292,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,10 +569,10 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.7094808894336115,
+  "breeder_fitness": 0.6764706546207779,
   "breeder_genome": {
-    "generation": 291,
-    "active_neo": 7,
+    "generation": 292,
+    "active_neo": 6,
     "mutations": [
       {
         "s": 13,
@@ -652,7 +652,7 @@
       {
         "s": 69,
         "d": 70,
-        "w": 0.06204753150704538
+        "w": 0.11340514557839088
       },
       {
         "s": 26,
@@ -777,7 +777,7 @@
       {
         "s": 1,
         "d": 38,
-        "w": -0.46739334019630424
+        "w": -0.5512032909352309
       },
       {
         "s": 77,
@@ -982,22 +982,27 @@
       {
         "s": 21,
         "d": 86,
-        "w": -0.32029272312554413
+        "w": -0.2912848146874782
       },
       {
         "s": 60,
         "d": 16,
         "w": 0.38262828001507515
+      },
+      {
+        "s": 27,
+        "d": 62,
+        "w": -0.48290204065757936
       }
     ],
-    "temp": 0.7623299069117077,
+    "temp": 0.775297723798336,
     "top_p": 0.99,
-    "rep": 1.107393649584882,
-    "tokens": 168,
-    "guidance": 6.613568776287938,
+    "rep": 1.1660241748082685,
+    "tokens": 173,
+    "guidance": 6.361689248755674,
     "steps": 7,
-    "seed_bias": 884801610,
-    "mutation_rate": 0.07070685109707275,
+    "seed_bias": 609025098,
+    "mutation_rate": 0.06250446193100269,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1244,6 +1249,24 @@
         "s": 2,
         "d": 39,
         "factor": 1.1744668576939779
+      },
+      {
+        "kind": "native_birth",
+        "s": 59,
+        "d": 28,
+        "w": 0.04668043900269777
+      },
+      {
+        "kind": "native_rewire",
+        "s": 17,
+        "d": 25,
+        "d2": 54
+      },
+      {
+        "kind": "native_scale",
+        "s": 27,
+        "d": 60,
+        "factor": 1.1607451694159556
       }
     ]
   },
@@ -1844,31 +1867,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "40b9a3ecaa007f6f510f744a4764f6dcb3b9afb98705e5d1a899fcfa29c2c9f4",
-    "breeder_native_nonzero_edges": 302,
-    "breeder_native_ops": 42,
+    "breeder_topology_hash": "e9565199cfca7584d15c66f58d03708cf4899890c49d38254f86e05ec1bc9b33",
+    "breeder_native_nonzero_edges": 303,
+    "breeder_native_ops": 45,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.7094808894336115,
-    "text_score": 0.8066198547215497,
+    "fitness": 0.6764706546207779,
+    "text_score": 0.7195428571428572,
     "vision": {
-      "clip_cosine": 0.2694287896156311,
-      "score": 0.7150772279500961,
-      "guidance": 6.665731430053711
+      "clip_cosine": 0.24563154578208923,
+      "score": 0.7057963028550148,
+      "guidance": 6.460366249084473
     },
-    "integration": 0.5366185307502747,
+    "integration": 0.556093692779541,
     "structure": {
-      "mutations": 83,
-      "active_neo": 7,
-      "nonzero_edges": 355,
-      "native_ops": 42,
-      "native_core_nonzero_edges": 302,
-      "topology_hash": "40b9a3ecaa007f6f510f744a4764f6dcb3b9afb98705e5d1a899fcfa29c2c9f4"
+      "mutations": 84,
+      "active_neo": 6,
+      "nonzero_edges": 354,
+      "native_ops": 45,
+      "native_core_nonzero_edges": 303,
+      "topology_hash": "e9565199cfca7584d15c66f58d03708cf4899890c49d38254f86e05ec1bc9b33"
     },
-    "text": "초파리는 신생뉴런과 연결된 신자체로, 전달되는 정보를 빠르게 바꾸고, 이 정보에 대한 새로운 상황을 모니터링하고 이를 기록하는 데 사용됩니다. \n\nConnectome은 신생뉴런과 연결되어 있는 뇌의 전체적인 상태를 나타냅니다. LLM은 Connectomes에서 추출한 정보들을 학습시키며, Stable Diffusion는 LLM의 예측 결과를 사용하여 이미지 또는 맵을 제작합니다.\n\nStable Diffusion 시각기는 AI 알고리즘이 Stable Diffusion 모델로 훈련된 영상을 사용하여 샘플화되며, 이것은 인공지능(IA)와 인간의 상호 작용을 가능하게 합니다"
+    "text": "초파리와 연결되있는 신생뉴런은 초기 생존 신호를 받아서 기능적인 전달 역할을 하며, 이것은 신생 신호 대신 이전의 신호로 반응하게 되는데요. 이러한 신생 신호는 LLM(언어 모델)과 Stable Diffusion 레이블링 시각적 자료에 의해 만들어져야 합니다.\n\n이렇게 모든 세부 요소가 함께 작동하면 신장에서 신자체를 만들어 내려야 합니다:\n\n- 신생뉴런: 초기 생존 신호를 받아 신자체를 만들 수 있습니다.\n- LLM(Learn and Learn): 이 부분은 신생뉴런이 신자가 아닌 다른 신자를 통해 정보를 얻거나 새로운 신자체를 만드는 과정"
   },
-  "elapsed_seconds": 111.44872379302979
+  "elapsed_seconds": 169.12202286720276
 }
