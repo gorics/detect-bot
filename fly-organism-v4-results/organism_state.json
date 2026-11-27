@@ -1,7 +1,7 @@
 {
   "status": "SUCCESS",
   "version": "v5-native-core-evolution",
-  "generation": 292,
+  "generation": 293,
   "fitness": 0.7915020286973262,
   "genome": {
     "generation": 180,
@@ -569,9 +569,9 @@
     ]
   },
   "champion_generation": 180,
-  "breeder_fitness": 0.6764706546207779,
+  "breeder_fitness": 0.6223407436537198,
   "breeder_genome": {
-    "generation": 292,
+    "generation": 293,
     "active_neo": 6,
     "mutations": [
       {
@@ -685,7 +685,7 @@
         "w": 0.21436826240660092
       },
       {
-        "s": 80,
+        "s": 3,
         "d": 27,
         "w": 0.28459931780699826
       },
@@ -770,7 +770,7 @@
         "w": 0.056080911760525015
       },
       {
-        "s": 75,
+        "s": 34,
         "d": 66,
         "w": -0.0528791614477103
       },
@@ -843,11 +843,6 @@
         "s": 62,
         "d": 57,
         "w": 0.2843096550247773
-      },
-      {
-        "s": 37,
-        "d": 57,
-        "w": -0.06938135543171894
       },
       {
         "s": 6,
@@ -993,16 +988,26 @@
         "s": 27,
         "d": 62,
         "w": -0.48290204065757936
+      },
+      {
+        "s": 6,
+        "d": 60,
+        "w": -0.1563413294747109
+      },
+      {
+        "s": 62,
+        "d": 45,
+        "w": -0.012219038662757434
       }
     ],
-    "temp": 0.775297723798336,
+    "temp": 0.7182390170786905,
     "top_p": 0.99,
-    "rep": 1.1660241748082685,
-    "tokens": 173,
-    "guidance": 6.361689248755674,
+    "rep": 1.155528921532993,
+    "tokens": 164,
+    "guidance": 5.227583643858812,
     "steps": 7,
-    "seed_bias": 609025098,
-    "mutation_rate": 0.06250446193100269,
+    "seed_bias": 244906900,
+    "mutation_rate": 0.06261931389263588,
     "native_ops": [
       {
         "kind": "native_scale",
@@ -1267,6 +1272,24 @@
         "s": 27,
         "d": 60,
         "factor": 1.1607451694159556
+      },
+      {
+        "kind": "native_scale",
+        "s": 15,
+        "d": 9,
+        "factor": 0.9938082904209253
+      },
+      {
+        "kind": "native_birth",
+        "s": 47,
+        "d": 27,
+        "w": 0.11010114888592817
+      },
+      {
+        "kind": "native_birth",
+        "s": 2,
+        "d": 9,
+        "w": 0.12846491597586582
       }
     ]
   },
@@ -1867,31 +1890,31 @@
     "best_ever_elitism": true
   },
   "native_core": {
-    "breeder_topology_hash": "e9565199cfca7584d15c66f58d03708cf4899890c49d38254f86e05ec1bc9b33",
-    "breeder_native_nonzero_edges": 303,
-    "breeder_native_ops": 45,
+    "breeder_topology_hash": "b9ed81f48b1c6567de555f3cc5215f57d01c871dec370fe283086c08a3e55714",
+    "breeder_native_nonzero_edges": 305,
+    "breeder_native_ops": 48,
     "champion_topology_hash": "f1758e273cf789c305c7d7efebb188eb5c007ecf625b5c1f2508432de7b35ba3",
     "champion_native_nonzero_edges": 298,
     "champion_native_ops": 28
   },
   "last_breeder": {
-    "fitness": 0.6764706546207779,
-    "text_score": 0.7195428571428572,
+    "fitness": 0.6223407436537198,
+    "text_score": 0.5573055690072639,
     "vision": {
-      "clip_cosine": 0.24563154578208923,
-      "score": 0.7057963028550148,
-      "guidance": 6.460366249084473
+      "clip_cosine": 0.2536107003688812,
+      "score": 0.7089081731438637,
+      "guidance": 5.319972515106201
     },
-    "integration": 0.556093692779541,
+    "integration": 0.584640383720398,
     "structure": {
-      "mutations": 84,
+      "mutations": 85,
       "active_neo": 6,
-      "nonzero_edges": 354,
-      "native_ops": 45,
-      "native_core_nonzero_edges": 303,
-      "topology_hash": "e9565199cfca7584d15c66f58d03708cf4899890c49d38254f86e05ec1bc9b33"
+      "nonzero_edges": 355,
+      "native_ops": 48,
+      "native_core_nonzero_edges": 305,
+      "topology_hash": "b9ed81f48b1c6567de555f3cc5215f57d01c871dec370fe283086c08a3e55714"
     },
-    "text": "초파리와 연결되있는 신생뉴런은 초기 생존 신호를 받아서 기능적인 전달 역할을 하며, 이것은 신생 신호 대신 이전의 신호로 반응하게 되는데요. 이러한 신생 신호는 LLM(언어 모델)과 Stable Diffusion 레이블링 시각적 자료에 의해 만들어져야 합니다.\n\n이렇게 모든 세부 요소가 함께 작동하면 신장에서 신자체를 만들어 내려야 합니다:\n\n- 신생뉴런: 초기 생존 신호를 받아 신자체를 만들 수 있습니다.\n- LLM(Learn and Learn): 이 부분은 신생뉴런이 신자가 아닌 다른 신자를 통해 정보를 얻거나 새로운 신자체를 만드는 과정"
+    "text": "초파리 연결주에서 새로운 신호를 형성하기 위한 신생뉴런은 6개입니다. 이들은 기존에 생성된 신호나 전달된 정보를 바탕으로 새로운 신호를 얻습니다.\n\n신생뉴런과 관련된 중요한 요소들을 살펴보겠습니다:\n\n1. **인식과 예측**: 새로운 신호는 이미지와 영양소 등을 통해 인식되며, 이를 예측하고 반응합니다. 이것은 신장 내의 신경요구 조절 및 결정과정을 포함합니다.\n\n2. **전달**: 신생뉴런은 다른 신호(입력)로부터 얻어진 정보를 전송합니다.\n   \n3. **작용**: 특정한 작업 또는 행동을 수행하여 신호"
   },
-  "elapsed_seconds": 169.12202286720276
+  "elapsed_seconds": 179.9104871749878
 }
